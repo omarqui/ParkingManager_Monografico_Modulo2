@@ -1,0 +1,9 @@
+C:\Users\omarqui\source\repos\ParkingManager_Monografico_Modulo2\Presentacion\bin\Debug\Presentacion.exe.config
+C:\Users\omarqui\source\repos\ParkingManager_Monografico_Modulo2\Presentacion\bin\Debug\Presentacion.exe
+C:\Users\omarqui\source\repos\ParkingManager_Monografico_Modulo2\Presentacion\bin\Debug\Presentacion.pdb
+C:\Users\omarqui\source\repos\ParkingManager_Monografico_Modulo2\Presentacion\obj\Debug\Presentacion.csprojAssemblyReference.cache
+C:\Users\omarqui\source\repos\ParkingManager_Monografico_Modulo2\Presentacion\obj\Debug\Presentacion.Properties.Resources.resources
+C:\Users\omarqui\source\repos\ParkingManager_Monografico_Modulo2\Presentacion\obj\Debug\Presentacion.csproj.GenerateResource.cache
+C:\Users\omarqui\source\repos\ParkingManager_Monografico_Modulo2\Presentacion\obj\Debug\Presentacion.csproj.CoreCompileInputs.cache
+C:\Users\omarqui\source\repos\ParkingManager_Monografico_Modulo2\Presentacion\obj\Debug\Presentacion.exe
+C:\Users\omarqui\source\repos\ParkingManager_Monografico_Modulo2\Presentacion\obj\Debug\Presentacion.pdb
