@@ -1,4 +1,4 @@
-﻿namespace Presentacion
+﻿namespace CapaPresentacion
 {
     partial class Form1
     {
