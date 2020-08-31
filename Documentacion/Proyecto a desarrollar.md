@@ -82,3 +82,7 @@ MontoApertura|decimal
 MontoCobrado|decimal
 MontoEntregado|decimal
 MontoDiferencia|decimal
+---------------------------------------
+
+
+bgm Modificando
