@@ -1,6 +1,6 @@
 # 98-SISTEMA INFORMÁTICO PARA MANEJO DE PARQUEADEROS
 
-Este poryecto consiste en crear un sistema que ayude al facil y rapido desembolvimiento de las actividades relacionadas al manejo de parqueos.
+Este proyecto consiste en crear un sistema que ayude al facil y rapido desembolvimiento de las actividades relacionadas al manejo de parqueos.
 
 ## Limitaciones
 
