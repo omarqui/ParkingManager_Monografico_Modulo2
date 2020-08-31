@@ -2,6 +2,11 @@
 
 Este poryecto consiste en crear un sistema que ayude al facil y rapido desembolvimiento de las actividades relacionadas al manejo de parqueos.
 
+## Limitaciones
+
+1. Cantidad de parqueo se trabaja por configuraion
+2. Precio se defino por hora en configuracion
+
 ## Formularios
 
 1. Registro Usuario
@@ -39,6 +44,7 @@ Usuario|varchar|25
 Clave|hash||Encriptada
 
 ## Permiso
+
 campo|tipo dato|logitud|nota
 ---|---|---|---
 IdUsuario|int||foreingh key
@@ -46,6 +52,7 @@ IdFormulario|int
 TieneAcceso|bit
 
 ## Uso de Parqueo
+
 campo|tipo dato|logitud|nota
 ---|---|---|---
 IdUso|int
@@ -61,6 +68,7 @@ MontoPagado|decimal
 Devuelta|decimal
 
 ## Configuraciones
+
 campo|tipo dato|logitud|nota
 ---|---|---|---
 NombreEmpresa|varchar
@@ -70,7 +78,8 @@ PoliticaPrecioParqueo|char|1
 PrecioXHora|decimal
 PrecioFijo|decimal
 
-## IdTurno
+## Turno
+
 campo|tipo dato|logitud|nota
 ---|---|---|---
 IdTurno|int
