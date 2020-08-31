@@ -1,6 +1,5 @@
 # ParkingManager_Monografico_Modulo2
-
-Proyecto final para el Modulo 2 del Monografico O&amp
+Proyecto final para el Modulo 2 del Monografico O&M
 
 ## Participantes
 
