@@ -53,7 +53,7 @@ namespace CapaDatos
 
         //    return cadenaConexion;
         //}
-
+        /// pALOMO
 
     }
 }
