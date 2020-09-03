@@ -10,6 +10,7 @@ namespace Entidades
     {
         public void Hola()
         {
+            //hola mundo
             string hola = "HolaMundo";
             Console.WriteLine(hola);
 
