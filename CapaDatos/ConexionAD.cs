@@ -8,6 +8,9 @@ namespace CapaDatos
 {
     class ConexionAD
     {
-
+        public static string ObetenerConexion()
+        {
+            return @"Data Source=MRCODE\MRCODE2017;Initial Catalog=DB_ESTACIONAMIENTO; Integrated Security=True";
+        }
     }
 }
