@@ -21,5 +21,17 @@ namespace CapaPresentacion
         {
 
         }
+
+        private void AsignarValoresPorDefecto()
+        {
+            txtCedula.Clear();
+            txtCelular.Clear();
+            txtClave.Clear();
+            txtCodigoEmpleado.Clear(); //Debe haber un metodo que busque la secuencia y actualice este campo
+            txtDireccion.Clear();
+            txtEstado.Clear();
+            txtNombre.Clear();
+            txtUsuario.Clear();
+        }
     }
 }
