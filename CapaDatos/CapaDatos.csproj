@@ -42,7 +42,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Acceso.cs" />
     <Compile Include="EmpleadoAD.cs" />
     <Compile Include="Interfaces\IEmpleado.cs" />
     <Compile Include="ManejadorConexion.cs" />

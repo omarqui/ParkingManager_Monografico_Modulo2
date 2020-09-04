@@ -26,10 +26,8 @@ namespace CapaDatos
 
         public bool EsUsuarioValido(string usuario, string clave)
         {
-            using (var cmd = new SqlCommand("pa_ValidarUsuario", Conexion))
+            using (var cmd = MakeCommand("pa_ValidarUsuario"))
             {
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Connection.Open();
                 cmd.Parameters.AddWithValue("@usuario", usuario);
                 cmd.Parameters.AddWithValue("@clave", clave);
 
