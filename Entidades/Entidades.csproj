@@ -42,16 +42,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
-<<<<<<< HEAD
     <Compile Include="ConfiguracionEN.cs" />
+    <Compile Include="EmpleadoEN.cs" />
     <Compile Include="PermisoEN.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UsoDeParqueoEN.cs" />
-=======
-    <Compile Include="EmpleadoEN.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TurnoEN.cs" />
->>>>>>> 266ee15dca8fad56b1c8e5f576be00d63f49d53d
+    <Compile Include="UsoDeParqueoEN.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
