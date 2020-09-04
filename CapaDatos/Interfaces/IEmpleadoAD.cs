@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CapaDatos.Interfaces
 {
-    public interface IEmpleado
+    public interface IEmpleadoAD
     {
         void Guardar(Empleado empleado);
 
