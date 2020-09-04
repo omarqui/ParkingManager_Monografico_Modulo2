@@ -16,12 +16,12 @@ namespace CapaDatos
     {
         public Empleado BuscarPorID(int id)
         {
-            throw new NotImplementedException();
+            return BuscarEmpleadoBase(new SqlParameter("idEmpleado",id));
         }
 
         public Empleado BuscarPorUsuario(string usuario)
         {
-            throw new NotImplementedException();
+            return BuscarEmpleadoBase(new SqlParameter("usuario", usuario));
         }
 
         public bool EsUsuarioValido(string usuario, string clave)
@@ -38,9 +38,58 @@ namespace CapaDatos
             }
         }
 
-        public void Guardar(Empleado empleado)
+        public int Guardar(Empleado empleado)
         {
-            throw new NotImplementedException();
+            using (var cmd = new SqlCommand("pa_GetUsuario", Conexion))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("Cedula", empleado.Cedula);
+                cmd.Parameters.AddWithValue("Celular", empleado.Celular);                
+                cmd.Parameters.AddWithValue("Direccion", empleado.Direccion);
+                cmd.Parameters.AddWithValue("EstaActivo", empleado.EstaActivo);
+                cmd.Parameters.AddWithValue("Nombre", empleado.Nombre);
+                
+                if (empleado.IdEmpleado == 0)
+                {
+                    cmd.Parameters.AddWithValue("Clave", empleado.Clave);
+                    cmd.Parameters.AddWithValue("Usuario", empleado.Usuario);
+                }
+
+                cmd.Connection.Open();
+
+                var filasAfectadas = cmd.ExecuteNonQuery();
+
+                return filasAfectadas;
+            }
+        }
+
+        Empleado BuscarEmpleadoBase(SqlParameter parameter)
+        {
+            using (var cmd = new SqlCommand("pa_GetUsuario", Conexion))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add(parameter);
+                cmd.Connection.Open();
+
+                using (var reader = cmd.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        return new Empleado()
+                        {
+                            IdEmpleado = reader["IdEmpleado"] as int? ?? 0,
+                            Cedula = reader["Cedula"].ToString(),
+                            Nombre = reader["Nombre"].ToString(),
+                            Direccion = reader["Direccion"].ToString(),
+                            Celular = reader["Celular"].ToString(),
+                            EstaActivo = reader["EstaActivo"] as bool? ?? false,
+                            Usuario = reader["Usuario"].ToString()
+                        };
+                    }
+                }
+            }
+
+            return null;
         }
     }
 }

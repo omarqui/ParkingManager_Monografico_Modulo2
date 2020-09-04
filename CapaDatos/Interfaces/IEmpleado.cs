@@ -9,7 +9,7 @@ namespace CapaDatos.Interfaces
 {
     public interface IEmpleado
     {
-        void Guardar(Empleado empleado);
+        int Guardar(Empleado empleado);
 
         Empleado BuscarPorID(int id);
 
