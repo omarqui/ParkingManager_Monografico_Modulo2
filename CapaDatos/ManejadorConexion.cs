@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Data;
 using System.Data.SqlClient;
 using System.IO;
 using System.Linq;
@@ -38,6 +39,17 @@ namespace CapaDatos
 
                 return _conexion;
             }
+        }
+
+        public static SqlCommand MakeCommand(string cmdText, CommandType type = CommandType.StoredProcedure)
+        {
+            var cmd = new SqlCommand(cmdText, Conexion)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
+            cmd.Connection.Open();
+
+            return cmd;
         }
     }
 }
