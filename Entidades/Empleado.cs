@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    public class EmpleadoEN
+    public class Empleado
     {
         public int IdEmpleado { get; set; }
         public int Cedula { get; set; }

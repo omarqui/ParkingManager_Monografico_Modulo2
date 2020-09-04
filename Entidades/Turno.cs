@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    class TurnoEN
+    class Turno
     {
         public int IdTurno { get; set; }
         public int IdEmpleado { get; set; }
