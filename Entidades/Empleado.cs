@@ -10,11 +10,12 @@ namespace Entidades
     public class Empleado
     {
         public int IdEmpleado { get; set; }
-        public int Cedula { get; set; }
+        public string Cedula { get; set; }
         public string Nombre { get; set; }
         public string Direccion { get; set; }
-        public int Celular { get; set; }
+        public string Celular { get; set; }
         public string Usuario { get; set; }
         public string Clave { get; set; }
+        public bool EstaActivo { get; set; }
     }
 }

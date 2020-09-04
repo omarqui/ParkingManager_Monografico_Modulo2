@@ -32,7 +32,7 @@ namespace CapaNegocio
             return empleado.EsUsuarioValido(usuario, clave);
         }
 
-        //NOTA: considero que el metodo Guardar en la capa de datos deberia devolver un true o algo que le haga saber
+        //NOTA: considero que el metodo Guardar en la capa de datos deberia devolver un bool o algo que le haga saber
         // a la capa de presentacion que se guardo con exito. Puede ser en esta misma capa tambien que devuelva este valor.
         public void GuardarEmpleado(Empleado empleado)
         {

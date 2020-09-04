@@ -35,7 +35,6 @@
             this.lblCelular = new System.Windows.Forms.Label();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.lblClave = new System.Windows.Forms.Label();
-            this.lblEstado = new System.Windows.Forms.Label();
             this.txtCodigoEmpleado = new System.Windows.Forms.TextBox();
             this.txtCedula = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
@@ -43,10 +42,10 @@
             this.txtCelular = new System.Windows.Forms.TextBox();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.txtClave = new System.Windows.Forms.TextBox();
-            this.txtEstado = new System.Windows.Forms.TextBox();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.bntGuardar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
+            this.chkEstado = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // lblCodigoEmpleado
@@ -112,15 +111,6 @@
             this.lblClave.TabIndex = 6;
             this.lblClave.Text = "Contraseña";
             // 
-            // lblEstado
-            // 
-            this.lblEstado.AutoSize = true;
-            this.lblEstado.Location = new System.Drawing.Point(68, 307);
-            this.lblEstado.Name = "lblEstado";
-            this.lblEstado.Size = new System.Drawing.Size(40, 13);
-            this.lblEstado.TabIndex = 7;
-            this.lblEstado.Text = "Estado";
-            // 
             // txtCodigoEmpleado
             // 
             this.txtCodigoEmpleado.Location = new System.Drawing.Point(175, 32);
@@ -171,13 +161,6 @@
             this.txtClave.Size = new System.Drawing.Size(163, 20);
             this.txtClave.TabIndex = 14;
             // 
-            // txtEstado
-            // 
-            this.txtEstado.Location = new System.Drawing.Point(175, 300);
-            this.txtEstado.Name = "txtEstado";
-            this.txtEstado.Size = new System.Drawing.Size(163, 20);
-            this.txtEstado.TabIndex = 15;
-            // 
             // btnNuevo
             // 
             this.btnNuevo.Location = new System.Drawing.Point(83, 397);
@@ -186,6 +169,7 @@
             this.btnNuevo.TabIndex = 16;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // bntGuardar
             // 
@@ -195,6 +179,7 @@
             this.bntGuardar.TabIndex = 17;
             this.bntGuardar.Text = "Guardar";
             this.bntGuardar.UseVisualStyleBackColor = true;
+            this.bntGuardar.Click += new System.EventHandler(this.bntGuardar_Click);
             // 
             // btnSalir
             // 
@@ -205,15 +190,25 @@
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
             // 
+            // chkEstado
+            // 
+            this.chkEstado.AutoSize = true;
+            this.chkEstado.Location = new System.Drawing.Point(175, 308);
+            this.chkEstado.Name = "chkEstado";
+            this.chkEstado.Size = new System.Drawing.Size(56, 17);
+            this.chkEstado.TabIndex = 19;
+            this.chkEstado.Text = "Activo";
+            this.chkEstado.UseVisualStyleBackColor = true;
+            // 
             // frmMaestroEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(685, 536);
+            this.Controls.Add(this.chkEstado);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.bntGuardar);
             this.Controls.Add(this.btnNuevo);
-            this.Controls.Add(this.txtEstado);
             this.Controls.Add(this.txtClave);
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.txtCelular);
@@ -221,7 +216,6 @@
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.txtCedula);
             this.Controls.Add(this.txtCodigoEmpleado);
-            this.Controls.Add(this.lblEstado);
             this.Controls.Add(this.lblClave);
             this.Controls.Add(this.lblUsuario);
             this.Controls.Add(this.lblCelular);
@@ -246,7 +240,6 @@
         private System.Windows.Forms.Label lblCelular;
         private System.Windows.Forms.Label lblUsuario;
         private System.Windows.Forms.Label lblClave;
-        private System.Windows.Forms.Label lblEstado;
         private System.Windows.Forms.TextBox txtCodigoEmpleado;
         private System.Windows.Forms.TextBox txtCedula;
         private System.Windows.Forms.TextBox txtNombre;
@@ -254,9 +247,9 @@
         private System.Windows.Forms.TextBox txtCelular;
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.TextBox txtClave;
-        private System.Windows.Forms.TextBox txtEstado;
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.Button bntGuardar;
         private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.CheckBox chkEstado;
     }
 }
