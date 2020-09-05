@@ -43,11 +43,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EmpleadoAD.cs" />
-    <Compile Include="Interfaces\IEmpleado.cs" />
+    <Compile Include="Interfaces\IEmpleadoAD.cs" />
     <Compile Include="ManejadorConexion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\Entidades\Entidades.csproj">
       <Project>{1348fd89-482e-4b06-940c-ba804b9837b4}</Project>

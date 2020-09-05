@@ -12,7 +12,7 @@ using static CapaDatos.ManejadorConexion;
 
 namespace CapaDatos
 {
-    public class EmpleadoAD : IEmpleado
+    public class EmpleadoAD : IEmpleadoAD
     {
         public Empleado BuscarPorID(int id)
         {

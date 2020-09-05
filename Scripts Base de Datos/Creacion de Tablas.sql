@@ -36,6 +36,7 @@ Direccion nvarchar(400) DEFAULT '',
 Celular nvarchar(30) DEFAULT '',
 Usuario nvarchar(30),
 Clave binary(64) NOT NULL,
+EstaActivo bit NOT NULL DEFAULT 1,
 CONSTRAINT PK_EMPLEADO_IdEmpleado PRIMARY KEY (IdEmpleado),
 CONSTRAINT CHK_EMPLEADO_Clave CHECK (Clave <> '')
 )
