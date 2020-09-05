@@ -47,17 +47,26 @@ namespace CapaDatos
                 Transaction = transaction,
                 CommandType = type
             };
-            cmd.Connection.Open();
+            if (connection.State == ConnectionState.Closed)
+            {
+                cmd.Connection.Open();
+            }
 
             return cmd;
         }
 
-        //public static SqlCommand CrearCommandConTransaccion(
+        //public static SqlCommand CrearCommand(
+        //    SqlConnection connection,
         //    string cmdText,
         //    out SqlTransaction transaction,
         //    CommandType type = CommandType.StoredProcedure)
         //{
-        //    var cmd = CrearCommand(cmdText, type: type);
+
+        //    var cmd = new SqlCommand(cmdText, connection)
+        //    {
+        //        CommandType = type
+        //    };
+        //    cmd.Connection.Open();
         //    transaction = cmd.Connection.BeginTransaction();
         //    cmd.Transaction = transaction;
 
