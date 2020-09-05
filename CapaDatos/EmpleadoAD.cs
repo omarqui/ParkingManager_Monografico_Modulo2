@@ -12,7 +12,7 @@ using static CapaDatos.ManejadorConexion;
 
 namespace CapaDatos
 {
-    public class EmpleadoAD : IEmpleadoAD, ISecuenacia
+    public class EmpleadoAD : IEmpleadoAD, ISecuencia
     {
         public Empleado BuscarPorID(int id)
         {
@@ -58,7 +58,7 @@ namespace CapaDatos
             }
         }
 
-        public int ObtenerSecuenacia()
+        public int ObtenerSecuencia()
         {
             return ObtenerSecuenaciaBase("IdEmpleado", "Empleado");
         }

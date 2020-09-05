@@ -45,7 +45,7 @@ namespace CapaDatos
         {
             var cmd = new SqlCommand(cmdText, Conexion)
             {
-                CommandType = CommandType.StoredProcedure
+                CommandType = type
             };
             cmd.Connection.Open();
 

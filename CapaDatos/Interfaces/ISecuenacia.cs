@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace CapaDatos.Interfaces
 {
-    public interface ISecuenacia
+    public interface ISecuencia
     {
-        int ObtenerSecuenacia();
+        int ObtenerSecuencia();
     }
 }

@@ -51,7 +51,7 @@
             // lblCodigoEmpleado
             // 
             this.lblCodigoEmpleado.AutoSize = true;
-            this.lblCodigoEmpleado.Location = new System.Drawing.Point(56, 39);
+            this.lblCodigoEmpleado.Location = new System.Drawing.Point(69, 39);
             this.lblCodigoEmpleado.Name = "lblCodigoEmpleado";
             this.lblCodigoEmpleado.Size = new System.Drawing.Size(40, 13);
             this.lblCodigoEmpleado.TabIndex = 0;
@@ -60,7 +60,7 @@
             // lblCedula
             // 
             this.lblCedula.AutoSize = true;
-            this.lblCedula.Location = new System.Drawing.Point(56, 89);
+            this.lblCedula.Location = new System.Drawing.Point(69, 89);
             this.lblCedula.Name = "lblCedula";
             this.lblCedula.Size = new System.Drawing.Size(40, 13);
             this.lblCedula.TabIndex = 1;
@@ -69,7 +69,7 @@
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(59, 118);
+            this.lblNombre.Location = new System.Drawing.Point(69, 118);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(44, 13);
             this.lblNombre.TabIndex = 2;
@@ -78,7 +78,7 @@
             // lblDireccion
             // 
             this.lblDireccion.AutoSize = true;
-            this.lblDireccion.Location = new System.Drawing.Point(59, 161);
+            this.lblDireccion.Location = new System.Drawing.Point(69, 161);
             this.lblDireccion.Name = "lblDireccion";
             this.lblDireccion.Size = new System.Drawing.Size(52, 13);
             this.lblDireccion.TabIndex = 3;
@@ -87,7 +87,7 @@
             // lblCelular
             // 
             this.lblCelular.AutoSize = true;
-            this.lblCelular.Location = new System.Drawing.Point(59, 199);
+            this.lblCelular.Location = new System.Drawing.Point(69, 199);
             this.lblCelular.Name = "lblCelular";
             this.lblCelular.Size = new System.Drawing.Size(39, 13);
             this.lblCelular.TabIndex = 4;
@@ -96,7 +96,7 @@
             // lblUsuario
             // 
             this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Location = new System.Drawing.Point(68, 240);
+            this.lblUsuario.Location = new System.Drawing.Point(69, 240);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(43, 13);
             this.lblUsuario.TabIndex = 5;

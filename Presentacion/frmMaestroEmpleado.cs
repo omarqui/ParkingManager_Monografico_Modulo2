@@ -30,7 +30,7 @@ namespace CapaPresentacion
             txtCedula.Clear();
             txtCelular.Clear();
             txtClave.Clear();
-            txtCodigoEmpleado.Clear(); //Debe haber un metodo que busque la secuencia y actualice este campo
+            txtCodigoEmpleado.Text = EmpleadoLG.ObtenerSecuencia().ToString(); ; //Debe haber un metodo que busque la secuencia y actualice este campo
             txtDireccion.Clear();
             txtNombre.Clear();
             txtUsuario.Clear();
@@ -45,7 +45,7 @@ namespace CapaPresentacion
                 Empleado empleadoEntidad = new Empleado();
 
                 //Asignando valores recogidos del formulario a los atributos de la entidad
-                //empleadoEntidad.IdEmpleado = Convert.ToInt32(txtCodigoEmpleado.Text);
+                empleadoEntidad.IdEmpleado = Convert.ToInt32(txtCodigoEmpleado.Text);
                 empleadoEntidad.Nombre = txtNombre.Text.Trim();
                 empleadoEntidad.Cedula = txtCedula.Text.Trim();
                 empleadoEntidad.Celular = txtCelular.Text.Trim();
@@ -54,10 +54,12 @@ namespace CapaPresentacion
                 empleadoEntidad.Usuario = txtUsuario.Text.Trim();
                 empleadoEntidad.EstaActivo = (chkEstado.Checked == true) ? true : false ;
 
+                //Ejecutando metodo que guarda y/o actualiza y devuelve la cantidad de registros afectados
                 int registroGuardado = empleadoLogica.GuardarEmpleado(empleadoEntidad);
                 if (registroGuardado >= 1)
                 {
-                    MessageBox.Show("Guardado con exito","GUARDAR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("Guardado correctamente","GUARDAR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    AsignarValoresPorDefecto();
                 }
 
             }
