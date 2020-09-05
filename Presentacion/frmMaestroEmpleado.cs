@@ -45,7 +45,7 @@ namespace CapaPresentacion
                 Empleado empleadoEntidad = new Empleado();
 
                 //Asignando valores recogidos del formulario a los atributos de la entidad
-                empleadoEntidad.IdEmpleado = Convert.ToInt32(txtCodigoEmpleado.Text);
+                empleadoEntidad.IdEmpleado = 0; //debe llenarse depende si es creado o modi
                 empleadoEntidad.Nombre = txtNombre.Text.Trim();
                 empleadoEntidad.Cedula = txtCedula.Text.Trim();
                 empleadoEntidad.Celular = txtCelular.Text.Trim();
@@ -55,13 +55,19 @@ namespace CapaPresentacion
                 empleadoEntidad.EstaActivo = (chkEstado.Checked == true) ? true : false ;
 
                 //Ejecutando metodo que guarda y/o actualiza y devuelve la cantidad de registros afectados
-                int registroGuardado = empleadoLogica.GuardarEmpleado(empleadoEntidad);
-                if (registroGuardado >= 1)
-                {
-                    MessageBox.Show("Guardado correctamente","GUARDAR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    AsignarValoresPorDefecto();
-                }
+                
+                DialogResult respuesta = MessageBox.Show("Seguro que desea guardar esta operación?", "GUARDAR", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
+                if (respuesta == DialogResult.Yes)
+                {
+                    int registroGuardado = empleadoLogica.GuardarEmpleado(empleadoEntidad);
+                    if (registroGuardado >= 1)
+                    {
+                        MessageBox.Show("Guardado correctamente", "GUARDAR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        AsignarValoresPorDefecto();
+                    }
+
+                }               
             }
             catch (Exception)
             {
