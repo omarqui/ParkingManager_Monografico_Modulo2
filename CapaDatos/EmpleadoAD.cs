@@ -12,11 +12,11 @@ using static CapaDatos.ManejadorConexion;
 
 namespace CapaDatos
 {
-    public class EmpleadoAD : IEmpleadoAD
+    public class EmpleadoAD : IEmpleadoAD, ISecuenacia
     {
         public Empleado BuscarPorID(int id)
         {
-            return BuscarEmpleadoBase(new SqlParameter("idEmpleado",id));
+            return BuscarEmpleadoBase(new SqlParameter("id",id));
         }
 
         public Empleado BuscarPorUsuario(string usuario)
@@ -38,12 +38,12 @@ namespace CapaDatos
 
         public int Guardar(Empleado empleado)
         {
-            using (var cmd = MakeCommand("pa_GetUsuario"))
+            using (var cmd = MakeCommand("pa_insertarEmpleado"))
             {
+                cmd.Parameters.AddWithValue("IdEmpleado", empleado.IdEmpleado);
                 cmd.Parameters.AddWithValue("Cedula", empleado.Cedula);
                 cmd.Parameters.AddWithValue("Celular", empleado.Celular);                
-                cmd.Parameters.AddWithValue("Direccion", empleado.Direccion);
-                cmd.Parameters.AddWithValue("EstaActivo", empleado.EstaActivo);
+                cmd.Parameters.AddWithValue("Direccion", empleado.Direccion);                
                 cmd.Parameters.AddWithValue("Nombre", empleado.Nombre);
                 
                 if (empleado.IdEmpleado == 0)
@@ -58,9 +58,27 @@ namespace CapaDatos
             }
         }
 
-        Empleado BuscarEmpleadoBase(SqlParameter parameter)
+        public int ObtenerSecuenacia()
         {
-            using (var cmd = MakeCommand("pa_GetUsuario"))
+            return ObtenerSecuenaciaBase("IdEmpleado", "Empleado");
+        }
+
+        public DataTable BuscarTodos()
+        {
+            DataTable dt = new DataTable();
+            using (var cmd = MakeCommand("pa_buscarEmpleado"))
+            {
+                using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
+                {
+                    adapter.Fill(dt);
+                    return dt;
+                }
+            }
+        }
+
+        private Empleado BuscarEmpleadoBase(SqlParameter parameter)
+        {
+            using (var cmd = MakeCommand("pa_buscarEmpleado"))
             {
                 cmd.Parameters.Add(parameter);
 
@@ -84,5 +102,7 @@ namespace CapaDatos
 
             return null;
         }
+
+        
     }
 }

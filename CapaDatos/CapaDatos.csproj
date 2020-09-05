@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="EmpleadoAD.cs" />
     <Compile Include="Interfaces\IEmpleadoAD.cs" />
+    <Compile Include="Interfaces\ISecuenacia.cs" />
     <Compile Include="ManejadorConexion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
