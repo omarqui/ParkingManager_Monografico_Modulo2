@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaDatos", "CapaDatos\Capa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entidades", "Entidades\Entidades.csproj", "{1348FD89-482E-4B06-940C-BA804B9837B4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaDatosUnitTest", "CapaDatosUnitTest\CapaDatosUnitTest.csproj", "{1DD594AF-118F-4C0B-88B0-97193B9EA43B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTest", "UnitTest", "{A0E9056C-2A58-4256-B4EF-D597EB641F2B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,9 +37,16 @@ Global
 		{1348FD89-482E-4B06-940C-BA804B9837B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1348FD89-482E-4B06-940C-BA804B9837B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1348FD89-482E-4B06-940C-BA804B9837B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DD594AF-118F-4C0B-88B0-97193B9EA43B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DD594AF-118F-4C0B-88B0-97193B9EA43B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DD594AF-118F-4C0B-88B0-97193B9EA43B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DD594AF-118F-4C0B-88B0-97193B9EA43B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1DD594AF-118F-4C0B-88B0-97193B9EA43B} = {A0E9056C-2A58-4256-B4EF-D597EB641F2B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {686B541D-8934-4952-AF85-87F1010A4C82}
