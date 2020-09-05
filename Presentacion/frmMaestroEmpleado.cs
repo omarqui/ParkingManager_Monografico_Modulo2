@@ -29,9 +29,19 @@ namespace CapaPresentacion
             txtClave.Clear();
             txtCodigoEmpleado.Clear(); //Debe haber un metodo que busque la secuencia y actualice este campo
             txtDireccion.Clear();
-            txtEstado.Clear();
+            //txtEstado.Clear();
             txtNombre.Clear();
             txtUsuario.Clear();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
