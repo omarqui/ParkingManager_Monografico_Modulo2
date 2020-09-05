@@ -18,33 +18,33 @@ namespace CapaDatos
         {
             get
             {
-                if (_conexion == null)
-                {
-                    string cadenaConexion;
+                string cadenaConexion;
 
-                    string dir = AppDomain.CurrentDomain.BaseDirectory;
-                    string file = dir + "\\Local.config";
-                    if (File.Exists(file))
-                    {                        
-                        StreamReader leerConexion = new StreamReader(file);
-                        cadenaConexion = leerConexion.ReadLine();
-                    } 
-                    else
-                    {
-                        cadenaConexion = ConfigurationManager.ConnectionStrings["ConexionDB"].ToString();
-                    }
-                    
-                    _conexion = new SqlConnection(cadenaConexion);
+                string dir = AppDomain.CurrentDomain.BaseDirectory;
+                string file = dir + "\\Local.config";
+                if (File.Exists(file))
+                {
+                    StreamReader leerConexion = new StreamReader(file);
+                    cadenaConexion = leerConexion.ReadLine();
+                }
+                else
+                {
+                    cadenaConexion = ConfigurationManager.ConnectionStrings["ConexionDB"].ToString();
                 }
 
-                return _conexion;
+                return new SqlConnection(cadenaConexion);
             }
         }
 
-        public static SqlCommand MakeCommand(string cmdText, CommandType type = CommandType.StoredProcedure)
+        public static SqlCommand CrearCommand(
+            SqlConnection connection,
+            string cmdText,
+            SqlTransaction transaction = null,
+            CommandType type = CommandType.StoredProcedure)
         {
-            var cmd = new SqlCommand(cmdText, Conexion)
+            var cmd = new SqlCommand(cmdText, connection)
             {
+                Transaction = transaction,
                 CommandType = type
             };
             cmd.Connection.Open();
@@ -52,19 +52,34 @@ namespace CapaDatos
             return cmd;
         }
 
+        //public static SqlCommand CrearCommandConTransaccion(
+        //    string cmdText,
+        //    out SqlTransaction transaction,
+        //    CommandType type = CommandType.StoredProcedure)
+        //{
+        //    var cmd = CrearCommand(cmdText, type: type);
+        //    transaction = cmd.Connection.BeginTransaction();
+        //    cmd.Transaction = transaction;
+
+        //    return cmd;
+        //}
+
         public static int ObtenerSecuenaciaBase(string nombreCampoSecuencia,
                                             string nombreTabla)
         {
             string cmdText = $@"SELECT MAX({nombreCampoSecuencia})+1 secuencia
                                 FROM {nombreTabla}";
-
-            using (var cmd = MakeCommand(cmdText, CommandType.Text))
+            using (var conn = Conexion)
             {
-                using (var reader = cmd.ExecuteReader())
+                using (var cmd = CrearCommand(conn, cmdText, type: CommandType.Text))
                 {
-                    if (reader.Read())
+                    using (var reader = cmd.ExecuteReader())
                     {
-                        return reader["secuencia"] as int? ?? 1;
+                        if (reader.Read())
+                        {
+                            int secuencia = reader["secuencia"] as int? ?? 1;
+                            return secuencia;
+                        }
                     }
                 }
             }

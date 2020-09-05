@@ -14,6 +14,18 @@ namespace CapaDatos
 {
     public class EmpleadoAD : IEmpleadoAD, ISecuencia
     {
+        SqlTransaction _sqlTransaction;
+
+        public EmpleadoAD()
+        {
+
+        }
+
+        public EmpleadoAD(SqlTransaction sqlTransaction)
+        {
+            _sqlTransaction = sqlTransaction;
+        }
+
         public Empleado BuscarPorID(int id)
         {
             return BuscarEmpleadoBase(new SqlParameter("id",id));
@@ -26,35 +38,41 @@ namespace CapaDatos
 
         public bool EsUsuarioValido(string usuario, string clave)
         {
-            using (var cmd = MakeCommand("pa_ValidarUsuario"))
+            using (var conn = Conexion)
             {
-                cmd.Parameters.AddWithValue("@usuario", usuario);
-                cmd.Parameters.AddWithValue("@clave", clave);
+                using (var cmd = CrearCommand(conn, "pa_ValidarUsuario"))
+                {
+                    cmd.Parameters.AddWithValue("@usuario", usuario);
+                    cmd.Parameters.AddWithValue("@clave", clave);
 
-                using (var Reader = cmd.ExecuteReader())
-                    return Reader.Read();
+                    using (var Reader = cmd.ExecuteReader())
+                        return Reader.Read();
+                }
             }
         }
 
         public int Guardar(Empleado empleado)
         {
-            using (var cmd = MakeCommand("pa_insertarEmpleado"))
+            using (var conn = Conexion)
             {
-                cmd.Parameters.AddWithValue("IdEmpleado", empleado.IdEmpleado);
-                cmd.Parameters.AddWithValue("Cedula", empleado.Cedula);
-                cmd.Parameters.AddWithValue("Celular", empleado.Celular);                
-                cmd.Parameters.AddWithValue("Direccion", empleado.Direccion);                
-                cmd.Parameters.AddWithValue("Nombre", empleado.Nombre);
-                
-                if (empleado.IdEmpleado == 0)
+                using (var cmd = CrearCommand(conn, "pa_insertarEmpleado"))
                 {
-                    cmd.Parameters.AddWithValue("Clave", empleado.Clave);
-                    cmd.Parameters.AddWithValue("Usuario", empleado.Usuario);
+                    cmd.Parameters.AddWithValue("IdEmpleado", empleado.IdEmpleado);
+                    cmd.Parameters.AddWithValue("Cedula", empleado.Cedula);
+                    cmd.Parameters.AddWithValue("Celular", empleado.Celular);
+                    cmd.Parameters.AddWithValue("Direccion", empleado.Direccion);
+                    cmd.Parameters.AddWithValue("Nombre", empleado.Nombre);
+
+                    if (empleado.IdEmpleado == 0)
+                    {
+                        cmd.Parameters.AddWithValue("Clave", empleado.Clave);
+                        cmd.Parameters.AddWithValue("Usuario", empleado.Usuario);
+                    }
+
+                    var filasAfectadas = cmd.ExecuteNonQuery();
+
+                    return filasAfectadas;
                 }
-
-                var filasAfectadas = cmd.ExecuteNonQuery();
-
-                return filasAfectadas;
             }
         }
 
@@ -66,36 +84,43 @@ namespace CapaDatos
         public DataTable BuscarTodos()
         {
             DataTable dt = new DataTable();
-            using (var cmd = MakeCommand("pa_buscarEmpleado"))
+            using (var conn = Conexion)
             {
-                using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
+                using (var cmd = CrearCommand(conn,"pa_buscarEmpleado"))
                 {
-                    adapter.Fill(dt);
-                    return dt;
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
+                    {
+                        adapter.Fill(dt);
+                        return dt;
+                    }
                 }
             }
+            
         }
 
         private Empleado BuscarEmpleadoBase(SqlParameter parameter)
         {
-            using (var cmd = MakeCommand("pa_buscarEmpleado"))
+            using (var conn = Conexion)
             {
-                cmd.Parameters.Add(parameter);
-
-                using (var reader = cmd.ExecuteReader())
+                using (var cmd = CrearCommand(conn, "pa_buscarEmpleado"))
                 {
-                    if (reader.Read())
+                    cmd.Parameters.Add(parameter);
+
+                    using (var reader = cmd.ExecuteReader())
                     {
-                        return new Empleado()
+                        if (reader.Read())
                         {
-                            IdEmpleado = reader["IdEmpleado"] as int? ?? 0,
-                            Cedula = reader["Cedula"].ToString(),
-                            Nombre = reader["Nombre"].ToString(),
-                            Direccion = reader["Direccion"].ToString(),
-                            Celular = reader["Celular"].ToString(),
-                            EstaActivo = reader["EstaActivo"] as bool? ?? false,
-                            Usuario = reader["Usuario"].ToString()
-                        };
+                            return new Empleado()
+                            {
+                                IdEmpleado = reader["IdEmpleado"] as int? ?? 0,
+                                Cedula = reader["Cedula"].ToString(),
+                                Nombre = reader["Nombre"].ToString(),
+                                Direccion = reader["Direccion"].ToString(),
+                                Celular = reader["Celular"].ToString(),
+                                EstaActivo = reader["EstaActivo"] as bool? ?? false,
+                                Usuario = reader["Usuario"].ToString()
+                            };
+                        }
                     }
                 }
             }
