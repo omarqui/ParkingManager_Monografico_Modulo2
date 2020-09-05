@@ -51,5 +51,25 @@ namespace CapaDatos
 
             return cmd;
         }
+
+        public static int ObtenerSecuenaciaBase(string nombreCampoSecuencia,
+                                            string nombreTabla)
+        {
+            string cmdText = $@"SELECT MAX({nombreCampoSecuencia})+1 secuencia
+                                FROM {nombreTabla}";
+
+            using (var cmd = MakeCommand(cmdText, CommandType.Text))
+            {
+                using (var reader = cmd.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        return reader["secuencia"] as int? ?? 1;
+                    }
+                }
+            }
+
+            return 1;
+        }
     }
 }

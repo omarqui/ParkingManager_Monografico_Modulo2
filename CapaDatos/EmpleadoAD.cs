@@ -12,11 +12,11 @@ using static CapaDatos.ManejadorConexion;
 
 namespace CapaDatos
 {
-    public class EmpleadoAD : IEmpleadoAD
+    public class EmpleadoAD : IEmpleadoAD, ISecuenacia
     {
         public Empleado BuscarPorID(int id)
         {
-            return BuscarEmpleadoBase(new SqlParameter("idEmpleado",id));
+            return BuscarEmpleadoBase(new SqlParameter("id",id));
         }
 
         public Empleado BuscarPorUsuario(string usuario)
@@ -38,13 +38,12 @@ namespace CapaDatos
 
         public int Guardar(Empleado empleado)
         {
-            using (var cmd = new SqlCommand("pa_GetUsuario", Conexion))
+            using (var cmd = MakeCommand("pa_insertarEmpleado"))
             {
-                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("IdEmpleado", empleado.IdEmpleado);
                 cmd.Parameters.AddWithValue("Cedula", empleado.Cedula);
                 cmd.Parameters.AddWithValue("Celular", empleado.Celular);                
-                cmd.Parameters.AddWithValue("Direccion", empleado.Direccion);
-                cmd.Parameters.AddWithValue("EstaActivo", empleado.EstaActivo);
+                cmd.Parameters.AddWithValue("Direccion", empleado.Direccion);                
                 cmd.Parameters.AddWithValue("Nombre", empleado.Nombre);
                 
                 if (empleado.IdEmpleado == 0)
@@ -53,21 +52,35 @@ namespace CapaDatos
                     cmd.Parameters.AddWithValue("Usuario", empleado.Usuario);
                 }
 
-                cmd.Connection.Open();
-
                 var filasAfectadas = cmd.ExecuteNonQuery();
 
                 return filasAfectadas;
             }
         }
 
-        Empleado BuscarEmpleadoBase(SqlParameter parameter)
+        public int ObtenerSecuenacia()
         {
-            using (var cmd = new SqlCommand("pa_GetUsuario", Conexion))
+            return ObtenerSecuenaciaBase("IdEmpleado", "Empleado");
+        }
+
+        public DataTable BuscarTodos()
+        {
+            DataTable dt = new DataTable();
+            using (var cmd = MakeCommand("pa_buscarEmpleado"))
             {
-                cmd.CommandType = CommandType.StoredProcedure;
+                using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
+                {
+                    adapter.Fill(dt);
+                    return dt;
+                }
+            }
+        }
+
+        private Empleado BuscarEmpleadoBase(SqlParameter parameter)
+        {
+            using (var cmd = MakeCommand("pa_buscarEmpleado"))
+            {
                 cmd.Parameters.Add(parameter);
-                cmd.Connection.Open();
 
                 using (var reader = cmd.ExecuteReader())
                 {
@@ -89,5 +102,7 @@ namespace CapaDatos
 
             return null;
         }
+
+        
     }
 }

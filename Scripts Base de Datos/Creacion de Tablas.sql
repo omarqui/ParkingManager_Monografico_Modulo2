@@ -29,7 +29,7 @@ BEGIN
 END 
 
 CREATE TABLE EMPLEADO(
-IdEmpleado int IDENTITY, 
+IdEmpleado int,
 Cedula char(11),
 Nombre nvarchar(100) NOT NULL,
 Direccion nvarchar(400) DEFAULT '',
@@ -95,21 +95,3 @@ Devuelta decimal(10,2),
 CONSTRAINT PK_IdUso PRIMARY KEY (IdUso), 
 CONSTRAINT FK_ID_TURNO FOREIGN KEY (IdTurno) REFERENCES TURNO (IdTurno)
 )
-
-----Datos de prueba
-GO
-INSERT INTO [dbo].[EMPLEADO]
-           ([Cedula]
-           ,[Nombre]
-           ,[Direccion]
-           ,[Celular]
-           ,[Usuario]
-           ,[Clave])
-     VALUES
-           ('40224245487'
-           ,'soy un empleado'
-           ,'mi casa'
-           ,'8095487454'
-           ,'admin'
-           ,HASHBYTES('SHA2_512','123'))
-GO
