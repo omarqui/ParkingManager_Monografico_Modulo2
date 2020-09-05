@@ -18,19 +18,7 @@ namespace CapaDatos
         {
             get
             {
-                string cadenaConexion;
-
-                string dir = AppDomain.CurrentDomain.BaseDirectory;
-                string file = dir + "\\Local.config";
-                if (File.Exists(file))
-                {
-                    StreamReader leerConexion = new StreamReader(file);
-                    cadenaConexion = leerConexion.ReadLine();
-                }
-                else
-                {
-                    cadenaConexion = ConfigurationManager.ConnectionStrings["ConexionDB"].ToString();
-                }
+                string cadenaConexion = ConfigurationManager.ConnectionStrings["ConexionDB"].ToString();
 
                 return new SqlConnection(cadenaConexion);
             }
