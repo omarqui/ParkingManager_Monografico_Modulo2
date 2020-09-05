@@ -45,7 +45,7 @@ namespace CapaPresentacion
                 Empleado empleadoEntidad = new Empleado();
 
                 //Asignando valores recogidos del formulario a los atributos de la entidad
-                empleadoEntidad.IdEmpleado = Convert.ToInt32(txtCodigoEmpleado.Text);
+                //empleadoEntidad.IdEmpleado = Convert.ToInt32(txtCodigoEmpleado.Text);
                 empleadoEntidad.Nombre = txtNombre.Text.Trim();
                 empleadoEntidad.Cedula = txtCedula.Text.Trim();
                 empleadoEntidad.Celular = txtCelular.Text.Trim();
@@ -54,7 +54,11 @@ namespace CapaPresentacion
                 empleadoEntidad.Usuario = txtUsuario.Text.Trim();
                 empleadoEntidad.EstaActivo = (chkEstado.Checked == true) ? true : false ;
 
-
+                int registroGuardado = empleadoLogica.GuardarEmpleado(empleadoEntidad);
+                if (registroGuardado >= 1)
+                {
+                    MessageBox.Show("Guardado con exito","GUARDAR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
 
             }
             catch (Exception)
@@ -67,6 +71,16 @@ namespace CapaPresentacion
         private void btnNuevo_Click(object sender, EventArgs e)
         {
             AsignarValoresPorDefecto();
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            DialogResult respuesta = MessageBox.Show("Seguro que desea salir de esta ventana?", "SALIR", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (respuesta == DialogResult.Yes)
+            {
+                this.Dispose();
+            }
         }
     }
 }
