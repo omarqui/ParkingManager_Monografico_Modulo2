@@ -38,9 +38,8 @@ namespace CapaDatos
 
         public int Guardar(Empleado empleado)
         {
-            using (var cmd = new SqlCommand("pa_GetUsuario", Conexion))
+            using (var cmd = MakeCommand("pa_GetUsuario"))
             {
-                cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("Cedula", empleado.Cedula);
                 cmd.Parameters.AddWithValue("Celular", empleado.Celular);                
                 cmd.Parameters.AddWithValue("Direccion", empleado.Direccion);
@@ -53,8 +52,6 @@ namespace CapaDatos
                     cmd.Parameters.AddWithValue("Usuario", empleado.Usuario);
                 }
 
-                cmd.Connection.Open();
-
                 var filasAfectadas = cmd.ExecuteNonQuery();
 
                 return filasAfectadas;
@@ -63,11 +60,9 @@ namespace CapaDatos
 
         Empleado BuscarEmpleadoBase(SqlParameter parameter)
         {
-            using (var cmd = new SqlCommand("pa_GetUsuario", Conexion))
+            using (var cmd = MakeCommand("pa_GetUsuario"))
             {
-                cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.Add(parameter);
-                cmd.Connection.Open();
 
                 using (var reader = cmd.ExecuteReader())
                 {
