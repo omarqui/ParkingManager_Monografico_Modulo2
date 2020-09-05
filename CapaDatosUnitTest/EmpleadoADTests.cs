@@ -2,6 +2,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using CapaDatos;
 using Entidades;
+using System.Data.SqlClient;
 
 namespace CapaDatosUnitTest
 {
@@ -32,6 +33,7 @@ namespace CapaDatosUnitTest
         [TestMethod]
         public void GuardarTests()
         {
+            SqlTransaction transaction;
             var empleadoRepositorio = new EmpleadoAD();
             var empleado = new Empleado()
             {
@@ -44,6 +46,16 @@ namespace CapaDatosUnitTest
             };
 
             Assert.AreEqual(empleadoRepositorio.Guardar(empleado),1);
+
+            //transaction.Rollback();
+        }
+
+        [TestMethod]
+        public void ObtenerSecuenciaTests()
+        {
+            var empleadoRepositorio = new EmpleadoAD();
+            Assert.IsNotNull(empleadoRepositorio.ObtenerSecuencia());
+            Assert.IsNotNull(empleadoRepositorio.ObtenerSecuencia());
         }
     }
 }

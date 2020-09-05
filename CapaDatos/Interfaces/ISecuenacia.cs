@@ -8,6 +8,6 @@ namespace CapaDatos.Interfaces
 {
     public interface ISecuenacia
     {
-        int ObtenerSecuenacia();
+        int ObtenerSecuencia();
     }
 }
