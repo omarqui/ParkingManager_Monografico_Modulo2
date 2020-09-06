@@ -76,8 +76,10 @@ namespace CapaDatos
         public static int ObtenerSecuenaciaBase(string nombreCampoSecuencia,
                                             string nombreTabla)
         {
-            string cmdText = $@"SELECT MAX({nombreCampoSecuencia})+1 secuencia
-                                FROM {nombreTabla}";
+            string cmdText = $@"SELECT TOP 1 {nombreCampoSecuencia}+1 secuencia
+                                FROM {nombreTabla}
+                                ORDER BY {nombreCampoSecuencia} DESC";
+
             using (var conn = Conexion)
             {
                 using (var cmd = CrearCommand(conn, cmdText, type: CommandType.Text))
