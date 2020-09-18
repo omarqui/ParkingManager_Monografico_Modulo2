@@ -12,17 +12,17 @@ using static CapaDatos.ManejadorConexion;
 
 namespace CapaDatos
 {
-    public class EmpleadoAD : AccesadoDatos, IEmpleadoAD, ISecuencia
+    public class EmpleadoAD : AccesadorDatos, IEmpleadoAD, ISecuencia
     {
         public EmpleadoAD()
         {
-            Connection = Conexion;
+            _conexion = ManejadorConexion.Conexion;
         }
 
-        public EmpleadoAD(SqlConnection connection)
+        public EmpleadoAD(SqlConnection conexion)
         {
-            Connection = connection;
-            esAutoManejado = false;
+            _conexion = conexion;
+            esConexionAutoManejado = false;
         }
 
         public Empleado BuscarPorID(int id)
@@ -38,9 +38,9 @@ namespace CapaDatos
         public bool EsUsuarioValido(string usuario, string clave)
         {
 
-            using (var conn = Connection)
+            using (var conn = _conexion)
             {
-                using (var cmd = CrearCommand(Connection, "pa_ValidarUsuario"))
+                using (var cmd = CrearCommand(_conexion, "pa_ValidarUsuario"))
                 {
                     cmd.Parameters.AddWithValue("@usuario", usuario);
                     cmd.Parameters.AddWithValue("@clave", clave);
@@ -56,7 +56,7 @@ namespace CapaDatos
         {
             try
             {
-                using (var cmd = CrearCommand(Connection, "pa_insertarEmpleado", transaction))
+                using (var cmd = CrearCommand(_conexion, "pa_insertarEmpleado", transaction))
                 {
                     cmd.Parameters.AddWithValue("IdEmpleado", empleado.IdEmpleado);
                     cmd.Parameters.AddWithValue("Cedula", empleado.Cedula);
@@ -82,22 +82,22 @@ namespace CapaDatos
             }
             finally
             {
-                if (esAutoManejado)
+                if (esConexionAutoManejado)
                 {
-                    Connection.Close();
+                    _conexion.Close();
                 }
             }
         }
 
         public int ObtenerSecuencia()
         {
-            return ObtenerSecuenaciaBase("IdEmpleado", "Empleado");
+            return ObtenerSiguienteSecuenacia("Empleado", "IdEmpleado");
         }
 
         public DataTable BuscarTodos()
         {
             DataTable dt = new DataTable();
-            using (var conn = Connection)
+            using (var conn = _conexion)
             {
                 using (var cmd = CrearCommand(conn, "pa_buscarEmpleado"))
                 {
@@ -113,7 +113,7 @@ namespace CapaDatos
 
         private Empleado BuscarEmpleadoBase(SqlParameter parameter)
         {
-            using (var conn = Connection)
+            using (var conn = _conexion)
             {
                 using (var cmd = CrearCommand(conn, "pa_buscarEmpleado"))
                 {

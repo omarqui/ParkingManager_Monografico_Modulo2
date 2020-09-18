@@ -12,8 +12,6 @@ namespace CapaDatos
 {
     public class ManejadorConexion
     {
-        static private SqlConnection _conexion;
-
         static public SqlConnection Conexion
         {
             get
@@ -73,29 +71,26 @@ namespace CapaDatos
         //    return cmd;
         //}
 
-        public static int ObtenerSecuenaciaBase(string nombreCampoSecuencia,
-                                            string nombreTabla)
+        public static int ObtenerSiguienteSecuenacia(
+            string nombreTabla,
+            string nombreCampoSecuencia)
         {
-            string cmdText = $@"SELECT TOP 1 {nombreCampoSecuencia}+1 secuencia
-                                FROM {nombreTabla}
-                                ORDER BY {nombreCampoSecuencia} DESC";
+            string cmdText = "usp_getNextSequence";
 
             using (var conn = Conexion)
             {
-                using (var cmd = CrearCommand(conn, cmdText, type: CommandType.Text))
+                using (var cmd = CrearCommand(conn, cmdText))
                 {
-                    using (var reader = cmd.ExecuteReader())
-                    {
-                        if (reader.Read())
-                        {
-                            int secuencia = reader["secuencia"] as int? ?? 1;
-                            return secuencia;
-                        }
-                    }
+                    cmd.Parameters.AddWithValue("tableName", nombreTabla);
+                    cmd.Parameters.AddWithValue("columnName", nombreCampoSecuencia);                    
+
+                    var secuencia = cmd.Parameters.Add("@ReturnVal", SqlDbType.Int);
+                    secuencia.Direction = ParameterDirection.ReturnValue;
+
+                    cmd.ExecuteReader();
+                    return (int)secuencia.Value;
                 }
             }
-
-            return 1;
         }
     }
 }

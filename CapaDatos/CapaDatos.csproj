@@ -42,7 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AccesadoDatos.cs" />
+    <Compile Include="AccesadorDatos.cs" />
     <Compile Include="EmpleadoAD.cs" />
     <Compile Include="Interfaces\IEmpleadoAD.cs" />
     <Compile Include="Interfaces\ISecuencia.cs" />
