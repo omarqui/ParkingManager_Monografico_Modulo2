@@ -97,3 +97,47 @@ begin
 end
 GO
 
+CREATE proc pa_BuscarConfiguracion
+AS
+BEGIN
+	IF NOT EXISTS(SELECT TOP 1 * FROM CONFIGURACIONES)
+		EXEC pa_InsertDefaultConfig 
+
+	SELECT TOP 1 * 
+	FROM CONFIGURACIONES
+END
+GO
+CREATE PROC pa_InsertDefaultConfig
+AS 
+INSERT INTO CONFIGURACIONES (NombreEmpresa
+									,DireccionEmpresa
+									,TelefonoEmpresa
+									,PrecioPorHora
+									,CantidadParqueos)
+		VALUES ('EMPRESA PRUEBA'
+			   ,'MOCA'
+			   ,'8095784578'
+			   ,10
+			   ,50)
+GO
+CREATE PROC pa_ActualizarConfiguracion(
+	@NombreEmpresa nvarchar(400),
+	@DireccionEmpresa nvarchar (400),
+	@TelefonoEmpresa nvarchar(20),
+	@PrecioPorHora decimal(10,2),
+	@CantidadParqueos int
+)
+AS
+BEGIN 
+	IF NOT EXISTS(SELECT TOP 1 * FROM CONFIGURACIONES)
+		EXEC pa_InsertDefaultConfig 
+	 
+		
+	UPDATE CONFIGURACIONES
+		SET NombreEmpresa = @NombreEmpresa
+		   ,DireccionEmpresa = @DireccionEmpresa
+		   ,TelefonoEmpresa = @TelefonoEmpresa
+		   ,PrecioPorHora = @PrecioPorHora
+		   ,CantidadParqueos = @CantidadParqueos
+END 
+
