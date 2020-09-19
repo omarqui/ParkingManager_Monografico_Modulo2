@@ -75,14 +75,14 @@ namespace CapaDatos
             string nombreTabla,
             string nombreCampoSecuencia)
         {
-            string cmdText = "usp_getNextSequence";
+            string cmdText = "pa_buscarSiguienteSecuencia";
 
             using (var conn = Conexion)
             {
                 using (var cmd = CrearCommand(conn, cmdText))
                 {
-                    cmd.Parameters.AddWithValue("tableName", nombreTabla);
-                    cmd.Parameters.AddWithValue("columnName", nombreCampoSecuencia);                    
+                    cmd.Parameters.AddWithValue("nombreTabla", nombreTabla);
+                    cmd.Parameters.AddWithValue("nombreColumna", nombreCampoSecuencia);                    
 
                     var secuencia = cmd.Parameters.Add("@ReturnVal", SqlDbType.Int);
                     secuencia.Direction = ParameterDirection.ReturnValue;
