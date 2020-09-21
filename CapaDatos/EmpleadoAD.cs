@@ -62,6 +62,7 @@ namespace CapaDatos
                     cmd.Parameters.AddWithValue("Celular", empleado.Celular);
                     cmd.Parameters.AddWithValue("Direccion", empleado.Direccion);
                     cmd.Parameters.AddWithValue("Nombre", empleado.Nombre);
+                    cmd.Parameters.AddWithValue("EstaActivo", empleado.EstaActivo);
 
                     if (empleado.IdEmpleado == 0)
                     {

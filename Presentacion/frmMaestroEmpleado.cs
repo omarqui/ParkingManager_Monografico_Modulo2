@@ -19,6 +19,15 @@ namespace CapaPresentacion
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Constructor que se utiliza cuando se llama el formulario para editar un Empleado
+        /// </summary>
+        public frmMaestroEmpleado(int idEmpleadoBusqueda)
+        {
+            InitializeComponent();
+            CargarDatosEmpleado(idEmpleadoBusqueda);
+        }
+
         private void frmMaestroEmpleado_Load(object sender, EventArgs e)
         {
             //Colocar valores por defecto al cargar el formulario
@@ -118,6 +127,17 @@ namespace CapaPresentacion
             {
                 this.Dispose();
             }
+        }
+
+        private void CargarDatosEmpleado(int idEmpleado)
+        {
+            //Cargando el empleado en una variable tipo Entidad Empleado
+            Empleado empleadoCargado = EmpleadoLG.BuscarEmpleado(idEmpleado);
+            
+            //Colocando los datos en cada campo que corresponde
+            txtCodigoEmpleado.Text = empleadoCargado.IdEmpleado.ToString();
+            txtNombre.Text = empleadoCargado.Nombre;
+
         }
     }
 }

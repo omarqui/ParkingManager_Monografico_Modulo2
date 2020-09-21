@@ -43,6 +43,7 @@ CREATE PROCEDURE [dbo].[pa_insertarEmpleado]
    ,@Nombre nvarchar(100)
    ,@Direccion nvarchar(400)
    ,@Celular nvarchar(30)
+   ,@EstaActivo bit
    ,@Usuario nvarchar(30) = null
    ,@Clave nvarchar(30) = null
 AS
@@ -56,6 +57,7 @@ BEGIN
 				   ,[Nombre]
 				   ,[Direccion]
 				   ,[Celular]
+				   ,[EstaActivo]
 				   ,[Usuario]
 				   ,[Clave])
 			 VALUES
@@ -64,6 +66,7 @@ BEGIN
 				   ,@Nombre
 				   ,@Direccion
 				   ,@Celular
+				   ,@EstaActivo
 				   ,@Usuario
 				   ,HASHBYTES('SHA2_512',@Clave))
 	ELSE 
@@ -72,6 +75,7 @@ BEGIN
 			  ,[Nombre] = @Nombre
 			  ,[Direccion] = @Direccion
 			  ,[Celular] = @Celular
+			  ,[EstaActivo] = @EstaActivo
 		 WHERE IdEmpleado = @IdEmpleado
 END
 GO
