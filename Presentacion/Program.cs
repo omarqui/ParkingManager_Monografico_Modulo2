@@ -18,6 +18,7 @@ namespace CapaPresentacion
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new frmMaestroEmpleado());
             Application.Run(new FrmPrincipal());
+            //Application.Run(new frmLogin());
         }
     }
 }
