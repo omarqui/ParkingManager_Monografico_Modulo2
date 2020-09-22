@@ -33,19 +33,5 @@ namespace CapaPresentacion
             txtNombre.Clear();
             txtUsuario.Clear();
         }
-
-        private void lblClave_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnSalir_Click(object sender, EventArgs e)
-        {
-            DialogResult respuesta = MessageBox.Show("Seguro que sea Salir?", "SALIR", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (respuesta == DialogResult.Yes)
-            {
-                Application.Exit();
-            }
-        }
     }
 }

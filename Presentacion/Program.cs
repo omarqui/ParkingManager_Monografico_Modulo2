@@ -14,11 +14,10 @@ namespace CapaPresentacion
         [STAThread]
         static void Main()
         {
-            //Application.EnableVisualStyles();
-            //Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmMaestroEmpleado());
-            //Application.Run(new FrmPrincipal());
-            //Application.Run(new frmLogin());
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            //Application.Run(new frmMaestroEmpleado());
+            Application.Run(new FrmPrincipal());
         }
     }
 }
