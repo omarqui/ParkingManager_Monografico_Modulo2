@@ -132,5 +132,14 @@ namespace CapaPresentacion
         {
 
         }
+
+        private void BtnSalirPrincipal_Click(object sender, EventArgs e)
+        {
+            DialogResult respuesta = MessageBox.Show("Seguro que sea Salir?", "SALIR", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (respuesta == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
     }
 }
