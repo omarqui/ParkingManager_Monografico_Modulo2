@@ -16,6 +16,8 @@ namespace CapaPresentacion
     {
         ///Esta propieda sirve para saber si se esta editando un empleado o no
         public bool estaEditando { get; set; }
+        public int idEmpleadoEditar { get; set; }
+
         public frmMaestroEmpleado()
         {
             InitializeComponent();
@@ -27,6 +29,7 @@ namespace CapaPresentacion
         public frmMaestroEmpleado(int idEmpleadoBusqueda)
         {
             InitializeComponent();
+            idEmpleadoEditar = idEmpleadoBusqueda;
             CargarDatosEmpleado(idEmpleadoBusqueda);
         }
 
@@ -86,7 +89,7 @@ namespace CapaPresentacion
                         Empleado empleadoEntidad = new Empleado();
 
                         //Asignando valores recogidos del formulario a los atributos de la entidad
-                        empleadoEntidad.IdEmpleado = 0; //debe llenarse depende si es creado o modifinando
+                        empleadoEntidad.IdEmpleado = (estaEditando) ?  this.idEmpleadoEditar : EmpleadoLG.ObtenerSecuencia();   //debe llenarse depende si es creado o modifinando
                         empleadoEntidad.Nombre = txtNombre.Text.Trim();
                         empleadoEntidad.Cedula = txtCedula.Text.Trim();
                         empleadoEntidad.Celular = txtCelular.Text.Trim();
