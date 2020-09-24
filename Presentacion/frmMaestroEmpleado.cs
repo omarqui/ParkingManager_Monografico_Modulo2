@@ -21,6 +21,8 @@ namespace CapaPresentacion
         public frmMaestroEmpleado()
         {
             InitializeComponent();
+            idEmpleadoEditar = 0;
+            estaEditando = false;
         }
 
         /// <summary>
@@ -52,6 +54,7 @@ namespace CapaPresentacion
             txtNombre.Clear();
             txtUsuario.Clear();
             chkEstado.Checked = true;
+            estaEditando = false;
         }
 
         private void bntGuardar_Click(object sender, EventArgs e)
@@ -66,7 +69,7 @@ namespace CapaPresentacion
                 MessageBox.Show("El campo Usuario no debe estar vacío, complete la información para continuar.", "AVISO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtUsuario.Focus();
             }
-            else if (txtClave.Text == "")
+            else if (txtClave.Text == "" && estaEditando == false)
             {
                 MessageBox.Show("El campo Contraseña no debe estar vacío, complete la información para continuar.", "AVISO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtClave.Focus();
@@ -89,7 +92,7 @@ namespace CapaPresentacion
                         Empleado empleadoEntidad = new Empleado();
 
                         //Asignando valores recogidos del formulario a los atributos de la entidad
-                        empleadoEntidad.IdEmpleado = (estaEditando) ?  this.idEmpleadoEditar : EmpleadoLG.ObtenerSecuencia();   //debe llenarse depende si es creado o modifinando
+                        empleadoEntidad.IdEmpleado = this.idEmpleadoEditar ;   //debe llenarse depende si es creado o modifinando
                         empleadoEntidad.Nombre = txtNombre.Text.Trim();
                         empleadoEntidad.Cedula = txtCedula.Text.Trim();
                         empleadoEntidad.Celular = txtCelular.Text.Trim();

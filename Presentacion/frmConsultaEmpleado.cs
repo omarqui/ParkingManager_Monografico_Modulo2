@@ -24,8 +24,14 @@ namespace CapaPresentacion
             LlenarInformacionDataDrid();            
         }
 
+        /// <summary>
+        /// Este metodo llena la informacion del grid
+        /// </summary>
         private void LlenarInformacionDataDrid()
         {
+            //Limpar el grid
+            dtgvEmpleado.Rows.Clear();
+
             DataTable datosEmpleado = EmpleadoLG.BuscarTodosEmpleados();
 
             foreach (DataRow registro in datosEmpleado.Rows)
@@ -44,6 +50,7 @@ namespace CapaPresentacion
             frmMaestroEmpleado maestroEmpleado = new frmMaestroEmpleado(idEmpleado);
             maestroEmpleado.estaEditando = true;
             maestroEmpleado.ShowDialog(this);
+            LlenarInformacionDataDrid();
 
         }
 
@@ -52,6 +59,7 @@ namespace CapaPresentacion
             frmMaestroEmpleado maestroEmpleado = new frmMaestroEmpleado();
             maestroEmpleado.estaEditando = false;
             maestroEmpleado.ShowDialog(this);
+            LlenarInformacionDataDrid();
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
