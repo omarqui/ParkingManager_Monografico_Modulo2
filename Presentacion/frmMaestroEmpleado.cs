@@ -105,7 +105,7 @@ namespace CapaPresentacion
                         int registroGuardado = empleadoLogica.GuardarEmpleado(empleadoEntidad);
                         if (registroGuardado >= 1)
                         {
-                            MessageBox.Show("Guardado correctamente", "GUARDAR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            MessageBox.Show("Guardado correctamente", "GUARDAR", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             AsignarValoresPorDefecto();
                         }
 

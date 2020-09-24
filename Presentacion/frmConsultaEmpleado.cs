@@ -45,12 +45,21 @@ namespace CapaPresentacion
 
         private void btnEditarEmpleado_Click(object sender, EventArgs e)
         {
-            int idEmpleado = Convert.ToInt32(dtgvEmpleado.CurrentRow.Cells["dgvIdEmpleado"].Value);
-            
-            frmMaestroEmpleado maestroEmpleado = new frmMaestroEmpleado(idEmpleado);
-            maestroEmpleado.estaEditando = true;
-            maestroEmpleado.ShowDialog(this);
-            LlenarInformacionDataDrid();
+            if (dtgvEmpleado.Rows.Count <= 0)
+            {
+                MessageBox.Show("Debe seleccionar un registro para editar", "AVISO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                int idEmpleado = Convert.ToInt32(dtgvEmpleado.CurrentRow.Cells["dgvIdEmpleado"].Value);
+
+                frmMaestroEmpleado maestroEmpleado = new frmMaestroEmpleado(idEmpleado);
+                maestroEmpleado.estaEditando = true;
+                maestroEmpleado.ShowDialog(this);
+                LlenarInformacionDataDrid();
+            }
+
+
 
         }
 
