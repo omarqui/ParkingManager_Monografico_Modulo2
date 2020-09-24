@@ -113,12 +113,17 @@
     <Content Include="Recursos\coche.png" />
     <Content Include="Recursos\Configuración.png" />
     <Content Include="Recursos\Consulta.png" />
+    <None Include="Recursos\Edit User Male_40px.png" />
     <Content Include="Recursos\EMPLEADOS.png" />
     <Content Include="Recursos\exit.png" />
+    <None Include="Recursos\guardar.png" />
+    <None Include="Recursos\guardar peq.png" />
+    <None Include="Recursos\Exit_64px.png" />
     <Content Include="Recursos\iconos .png" />
     <Content Include="Recursos\Inicio.png" />
     <Content Include="Recursos\llave.png" />
     <Content Include="Recursos\LOGO.png" />
+    <None Include="Recursos\nuevo.png" />
     <Content Include="Recursos\Procesos.png" />
     <Content Include="Recursos\Reporte.png" />
     <Content Include="Recursos\salir.png" />
@@ -130,6 +135,7 @@
     <Content Include="Recursos\unloker3.png" />
     <Content Include="Recursos\Usuario.png" />
     <Content Include="Recursos\WhatsApp Image 2020-09-03 at 11.51.56 PM.jpeg" />
+    <None Include="Resources\nuevo.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CapaNegocio\CapaNegocio.csproj">
