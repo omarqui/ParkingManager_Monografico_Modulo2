@@ -51,6 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConfiguracionADTests.cs" />
+    <Compile Include="TurnoADTests.cs" />
     <Compile Include="EmpleadoADTests.cs" />
     <Compile Include="ManejadorConexionTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

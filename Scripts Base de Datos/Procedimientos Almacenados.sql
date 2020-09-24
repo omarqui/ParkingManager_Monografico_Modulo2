@@ -140,4 +140,62 @@ BEGIN
 		   ,PrecioPorHora = @PrecioPorHora
 		   ,CantidadParqueos = @CantidadParqueos
 END 
+go
 
+
+CREATE PROCEDURE dbo.pa_aperturar_turno 
+    @idEmpleado int,
+	@montoApertura decimal(10,2)
+AS
+BEGIN
+	DECLARE @idGenerado int 
+	EXEC @idGenerado = pa_buscarSiguienteSecuencia 'TURNO', 'IdTurno'
+	
+    INSERT INTO TURNO (
+		IdTurno
+	   ,IdEmpleado
+	   ,FechaApertura
+	   ,MontoApertura
+	)
+	VALUES (
+		@idGenerado
+	   ,@idEmpleado
+	   ,GETDATE()
+	   ,@montoApertura
+	)
+END
+
+GO
+
+CREATE PROCEDURE dbo.pa_cerrar_turno 
+    @idTurno int,
+	@montoCobrado decimal(10,2),
+	@montoEntregado decimal(10,2),
+	@montoDiferencia decimal(10,2)
+AS
+BEGIN
+    UPDATE TURNO 
+	SET FechaCierre = GETDATE()
+	   ,MontoCobrado = @montoCobrado
+	   ,MontoEntregado = @montoEntregado
+	   ,MontoDiferencia = @montoDiferencia
+	WHERE IdTurno = @idTurno
+END
+
+GO 
+
+CREATE PROCEDURE dbo.pa_buscarTurno
+    @idTurno int
+AS
+BEGIN
+    SELECT IdTurno
+	      ,IdEmpleado
+		  ,FechaApertura
+		  ,FechaCierre
+		  ,MontoApertura
+		  ,MontoCobrado
+		  ,MontoEntregado
+		  ,MontoDiferencia
+	FROM TURNO
+	WHERE IdTurno = @idTurno
+END
