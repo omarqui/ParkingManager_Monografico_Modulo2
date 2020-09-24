@@ -145,6 +145,13 @@ namespace CapaPresentacion
             //Colocando los datos en cada campo que corresponde
             txtCodigoEmpleado.Text = empleadoCargado.IdEmpleado.ToString();
             txtNombre.Text = empleadoCargado.Nombre;
+            txtCedula.Text = empleadoCargado.Cedula;
+            txtCelular.Text = empleadoCargado.Celular;
+            txtDireccion.Text = empleadoCargado.Direccion;
+            txtUsuario.Text = empleadoCargado.Usuario;
+            chkEstado.Checked = empleadoCargado.EstaActivo;
+            txtClave.Visible = false;
+            lblClave.Visible = false;
 
         }
     }
