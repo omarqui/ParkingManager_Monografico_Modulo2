@@ -63,13 +63,13 @@ IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES
 
 CREATE TABLE TURNO(
 IdTurno INT, 
-IdEmpleado INT, 
-FechaApertura datetime DEFAULT GETDATE(), 
-FechaCierre datetime, 
-MontoApertura decimal(10,2) NOT NULL DEFAULT 0,
-MontoCobrado decimal(10,2) NOT NULL DEFAULT 0,
-MontoEntregado decimal(10,2) NOT NULL DEFAULT 0,
-MontoDiferencia decimal(10,2) NOT NULL DEFAULT 0,
+IdEmpleado INT NOT NULL, 
+FechaApertura datetime NOT NULL CONSTRAINT DF_TURNO_FechaApertura DEFAULT GETDATE(), 
+FechaCierre datetime NULL, 
+MontoApertura decimal(10,2) NOT NULL,
+MontoCobrado decimal(10,2),
+MontoEntregado decimal(10,2),
+MontoDiferencia decimal(10,2),
 CONSTRAINT PK_IdTurno PRIMARY KEY (IdTurno),
 CONSTRAINT FK_IdEmpleado_TURNO FOREIGN KEY (IdEmpleado) REFERENCES EMPLEADO(IdEmpleado)
 )
@@ -85,14 +85,29 @@ IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES
 CREATE TABLE USO_DE_PARQUEO(
 IdUso int,
 IdTurno int,
-FechaEntrada datetime,
-FechaSalida datetime,
-TiempoUso decimal(10,2),
-PrecioPorMinuto decimal(10,2),
-Descuento decimal(10,2),
-Total decimal(10,2),
-MontoPagado decimal(10,2),
-Devuelta decimal(10,2),
+FechaEntrada datetime NOT NULL CONSTRAINT DF_USO_DE_PARQUEO_FechaEntrada DEFAULT GETDATE(),
+FechaSalida datetime NULL,
+TiempoUso decimal(10,2) NULL,
+PrecioPorMinuto decimal(10,2) NOT NULL,
+Total decimal(10,2) NULL,
 CONSTRAINT PK_IdUso PRIMARY KEY (IdUso), 
 CONSTRAINT FK_ID_TURNO FOREIGN KEY (IdTurno) REFERENCES TURNO (IdTurno)
+)
+
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES 
+	WHERE TABLE_NAME = 'COBRO_PARQUEO'
+)
+	DROP TABLE COBRO_PARQUEO
+
+CREATE TABLE COBRO_PARQUEO(
+IdCobro int,
+IdUso int,
+IdTurno int,
+Descuento decimal(10,2) NULL,
+MontoCobrado decimal(10,2) NOT NULL,
+MontoPagado decimal(10,2) NOT NULL,
+Devuelta decimal(10,2) NOT NULL,
+CONSTRAINT PK_IdCobro PRIMARY KEY (IdUso),
+CONSTRAINT FK_COBRO_PARQUEO_IdTurno FOREIGN KEY (IdTurno) REFERENCES TURNO (IdTurno),
+CONSTRAINT FK_COBRO_PARQUEO_IdUso FOREIGN KEY (IdUso) REFERENCES USO_DE_PARQUEO (IdUso)
 )
