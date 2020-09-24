@@ -46,5 +46,22 @@ namespace CapaPresentacion
             maestroEmpleado.ShowDialog(this);
 
         }
+
+        private void btnNuevoEmpleado_Click(object sender, EventArgs e)
+        {
+            frmMaestroEmpleado maestroEmpleado = new frmMaestroEmpleado();
+            maestroEmpleado.estaEditando = false;
+            maestroEmpleado.ShowDialog(this);
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            DialogResult respuesta = MessageBox.Show("Seguro que desea salir de esta ventana?", "SALIR", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (respuesta == DialogResult.Yes)
+            {
+                this.Dispose();
+            }
+        }
     }
 }
