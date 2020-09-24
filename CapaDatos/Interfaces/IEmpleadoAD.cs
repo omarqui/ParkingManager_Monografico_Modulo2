@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,7 +11,7 @@ namespace CapaDatos.Interfaces
 {
     public interface IEmpleadoAD
     {
-        int Guardar(Empleado empleado);
+        int Guardar(Empleado empleado, SqlTransaction transaction = null);
 
         Empleado BuscarPorID(int id);
 

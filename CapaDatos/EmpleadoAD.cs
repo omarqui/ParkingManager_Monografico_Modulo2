@@ -12,23 +12,22 @@ using static CapaDatos.ManejadorConexion;
 
 namespace CapaDatos
 {
-    public class EmpleadoAD : IEmpleadoAD, ISecuencia
+    public class EmpleadoAD : AccesadorDatos, IEmpleadoAD, ISecuencia
     {
-        SqlTransaction _sqlTransaction;
-
         public EmpleadoAD()
         {
-
+            _conexion = ManejadorConexion.Conexion;
         }
 
-        public EmpleadoAD(SqlTransaction sqlTransaction)
+        public EmpleadoAD(SqlConnection conexion)
         {
-            _sqlTransaction = sqlTransaction;
+            _conexion = conexion;
+            esConexionAutoManejado = false;
         }
 
         public Empleado BuscarPorID(int id)
         {
-            return BuscarEmpleadoBase(new SqlParameter("id",id));
+            return BuscarEmpleadoBase(new SqlParameter("id", id));
         }
 
         public Empleado BuscarPorUsuario(string usuario)
@@ -38,9 +37,10 @@ namespace CapaDatos
 
         public bool EsUsuarioValido(string usuario, string clave)
         {
-            using (var conn = Conexion)
+
+            using (var conn = _conexion)
             {
-                using (var cmd = CrearCommand(conn, "pa_ValidarUsuario"))
+                using (var cmd = CrearCommand(_conexion, "pa_ValidarUsuario"))
                 {
                     cmd.Parameters.AddWithValue("@usuario", usuario);
                     cmd.Parameters.AddWithValue("@clave", clave);
@@ -49,13 +49,14 @@ namespace CapaDatos
                         return Reader.Read();
                 }
             }
+
         }
 
-        public int Guardar(Empleado empleado)
+        public int Guardar(Empleado empleado, SqlTransaction transaction = null)
         {
-            using (var conn = Conexion)
+            try
             {
-                using (var cmd = CrearCommand(conn, "pa_insertarEmpleado"))
+                using (var cmd = CrearCommand(_conexion, "pa_insertarEmpleado", transaction))
                 {
                     cmd.Parameters.AddWithValue("IdEmpleado", empleado.IdEmpleado);
                     cmd.Parameters.AddWithValue("Cedula", empleado.Cedula);
@@ -74,20 +75,32 @@ namespace CapaDatos
 
                     return filasAfectadas;
                 }
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                if (esConexionAutoManejado)
+                {
+                    _conexion.Close();
+                }
             }
         }
 
         public int ObtenerSecuencia()
         {
-            return ObtenerSecuenaciaBase("IdEmpleado", "Empleado");
+            return ObtenerSiguienteSecuenacia("Empleado", "IdEmpleado");
         }
 
         public DataTable BuscarTodos()
         {
             DataTable dt = new DataTable();
-            using (var conn = Conexion)
+            using (var conn = _conexion)
             {
-                using (var cmd = CrearCommand(conn,"pa_buscarEmpleado"))
+                using (var cmd = CrearCommand(conn, "pa_buscarEmpleado"))
                 {
                     using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
                     {
@@ -96,12 +109,12 @@ namespace CapaDatos
                     }
                 }
             }
-            
+
         }
 
         private Empleado BuscarEmpleadoBase(SqlParameter parameter)
         {
-            using (var conn = Conexion)
+            using (var conn = _conexion)
             {
                 using (var cmd = CrearCommand(conn, "pa_buscarEmpleado"))
                 {
@@ -129,6 +142,6 @@ namespace CapaDatos
             return null;
         }
 
-        
+
     }
 }

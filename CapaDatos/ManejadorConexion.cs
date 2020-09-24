@@ -12,8 +12,6 @@ namespace CapaDatos
 {
     public class ManejadorConexion
     {
-        static private SqlConnection _conexion;
-
         static public SqlConnection Conexion
         {
             get
@@ -35,44 +33,52 @@ namespace CapaDatos
                 Transaction = transaction,
                 CommandType = type
             };
-            cmd.Connection.Open();
+            if (connection.State == ConnectionState.Closed)
+            {
+                cmd.Connection.Open();
+            }
 
             return cmd;
         }
 
-        //public static SqlCommand CrearCommandConTransaccion(
+        //public static SqlCommand CrearCommand(
+        //    SqlConnection connection,
         //    string cmdText,
         //    out SqlTransaction transaction,
         //    CommandType type = CommandType.StoredProcedure)
         //{
-        //    var cmd = CrearCommand(cmdText, type: type);
+
+        //    var cmd = new SqlCommand(cmdText, connection)
+        //    {
+        //        CommandType = type
+        //    };
+        //    cmd.Connection.Open();
         //    transaction = cmd.Connection.BeginTransaction();
         //    cmd.Transaction = transaction;
 
         //    return cmd;
         //}
 
-        public static int ObtenerSecuenaciaBase(string nombreCampoSecuencia,
-                                            string nombreTabla)
+        public static int ObtenerSiguienteSecuenacia(
+            string nombreTabla,
+            string nombreCampoSecuencia)
         {
-            string cmdText = $@"SELECT MAX({nombreCampoSecuencia})+1 secuencia
-                                FROM {nombreTabla}";
+            string cmdText = "pa_buscarSiguienteSecuencia";
+
             using (var conn = Conexion)
             {
-                using (var cmd = CrearCommand(conn, cmdText, type: CommandType.Text))
+                using (var cmd = CrearCommand(conn, cmdText))
                 {
-                    using (var reader = cmd.ExecuteReader())
-                    {
-                        if (reader.Read())
-                        {
-                            int secuencia = reader["secuencia"] as int? ?? 1;
-                            return secuencia;
-                        }
-                    }
+                    cmd.Parameters.AddWithValue("nombreTabla", nombreTabla);
+                    cmd.Parameters.AddWithValue("nombreColumna", nombreCampoSecuencia);                    
+
+                    var secuencia = cmd.Parameters.Add("@ReturnVal", SqlDbType.Int);
+                    secuencia.Direction = ParameterDirection.ReturnValue;
+
+                    cmd.ExecuteReader();
+                    return (int)secuencia.Value;
                 }
             }
-
-            return 1;
         }
     }
 }
