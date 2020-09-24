@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CapaNegocio;
 
 namespace CapaPresentacion
 {
@@ -29,6 +30,35 @@ namespace CapaPresentacion
             {
                 Application.Exit();
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string usuario = textBox1.Text.Trim();
+            string clave = textBox2.Text.Trim();
+            bool esValido = EmpleadoLG.EsUsuarioValido(usuario, clave);
+
+            try
+            {
+                if (esValido)
+                {
+                    FrmPrincipal presentacion = new FrmPrincipal();
+                    this.Hide();
+                    presentacion.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Usuario o contraseña incorrecto", "AVISO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    textBox1.Focus();
+                }
+
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show("Ha ocurrido un error al momento de verificar los datos suministrados \n " + error.Message, "AVISO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                textBox1.Focus();
+            }
+
         }
     }
 }
