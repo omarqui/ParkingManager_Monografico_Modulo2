@@ -33,21 +33,27 @@ namespace CapaDatosUnitTest
         [TestMethod]
         public void GuardarTests()
         {
-            SqlTransaction transaction;
-            var empleadoRepositorio = new EmpleadoAD();
-            var empleado = new Empleado()
+            using (var conn = ManejadorConexion.Conexion)
             {
-                Cedula = "123",
-                Celular = "4546",
-                Clave = "123",
-                Direccion = "klk",
-                Nombre = "jua",
-                Usuario = "kd"
-            };
+                conn.Open();
+                using (SqlTransaction transaction = conn.BeginTransaction())
+                {
+                    var empleadoRepositorio = new EmpleadoAD(conn);
+                    var empleado = new Empleado()
+                    {
+                        Cedula = "123",
+                        Celular = "4546",
+                        Clave = "123",
+                        Direccion = "klk",
+                        Nombre = "jua",
+                        Usuario = "kd"
+                    };
 
-            Assert.AreEqual(empleadoRepositorio.Guardar(empleado),1);
+                    Assert.AreEqual(empleadoRepositorio.Guardar(empleado, transaction), 1);
 
-            //transaction.Rollback();
+                    transaction.Rollback();
+                }
+            }
         }
 
         [TestMethod]
