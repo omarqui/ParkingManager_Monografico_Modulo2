@@ -64,9 +64,10 @@
             this.lblCodigoEmpleado.AutoSize = true;
             this.lblCodigoEmpleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCodigoEmpleado.ForeColor = System.Drawing.Color.White;
-            this.lblCodigoEmpleado.Location = new System.Drawing.Point(48, 93);
+            this.lblCodigoEmpleado.Location = new System.Drawing.Point(64, 114);
+            this.lblCodigoEmpleado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCodigoEmpleado.Name = "lblCodigoEmpleado";
-            this.lblCodigoEmpleado.Size = new System.Drawing.Size(107, 20);
+            this.lblCodigoEmpleado.Size = new System.Drawing.Size(132, 25);
             this.lblCodigoEmpleado.TabIndex = 0;
             this.lblCodigoEmpleado.Text = "IdEmpleados:";
             // 
@@ -75,9 +76,10 @@
             this.lblCedula.AutoSize = true;
             this.lblCedula.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCedula.ForeColor = System.Drawing.Color.White;
-            this.lblCedula.Location = new System.Drawing.Point(48, 131);
+            this.lblCedula.Location = new System.Drawing.Point(64, 161);
+            this.lblCedula.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCedula.Name = "lblCedula";
-            this.lblCedula.Size = new System.Drawing.Size(59, 20);
+            this.lblCedula.Size = new System.Drawing.Size(75, 25);
             this.lblCedula.TabIndex = 1;
             this.lblCedula.Text = "Cédula";
             // 
@@ -86,9 +88,10 @@
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.ForeColor = System.Drawing.Color.White;
-            this.lblNombre.Location = new System.Drawing.Point(48, 169);
+            this.lblNombre.Location = new System.Drawing.Point(64, 208);
+            this.lblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(65, 20);
+            this.lblNombre.Size = new System.Drawing.Size(81, 25);
             this.lblNombre.TabIndex = 2;
             this.lblNombre.Text = "Nombre";
             // 
@@ -97,9 +100,10 @@
             this.lblDireccion.AutoSize = true;
             this.lblDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDireccion.ForeColor = System.Drawing.Color.White;
-            this.lblDireccion.Location = new System.Drawing.Point(48, 207);
+            this.lblDireccion.Location = new System.Drawing.Point(64, 255);
+            this.lblDireccion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDireccion.Name = "lblDireccion";
-            this.lblDireccion.Size = new System.Drawing.Size(75, 20);
+            this.lblDireccion.Size = new System.Drawing.Size(93, 25);
             this.lblDireccion.TabIndex = 3;
             this.lblDireccion.Text = "Dirección";
             // 
@@ -108,9 +112,10 @@
             this.lblCelular.AutoSize = true;
             this.lblCelular.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCelular.ForeColor = System.Drawing.Color.White;
-            this.lblCelular.Location = new System.Drawing.Point(48, 245);
+            this.lblCelular.Location = new System.Drawing.Point(64, 302);
+            this.lblCelular.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCelular.Name = "lblCelular";
-            this.lblCelular.Size = new System.Drawing.Size(58, 20);
+            this.lblCelular.Size = new System.Drawing.Size(74, 25);
             this.lblCelular.TabIndex = 4;
             this.lblCelular.Text = "Celular";
             // 
@@ -119,9 +124,10 @@
             this.lblUsuario.AutoSize = true;
             this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsuario.ForeColor = System.Drawing.Color.White;
-            this.lblUsuario.Location = new System.Drawing.Point(48, 283);
+            this.lblUsuario.Location = new System.Drawing.Point(64, 348);
+            this.lblUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(64, 20);
+            this.lblUsuario.Size = new System.Drawing.Size(79, 25);
             this.lblUsuario.TabIndex = 5;
             this.lblUsuario.Text = "Usuario";
             // 
@@ -130,9 +136,10 @@
             this.lblClave.AutoSize = true;
             this.lblClave.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblClave.ForeColor = System.Drawing.Color.White;
-            this.lblClave.Location = new System.Drawing.Point(48, 321);
+            this.lblClave.Location = new System.Drawing.Point(64, 395);
+            this.lblClave.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblClave.Name = "lblClave";
-            this.lblClave.Size = new System.Drawing.Size(92, 20);
+            this.lblClave.Size = new System.Drawing.Size(114, 25);
             this.lblClave.TabIndex = 6;
             this.lblClave.Text = "Contraseña";
             // 
@@ -141,71 +148,80 @@
             this.lblEstado.AutoSize = true;
             this.lblEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEstado.ForeColor = System.Drawing.Color.White;
-            this.lblEstado.Location = new System.Drawing.Point(48, 359);
+            this.lblEstado.Location = new System.Drawing.Point(64, 442);
+            this.lblEstado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEstado.Name = "lblEstado";
-            this.lblEstado.Size = new System.Drawing.Size(60, 20);
+            this.lblEstado.Size = new System.Drawing.Size(73, 25);
             this.lblEstado.TabIndex = 7;
             this.lblEstado.Text = "Estado";
             // 
             // txtCodigoEmpleado
             // 
-            this.txtCodigoEmpleado.Location = new System.Drawing.Point(182, 91);
+            this.txtCodigoEmpleado.Location = new System.Drawing.Point(243, 112);
+            this.txtCodigoEmpleado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCodigoEmpleado.Name = "txtCodigoEmpleado";
             this.txtCodigoEmpleado.ReadOnly = true;
-            this.txtCodigoEmpleado.Size = new System.Drawing.Size(100, 20);
+            this.txtCodigoEmpleado.Size = new System.Drawing.Size(132, 22);
             this.txtCodigoEmpleado.TabIndex = 8;
             // 
             // txtCedula
             // 
-            this.txtCedula.Location = new System.Drawing.Point(182, 129);
+            this.txtCedula.Location = new System.Drawing.Point(243, 159);
+            this.txtCedula.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCedula.Name = "txtCedula";
-            this.txtCedula.Size = new System.Drawing.Size(163, 20);
+            this.txtCedula.Size = new System.Drawing.Size(216, 22);
             this.txtCedula.TabIndex = 9;
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(182, 167);
+            this.txtNombre.Location = new System.Drawing.Point(243, 206);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(163, 20);
+            this.txtNombre.Size = new System.Drawing.Size(216, 22);
             this.txtNombre.TabIndex = 10;
             // 
             // txtDireccion
             // 
-            this.txtDireccion.Location = new System.Drawing.Point(182, 205);
+            this.txtDireccion.Location = new System.Drawing.Point(243, 252);
+            this.txtDireccion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(163, 20);
+            this.txtDireccion.Size = new System.Drawing.Size(216, 22);
             this.txtDireccion.TabIndex = 11;
             // 
             // txtCelular
             // 
-            this.txtCelular.Location = new System.Drawing.Point(182, 243);
+            this.txtCelular.Location = new System.Drawing.Point(243, 299);
+            this.txtCelular.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCelular.Name = "txtCelular";
-            this.txtCelular.Size = new System.Drawing.Size(163, 20);
+            this.txtCelular.Size = new System.Drawing.Size(216, 22);
             this.txtCelular.TabIndex = 12;
             // 
             // txtUsuario
             // 
-            this.txtUsuario.Location = new System.Drawing.Point(182, 281);
+            this.txtUsuario.Location = new System.Drawing.Point(243, 346);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(163, 20);
+            this.txtUsuario.Size = new System.Drawing.Size(216, 22);
             this.txtUsuario.TabIndex = 13;
             // 
             // txtClave
             // 
-            this.txtClave.Location = new System.Drawing.Point(182, 319);
+            this.txtClave.Location = new System.Drawing.Point(243, 393);
+            this.txtClave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtClave.Name = "txtClave";
-            this.txtClave.Size = new System.Drawing.Size(163, 20);
+            this.txtClave.Size = new System.Drawing.Size(216, 22);
             this.txtClave.TabIndex = 14;
             // 
             // btnNuevo
             // 
             this.btnNuevo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(36)))), ((int)(((byte)(85)))));
             this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNuevo.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
             this.btnNuevo.ForeColor = System.Drawing.Color.White;
-            this.btnNuevo.Location = new System.Drawing.Point(331, 354);
+            this.btnNuevo.Location = new System.Drawing.Point(441, 436);
+            this.btnNuevo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(81, 31);
+            this.btnNuevo.Size = new System.Drawing.Size(108, 38);
             this.btnNuevo.TabIndex = 16;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.UseVisualStyleBackColor = false;
@@ -214,11 +230,12 @@
             // 
             this.bntGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(36)))), ((int)(((byte)(85)))));
             this.bntGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.bntGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bntGuardar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
             this.bntGuardar.ForeColor = System.Drawing.Color.White;
-            this.bntGuardar.Location = new System.Drawing.Point(425, 354);
+            this.bntGuardar.Location = new System.Drawing.Point(567, 436);
+            this.bntGuardar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bntGuardar.Name = "bntGuardar";
-            this.bntGuardar.Size = new System.Drawing.Size(81, 31);
+            this.bntGuardar.Size = new System.Drawing.Size(108, 38);
             this.bntGuardar.TabIndex = 17;
             this.bntGuardar.Text = "Guardar";
             this.bntGuardar.UseVisualStyleBackColor = false;
@@ -227,11 +244,12 @@
             // 
             this.btnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(36)))), ((int)(((byte)(85)))));
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
             this.btnSalir.ForeColor = System.Drawing.Color.White;
-            this.btnSalir.Location = new System.Drawing.Point(519, 354);
+            this.btnSalir.Location = new System.Drawing.Point(692, 436);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(81, 31);
+            this.btnSalir.Size = new System.Drawing.Size(108, 38);
             this.btnSalir.TabIndex = 18;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = false;
@@ -243,9 +261,10 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.label1.Location = new System.Drawing.Point(210, 23);
+            this.label1.Location = new System.Drawing.Point(280, 28);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(224, 37);
+            this.label1.Size = new System.Drawing.Size(281, 46);
             this.label1.TabIndex = 19;
             this.label1.Text = "EMPLEADOS ";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -253,26 +272,31 @@
             // chkEstado
             // 
             this.chkEstado.AutoSize = true;
-            this.chkEstado.Location = new System.Drawing.Point(182, 364);
+            this.chkEstado.Location = new System.Drawing.Point(243, 448);
+            this.chkEstado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.chkEstado.Name = "chkEstado";
-            this.chkEstado.Size = new System.Drawing.Size(15, 14);
+            this.chkEstado.Size = new System.Drawing.Size(18, 17);
             this.chkEstado.TabIndex = 22;
             this.chkEstado.UseVisualStyleBackColor = true;
             // 
             // pictureBox4
             // 
+            this.pictureBox4.Image = global::CapaPresentacion.Properties.Resources.logo_Parking1;
             this.pictureBox4.Location = new System.Drawing.Point(1, 0);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(31, 28);
+            this.pictureBox4.Size = new System.Drawing.Size(41, 34);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 24;
             this.pictureBox4.TabStop = false;
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Location = new System.Drawing.Point(179, 26);
+            this.pictureBox3.Image = global::CapaPresentacion.Properties.Resources.EMPLEADOS;
+            this.pictureBox3.Location = new System.Drawing.Point(239, 32);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(36, 31);
+            this.pictureBox3.Size = new System.Drawing.Size(48, 38);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 23;
             this.pictureBox3.TabStop = false;
@@ -280,27 +304,30 @@
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(232)))), ((int)(((byte)(170)))));
-            this.pictureBox2.Location = new System.Drawing.Point(439, 159);
+            this.pictureBox2.Location = new System.Drawing.Point(585, 196);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(98, 107);
+            this.pictureBox2.Size = new System.Drawing.Size(131, 132);
             this.pictureBox2.TabIndex = 21;
             this.pictureBox2.TabStop = false;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(376, 82);
+            this.pictureBox1.Image = global::CapaPresentacion.Properties.Resources.Sin_título_1;
+            this.pictureBox1.Location = new System.Drawing.Point(501, 101);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(225, 257);
+            this.pictureBox1.Size = new System.Drawing.Size(300, 316);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 20;
             this.pictureBox1.TabStop = false;
             // 
             // frmMaestroEmpleado
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(31)))), ((int)(((byte)(45)))));
-            this.ClientSize = new System.Drawing.Size(632, 411);
+            this.ClientSize = new System.Drawing.Size(843, 506);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.chkEstado);
@@ -327,6 +354,7 @@
             this.Controls.Add(this.lblCodigoEmpleado);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmMaestroEmpleado";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Maestro Empleado";
