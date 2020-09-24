@@ -139,6 +139,7 @@
     <None Include="Recursos\guardar.png" />
     <None Include="Recursos\guardar peq.png" />
     <None Include="Recursos\Exit_64px.png" />
+    <None Include="Recursos\ICONO LOGO.png" />
     <Content Include="Recursos\iconos .png" />
     <Content Include="Recursos\Inicio.png" />
     <Content Include="Recursos\llave.png" />

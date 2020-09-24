@@ -26,5 +26,10 @@ namespace CapaPresentacion
         {
 
         }
+
+        private void btnSalirTurno_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
