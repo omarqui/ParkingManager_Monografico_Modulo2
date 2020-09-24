@@ -42,6 +42,7 @@ namespace CapaPresentacion
             int idEmpleado = Convert.ToInt32(dtgvEmpleado.CurrentRow.Cells["dgvIdEmpleado"].Value);
             
             frmMaestroEmpleado maestroEmpleado = new frmMaestroEmpleado(idEmpleado);
+            maestroEmpleado.estaEditando = true;
             maestroEmpleado.ShowDialog(this);
 
         }

@@ -14,6 +14,8 @@ namespace CapaPresentacion
 {
     public partial class frmMaestroEmpleado : Form
     {
+        ///Esta propieda sirve para saber si se esta editando un empleado o no
+        public bool estaEditando { get; set; }
         public frmMaestroEmpleado()
         {
             InitializeComponent();
@@ -31,7 +33,10 @@ namespace CapaPresentacion
         private void frmMaestroEmpleado_Load(object sender, EventArgs e)
         {
             //Colocar valores por defecto al cargar el formulario
-            AsignarValoresPorDefecto();
+            if (estaEditando == false)
+            {
+                AsignarValoresPorDefecto();
+            }
         }
 
         private void AsignarValoresPorDefecto()
