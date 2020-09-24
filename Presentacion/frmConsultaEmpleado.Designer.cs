@@ -34,6 +34,8 @@
             this.dgvUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvEstado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnEditarEmpleado = new System.Windows.Forms.Button();
+            this.btnNuevoEmpleado = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvEmpleado)).BeginInit();
             this.SuspendLayout();
             // 
@@ -79,7 +81,7 @@
             // 
             // btnEditarEmpleado
             // 
-            this.btnEditarEmpleado.Location = new System.Drawing.Point(713, 93);
+            this.btnEditarEmpleado.Location = new System.Drawing.Point(703, 142);
             this.btnEditarEmpleado.Name = "btnEditarEmpleado";
             this.btnEditarEmpleado.Size = new System.Drawing.Size(75, 23);
             this.btnEditarEmpleado.TabIndex = 1;
@@ -87,11 +89,31 @@
             this.btnEditarEmpleado.UseVisualStyleBackColor = true;
             this.btnEditarEmpleado.Click += new System.EventHandler(this.btnEditarEmpleado_Click);
             // 
+            // btnNuevoEmpleado
+            // 
+            this.btnNuevoEmpleado.Location = new System.Drawing.Point(703, 113);
+            this.btnNuevoEmpleado.Name = "btnNuevoEmpleado";
+            this.btnNuevoEmpleado.Size = new System.Drawing.Size(75, 23);
+            this.btnNuevoEmpleado.TabIndex = 2;
+            this.btnNuevoEmpleado.Text = "Crear";
+            this.btnNuevoEmpleado.UseVisualStyleBackColor = true;
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.Location = new System.Drawing.Point(703, 205);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(75, 23);
+            this.btnSalir.TabIndex = 3;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = true;
+            // 
             // frmConsultaEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnSalir);
+            this.Controls.Add(this.btnNuevoEmpleado);
             this.Controls.Add(this.btnEditarEmpleado);
             this.Controls.Add(this.dtgvEmpleado);
             this.Name = "frmConsultaEmpleado";
@@ -110,5 +132,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvNombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvUsuario;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvEstado;
+        private System.Windows.Forms.Button btnNuevoEmpleado;
+        private System.Windows.Forms.Button btnSalir;
     }
 }
