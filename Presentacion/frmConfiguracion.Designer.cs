@@ -35,11 +35,12 @@
             this.lblDireccionEmpresa = new System.Windows.Forms.Label();
             this.lblTelefonoEmpresa = new System.Windows.Forms.Label();
             this.lblPrecioPorHora = new System.Windows.Forms.Label();
-            this.PrecioPorHora = new System.Windows.Forms.TextBox();
+            this.txtPrecioPorHora = new System.Windows.Forms.TextBox();
             this.lblCantidadParqueos = new System.Windows.Forms.Label();
             this.nudCantidadParqueos = new System.Windows.Forms.NumericUpDown();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
+            this.llbTituloConfiguracion = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.nudCantidadParqueos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,14 +48,14 @@
             // 
             this.txtNombreEmpresa.Location = new System.Drawing.Point(231, 74);
             this.txtNombreEmpresa.Name = "txtNombreEmpresa";
-            this.txtNombreEmpresa.Size = new System.Drawing.Size(150, 20);
+            this.txtNombreEmpresa.Size = new System.Drawing.Size(236, 20);
             this.txtNombreEmpresa.TabIndex = 0;
             // 
             // txtDireccionEmpresa
             // 
             this.txtDireccionEmpresa.Location = new System.Drawing.Point(231, 114);
             this.txtDireccionEmpresa.Name = "txtDireccionEmpresa";
-            this.txtDireccionEmpresa.Size = new System.Drawing.Size(100, 20);
+            this.txtDireccionEmpresa.Size = new System.Drawing.Size(236, 20);
             this.txtDireccionEmpresa.TabIndex = 1;
             // 
             // txtTelefonoEmpresa
@@ -100,12 +101,12 @@
             this.lblPrecioPorHora.TabIndex = 7;
             this.lblPrecioPorHora.Text = "Precio Por Hora";
             // 
-            // PrecioPorHora
+            // txtPrecioPorHora
             // 
-            this.PrecioPorHora.Location = new System.Drawing.Point(231, 197);
-            this.PrecioPorHora.Name = "PrecioPorHora";
-            this.PrecioPorHora.Size = new System.Drawing.Size(100, 20);
-            this.PrecioPorHora.TabIndex = 6;
+            this.txtPrecioPorHora.Location = new System.Drawing.Point(231, 197);
+            this.txtPrecioPorHora.Name = "txtPrecioPorHora";
+            this.txtPrecioPorHora.Size = new System.Drawing.Size(100, 20);
+            this.txtPrecioPorHora.TabIndex = 6;
             // 
             // lblCantidadParqueos
             // 
@@ -143,17 +144,27 @@
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
+            // llbTituloConfiguracion
+            // 
+            this.llbTituloConfiguracion.AutoSize = true;
+            this.llbTituloConfiguracion.Location = new System.Drawing.Point(203, 28);
+            this.llbTituloConfiguracion.Name = "llbTituloConfiguracion";
+            this.llbTituloConfiguracion.Size = new System.Drawing.Size(88, 13);
+            this.llbTituloConfiguracion.TabIndex = 13;
+            this.llbTituloConfiguracion.Text = "Nombre Empresa";
+            // 
             // frmConfiguracion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 441);
+            this.Controls.Add(this.llbTituloConfiguracion);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.nudCantidadParqueos);
             this.Controls.Add(this.lblCantidadParqueos);
             this.Controls.Add(this.lblPrecioPorHora);
-            this.Controls.Add(this.PrecioPorHora);
+            this.Controls.Add(this.txtPrecioPorHora);
             this.Controls.Add(this.lblTelefonoEmpresa);
             this.Controls.Add(this.lblDireccionEmpresa);
             this.Controls.Add(this.lblNombreEmpresa);
@@ -161,7 +172,7 @@
             this.Controls.Add(this.txtDireccionEmpresa);
             this.Controls.Add(this.txtNombreEmpresa);
             this.Name = "frmConfiguracion";
-            this.Text = "frmConfiguracion";
+            this.Text = "Configuración de Sistema";
             this.Load += new System.EventHandler(this.frmConfiguracion_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nudCantidadParqueos)).EndInit();
             this.ResumeLayout(false);
@@ -178,10 +189,11 @@
         private System.Windows.Forms.Label lblDireccionEmpresa;
         private System.Windows.Forms.Label lblTelefonoEmpresa;
         private System.Windows.Forms.Label lblPrecioPorHora;
-        private System.Windows.Forms.TextBox PrecioPorHora;
+        private System.Windows.Forms.TextBox txtPrecioPorHora;
         private System.Windows.Forms.Label lblCantidadParqueos;
         private System.Windows.Forms.NumericUpDown nudCantidadParqueos;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Label llbTituloConfiguracion;
     }
 }
