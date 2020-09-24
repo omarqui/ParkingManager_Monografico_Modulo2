@@ -121,8 +121,10 @@
     <Content Include="Recursos\close.png" />
     <Content Include="Recursos\coche.png" />
     <Content Include="Recursos\Configuración.png" />
+    <None Include="Recursos\consulta empleado.png" />
     <Content Include="Recursos\Consulta.png" />
     <None Include="Recursos\Edit User Male_40px.png" />
+    <None Include="Recursos\editar.png" />
     <Content Include="Recursos\EMPLEADOS.png" />
     <Content Include="Recursos\exit.png" />
     <None Include="Recursos\guardar.png" />
@@ -133,9 +135,13 @@
     <Content Include="Recursos\llave.png" />
     <Content Include="Recursos\LOGO.png" />
     <None Include="Recursos\nuevo.png" />
+    <None Include="Recursos\new.png" />
     <Content Include="Recursos\Procesos.png" />
+    <None Include="Recursos\registrar.png" />
+    <None Include="Recursos\registrar grand.png" />
     <Content Include="Recursos\Reporte.png" />
     <Content Include="Recursos\salir.png" />
+    <None Include="Recursos\save blanco.png" />
     <Content Include="Recursos\Sin título-1.png" />
     <Content Include="Recursos\Unlock_50px.png" />
     <Content Include="Recursos\unloker.png" />

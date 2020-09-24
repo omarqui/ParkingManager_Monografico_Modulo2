@@ -67,9 +67,9 @@
             this.lblCodigoEmpleado.Location = new System.Drawing.Point(32, 112);
             this.lblCodigoEmpleado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCodigoEmpleado.Name = "lblCodigoEmpleado";
-            this.lblCodigoEmpleado.Size = new System.Drawing.Size(132, 25);
+            this.lblCodigoEmpleado.Size = new System.Drawing.Size(124, 25);
             this.lblCodigoEmpleado.TabIndex = 0;
-            this.lblCodigoEmpleado.Text = "IdEmpleados:";
+            this.lblCodigoEmpleado.Text = "ID Empleado";
             // 
             // lblCedula
             // 
@@ -306,7 +306,7 @@
             this.bntGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.bntGuardar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bntGuardar.ForeColor = System.Drawing.Color.White;
-            this.bntGuardar.Image = global::CapaPresentacion.Properties.Resources.guardar_peq1;
+            this.bntGuardar.Image = global::CapaPresentacion.Properties.Resources.save_blanco;
             this.bntGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bntGuardar.Location = new System.Drawing.Point(567, 436);
             this.bntGuardar.Margin = new System.Windows.Forms.Padding(4);
@@ -329,8 +329,8 @@
             this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnNuevo.Font = new System.Drawing.Font("Arial Rounded MT Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNuevo.ForeColor = System.Drawing.Color.White;
-            this.btnNuevo.Image = global::CapaPresentacion.Properties.Resources.nuevo1;
-            this.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnNuevo.Image = global::CapaPresentacion.Properties.Resources._new;
+            this.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNuevo.Location = new System.Drawing.Point(441, 436);
             this.btnNuevo.Margin = new System.Windows.Forms.Padding(4);
             this.btnNuevo.Name = "btnNuevo";
