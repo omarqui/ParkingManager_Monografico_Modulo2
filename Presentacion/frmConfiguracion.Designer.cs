@@ -40,34 +40,31 @@
             this.lblCantidadParqueos = new System.Windows.Forms.Label();
             this.nudCantidadParqueos = new System.Windows.Forms.NumericUpDown();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnSalir = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.nudCantidadParqueos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtNombreEmpresa
             // 
-            this.txtNombreEmpresa.Location = new System.Drawing.Point(346, 168);
-            this.txtNombreEmpresa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombreEmpresa.Location = new System.Drawing.Point(260, 136);
             this.txtNombreEmpresa.Name = "txtNombreEmpresa";
-            this.txtNombreEmpresa.Size = new System.Drawing.Size(313, 22);
+            this.txtNombreEmpresa.Size = new System.Drawing.Size(236, 20);
             this.txtNombreEmpresa.TabIndex = 0;
             // 
             // txtDireccionEmpresa
             // 
-            this.txtDireccionEmpresa.Location = new System.Drawing.Point(346, 214);
-            this.txtDireccionEmpresa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDireccionEmpresa.Location = new System.Drawing.Point(260, 174);
             this.txtDireccionEmpresa.Name = "txtDireccionEmpresa";
-            this.txtDireccionEmpresa.Size = new System.Drawing.Size(313, 22);
+            this.txtDireccionEmpresa.Size = new System.Drawing.Size(236, 20);
             this.txtDireccionEmpresa.TabIndex = 1;
             // 
             // txtTelefonoEmpresa
             // 
-            this.txtTelefonoEmpresa.Location = new System.Drawing.Point(346, 260);
-            this.txtTelefonoEmpresa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTelefonoEmpresa.Location = new System.Drawing.Point(260, 211);
             this.txtTelefonoEmpresa.Name = "txtTelefonoEmpresa";
-            this.txtTelefonoEmpresa.Size = new System.Drawing.Size(132, 22);
+            this.txtTelefonoEmpresa.Size = new System.Drawing.Size(100, 20);
             this.txtTelefonoEmpresa.TabIndex = 2;
             // 
             // lblNombreEmpresa
@@ -75,10 +72,9 @@
             this.lblNombreEmpresa.AutoSize = true;
             this.lblNombreEmpresa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.lblNombreEmpresa.ForeColor = System.Drawing.Color.White;
-            this.lblNombreEmpresa.Location = new System.Drawing.Point(108, 167);
-            this.lblNombreEmpresa.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNombreEmpresa.Location = new System.Drawing.Point(81, 136);
             this.lblNombreEmpresa.Name = "lblNombreEmpresa";
-            this.lblNombreEmpresa.Size = new System.Drawing.Size(164, 25);
+            this.lblNombreEmpresa.Size = new System.Drawing.Size(133, 20);
             this.lblNombreEmpresa.TabIndex = 3;
             this.lblNombreEmpresa.Text = "Nombre Empresa";
             // 
@@ -87,10 +83,9 @@
             this.lblDireccionEmpresa.AutoSize = true;
             this.lblDireccionEmpresa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.lblDireccionEmpresa.ForeColor = System.Drawing.Color.White;
-            this.lblDireccionEmpresa.Location = new System.Drawing.Point(108, 213);
-            this.lblDireccionEmpresa.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDireccionEmpresa.Location = new System.Drawing.Point(81, 173);
             this.lblDireccionEmpresa.Name = "lblDireccionEmpresa";
-            this.lblDireccionEmpresa.Size = new System.Drawing.Size(176, 25);
+            this.lblDireccionEmpresa.Size = new System.Drawing.Size(143, 20);
             this.lblDireccionEmpresa.TabIndex = 4;
             this.lblDireccionEmpresa.Text = "Direccion Empresa";
             // 
@@ -99,10 +94,9 @@
             this.lblTelefonoEmpresa.AutoSize = true;
             this.lblTelefonoEmpresa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.lblTelefonoEmpresa.ForeColor = System.Drawing.Color.White;
-            this.lblTelefonoEmpresa.Location = new System.Drawing.Point(108, 259);
-            this.lblTelefonoEmpresa.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTelefonoEmpresa.Location = new System.Drawing.Point(81, 210);
             this.lblTelefonoEmpresa.Name = "lblTelefonoEmpresa";
-            this.lblTelefonoEmpresa.Size = new System.Drawing.Size(172, 25);
+            this.lblTelefonoEmpresa.Size = new System.Drawing.Size(139, 20);
             this.lblTelefonoEmpresa.TabIndex = 5;
             this.lblTelefonoEmpresa.Text = "Teléfono Empresa";
             // 
@@ -111,19 +105,17 @@
             this.lblPrecioPorHora.AutoSize = true;
             this.lblPrecioPorHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.lblPrecioPorHora.ForeColor = System.Drawing.Color.White;
-            this.lblPrecioPorHora.Location = new System.Drawing.Point(108, 305);
-            this.lblPrecioPorHora.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPrecioPorHora.Location = new System.Drawing.Point(81, 248);
             this.lblPrecioPorHora.Name = "lblPrecioPorHora";
-            this.lblPrecioPorHora.Size = new System.Drawing.Size(149, 25);
+            this.lblPrecioPorHora.Size = new System.Drawing.Size(120, 20);
             this.lblPrecioPorHora.TabIndex = 7;
             this.lblPrecioPorHora.Text = "Precio Por Hora";
             // 
             // txtPrecioPorHora
             // 
-            this.txtPrecioPorHora.Location = new System.Drawing.Point(346, 306);
-            this.txtPrecioPorHora.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPrecioPorHora.Location = new System.Drawing.Point(260, 249);
             this.txtPrecioPorHora.Name = "txtPrecioPorHora";
-            this.txtPrecioPorHora.Size = new System.Drawing.Size(132, 22);
+            this.txtPrecioPorHora.Size = new System.Drawing.Size(100, 20);
             this.txtPrecioPorHora.TabIndex = 6;
             // 
             // lblCantidadParqueos
@@ -131,48 +123,29 @@
             this.lblCantidadParqueos.AutoSize = true;
             this.lblCantidadParqueos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.lblCantidadParqueos.ForeColor = System.Drawing.Color.White;
-            this.lblCantidadParqueos.Location = new System.Drawing.Point(108, 351);
-            this.lblCantidadParqueos.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCantidadParqueos.Location = new System.Drawing.Point(81, 285);
             this.lblCantidadParqueos.Name = "lblCantidadParqueos";
-            this.lblCantidadParqueos.Size = new System.Drawing.Size(207, 25);
+            this.lblCantidadParqueos.Size = new System.Drawing.Size(167, 20);
             this.lblCantidadParqueos.TabIndex = 9;
             this.lblCantidadParqueos.Text = "Cantidad de Parqueos";
             // 
             // nudCantidadParqueos
             // 
-            this.nudCantidadParqueos.Location = new System.Drawing.Point(346, 352);
-            this.nudCantidadParqueos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nudCantidadParqueos.Location = new System.Drawing.Point(260, 286);
             this.nudCantidadParqueos.Name = "nudCantidadParqueos";
-            this.nudCantidadParqueos.Size = new System.Drawing.Size(133, 22);
+            this.nudCantidadParqueos.Size = new System.Drawing.Size(100, 20);
             this.nudCantidadParqueos.TabIndex = 10;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::CapaPresentacion.Properties.Resources.logo_Parking1;
-            this.pictureBox1.Location = new System.Drawing.Point(113, 21);
+            this.pictureBox1.Location = new System.Drawing.Point(85, 17);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(550, 103);
+            this.pictureBox1.Size = new System.Drawing.Size(412, 84);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 14;
             this.pictureBox1.TabStop = false;
-            // 
-            // btnSalir
-            // 
-            this.btnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(36)))), ((int)(((byte)(85)))));
-            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSalir.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F);
-            this.btnSalir.ForeColor = System.Drawing.Color.White;
-            this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
-            this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalir.Location = new System.Drawing.Point(551, 418);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(4);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(108, 38);
-            this.btnSalir.TabIndex = 12;
-            this.btnSalir.Text = "Salir";
-            this.btnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnSalir.UseVisualStyleBackColor = false;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btnGuardar
             // 
@@ -182,10 +155,9 @@
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
             this.btnGuardar.Image = global::CapaPresentacion.Properties.Resources.save_blanco;
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardar.Location = new System.Drawing.Point(346, 418);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnGuardar.Location = new System.Drawing.Point(260, 340);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(108, 38);
+            this.btnGuardar.Size = new System.Drawing.Size(81, 31);
             this.btnGuardar.TabIndex = 11;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -193,14 +165,31 @@
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(36)))), ((int)(((byte)(85)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F);
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(415, 340);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(81, 31);
+            this.button1.TabIndex = 15;
+            this.button1.Text = "Salir";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // frmConfiguracion
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(31)))), ((int)(((byte)(45)))));
-            this.ClientSize = new System.Drawing.Size(843, 506);
+            this.ClientSize = new System.Drawing.Size(632, 411);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.nudCantidadParqueos);
             this.Controls.Add(this.lblCantidadParqueos);
@@ -213,7 +202,6 @@
             this.Controls.Add(this.txtDireccionEmpresa);
             this.Controls.Add(this.txtNombreEmpresa);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmConfiguracion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Configuración de Sistema";
@@ -238,7 +226,7 @@
         private System.Windows.Forms.Label lblCantidadParqueos;
         private System.Windows.Forms.NumericUpDown nudCantidadParqueos;
         private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button1;
     }
 }

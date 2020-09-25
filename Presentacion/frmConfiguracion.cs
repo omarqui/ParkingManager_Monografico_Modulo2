@@ -29,7 +29,7 @@ namespace CapaPresentacion
             DialogResult respuesta = MessageBox.Show("Seguro que desea salir de esta ventana?, se descartarán los cambios realizados", "SALIR", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (respuesta == DialogResult.Yes)
             {
-                this.Dispose();
+                Close();
             }
         }
 
@@ -75,6 +75,16 @@ namespace CapaPresentacion
             txtTelefonoEmpresa.Text = configuracionSistema.TelefonoEmpresa;
             txtPrecioPorHora.Text = configuracionSistema.PrecioPorHora.ToString();
             nudCantidadParqueos.Value = configuracionSistema.CantidadParqueos;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DialogResult respuesta = MessageBox.Show("Seguro que sea Salir?", "SALIR", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (respuesta == DialogResult.Yes)
+            {
+
+                this.Dispose();
+            }
         }
     }
 }

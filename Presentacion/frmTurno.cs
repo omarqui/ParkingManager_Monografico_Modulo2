@@ -32,7 +32,8 @@ namespace CapaPresentacion
             DialogResult respuesta = MessageBox.Show("Seguro que sea Salir?", "SALIR", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (respuesta == DialogResult.Yes)
             {
-                Application.Exit();
+
+                this.Dispose();
             }
         }
     }

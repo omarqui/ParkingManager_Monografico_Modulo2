@@ -51,10 +51,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.PnPrincipal = new System.Windows.Forms.Panel();
+            this.button16 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.BtnSalirPrincipal = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
             this.PnSubMenuReportes = new System.Windows.Forms.Panel();
+            this.button15 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
@@ -355,6 +357,7 @@
             // PnPrincipal
             // 
             this.PnPrincipal.AutoScroll = true;
+            this.PnPrincipal.Controls.Add(this.button16);
             this.PnPrincipal.Controls.Add(this.pictureBox1);
             this.PnPrincipal.Controls.Add(this.BtnSalirPrincipal);
             this.PnPrincipal.Controls.Add(this.button12);
@@ -372,11 +375,31 @@
             this.PnPrincipal.Size = new System.Drawing.Size(299, 663);
             this.PnPrincipal.TabIndex = 1;
             // 
+            // button16
+            // 
+            this.button16.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button16.FlatAppearance.BorderSize = 0;
+            this.button16.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
+            this.button16.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
+            this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button16.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button16.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button16.Location = new System.Drawing.Point(0, 629);
+            this.button16.Name = "button16";
+            this.button16.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.button16.Size = new System.Drawing.Size(282, 32);
+            this.button16.TabIndex = 16;
+            this.button16.Text = "Configuración de Empresa ";
+            this.button16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button16.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button16.UseVisualStyleBackColor = true;
+            this.button16.Click += new System.EventHandler(this.button16_Click);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pictureBox1.Image = global::CapaPresentacion.Properties.Resources.logo_Parking1;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 716);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 661);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(282, 39);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -391,7 +414,7 @@
             this.BtnSalirPrincipal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnSalirPrincipal.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnSalirPrincipal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(36)))), ((int)(((byte)(85)))));
-            this.BtnSalirPrincipal.Location = new System.Drawing.Point(0, 755);
+            this.BtnSalirPrincipal.Location = new System.Drawing.Point(0, 700);
             this.BtnSalirPrincipal.Name = "BtnSalirPrincipal";
             this.BtnSalirPrincipal.Size = new System.Drawing.Size(282, 34);
             this.BtnSalirPrincipal.TabIndex = 14;
@@ -408,27 +431,49 @@
             this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button12.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button12.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button12.Location = new System.Drawing.Point(0, 664);
+            this.button12.Location = new System.Drawing.Point(0, 589);
             this.button12.Name = "button12";
             this.button12.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.button12.Size = new System.Drawing.Size(282, 52);
+            this.button12.Size = new System.Drawing.Size(282, 40);
             this.button12.TabIndex = 13;
             this.button12.Text = "Configuracion";
             this.button12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button12.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // PnSubMenuReportes
             // 
             this.PnSubMenuReportes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(31)))), ((int)(((byte)(45)))));
+            this.PnSubMenuReportes.Controls.Add(this.button15);
             this.PnSubMenuReportes.Controls.Add(this.button11);
             this.PnSubMenuReportes.Controls.Add(this.button10);
             this.PnSubMenuReportes.Controls.Add(this.button9);
             this.PnSubMenuReportes.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PnSubMenuReportes.Location = new System.Drawing.Point(0, 547);
+            this.PnSubMenuReportes.Location = new System.Drawing.Point(0, 463);
             this.PnSubMenuReportes.Name = "PnSubMenuReportes";
-            this.PnSubMenuReportes.Size = new System.Drawing.Size(282, 117);
+            this.PnSubMenuReportes.Size = new System.Drawing.Size(282, 126);
             this.PnSubMenuReportes.TabIndex = 12;
+            // 
+            // button15
+            // 
+            this.button15.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button15.FlatAppearance.BorderSize = 0;
+            this.button15.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
+            this.button15.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
+            this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button15.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button15.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button15.Location = new System.Drawing.Point(0, 96);
+            this.button15.Name = "button15";
+            this.button15.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.button15.Size = new System.Drawing.Size(282, 32);
+            this.button15.TabIndex = 3;
+            this.button15.Text = "Lista de facturas";
+            this.button15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button15.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button15.UseVisualStyleBackColor = true;
+            this.button15.Click += new System.EventHandler(this.button15_Click);
             // 
             // button11
             // 
@@ -439,12 +484,12 @@
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button11.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button11.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button11.Location = new System.Drawing.Point(0, 76);
+            this.button11.Location = new System.Drawing.Point(0, 64);
             this.button11.Name = "button11";
             this.button11.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button11.Size = new System.Drawing.Size(282, 35);
+            this.button11.Size = new System.Drawing.Size(282, 32);
             this.button11.TabIndex = 2;
-            this.button11.Text = "button11";
+            this.button11.Text = "Recibo de Ingreso";
             this.button11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button11.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button11.UseVisualStyleBackColor = true;
@@ -459,12 +504,12 @@
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button10.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button10.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button10.Location = new System.Drawing.Point(0, 38);
+            this.button10.Location = new System.Drawing.Point(0, 32);
             this.button10.Name = "button10";
             this.button10.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button10.Size = new System.Drawing.Size(282, 38);
+            this.button10.Size = new System.Drawing.Size(282, 32);
             this.button10.TabIndex = 1;
-            this.button10.Text = "button10";
+            this.button10.Text = "Tiket de Parqueo en Uso";
             this.button10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button10.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button10.UseVisualStyleBackColor = true;
@@ -482,9 +527,9 @@
             this.button9.Location = new System.Drawing.Point(0, 0);
             this.button9.Name = "button9";
             this.button9.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button9.Size = new System.Drawing.Size(282, 38);
+            this.button9.Size = new System.Drawing.Size(282, 32);
             this.button9.TabIndex = 0;
-            this.button9.Text = "button9";
+            this.button9.Text = "Cuadre de caja";
             this.button9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button9.UseVisualStyleBackColor = true;
@@ -499,10 +544,10 @@
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button8.Location = new System.Drawing.Point(0, 495);
+            this.button8.Location = new System.Drawing.Point(0, 423);
             this.button8.Name = "button8";
             this.button8.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.button8.Size = new System.Drawing.Size(282, 52);
+            this.button8.Size = new System.Drawing.Size(282, 40);
             this.button8.TabIndex = 11;
             this.button8.Text = "Reportes";
             this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -517,9 +562,9 @@
             this.PnSubMenuConsulta.Controls.Add(this.button6);
             this.PnSubMenuConsulta.Controls.Add(this.button5);
             this.PnSubMenuConsulta.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PnSubMenuConsulta.Location = new System.Drawing.Point(0, 378);
+            this.PnSubMenuConsulta.Location = new System.Drawing.Point(0, 333);
             this.PnSubMenuConsulta.Name = "PnSubMenuConsulta";
-            this.PnSubMenuConsulta.Size = new System.Drawing.Size(282, 117);
+            this.PnSubMenuConsulta.Size = new System.Drawing.Size(282, 90);
             this.PnSubMenuConsulta.TabIndex = 10;
             // 
             // button7
@@ -531,10 +576,10 @@
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button7.Location = new System.Drawing.Point(0, 76);
+            this.button7.Location = new System.Drawing.Point(0, 64);
             this.button7.Name = "button7";
             this.button7.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button7.Size = new System.Drawing.Size(282, 35);
+            this.button7.Size = new System.Drawing.Size(282, 37);
             this.button7.TabIndex = 2;
             this.button7.Text = "button7";
             this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -551,12 +596,12 @@
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button6.Location = new System.Drawing.Point(0, 38);
+            this.button6.Location = new System.Drawing.Point(0, 32);
             this.button6.Name = "button6";
             this.button6.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button6.Size = new System.Drawing.Size(282, 38);
+            this.button6.Size = new System.Drawing.Size(282, 32);
             this.button6.TabIndex = 1;
-            this.button6.Text = "button6";
+            this.button6.Text = "Consultar Empleado ";
             this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button6.UseVisualStyleBackColor = true;
@@ -574,9 +619,9 @@
             this.button5.Location = new System.Drawing.Point(0, 0);
             this.button5.Name = "button5";
             this.button5.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button5.Size = new System.Drawing.Size(282, 38);
+            this.button5.Size = new System.Drawing.Size(282, 32);
             this.button5.TabIndex = 0;
-            this.button5.Text = "button5";
+            this.button5.Text = "Parqueos en uso x tiempo";
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button5.UseVisualStyleBackColor = true;
@@ -591,10 +636,10 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button4.Location = new System.Drawing.Point(0, 326);
+            this.button4.Location = new System.Drawing.Point(0, 293);
             this.button4.Name = "button4";
             this.button4.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.button4.Size = new System.Drawing.Size(282, 52);
+            this.button4.Size = new System.Drawing.Size(282, 40);
             this.button4.TabIndex = 9;
             this.button4.Text = "Consultas";
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -609,9 +654,9 @@
             this.PnSubMenuProcesos.Controls.Add(this.button2);
             this.PnSubMenuProcesos.Controls.Add(this.button1);
             this.PnSubMenuProcesos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PnSubMenuProcesos.Location = new System.Drawing.Point(0, 210);
+            this.PnSubMenuProcesos.Location = new System.Drawing.Point(0, 192);
             this.PnSubMenuProcesos.Name = "PnSubMenuProcesos";
-            this.PnSubMenuProcesos.Size = new System.Drawing.Size(282, 116);
+            this.PnSubMenuProcesos.Size = new System.Drawing.Size(282, 101);
             this.PnSubMenuProcesos.TabIndex = 8;
             // 
             // BtnSubMenuProcesos
@@ -623,12 +668,12 @@
             this.BtnSubMenuProcesos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnSubMenuProcesos.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnSubMenuProcesos.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.BtnSubMenuProcesos.Location = new System.Drawing.Point(0, 76);
+            this.BtnSubMenuProcesos.Location = new System.Drawing.Point(0, 64);
             this.BtnSubMenuProcesos.Name = "BtnSubMenuProcesos";
             this.BtnSubMenuProcesos.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.BtnSubMenuProcesos.Size = new System.Drawing.Size(282, 34);
+            this.BtnSubMenuProcesos.Size = new System.Drawing.Size(282, 32);
             this.BtnSubMenuProcesos.TabIndex = 2;
-            this.BtnSubMenuProcesos.Text = "button3";
+            this.BtnSubMenuProcesos.Text = "Cuadre de caja";
             this.BtnSubMenuProcesos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnSubMenuProcesos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnSubMenuProcesos.UseVisualStyleBackColor = true;
@@ -643,12 +688,12 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.Location = new System.Drawing.Point(0, 38);
+            this.button2.Location = new System.Drawing.Point(0, 32);
             this.button2.Name = "button2";
             this.button2.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button2.Size = new System.Drawing.Size(282, 38);
+            this.button2.Size = new System.Drawing.Size(282, 32);
             this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
+            this.button2.Text = "Registro de Turno";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button2.UseVisualStyleBackColor = true;
@@ -666,9 +711,9 @@
             this.button1.Location = new System.Drawing.Point(0, 0);
             this.button1.Name = "button1";
             this.button1.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(282, 38);
+            this.button1.Size = new System.Drawing.Size(282, 32);
             this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
+            this.button1.Text = "Entr. Parqueo en Uso";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button1.UseVisualStyleBackColor = true;
@@ -683,10 +728,10 @@
             this.BtnProcesos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnProcesos.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnProcesos.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.BtnProcesos.Location = new System.Drawing.Point(0, 158);
+            this.BtnProcesos.Location = new System.Drawing.Point(0, 152);
             this.BtnProcesos.Name = "BtnProcesos";
             this.BtnProcesos.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.BtnProcesos.Size = new System.Drawing.Size(282, 52);
+            this.BtnProcesos.Size = new System.Drawing.Size(282, 40);
             this.BtnProcesos.TabIndex = 7;
             this.BtnProcesos.Text = "Procesos";
             this.BtnProcesos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -706,7 +751,7 @@
             this.BtnInicio.Location = new System.Drawing.Point(0, 106);
             this.BtnInicio.Name = "BtnInicio";
             this.BtnInicio.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.BtnInicio.Size = new System.Drawing.Size(282, 52);
+            this.BtnInicio.Size = new System.Drawing.Size(282, 46);
             this.BtnInicio.TabIndex = 6;
             this.BtnInicio.Text = "Inicio";
             this.BtnInicio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -853,5 +898,7 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button14;
         private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Button button15;
+        private System.Windows.Forms.Button button16;
     }
 }

@@ -23,6 +23,8 @@ namespace CapaPresentacion
             PnSubMenuProcesos.Visible = false;
             PnSubMenuConsulta.Visible = false;
             PnSubMenuReportes.Visible = false;
+
+            
         }
 
         private void showSubMenu(Panel subMenu)
@@ -90,7 +92,11 @@ namespace CapaPresentacion
 
         private void button2_Click(object sender, EventArgs e)
         {
-            hideSubMenu();
+            frmTurno ControlTurno = new frmTurno();
+            
+            //this.Hide();
+            ControlTurno.Show();
+            //hideSubMenu();
         }
 
         private void BtnSubMenuProcesos_Click(object sender, EventArgs e)
@@ -105,6 +111,9 @@ namespace CapaPresentacion
 
         private void button6_Click(object sender, EventArgs e)
         {
+            frmConsultaEmpleado ConsultarEmpleado = new frmConsultaEmpleado();
+            ConsultarEmpleado.Show();
+
             hideSubMenu();
         }
 
@@ -140,6 +149,24 @@ namespace CapaPresentacion
             {
                 Application.Exit();
             }
+        }
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+            hideSubMenu();
+            frmConfiguracion ConfiguracionEmpresa = new frmConfiguracion();
+            ConfiguracionEmpresa.Show();
+            
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            hideSubMenu();
         }
     }
 }

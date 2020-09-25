@@ -136,7 +136,7 @@ namespace CapaPresentacion
 
             if (respuesta == DialogResult.Yes)
             {
-                this.Dispose();
+                Close();
             }
         }
 
