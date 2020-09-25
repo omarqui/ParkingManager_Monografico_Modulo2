@@ -20,5 +20,7 @@ namespace CapaDatos.Interfaces
         DataTable BuscarTodos();
 
         int BuscarCantidadParqueoDisponibles();
+
+        int CancelarUso(int idUso, SqlTransaction transaction = null);
     }
 }

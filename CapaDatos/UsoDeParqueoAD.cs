@@ -78,7 +78,7 @@ namespace CapaDatos
                     {
                         if (reader.Read())
                         {
-                            return new UsoDeParqueo()
+                            UsoDeParqueo usoDeParqueo = new UsoDeParqueo()
                             {
                                 IdUso = reader["IdUso"] as int? ?? default,
                                 IdTurno = reader["IdTurno"] as int? ?? default,
@@ -87,7 +87,16 @@ namespace CapaDatos
                                 PrecioPorMinuto = reader["PrecioPorMinuto"] as decimal? ?? default,
                                 TiempoUso = reader["TiempoUso"] as decimal? ?? default,
                                 Total = reader["Total"] as decimal? ?? default,
+                                EstaActivo = reader["EstaActivo"] as bool? ?? default,
                             };
+
+                            if (usoDeParqueo.EstaActivo && usoDeParqueo.FechaSalida != null)
+                            {
+                                CobroParqueoDA cobroRepositorio = new CobroParqueoDA();
+                                usoDeParqueo.Cobro = cobroRepositorio.BuscarPorIdUsoParqueo(usoDeParqueo.IdUso);
+                            }
+                            
+                            return usoDeParqueo;
                         }
                     }
                 }
@@ -110,6 +119,33 @@ namespace CapaDatos
                     }
                 }
             };
+        }
+
+        public int CancelarUso(int idUso, SqlTransaction transaction = null)
+        {
+            try
+            {
+                using (var cmd = CrearCommand(_conexion, "pa_CancelarUso", transaction))
+                {
+                    cmd.Parameters.AddWithValue("IdUso", idUso);
+                    
+                    var filasAfectadas = cmd.ExecuteNonQuery();
+
+                    return filasAfectadas;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                if (esConexionAutoManejado)
+                {
+                    _conexion.Close();
+                }
+            }
         }
 
         public int CerrarUso(UsoDeParqueo uso, SqlTransaction transaction = null)

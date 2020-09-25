@@ -15,5 +15,7 @@ namespace Entidades
         public decimal TiempoUso { get; set; }
         public decimal PrecioPorMinuto { get; set; }
         public decimal Total { get; set; }
+        public CobroParqueo Cobro { get; set; }
+        public bool EstaActivo { get; set; }
     }
 }

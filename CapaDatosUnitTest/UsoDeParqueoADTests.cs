@@ -32,6 +32,21 @@ namespace CapaDatosUnitTest
         }
 
         [TestMethod]
+        public void CancelarUsoTests()
+        {
+            using (var conn = ManejadorConexion.Conexion)
+            {
+                conn.Open();
+                using (SqlTransaction transaction = conn.BeginTransaction())
+                {
+                    var repositorio = new UsoDeParqueoAD();
+                    Assert.IsNotNull(repositorio.CancelarUso(1));
+                    transaction.Rollback();
+                }
+            }
+        }
+
+        [TestMethod]
         public void AperturarUsoTests()
         {
             using (var conn = ManejadorConexion.Conexion)

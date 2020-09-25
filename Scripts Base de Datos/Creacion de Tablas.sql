@@ -89,6 +89,7 @@ FechaSalida datetime NULL,
 TiempoUso decimal(10,2) NULL,
 PrecioPorMinuto decimal(10,2) NOT NULL,
 Total decimal(10,2) NULL,
+EstaActivo bit NOT NULL CONSTRAINT DF_USO_DE_PARQUEO_EstaActivo DEFAULT 1
 CONSTRAINT PK_IdUso PRIMARY KEY (IdUso), 
 CONSTRAINT FK_ID_TURNO FOREIGN KEY (IdTurno) REFERENCES TURNO (IdTurno)
 )
