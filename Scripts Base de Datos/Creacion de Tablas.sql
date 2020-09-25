@@ -102,6 +102,7 @@ CREATE TABLE COBRO_PARQUEO(
 IdCobro int,
 IdUso int,
 IdTurno int,
+fecha datetime NOT NULL CONSTRAINT DF_COBRO_PARQUEO_fecha DEFAULT GETDATE(),
 Descuento decimal(10,2) NULL,
 MontoCobrado decimal(10,2) NOT NULL,
 MontoPagado decimal(10,2) NOT NULL,

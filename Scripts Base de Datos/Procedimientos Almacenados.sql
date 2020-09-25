@@ -267,3 +267,56 @@ BEGIN
 	
 	RETURN ISNULL(@cantidad,0)
 END
+
+GO
+
+create PROCEDURE [dbo].[pa_InsertarCobro]
+	@idUso int,
+	@IdTurno int,
+	@descuento decimal(10,2),
+	@montoCobrado decimal(10,2),
+	@montoPagado decimal(10,2),
+	@devuelta decimal(10,2)
+AS
+BEGIN
+	DECLARE @idGenerado int
+
+	EXEC @idGenerado = pa_buscarSiguienteSecuencia 'COBRO_PARQUEO', 'IdCobro'
+
+	INSERT INTO [dbo].COBRO_PARQUEO
+				   (IdCobro
+				   ,IdUso
+				   ,IdTurno
+				   ,fecha
+				   ,Descuento
+				   ,MontoCobrado
+				   ,MontoPagado
+				   ,Devuelta)
+			 VALUES
+				   (@idGenerado
+				   ,@idUso
+				   ,@IdTurno
+				   ,GETDATE()
+				   ,@descuento
+				   ,@montoCobrado
+				   ,@montoPagado
+				   ,@devuelta)
+END
+GO
+
+CREATE PROCEDURE dbo.pa_buscarCobro
+    @idCobro int = null
+AS
+BEGIN
+    SELECT IdCobro
+		  ,IdUso
+		  ,IdTurno
+		  ,fecha
+		  ,Descuento
+		  ,MontoCobrado
+		  ,MontoPagado
+		  ,Devuelta
+	FROM COBRO_PARQUEO
+	WHERE (@idCobro IS NULL OR IdTurno = @idCobro)
+END
+GO
