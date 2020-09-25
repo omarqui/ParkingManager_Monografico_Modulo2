@@ -52,6 +52,7 @@ namespace CapaDatos
                     cmd.Parameters.AddWithValue("montoCobrado", cobro.TotalCobrado);
                     cmd.Parameters.AddWithValue("montoPagado", cobro.MontoPagado);
                     cmd.Parameters.AddWithValue("devuelta", cobro.Devuelta);
+                    cmd.Parameters.AddWithValue("fecha", cobro.Fecha);
 
                     var filasAfectadas = cmd.ExecuteNonQuery();
 
