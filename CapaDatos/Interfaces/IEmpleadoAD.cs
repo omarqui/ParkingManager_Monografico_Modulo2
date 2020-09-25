@@ -17,6 +17,8 @@ namespace CapaDatos.Interfaces
 
         Empleado BuscarPorUsuario(string usuario);
 
+        DataTable BuscarTodos();
+
         bool EsUsuarioValido(string usuario, string clave);
     }
 }
