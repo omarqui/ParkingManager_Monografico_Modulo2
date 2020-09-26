@@ -70,6 +70,7 @@ MontoApertura decimal(10,2) NOT NULL,
 MontoCobrado decimal(10,2),
 MontoEntregado decimal(10,2),
 MontoDiferencia decimal(10,2),
+EstaAbierto BIT Default 1 NOT NULL 
 CONSTRAINT PK_IdTurno PRIMARY KEY (IdTurno),
 CONSTRAINT FK_IdEmpleado_TURNO FOREIGN KEY (IdEmpleado) REFERENCES EMPLEADO(IdEmpleado)
 )

@@ -4,6 +4,7 @@ pa_insertarEmpleado null
            ,'soy un empleado'
            ,'mi casa'
            ,'8095487454'
+		   ,1
            ,'admin'
 		   ,'123'
 GO

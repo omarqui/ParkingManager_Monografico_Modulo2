@@ -11,6 +11,7 @@
 *.sln.docstates
 
 Presentacion/App.config
+Presentacion/Program.cs
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
