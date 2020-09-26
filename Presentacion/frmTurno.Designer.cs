@@ -38,6 +38,8 @@
             this.txtMontoApertura = new System.Windows.Forms.TextBox();
             this.dtpFechaApertura = new System.Windows.Forms.DateTimePicker();
             this.lblFrmTurno = new System.Windows.Forms.Label();
+            this.lblNombreEmpleado = new System.Windows.Forms.Label();
+            this.txtNombreEmpleado = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.btnRegistrarTurno = new System.Windows.Forms.Button();
@@ -148,6 +150,24 @@
             this.lblFrmTurno.Text = " Registro Turno";
             this.lblFrmTurno.Click += new System.EventHandler(this.label1_Click);
             // 
+            // lblNombreEmpleado
+            // 
+            this.lblNombreEmpleado.AutoSize = true;
+            this.lblNombreEmpleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lblNombreEmpleado.ForeColor = System.Drawing.Color.White;
+            this.lblNombreEmpleado.Location = new System.Drawing.Point(20, 244);
+            this.lblNombreEmpleado.Name = "lblNombreEmpleado";
+            this.lblNombreEmpleado.Size = new System.Drawing.Size(174, 25);
+            this.lblNombreEmpleado.TabIndex = 28;
+            this.lblNombreEmpleado.Text = "Nombre Empleado";
+            // 
+            // txtNombreEmpleado
+            // 
+            this.txtNombreEmpleado.Location = new System.Drawing.Point(203, 248);
+            this.txtNombreEmpleado.Name = "txtNombreEmpleado";
+            this.txtNombreEmpleado.Size = new System.Drawing.Size(200, 22);
+            this.txtNombreEmpleado.TabIndex = 29;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::CapaPresentacion.Properties.Resources.registrar_grand;
@@ -172,6 +192,7 @@
             // btnRegistrarTurno
             // 
             this.btnRegistrarTurno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(36)))), ((int)(((byte)(85)))));
+            this.btnRegistrarTurno.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnRegistrarTurno.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F);
             this.btnRegistrarTurno.ForeColor = System.Drawing.Color.White;
             this.btnRegistrarTurno.Image = global::CapaPresentacion.Properties.Resources.registrar;
@@ -189,6 +210,7 @@
             // btnSalirTurno
             // 
             this.btnSalirTurno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(36)))), ((int)(((byte)(85)))));
+            this.btnSalirTurno.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSalirTurno.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F);
             this.btnSalirTurno.ForeColor = System.Drawing.Color.White;
             this.btnSalirTurno.Image = global::CapaPresentacion.Properties.Resources.Exit_64px;
@@ -201,27 +223,23 @@
             this.btnSalirTurno.Text = "Salir";
             this.btnSalirTurno.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnSalirTurno.UseVisualStyleBackColor = false;
-            this.btnSalirTurno.Click += new System.EventHandler(this.btnSalirTurno_Click);
             // 
             // lblNombreEmpleado
             // 
             this.lblNombreEmpleado.AutoSize = true;
             this.lblNombreEmpleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.lblNombreEmpleado.ForeColor = System.Drawing.Color.White;
-            this.lblNombreEmpleado.Location = new System.Drawing.Point(314, 149);
-            this.lblNombreEmpleado.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNombreEmpleado.Location = new System.Drawing.Point(20, 244);
             this.lblNombreEmpleado.Name = "lblNombreEmpleado";
-            this.lblNombreEmpleado.Size = new System.Drawing.Size(141, 20);
+            this.lblNombreEmpleado.Size = new System.Drawing.Size(174, 25);
             this.lblNombreEmpleado.TabIndex = 28;
             this.lblNombreEmpleado.Text = "Nombre Empleado";
             // 
             // txtNombreEmpleado
             // 
-            this.txtNombreEmpleado.Location = new System.Drawing.Point(451, 153);
-            this.txtNombreEmpleado.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNombreEmpleado.Location = new System.Drawing.Point(203, 248);
             this.txtNombreEmpleado.Name = "txtNombreEmpleado";
-            this.txtNombreEmpleado.ReadOnly = true;
-            this.txtNombreEmpleado.Size = new System.Drawing.Size(151, 20);
+            this.txtNombreEmpleado.Size = new System.Drawing.Size(200, 22);
             this.txtNombreEmpleado.TabIndex = 29;
             // 
             // dtpHora

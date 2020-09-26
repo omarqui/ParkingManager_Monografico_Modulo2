@@ -27,9 +27,9 @@ namespace CapaNegocio
 
         }
 
-        public bool EsUsuarioValido(string usuario, string clave)
+        public static bool EsUsuarioValido(string usuario, string clave)
         {
-            IEmpleadoAD empleado = null;
+            IEmpleadoAD empleado = new EmpleadoAD();
 
             return empleado.EsUsuarioValido(usuario, clave);
         }

@@ -58,6 +58,12 @@
     <Compile Include="frmConsultaEmpleado.Designer.cs">
       <DependentUpon>frmConsultaEmpleado.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmConsultaTurno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsultaTurno.Designer.cs">
+      <DependentUpon>frmConsultaTurno.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +95,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmConsultaEmpleado.resx">
       <DependentUpon>frmConsultaEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsultaTurno.resx">
+      <DependentUpon>frmConsultaTurno.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
@@ -127,6 +136,11 @@
     <None Include="Recursos\logo Parking.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Recursos\Calendar 31_64px.png" />
+    <None Include="Recursos\BUSCARPEQ..png" />
+    <None Include="Recursos\Circled Pause_501px.png" />
+    <None Include="Recursos\Circled Pause_50px.png" />
+    <None Include="Recursos\Circled Pause_5033px.png" />
     <Content Include="Recursos\close.png" />
     <Content Include="Recursos\coche.png" />
     <Content Include="Recursos\Configuración.png" />
@@ -134,23 +148,28 @@
     <Content Include="Recursos\Consulta.png" />
     <None Include="Recursos\Edit User Male_40px.png" />
     <None Include="Recursos\editar.png" />
+    <None Include="Recursos\DOG.png" />
     <Content Include="Recursos\EMPLEADOS.png" />
     <Content Include="Recursos\exit.png" />
     <None Include="Recursos\guardar.png" />
     <None Include="Recursos\guardar peq.png" />
     <None Include="Recursos\Exit_64px.png" />
+    <None Include="Recursos\ICONO LOGO.png" />
     <Content Include="Recursos\iconos .png" />
     <Content Include="Recursos\Inicio.png" />
     <Content Include="Recursos\llave.png" />
     <Content Include="Recursos\LOGO.png" />
     <None Include="Recursos\nuevo.png" />
     <None Include="Recursos\new.png" />
+    <None Include="Recursos\PRINTERPEQ.png" />
+    <None Include="Recursos\Ok_50px.png" />
     <Content Include="Recursos\Procesos.png" />
     <None Include="Recursos\registrar.png" />
     <None Include="Recursos\registrar grand.png" />
     <Content Include="Recursos\Reporte.png" />
     <Content Include="Recursos\salir.png" />
     <None Include="Recursos\save blanco.png" />
+    <None Include="Recursos\Search_52px.png" />
     <Content Include="Recursos\Sin título-1.png" />
     <Content Include="Recursos\Unlock_50px.png" />
     <Content Include="Recursos\unloker.png" />
