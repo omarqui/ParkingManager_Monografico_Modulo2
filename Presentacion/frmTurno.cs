@@ -72,15 +72,5 @@ namespace CapaPresentacion
                 txtMontoApertura.Text = "0.00";
             }
         }
-
-        private void btnSalirTurno_Click(object sender, EventArgs e)
-        {
-            DialogResult respuesta = MessageBox.Show("Seguro que sea Salir?", "SALIR", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (respuesta == DialogResult.Yes)
-            {
-
-                this.Dispose();
-            }
-        }
     }
 }
