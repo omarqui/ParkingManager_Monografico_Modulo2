@@ -84,6 +84,29 @@ namespace CapaDatos
             return null;
         }
 
+        public Turno BuscarUltimoTurnoAbiertoEmpleado(int id)
+        {
+            using (var conn = _conexion)
+            {
+                using (var cmd = CrearCommand(conn, "pa_BuscarUltimoTurnoAbiertoEmpleado"))
+                {
+                    cmd.Parameters.AddWithValue("idEmpleado", id);
+
+                    using (var reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            int IdTurnoAbierto = reader["idTurno"] as int? ?? 0;
+
+                            return BuscarPorID(IdTurnoAbierto);
+                        }
+                    }
+                }
+            }
+
+            return null;
+        }
+
         public DataTable BuscarTodos()
         {
             DataTable dt = new DataTable();
