@@ -155,7 +155,19 @@
     <None Include="Recursos\guardar peq.png" />
     <None Include="Recursos\Exit_64px.png" />
     <None Include="Recursos\ICONO LOGO.png" />
+    <None Include="Recursos\iconoGeneralTique.png" />
+    <None Include="Recursos\iconoCobrarTique.png" />
+    <None Include="Recursos\iconoConsultarTique.png" />
+    <None Include="Recursos\iconoProceso.png" />
+    <None Include="Recursos\iconoConsulta.png" />
+    <None Include="Recursos\iconoReportes.png" />
+    <None Include="Recursos\iconoConfiguracion.png" />
+    <None Include="Recursos\iconoInicio.png" />
+    <None Include="Recursos\iconoPocup.png" />
+    <None Include="Recursos\iconoParqueoD.png" />
+    <None Include="Recursos\iconoAccesosHoy.png" />
     <Content Include="Recursos\iconos .png" />
+    <None Include="Recursos\iconoSalidaHoy.png" />
     <Content Include="Recursos\Inicio.png" />
     <Content Include="Recursos\llave.png" />
     <Content Include="Recursos\LOGO.png" />
@@ -166,6 +178,7 @@
     <Content Include="Recursos\Procesos.png" />
     <None Include="Recursos\registrar.png" />
     <None Include="Recursos\registrar grand.png" />
+    <None Include="Recursos\punto.png" />
     <Content Include="Recursos\Reporte.png" />
     <Content Include="Recursos\salir.png" />
     <None Include="Recursos\save blanco.png" />
