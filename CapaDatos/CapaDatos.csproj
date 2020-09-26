@@ -45,11 +45,15 @@
     <Compile Include="AccesadorDatos.cs" />
     <Compile Include="ConfiguracionAD.cs" />
     <Compile Include="EmpleadoAD.cs" />
+    <Compile Include="Interfaces\ICobroParqueoDA.cs" />
     <Compile Include="Interfaces\ITurnoAD.cs" />
     <Compile Include="Interfaces\IEmpleadoAD.cs" />
     <Compile Include="Interfaces\ISecuencia.cs" />
+    <Compile Include="Interfaces\IUsoDeParqueo.cs" />
     <Compile Include="ManejadorConexion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="CobroParqueoDA.cs" />
+    <Compile Include="UsoDeParqueoAD.cs" />
     <Compile Include="TurnoAD.cs" />
   </ItemGroup>
   <ItemGroup>
