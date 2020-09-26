@@ -70,6 +70,7 @@ MontoApertura decimal(10,2) NOT NULL,
 MontoCobrado decimal(10,2),
 MontoEntregado decimal(10,2),
 MontoDiferencia decimal(10,2),
+EstaAbierto BIT Default 1 NOT NULL 
 CONSTRAINT PK_IdTurno PRIMARY KEY (IdTurno),
 CONSTRAINT FK_IdEmpleado_TURNO FOREIGN KEY (IdEmpleado) REFERENCES EMPLEADO(IdEmpleado)
 )
@@ -90,6 +91,7 @@ FechaSalida datetime NULL,
 TiempoUso decimal(10,2) NULL,
 PrecioPorMinuto decimal(10,2) NOT NULL,
 Total decimal(10,2) NULL,
+EstaActivo bit NOT NULL CONSTRAINT DF_USO_DE_PARQUEO_EstaActivo DEFAULT 1
 CONSTRAINT PK_IdUso PRIMARY KEY (IdUso), 
 CONSTRAINT FK_ID_TURNO FOREIGN KEY (IdTurno) REFERENCES TURNO (IdTurno)
 )
@@ -103,6 +105,7 @@ CREATE TABLE COBRO_PARQUEO(
 IdCobro int,
 IdUso int,
 IdTurno int,
+fecha datetime NOT NULL CONSTRAINT DF_COBRO_PARQUEO_fecha DEFAULT GETDATE(),
 Descuento decimal(10,2) NULL,
 MontoCobrado decimal(10,2) NOT NULL,
 MontoPagado decimal(10,2) NOT NULL,

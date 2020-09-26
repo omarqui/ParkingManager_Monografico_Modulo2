@@ -51,6 +51,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConfiguracionADTests.cs" />
+    <Compile Include="CobroParqueoDATests.cs" />
+    <Compile Include="UsoDeParqueoADTests.cs" />
     <Compile Include="TurnoADTests.cs" />
     <Compile Include="EmpleadoADTests.cs" />
     <Compile Include="ManejadorConexionTests.cs" />
