@@ -10,6 +10,20 @@ namespace CapaNegocio
 {
     public class ConfiguracionLG
     {
+        private static Configuracion configuracion;
+
+        public static Configuracion Configuracion
+        {
+            get
+            {
+                if (configuracion == null)
+                {
+                    configuracion = BuscarConfiguracionSistema();
+                }
+
+                return configuracion;
+            }
+        }
         public static int GuardarConfiguracion(Configuracion configuracion)
         {
             ConfiguracionAD funcionesConfiguracion = new ConfiguracionAD();
