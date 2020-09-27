@@ -71,7 +71,7 @@ namespace CapaPresentacion
             txtMontoApertura.Text = "0.00";
 
             //Cargando la informacion del usuario logueado y que esta abriendo turno
-            Empleado empleado = EmpleadoLG.BuscarEmpleado(1);//Cambiar el 1 por la variable que representa el ID del empleado logueado
+            Empleado empleado = EmpleadoLG.BuscarEmpleado(Globales.Empleado.IdEmpleado);//Cambiar el 1 por la variable que representa el ID del empleado logueado
             txtCodigoEmpleadoTurno.Text = empleado.IdEmpleado.ToString();
             txtNombreEmpleado.Text = empleado.Nombre;
         }

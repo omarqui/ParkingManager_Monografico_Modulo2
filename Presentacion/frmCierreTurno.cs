@@ -83,7 +83,6 @@ namespace CapaPresentacion
                     txtMontoDiferencia.Text = turnoAbierto.MontoDiferencia.Formatear();
                     txtMontoEntregado.Text = "0.00";
                     txtNombreEmpleado.Text = empleadoTurnoAbierto.Nombre;
-
                 }
             }
             catch (Exception)
