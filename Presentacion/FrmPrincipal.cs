@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CapaNegocio;
 
 namespace CapaPresentacion
 {
@@ -131,6 +132,23 @@ namespace CapaPresentacion
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnGenerarTicket_Click(object sender, EventArgs e)
+        {
+            var respuesta = MessageBox.Show("Seguro que desea generar un ticket?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (respuesta == DialogResult.No)
+            {
+                return;
+            }
+
+            UsoParqueoLN.AperturarUso();
+        }
+
+        private void btnCobrar_Click(object sender, EventArgs e)
+        {
+            FrmUsoDeParqueo frmUsoDeParqueo = new FrmUsoDeParqueo();
+            frmUsoDeParqueo.ShowDialog();
         }
     }
 }

@@ -8,6 +8,17 @@ namespace Entidades
 {
     public class Turno
     {
+        public Turno()
+        {
+
+        }
+
+        public Turno(int idEmpleado, decimal montoApertura)
+        {
+            IdEmpleado = idEmpleado;
+            MontoApertura = montoApertura;
+        }
+
         public int IdTurno { get; set; }
         public int IdEmpleado { get; set; }
         public DateTime  FechaApertura { get; set; }
