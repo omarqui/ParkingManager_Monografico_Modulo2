@@ -209,5 +209,10 @@ namespace CapaPresentacion
             FrmUsoDeParqueo frmUsoDeParqueo = new FrmUsoDeParqueo();
             frmUsoDeParqueo.ShowDialog();
         }
+
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+
+        }
     }
 }

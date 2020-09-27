@@ -93,6 +93,26 @@ namespace CapaPresentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Cancel_50px {
+            get {
+                object obj = ResourceManager.GetObject("Cancel_50px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Cash_In_Hand_50px {
+            get {
+                object obj = ResourceManager.GetObject("Cash In Hand_50px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Circled_Pause_501px {
             get {
                 object obj = ResourceManager.GetObject("Circled Pause_501px", resourceCulture);
@@ -206,6 +226,16 @@ namespace CapaPresentacion.Properties {
         internal static System.Drawing.Bitmap Exit_64px {
             get {
                 object obj = ResourceManager.GetObject("Exit_64px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Go_50px {
+            get {
+                object obj = ResourceManager.GetObject("Go_50px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
