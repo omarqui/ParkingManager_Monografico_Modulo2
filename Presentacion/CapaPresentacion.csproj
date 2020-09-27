@@ -160,6 +160,8 @@
     <None Include="Recursos\Circled Pause_501px.png" />
     <None Include="Recursos\Circled Pause_50px.png" />
     <None Include="Recursos\Circled Pause_5033px.png" />
+    <None Include="Recursos\Cancel_50px.png" />
+    <None Include="Recursos\Cash In Hand_50px.png" />
     <Content Include="Recursos\close.png" />
     <Content Include="Recursos\coche.png" />
     <Content Include="Recursos\Configuración.png" />
@@ -185,6 +187,7 @@
     <None Include="Recursos\iconoPocup.png" />
     <None Include="Recursos\iconoParqueoD.png" />
     <None Include="Recursos\iconoAccesosHoy.png" />
+    <None Include="Recursos\Go_50px.png" />
     <Content Include="Recursos\iconos .png" />
     <None Include="Recursos\iconoSalidaHoy.png" />
     <Content Include="Recursos\Inicio.png" />
