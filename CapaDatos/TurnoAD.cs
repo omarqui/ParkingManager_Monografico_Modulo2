@@ -13,9 +13,9 @@ namespace CapaDatos
 {
     public class TurnoAD : AccesadorDatos, ITurnoAD, ISecuencia
     {
-        public TurnoAD()
+        public TurnoAD() : base()
         {
-            _conexion = ManejadorConexion.Conexion;
+            
         }
 
         public TurnoAD(SqlConnection conexion)
@@ -33,10 +33,11 @@ namespace CapaDatos
                     cmd.Parameters.AddWithValue("idEmpleado", turno.IdEmpleado);
                     cmd.Parameters.AddWithValue("montoApertura", turno.MontoApertura);
 
+                    var idTurno = cmd.Parameters.Add("@idTurno", SqlDbType.Int);
+                    idTurno.Direction = ParameterDirection.ReturnValue;
+                    cmd.ExecuteNonQuery();
 
-                    var filasAfectadas = cmd.ExecuteNonQuery();
-
-                    return filasAfectadas;
+                    return (int)idTurno.Value;
                 }
 
             }
@@ -91,16 +92,17 @@ namespace CapaDatos
                 using (var cmd = CrearCommand(conn, "pa_BuscarUltimoTurnoAbiertoEmpleado"))
                 {
                     cmd.Parameters.AddWithValue("idEmpleado", id);
+                    var idTurno = cmd.Parameters.Add("@ReturnVal", SqlDbType.Int);
+                    idTurno.Direction = ParameterDirection.ReturnValue;
 
-                    using (var reader = cmd.ExecuteReader())
+                    cmd.ExecuteNonQuery();
+                    int idTurnoAbierto = (int)idTurno.Value;
+                    if (idTurnoAbierto > 0)
                     {
-                        if (reader.Read())
-                        {
-                            int IdTurnoAbierto = reader["idTurno"] as int? ?? 0;
-
-                            return BuscarPorID(IdTurnoAbierto);
-                        }
+                        return BuscarPorID(idTurnoAbierto);
                     }
+
+                    return null;
                 }
             }
 
