@@ -38,15 +38,15 @@
             this.txtMontoApertura = new System.Windows.Forms.TextBox();
             this.dtpFechaApertura = new System.Windows.Forms.DateTimePicker();
             this.lblFrmTurno = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.btnRegistrarTurno = new System.Windows.Forms.Button();
-            this.btnSalirTurno = new System.Windows.Forms.Button();
             this.lblNombreEmpleado = new System.Windows.Forms.Label();
             this.txtNombreEmpleado = new System.Windows.Forms.TextBox();
             this.dtpHora = new System.Windows.Forms.DateTimePicker();
             this.lblHora = new System.Windows.Forms.Label();
             this.BtnBuscarEmpleado = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.btnRegistrarTurno = new System.Windows.Forms.Button();
+            this.btnSalirTurno = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
@@ -141,70 +141,12 @@
             this.lblFrmTurno.AutoSize = true;
             this.lblFrmTurno.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
             this.lblFrmTurno.ForeColor = System.Drawing.Color.White;
-            this.lblFrmTurno.Location = new System.Drawing.Point(237, 14);
+            this.lblFrmTurno.Location = new System.Drawing.Point(235, 30);
             this.lblFrmTurno.Name = "lblFrmTurno";
             this.lblFrmTurno.Size = new System.Drawing.Size(295, 46);
             this.lblFrmTurno.TabIndex = 26;
             this.lblFrmTurno.Text = " Registro Turno";
             this.lblFrmTurno.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::CapaPresentacion.Properties.Resources.registrar_grand;
-            this.pictureBox1.Location = new System.Drawing.Point(178, 14);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(53, 50);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 27;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::CapaPresentacion.Properties.Resources.logo_Parking1;
-            this.pictureBox4.Location = new System.Drawing.Point(13, 14);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(41, 34);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 25;
-            this.pictureBox4.TabStop = false;
-            // 
-            // btnRegistrarTurno
-            // 
-            this.btnRegistrarTurno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(36)))), ((int)(((byte)(85)))));
-            this.btnRegistrarTurno.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnRegistrarTurno.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistrarTurno.ForeColor = System.Drawing.Color.White;
-            this.btnRegistrarTurno.Image = global::CapaPresentacion.Properties.Resources.registrar;
-            this.btnRegistrarTurno.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRegistrarTurno.Location = new System.Drawing.Point(86, 435);
-            this.btnRegistrarTurno.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnRegistrarTurno.Name = "btnRegistrarTurno";
-            this.btnRegistrarTurno.Size = new System.Drawing.Size(328, 69);
-            this.btnRegistrarTurno.TabIndex = 17;
-            this.btnRegistrarTurno.Text = "Registrar Turno";
-            this.btnRegistrarTurno.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnRegistrarTurno.UseVisualStyleBackColor = false;
-            this.btnRegistrarTurno.Click += new System.EventHandler(this.btnRegistrarTurno_Click);
-            // 
-            // btnSalirTurno
-            // 
-            this.btnSalirTurno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(36)))), ((int)(((byte)(85)))));
-            this.btnSalirTurno.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSalirTurno.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalirTurno.ForeColor = System.Drawing.Color.White;
-            this.btnSalirTurno.Image = global::CapaPresentacion.Properties.Resources.Exit_64px;
-            this.btnSalirTurno.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalirTurno.Location = new System.Drawing.Point(434, 435);
-            this.btnSalirTurno.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnSalirTurno.Name = "btnSalirTurno";
-            this.btnSalirTurno.Size = new System.Drawing.Size(190, 69);
-            this.btnSalirTurno.TabIndex = 16;
-            this.btnSalirTurno.Text = "Cancelar";
-            this.btnSalirTurno.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnSalirTurno.UseVisualStyleBackColor = false;
-            this.btnSalirTurno.Click += new System.EventHandler(this.btnSalirTurno_Click);
             // 
             // lblNombreEmpleado
             // 
@@ -233,7 +175,7 @@
             this.dtpHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.dtpHora.Format = System.Windows.Forms.DateTimePickerFormat.Time;
             this.dtpHora.Location = new System.Drawing.Point(541, 169);
-            this.dtpHora.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpHora.Margin = new System.Windows.Forms.Padding(4);
             this.dtpHora.Name = "dtpHora";
             this.dtpHora.Size = new System.Drawing.Size(121, 30);
             this.dtpHora.TabIndex = 30;
@@ -257,6 +199,65 @@
             this.BtnBuscarEmpleado.TabIndex = 32;
             this.BtnBuscarEmpleado.Text = "BuscarEmpleado";
             this.BtnBuscarEmpleado.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::CapaPresentacion.Properties.Resources.registrar_grand;
+            this.pictureBox1.Location = new System.Drawing.Point(176, 30);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(53, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 27;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::CapaPresentacion.Properties.Resources.logo_Parking1;
+            this.pictureBox4.Location = new System.Drawing.Point(13, 14);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(41, 34);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 25;
+            this.pictureBox4.TabStop = false;
+            // 
+            // btnRegistrarTurno
+            // 
+            this.btnRegistrarTurno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(36)))), ((int)(((byte)(85)))));
+            this.btnRegistrarTurno.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnRegistrarTurno.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistrarTurno.ForeColor = System.Drawing.Color.White;
+            this.btnRegistrarTurno.Image = global::CapaPresentacion.Properties.Resources.registrar;
+            this.btnRegistrarTurno.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRegistrarTurno.Location = new System.Drawing.Point(111, 435);
+            this.btnRegistrarTurno.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnRegistrarTurno.Name = "btnRegistrarTurno";
+            this.btnRegistrarTurno.Size = new System.Drawing.Size(190, 69);
+            this.btnRegistrarTurno.TabIndex = 17;
+            this.btnRegistrarTurno.Text = "Registrar ";
+            this.btnRegistrarTurno.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRegistrarTurno.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnRegistrarTurno.UseVisualStyleBackColor = false;
+            this.btnRegistrarTurno.Click += new System.EventHandler(this.btnRegistrarTurno_Click);
+            // 
+            // btnSalirTurno
+            // 
+            this.btnSalirTurno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(36)))), ((int)(((byte)(85)))));
+            this.btnSalirTurno.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSalirTurno.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalirTurno.ForeColor = System.Drawing.Color.White;
+            this.btnSalirTurno.Image = global::CapaPresentacion.Properties.Resources.Exit_64px;
+            this.btnSalirTurno.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSalirTurno.Location = new System.Drawing.Point(395, 435);
+            this.btnSalirTurno.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSalirTurno.Name = "btnSalirTurno";
+            this.btnSalirTurno.Size = new System.Drawing.Size(190, 69);
+            this.btnSalirTurno.TabIndex = 16;
+            this.btnSalirTurno.Text = "Cancelar";
+            this.btnSalirTurno.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnSalirTurno.UseVisualStyleBackColor = false;
+            this.btnSalirTurno.Click += new System.EventHandler(this.btnSalirTurno_Click);
             // 
             // frmTurno
             // 

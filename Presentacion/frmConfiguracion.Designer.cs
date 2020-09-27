@@ -49,7 +49,7 @@
             // txtNombreEmpresa
             // 
             this.txtNombreEmpresa.Location = new System.Drawing.Point(445, 265);
-            this.txtNombreEmpresa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombreEmpresa.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombreEmpresa.Name = "txtNombreEmpresa";
             this.txtNombreEmpresa.Size = new System.Drawing.Size(347, 22);
             this.txtNombreEmpresa.TabIndex = 0;
@@ -57,7 +57,7 @@
             // txtDireccionEmpresa
             // 
             this.txtDireccionEmpresa.Location = new System.Drawing.Point(445, 311);
-            this.txtDireccionEmpresa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDireccionEmpresa.Margin = new System.Windows.Forms.Padding(4);
             this.txtDireccionEmpresa.Name = "txtDireccionEmpresa";
             this.txtDireccionEmpresa.Size = new System.Drawing.Size(347, 22);
             this.txtDireccionEmpresa.TabIndex = 1;
@@ -65,7 +65,7 @@
             // txtTelefonoEmpresa
             // 
             this.txtTelefonoEmpresa.Location = new System.Drawing.Point(445, 357);
-            this.txtTelefonoEmpresa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTelefonoEmpresa.Margin = new System.Windows.Forms.Padding(4);
             this.txtTelefonoEmpresa.Name = "txtTelefonoEmpresa";
             this.txtTelefonoEmpresa.Size = new System.Drawing.Size(166, 22);
             this.txtTelefonoEmpresa.TabIndex = 2;
@@ -121,7 +121,7 @@
             // txtPrecioPorHora
             // 
             this.txtPrecioPorHora.Location = new System.Drawing.Point(445, 403);
-            this.txtPrecioPorHora.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPrecioPorHora.Margin = new System.Windows.Forms.Padding(4);
             this.txtPrecioPorHora.Name = "txtPrecioPorHora";
             this.txtPrecioPorHora.Size = new System.Drawing.Size(166, 22);
             this.txtPrecioPorHora.TabIndex = 6;
@@ -141,7 +141,7 @@
             // nudCantidadParqueos
             // 
             this.nudCantidadParqueos.Location = new System.Drawing.Point(445, 449);
-            this.nudCantidadParqueos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nudCantidadParqueos.Margin = new System.Windows.Forms.Padding(4);
             this.nudCantidadParqueos.Name = "nudCantidadParqueos";
             this.nudCantidadParqueos.Size = new System.Drawing.Size(167, 22);
             this.nudCantidadParqueos.TabIndex = 10;
@@ -213,7 +213,8 @@
             this.Controls.Add(this.txtDireccionEmpresa);
             this.Controls.Add(this.txtNombreEmpresa);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmConfiguracion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Configuración de Sistema";
