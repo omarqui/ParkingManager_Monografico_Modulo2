@@ -82,6 +82,12 @@
     <Compile Include="FrmPrincipal.Designer.cs">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCierreTurno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCierreTurno.Designer.cs">
+      <DependentUpon>frmCierreTurno.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmTurno.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +120,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCierreTurno.resx">
+      <DependentUpon>frmCierreTurno.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTurno.resx">
       <DependentUpon>frmTurno.cs</DependentUpon>
