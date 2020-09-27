@@ -75,7 +75,8 @@ namespace CapaDatos
                                 MontoApertura = reader["MontoApertura"] as decimal? ?? default,
                                 MontoCobrado = reader["MontoCobrado"] as decimal? ?? default,
                                 MontoDiferencia = reader["MontoDiferencia"] as decimal? ?? default,
-                                MontoEntregado = reader["MontoEntregado"] as decimal? ?? default
+                                MontoEntregado = reader["MontoEntregado"] as decimal? ?? default,
+                                EstaAbierto = reader["EstaAbierto"] as bool? ?? default
                             };
                         }
                     }

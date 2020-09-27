@@ -27,5 +27,6 @@ namespace Entidades
         public decimal MontoCobrado { get; set; }
         public decimal MontoEntregado { get; set; }
         public decimal MontoDiferencia { get; set; }
+        public bool EstaAbierto { get; set; }
     }
 }
