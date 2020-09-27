@@ -58,7 +58,7 @@ namespace CapaPresentacion
 
         private void btnSalirTurno_Click(object sender, EventArgs e)
         {
-            DialogResult respuesta = MessageBox.Show("Seguro que desea salir de esta ventana?", "SALIR", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult respuesta = MessageBox.Show("Seguro que desea Cancelar", "CANCELAR", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (respuesta == DialogResult.Yes)
             {
                 this.Dispose();

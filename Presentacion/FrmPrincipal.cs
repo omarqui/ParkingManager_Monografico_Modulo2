@@ -167,6 +167,9 @@ namespace CapaPresentacion
         private void button12_Click(object sender, EventArgs e)
         {
             hideSubMenu();
+            frmConfiguracion ConfiguracionEmpresa = new frmConfiguracion();
+            ConfiguracionEmpresa.Show();
+
         }
 
         private void panel8_Paint(object sender, PaintEventArgs e)
