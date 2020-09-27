@@ -21,3 +21,58 @@ Edwin| |
 Brayan| | 
 Edickson| | x
 Omarqui| | | x
+
+## Log de tareas
+
+### Empleado
+
+- [x] Registro 
+- [x] Consulta
+- [x] Login
+- [ ] Reporte
+
+### Configuracion
+
+- [x] Registro
+
+### Ticket
+
+#### Operacion
+
+- [x] Registro
+- [x] Cobro
+- [ ] Poner a funcionar descuento
+- [ ] Consulta
+
+#### Reporte
+
+- [ ] Registro
+- [ ] Cobro
+- [ ] Listado
+
+### Turno
+
+#### Operacion
+
+- [x] Apertura
+- [x] Consulta
+- [ ] Cierre
+- [ ] Consulta para selecionar empleado en apertura
+
+#### Reporte
+
+- [ ] Cierre
+- [ ] Listado
+
+## Principal
+
+- [x] Diseño
+- [ ] Mostrar datos usuario
+- [ ] Mostrar datos dashboard
+- [ ] Poner a funcionar menu
+- [ ] Poner a funcionar atajos de teclado
+- [ ] Mostrar fecha y hora
+
+## Permiso
+
+- [ ] Consulta
