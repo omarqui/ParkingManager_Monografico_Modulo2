@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCierreTurno));
             this.lblCodigoTurno = new System.Windows.Forms.Label();
             this.lblCodigoEmpleadoTurno = new System.Windows.Forms.Label();
@@ -52,6 +53,9 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.btnRegistrarTurno = new System.Windows.Forms.Button();
             this.btnSalirTurno = new System.Windows.Forms.Button();
+            this.txtTotalEnCaja = new System.Windows.Forms.TextBox();
+            this.lblTotalEnCaja = new System.Windows.Forms.Label();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
@@ -145,7 +149,7 @@
             this.lblMontoDiferencia.AutoSize = true;
             this.lblMontoDiferencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.lblMontoDiferencia.ForeColor = System.Drawing.Color.White;
-            this.lblMontoDiferencia.Location = new System.Drawing.Point(318, 232);
+            this.lblMontoDiferencia.Location = new System.Drawing.Point(314, 232);
             this.lblMontoDiferencia.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMontoDiferencia.Name = "lblMontoDiferencia";
             this.lblMontoDiferencia.Size = new System.Drawing.Size(130, 20);
@@ -155,7 +159,7 @@
             // txtCodigoTurno
             // 
             this.txtCodigoTurno.Location = new System.Drawing.Point(152, 109);
-            this.txtCodigoTurno.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCodigoTurno.Margin = new System.Windows.Forms.Padding(2);
             this.txtCodigoTurno.Name = "txtCodigoTurno";
             this.txtCodigoTurno.Size = new System.Drawing.Size(76, 20);
             this.txtCodigoTurno.TabIndex = 8;
@@ -163,7 +167,7 @@
             // txtCodigoEmpleadoTurno
             // 
             this.txtCodigoEmpleadoTurno.Location = new System.Drawing.Point(152, 151);
-            this.txtCodigoEmpleadoTurno.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCodigoEmpleadoTurno.Margin = new System.Windows.Forms.Padding(2);
             this.txtCodigoEmpleadoTurno.Name = "txtCodigoEmpleadoTurno";
             this.txtCodigoEmpleadoTurno.Size = new System.Drawing.Size(76, 20);
             this.txtCodigoEmpleadoTurno.TabIndex = 9;
@@ -171,32 +175,36 @@
             // txtMontoApertura
             // 
             this.txtMontoApertura.Location = new System.Drawing.Point(448, 109);
-            this.txtMontoApertura.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMontoApertura.Margin = new System.Windows.Forms.Padding(2);
             this.txtMontoApertura.Name = "txtMontoApertura";
+            this.txtMontoApertura.ReadOnly = true;
             this.txtMontoApertura.Size = new System.Drawing.Size(151, 20);
             this.txtMontoApertura.TabIndex = 10;
             // 
             // txtMontoCobrado
             // 
             this.txtMontoCobrado.Location = new System.Drawing.Point(448, 151);
-            this.txtMontoCobrado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMontoCobrado.Margin = new System.Windows.Forms.Padding(2);
             this.txtMontoCobrado.Name = "txtMontoCobrado";
+            this.txtMontoCobrado.ReadOnly = true;
             this.txtMontoCobrado.Size = new System.Drawing.Size(151, 20);
             this.txtMontoCobrado.TabIndex = 11;
             // 
             // txtMontoEntregado
             // 
             this.txtMontoEntregado.Location = new System.Drawing.Point(448, 193);
-            this.txtMontoEntregado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMontoEntregado.Margin = new System.Windows.Forms.Padding(2);
             this.txtMontoEntregado.Name = "txtMontoEntregado";
             this.txtMontoEntregado.Size = new System.Drawing.Size(151, 20);
             this.txtMontoEntregado.TabIndex = 12;
+            this.txtMontoEntregado.TextChanged += new System.EventHandler(this.txtMontoEntregado_TextChanged);
             // 
             // txtMontoDiferencia
             // 
             this.txtMontoDiferencia.Location = new System.Drawing.Point(448, 236);
-            this.txtMontoDiferencia.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMontoDiferencia.Margin = new System.Windows.Forms.Padding(2);
             this.txtMontoDiferencia.Name = "txtMontoDiferencia";
+            this.txtMontoDiferencia.ReadOnly = true;
             this.txtMontoDiferencia.Size = new System.Drawing.Size(151, 20);
             this.txtMontoDiferencia.TabIndex = 13;
             // 
@@ -205,7 +213,7 @@
             this.dtpFechaApertura.Enabled = false;
             this.dtpFechaApertura.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpFechaApertura.Location = new System.Drawing.Point(152, 252);
-            this.dtpFechaApertura.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpFechaApertura.Margin = new System.Windows.Forms.Padding(2);
             this.dtpFechaApertura.Name = "dtpFechaApertura";
             this.dtpFechaApertura.Size = new System.Drawing.Size(151, 20);
             this.dtpFechaApertura.TabIndex = 14;
@@ -215,7 +223,7 @@
             this.dtpFechaCierre.Enabled = false;
             this.dtpFechaCierre.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpFechaCierre.Location = new System.Drawing.Point(152, 293);
-            this.dtpFechaCierre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpFechaCierre.Margin = new System.Windows.Forms.Padding(2);
             this.dtpFechaCierre.Name = "dtpFechaCierre";
             this.dtpFechaCierre.Size = new System.Drawing.Size(151, 20);
             this.dtpFechaCierre.TabIndex = 15;
@@ -248,7 +256,7 @@
             // txtNombreEmpleado
             // 
             this.txtNombreEmpleado.Location = new System.Drawing.Point(152, 202);
-            this.txtNombreEmpleado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNombreEmpleado.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombreEmpleado.Name = "txtNombreEmpleado";
             this.txtNombreEmpleado.Size = new System.Drawing.Size(151, 20);
             this.txtNombreEmpleado.TabIndex = 29;
@@ -257,7 +265,7 @@
             // 
             this.pictureBox1.Image = global::CapaPresentacion.Properties.Resources.registrar_grand;
             this.pictureBox1.Location = new System.Drawing.Point(180, 28);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(40, 41);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -282,8 +290,8 @@
             this.btnRegistrarTurno.ForeColor = System.Drawing.Color.White;
             this.btnRegistrarTurno.Image = global::CapaPresentacion.Properties.Resources.registrar;
             this.btnRegistrarTurno.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRegistrarTurno.Location = new System.Drawing.Point(318, 280);
-            this.btnRegistrarTurno.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRegistrarTurno.Location = new System.Drawing.Point(318, 326);
+            this.btnRegistrarTurno.Margin = new System.Windows.Forms.Padding(2);
             this.btnRegistrarTurno.Name = "btnRegistrarTurno";
             this.btnRegistrarTurno.Size = new System.Drawing.Size(124, 31);
             this.btnRegistrarTurno.TabIndex = 17;
@@ -300,8 +308,8 @@
             this.btnSalirTurno.ForeColor = System.Drawing.Color.White;
             this.btnSalirTurno.Image = global::CapaPresentacion.Properties.Resources.Exit_64px;
             this.btnSalirTurno.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalirTurno.Location = new System.Drawing.Point(518, 280);
-            this.btnSalirTurno.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSalirTurno.Location = new System.Drawing.Point(518, 326);
+            this.btnSalirTurno.Margin = new System.Windows.Forms.Padding(2);
             this.btnSalirTurno.Name = "btnSalirTurno";
             this.btnSalirTurno.Size = new System.Drawing.Size(81, 31);
             this.btnSalirTurno.TabIndex = 16;
@@ -310,12 +318,36 @@
             this.btnSalirTurno.UseVisualStyleBackColor = false;
             this.btnSalirTurno.Click += new System.EventHandler(this.btnSalirTurno_Click);
             // 
+            // txtTotalEnCaja
+            // 
+            this.txtTotalEnCaja.Location = new System.Drawing.Point(448, 293);
+            this.txtTotalEnCaja.Margin = new System.Windows.Forms.Padding(2);
+            this.txtTotalEnCaja.Name = "txtTotalEnCaja";
+            this.txtTotalEnCaja.ReadOnly = true;
+            this.txtTotalEnCaja.Size = new System.Drawing.Size(151, 20);
+            this.txtTotalEnCaja.TabIndex = 31;
+            this.toolTip1.SetToolTip(this.txtTotalEnCaja, "Monto de inicio de fondo de caja más el monto total cobrado.");
+            // 
+            // lblTotalEnCaja
+            // 
+            this.lblTotalEnCaja.AutoSize = true;
+            this.lblTotalEnCaja.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lblTotalEnCaja.ForeColor = System.Drawing.Color.White;
+            this.lblTotalEnCaja.Location = new System.Drawing.Point(314, 291);
+            this.lblTotalEnCaja.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTotalEnCaja.Name = "lblTotalEnCaja";
+            this.lblTotalEnCaja.Size = new System.Drawing.Size(102, 20);
+            this.lblTotalEnCaja.TabIndex = 30;
+            this.lblTotalEnCaja.Text = "Total en Caja";
+            // 
             // frmCierreTurno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(31)))), ((int)(((byte)(45)))));
             this.ClientSize = new System.Drawing.Size(619, 373);
+            this.Controls.Add(this.txtTotalEnCaja);
+            this.Controls.Add(this.lblTotalEnCaja);
             this.Controls.Add(this.txtNombreEmpleado);
             this.Controls.Add(this.lblNombreEmpleado);
             this.Controls.Add(this.pictureBox1);
@@ -341,7 +373,7 @@
             this.Controls.Add(this.lblCodigoTurno);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmCierreTurno";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmTurno";
@@ -378,5 +410,8 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblNombreEmpleado;
         private System.Windows.Forms.TextBox txtNombreEmpleado;
+        private System.Windows.Forms.TextBox txtTotalEnCaja;
+        private System.Windows.Forms.Label lblTotalEnCaja;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

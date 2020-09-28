@@ -31,11 +31,12 @@ namespace CapaPresentacion
                     turnoCerrar.MontoCobrado = Convert.ToDecimal(txtMontoCobrado.Text);
                     turnoCerrar.MontoEntregado = Convert.ToDecimal(txtMontoEntregado.Text);
                     turnoCerrar.MontoDiferencia = Convert.ToDecimal(txtMontoDiferencia.Text);
+                    turnoCerrar.TotalEnCaja = Convert.ToDecimal(txtTotalEnCaja.Text);
 
                     int registroAfectado = TurnoLG.CerrarTurno(turnoCerrar);
                     if (registroAfectado > 0)
                     {
-                        MessageBox.Show("Turno cerrado correctamente", "TURNO CERRADO", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                        MessageBox.Show("Turno cerrado correctamente", "TURNO CERRADO", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
                 catch (Exception error)
@@ -63,9 +64,9 @@ namespace CapaPresentacion
 
         private void frmCierreTurno_Load(object sender, EventArgs e)
         {
-            BuscarInformacionTurnoAbierto();
+            BuscarInformacionTurnoAbierto();            
         }
-
+                
         private void BuscarInformacionTurnoAbierto()
         {
             try
@@ -75,21 +76,52 @@ namespace CapaPresentacion
                     Turno turnoAbierto = TurnoLG.BuscarTurnoPorID(Globales.Turno.IdTurno);
                     Empleado empleadoTurnoAbierto = EmpleadoLG.BuscarEmpleado(Globales.Turno.IdEmpleado);
 
+                    decimal sumatoriaCobradaTurno = TurnoLG.BuscarSumatoriaCierreTurno(Globales.Turno.IdTurno);
 
                     txtCodigoTurno.Text = turnoAbierto.IdTurno.ToString();
                     txtCodigoEmpleadoTurno.Text = turnoAbierto.IdEmpleado.ToString();
                     txtMontoApertura.Text = turnoAbierto.MontoApertura.Formatear();
-                    txtMontoCobrado.Text = turnoAbierto.MontoCobrado.Formatear();
+                    txtMontoCobrado.Text = sumatoriaCobradaTurno.Formatear();
                     txtMontoDiferencia.Text = turnoAbierto.MontoDiferencia.Formatear();
                     txtMontoEntregado.Text = "0.00";
                     txtNombreEmpleado.Text = empleadoTurnoAbierto.Nombre;
                 }
             }
-            catch (Exception)
+            catch (Exception error)
             {
-
-                throw;
+                MessageBox.Show("Ha ocurrido un error: \n" + error.Message);                
             }
+        }
+
+        /// <summary>
+        /// Fucion que se encarga de realziar los calculos del turno con los datos suministrados por el usuario
+        /// </summary>
+        /// <param name="montoApertura"> Monto que representa el fondo de caja en la apertura del turno</param>
+        /// <param name="montoCobrado"> Representa la sumatoria de todos los tickets cobrados en el turno correspondiente </param>
+        /// <param name="montoEntregado"> Representa el monto colocado por el usuario segun el conteo realizado en la caja al momento de cuadrar</param>
+        private void CalcularDatosTurno(decimal montoApertura, decimal montoCobrado, decimal montoEntregado)
+        {
+            decimal montoDiferencia, montoTotalEnCaja;
+
+            montoDiferencia = montoEntregado - montoCobrado;
+            montoTotalEnCaja = montoApertura + montoCobrado; //Este valor se puede colocar en un nuevo Textbox (incluso guardarlo en la base de datos como alternativa a mayor control )
+
+            //Asignando los valores acalculados a los textbox
+
+            txtMontoDiferencia.Text = montoDiferencia.Formatear();
+            txtTotalEnCaja.Text = montoTotalEnCaja.Formatear();
+            
+        }
+
+        private void txtMontoEntregado_TextChanged(object sender, EventArgs e)
+        {
+            decimal montoApertura, montoCobrado, montoDiferencia, montoEntregado;
+
+            montoApertura = Convert.ToDecimal(txtMontoApertura.Text);
+            montoCobrado = Convert.ToDecimal(txtMontoCobrado.Text);
+            montoEntregado = Convert.ToDecimal(txtMontoEntregado.Text);
+
+            CalcularDatosTurno(montoApertura, montoCobrado, montoEntregado);
         }
     }
 }

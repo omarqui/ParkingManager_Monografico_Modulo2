@@ -136,6 +136,7 @@ namespace CapaDatos
                     cmd.Parameters.AddWithValue("montoCobrado", turno.MontoCobrado);
                     cmd.Parameters.AddWithValue("MontoEntregado", turno.MontoEntregado);
                     cmd.Parameters.AddWithValue("MontoDiferencia", turno.MontoDiferencia);
+                    cmd.Parameters.AddWithValue("TotalEnCaja", turno.TotalEnCaja);
 
                     var filasAfectadas = cmd.ExecuteNonQuery();
 
@@ -160,5 +161,32 @@ namespace CapaDatos
         {
             return ObtenerSiguienteSecuenacia("TURNO", "IdTurno");
         }
+        
+        /// <summary>
+        /// Funcion que busca la sumatoria del turno a cerrar y devuelve el monto total cobrado
+        /// </summary>
+        /// <param name="idTurno"> Representa el identificador unico del turno que se está cerrando </param>
+        /// <returns>Valor de la sumarotia retornado</returns>
+        public decimal BuscarSumatoriaCierreTurno(int idTurno)
+        {
+            string cmdText = "pa_BuscarSumatoriaCierreTurno";
+            decimal montoCobratoTotalTurno = 0;
+
+            using (var conn = Conexion)
+            {
+                using (var cmd = CrearCommand(conn, cmdText))
+                {
+                    cmd.Parameters.AddWithValue("idTurno", idTurno);
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    if (reader.Read())
+                    {
+                        montoCobratoTotalTurno = (decimal)reader["MontoCobrado"] as decimal? ?? default;                            
+                    }
+                }
+            }
+
+            return montoCobratoTotalTurno;
+        }
+
     }
 }
