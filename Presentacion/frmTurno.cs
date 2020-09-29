@@ -72,7 +72,7 @@ namespace CapaPresentacion
                 txtMontoApertura.Text = "0.00";
             }
         }
-va
+
         private void txtMontoApertura_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.SoloNumeros();
