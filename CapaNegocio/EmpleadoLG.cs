@@ -21,10 +21,9 @@ namespace CapaNegocio
 
         public static Empleado BuscarPorUsuario(string usuario)
         {
-            IEmpleadoAD empleadoAD = null;
+            IEmpleadoAD empleadoAD = new EmpleadoAD();
 
             return empleadoAD.BuscarPorUsuario(usuario);
-
         }
 
         public static bool EsUsuarioValido(string usuario, string clave)

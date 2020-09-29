@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblDesde = new System.Windows.Forms.Label();
             this.lblHasta = new System.Windows.Forms.Label();
             this.lblEstado = new System.Windows.Forms.Label();
@@ -47,6 +47,15 @@
             this.label7 = new System.Windows.Forms.Label();
             this.lblCuandoEntregado = new System.Windows.Forms.Label();
             this.dtgvTicket = new System.Windows.Forms.DataGridView();
+            this.dgvIdUso = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvFechaEntrada = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvFechaSalida = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvEmpleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvTiempo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvDescuento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvNeto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvEstado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
@@ -58,15 +67,6 @@
             this.btnCierreConsultaTurno = new System.Windows.Forms.Button();
             this.btnImprimirConsultaTurno = new System.Windows.Forms.Button();
             this.btnBuscarConsultaTurno = new System.Windows.Forms.Button();
-            this.dgvIdUso = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvFechaEntrada = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvFechaSalida = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvEmpleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvTiempo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvDescuento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvNeto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvEstado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvTicket)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -280,14 +280,14 @@
             this.dtgvTicket.AllowUserToAddRows = false;
             this.dtgvTicket.AllowUserToDeleteRows = false;
             this.dtgvTicket.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(36)))), ((int)(((byte)(85)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DarkGray;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgvTicket.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(36)))), ((int)(((byte)(85)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.DarkGray;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvTicket.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgvTicket.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgvTicket.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dgvIdUso,
@@ -311,6 +311,65 @@
             this.dtgvTicket.TabIndex = 27;
             this.dtgvTicket.MouseDown += new System.Windows.Forms.MouseEventHandler(this.dtgvTicket_MouseDown);
             this.dtgvTicket.MouseUp += new System.Windows.Forms.MouseEventHandler(this.dtgvTicket_MouseUp);
+            // 
+            // dgvIdUso
+            // 
+            this.dgvIdUso.HeaderText = "TICKET NO.";
+            this.dgvIdUso.Name = "dgvIdUso";
+            this.dgvIdUso.ReadOnly = true;
+            // 
+            // dgvFechaEntrada
+            // 
+            this.dgvFechaEntrada.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dgvFechaEntrada.HeaderText = "FECHA ENTRADA";
+            this.dgvFechaEntrada.Name = "dgvFechaEntrada";
+            this.dgvFechaEntrada.ReadOnly = true;
+            this.dgvFechaEntrada.Width = 112;
+            // 
+            // dgvFechaSalida
+            // 
+            this.dgvFechaSalida.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dgvFechaSalida.HeaderText = "FECHA SALIDA";
+            this.dgvFechaSalida.Name = "dgvFechaSalida";
+            this.dgvFechaSalida.ReadOnly = true;
+            this.dgvFechaSalida.Width = 99;
+            // 
+            // dgvEmpleado
+            // 
+            this.dgvEmpleado.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dgvEmpleado.HeaderText = "CAJERO";
+            this.dgvEmpleado.Name = "dgvEmpleado";
+            this.dgvEmpleado.ReadOnly = true;
+            // 
+            // dgvTiempo
+            // 
+            this.dgvTiempo.HeaderText = "TIEMPO (MIN)";
+            this.dgvTiempo.Name = "dgvTiempo";
+            this.dgvTiempo.ReadOnly = true;
+            // 
+            // dgvTotal
+            // 
+            this.dgvTotal.HeaderText = "TOTAL";
+            this.dgvTotal.Name = "dgvTotal";
+            this.dgvTotal.ReadOnly = true;
+            // 
+            // dgvDescuento
+            // 
+            this.dgvDescuento.HeaderText = "DESCUENTO";
+            this.dgvDescuento.Name = "dgvDescuento";
+            this.dgvDescuento.ReadOnly = true;
+            // 
+            // dgvNeto
+            // 
+            this.dgvNeto.HeaderText = "NETO";
+            this.dgvNeto.Name = "dgvNeto";
+            this.dgvNeto.ReadOnly = true;
+            // 
+            // dgvEstado
+            // 
+            this.dgvEstado.HeaderText = "ESTADO";
+            this.dgvEstado.Name = "dgvEstado";
+            this.dgvEstado.ReadOnly = true;
             // 
             // pictureBox8
             // 
@@ -459,65 +518,6 @@
             this.btnBuscarConsultaTurno.UseVisualStyleBackColor = false;
             this.btnBuscarConsultaTurno.Click += new System.EventHandler(this.btnBuscarConsultaTurno_Click);
             // 
-            // dgvIdUso
-            // 
-            this.dgvIdUso.HeaderText = "TICKET NO.";
-            this.dgvIdUso.Name = "dgvIdUso";
-            this.dgvIdUso.ReadOnly = true;
-            // 
-            // dgvFechaEntrada
-            // 
-            this.dgvFechaEntrada.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dgvFechaEntrada.HeaderText = "FECHA ENTRADA";
-            this.dgvFechaEntrada.Name = "dgvFechaEntrada";
-            this.dgvFechaEntrada.ReadOnly = true;
-            this.dgvFechaEntrada.Width = 112;
-            // 
-            // dgvFechaSalida
-            // 
-            this.dgvFechaSalida.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dgvFechaSalida.HeaderText = "FECHA SALIDA";
-            this.dgvFechaSalida.Name = "dgvFechaSalida";
-            this.dgvFechaSalida.ReadOnly = true;
-            this.dgvFechaSalida.Width = 99;
-            // 
-            // dgvEmpleado
-            // 
-            this.dgvEmpleado.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dgvEmpleado.HeaderText = "CAJERO";
-            this.dgvEmpleado.Name = "dgvEmpleado";
-            this.dgvEmpleado.ReadOnly = true;
-            // 
-            // dgvTiempo
-            // 
-            this.dgvTiempo.HeaderText = "TIEMPO (MIN)";
-            this.dgvTiempo.Name = "dgvTiempo";
-            this.dgvTiempo.ReadOnly = true;
-            // 
-            // dgvTotal
-            // 
-            this.dgvTotal.HeaderText = "TOTAL";
-            this.dgvTotal.Name = "dgvTotal";
-            this.dgvTotal.ReadOnly = true;
-            // 
-            // dgvDescuento
-            // 
-            this.dgvDescuento.HeaderText = "DESCUENTO";
-            this.dgvDescuento.Name = "dgvDescuento";
-            this.dgvDescuento.ReadOnly = true;
-            // 
-            // dgvNeto
-            // 
-            this.dgvNeto.HeaderText = "NETO";
-            this.dgvNeto.Name = "dgvNeto";
-            this.dgvNeto.ReadOnly = true;
-            // 
-            // dgvEstado
-            // 
-            this.dgvEstado.HeaderText = "ESTADO";
-            this.dgvEstado.Name = "dgvEstado";
-            this.dgvEstado.ReadOnly = true;
-            // 
             // FrmConsultaTicket
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -556,6 +556,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmConsultaTicket";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmConsultaTurno";
             this.Load += new System.EventHandler(this.frmConsultaTurno_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgvTicket)).EndInit();

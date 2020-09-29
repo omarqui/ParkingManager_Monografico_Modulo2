@@ -34,8 +34,8 @@ namespace CapaPresentacion
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string usuario = textBox1.Text.Trim();
-            string clave = textBox2.Text.Trim();
+            string usuario = TxtUsuarioLogin.Text.Trim();
+            string clave = TxtPasswordLogin.Text.Trim();
             bool esValido = EmpleadoLG.EsUsuarioValido(usuario, clave);
 
             try
@@ -51,16 +51,31 @@ namespace CapaPresentacion
                 else
                 {
                     MessageBox.Show("Usuario o contraseña incorrecto", "AVISO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    textBox1.Focus();
+                    TxtUsuarioLogin.Focus();
                 }
 
             }
             catch (Exception error)
             {
                 MessageBox.Show("Ha ocurrido un error al momento de verificar los datos suministrados \n " + error.Message, "AVISO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                textBox1.Focus();
+                TxtUsuarioLogin.Focus();
             }
 
+        }
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                BtnEntrar.Focus();
+            }
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                TxtPasswordLogin.Focus();
+            }
         }
     }
 }

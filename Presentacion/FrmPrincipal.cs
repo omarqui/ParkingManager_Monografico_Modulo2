@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Globalization;
+using System.Data.Odbc;
 
 namespace CapaPresentacion
 {
@@ -39,8 +40,11 @@ namespace CapaPresentacion
                 subMenu.Visible = false;
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        private void FrmPrincipal_Load(object sender, EventArgs e)
         {
+            timer1.Enabled = true;
+
+            lblNombreUsuario.Text = Globales.Empleado.Usuario;
 
         }
 
@@ -82,38 +86,48 @@ namespace CapaPresentacion
         private void BtnInicio_Click(object sender, EventArgs e)
         {
             hideSubMenu();
-
-
         }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+            var respuesta = MessageBox.Show("Seguro que desea generar un ticket?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (respuesta == DialogResult.No)
+            {
+                return;
+            }
+
+            UsoParqueoLN.AperturarUso();
+
+
             hideSubMenu();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            frmTurno ControlTurno = new frmTurno();
-            
-            //this.Hide();
-            ControlTurno.Show();
-            //hideSubMenu();
+            AbrirFormulario<frmTurno>.ejecutarSoloUnaVez(true);
+            //frmTurno ControlTurno = new frmTurno();
+            //ControlTurno.Show();
+            hideSubMenu();
         }
 
         private void BtnSubMenuProcesos_Click(object sender, EventArgs e)
         {
+            AbrirFormulario<frmCierreTurno>.ejecutarSoloUnaVez(true);
             hideSubMenu();
         }
 
         private void button5_Click_1(object sender, EventArgs e)
         {
+            AbrirFormulario<FrmUsoDeParqueo>.ejecutarNuevo(true);
             hideSubMenu();
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            frmConsultaEmpleado ConsultarEmpleado = new frmConsultaEmpleado();
-            ConsultarEmpleado.Show();
+            AbrirFormulario<frmConsultaEmpleado>.ejecutarSoloUnaVez(true);
+
+            //frmConsultaEmpleado ConsultarEmpleado = new frmConsultaEmpleado();
+            //ConsultarEmpleado.Show();
 
             hideSubMenu();
         }
@@ -138,11 +152,6 @@ namespace CapaPresentacion
             hideSubMenu();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void BtnSalirPrincipal_Click(object sender, EventArgs e)
         {
             DialogResult respuesta = MessageBox.Show("Seguro que sea Salir?", "SALIR", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -154,10 +163,11 @@ namespace CapaPresentacion
 
         private void button16_Click(object sender, EventArgs e)
         {
+            AbrirFormulario<frmConfiguracion>.ejecutarSoloUnaVez(true);
             hideSubMenu();
-            frmConfiguracion ConfiguracionEmpresa = new frmConfiguracion();
-            ConfiguracionEmpresa.Show();
-            
+
+            //frmConfiguracion ConfiguracionEmpresa = new frmConfiguracion();
+            //ConfiguracionEmpresa.Show();
         }
 
         private void button15_Click(object sender, EventArgs e)
@@ -167,10 +177,11 @@ namespace CapaPresentacion
 
         private void button12_Click(object sender, EventArgs e)
         {
+            AbrirFormulario<frmConfiguracion>.ejecutarSoloUnaVez(true);
             hideSubMenu();
-            frmConfiguracion ConfiguracionEmpresa = new frmConfiguracion();
-            ConfiguracionEmpresa.Show();
 
+            //frmConfiguracion ConfiguracionEmpresa = new frmConfiguracion();
+            //ConfiguracionEmpresa.Show();
         }
 
         private void panel8_Paint(object sender, PaintEventArgs e)
@@ -206,17 +217,58 @@ namespace CapaPresentacion
 
         private void btnCobrar_Click(object sender, EventArgs e)
         {
-            AbrirFormulario<FrmUsoDeParqueo>.ejecutarSoloUnaVez(true);
+            AbrirFormulario<FrmUsoDeParqueo>.ejecutarNuevo(true);
         }
 
         private void button1_Click_2(object sender, EventArgs e)
         {
-
+            AbrirFormulario<frmConsultaTurno>.ejecutarSoloUnaVez(true);
+        }
+        private void btnCobrarTicket_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<FrmUsoDeParqueo>.ejecutarSoloUnaVez(true);
         }
 
-        private void FrmPrincipal_Load(object sender, EventArgs e)
+        private void FrmPrincipal_KeyDown(object sender, KeyEventArgs e)
         {
-            
+            switch (e.KeyCode)
+            {
+                case Keys.F1:
+                    MessageBox.Show("Trataste de ejecutar una accion con la tecla F1");
+                    break;
+
+                case Keys.F2:
+
+                    var respuesta = MessageBox.Show("Seguro que desea generar un ticket?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (respuesta == DialogResult.No)
+                    {
+                        return;
+                    }
+                    UsoParqueoLN.AperturarUso();
+ 
+                    break;
+
+                case Keys.F3:
+                    AbrirFormulario<FrmUsoDeParqueo>.ejecutarNuevo(true);
+                    break;               
+
+                case Keys.F4:
+                    AbrirFormulario<FrmConsultaTicket>.ejecutarSoloUnaVez(true);
+                    break;
+
+                default:
+                    //MessageBox.Show("Esta tacla no esta registrada");
+                    break;
+            }
+        }
+
+        private void button14_Click_1(object sender, EventArgs e)
+        {
+            AbrirFormulario<FrmConsultaTicket>.ejecutarSoloUnaVez(true);
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
             LblHora.Text = DateTime.Now.ToString("hh:mm:ss");
             LblFecha.Text = DateTime.Now.ToLongDateString();
         }

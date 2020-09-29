@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrincipal));
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblNombreUsuario = new System.Windows.Forms.Label();
@@ -91,6 +92,7 @@
             this.LblFecha = new System.Windows.Forms.Label();
             this.LblHora = new System.Windows.Forms.Label();
             this.Lbldashboard = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel7.SuspendLayout();
@@ -129,7 +131,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1098, 661);
             this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // lblNombreUsuario
             // 
@@ -203,6 +204,7 @@
             this.button14.TabIndex = 0;
             this.button14.Text = "Consultar Ticket";
             this.button14.UseVisualStyleBackColor = false;
+            this.button14.Click += new System.EventHandler(this.button14_Click_1);
             // 
             // panel6
             // 
@@ -489,7 +491,6 @@
             this.label1.Size = new System.Drawing.Size(208, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Parqueos Ocupados";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // panel8
             // 
@@ -591,9 +592,9 @@
             this.BtnSalirPrincipal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnSalirPrincipal.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnSalirPrincipal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(36)))), ((int)(((byte)(85)))));
-            this.BtnSalirPrincipal.Location = new System.Drawing.Point(0, 755);
+            this.BtnSalirPrincipal.Location = new System.Drawing.Point(0, 749);
             this.BtnSalirPrincipal.Name = "BtnSalirPrincipal";
-            this.BtnSalirPrincipal.Size = new System.Drawing.Size(282, 34);
+            this.BtnSalirPrincipal.Size = new System.Drawing.Size(282, 47);
             this.BtnSalirPrincipal.TabIndex = 14;
             this.BtnSalirPrincipal.Text = "Salir";
             this.BtnSalirPrincipal.UseVisualStyleBackColor = true;
@@ -610,7 +611,7 @@
             this.button12.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button12.Image = global::CapaPresentacion.Properties.Resources.iconoConfiguracion;
             this.button12.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button12.Location = new System.Drawing.Point(0, 696);
+            this.button12.Location = new System.Drawing.Point(0, 690);
             this.button12.Name = "button12";
             this.button12.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.button12.Size = new System.Drawing.Size(282, 59);
@@ -629,7 +630,7 @@
             this.PnSubMenuReportes.Controls.Add(this.btnTicketParqueoEnUso);
             this.PnSubMenuReportes.Controls.Add(this.btnReporteCuandreCaja);
             this.PnSubMenuReportes.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PnSubMenuReportes.Location = new System.Drawing.Point(0, 570);
+            this.PnSubMenuReportes.Location = new System.Drawing.Point(0, 564);
             this.PnSubMenuReportes.Name = "PnSubMenuReportes";
             this.PnSubMenuReportes.Size = new System.Drawing.Size(282, 126);
             this.PnSubMenuReportes.TabIndex = 12;
@@ -725,7 +726,7 @@
             this.button8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button8.Image = global::CapaPresentacion.Properties.Resources.iconoReportes;
             this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button8.Location = new System.Drawing.Point(0, 511);
+            this.button8.Location = new System.Drawing.Point(0, 505);
             this.button8.Name = "button8";
             this.button8.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.button8.Size = new System.Drawing.Size(282, 59);
@@ -743,7 +744,7 @@
             this.PnSubMenuConsulta.Controls.Add(this.btnConsultarEmpleado);
             this.PnSubMenuConsulta.Controls.Add(this.btnParqueosEnUso);
             this.PnSubMenuConsulta.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PnSubMenuConsulta.Location = new System.Drawing.Point(0, 414);
+            this.PnSubMenuConsulta.Location = new System.Drawing.Point(0, 408);
             this.PnSubMenuConsulta.Name = "PnSubMenuConsulta";
             this.PnSubMenuConsulta.Size = new System.Drawing.Size(282, 97);
             this.PnSubMenuConsulta.TabIndex = 10;
@@ -802,7 +803,7 @@
             this.btnParqueosEnUso.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.btnParqueosEnUso.Size = new System.Drawing.Size(282, 32);
             this.btnParqueosEnUso.TabIndex = 0;
-            this.btnParqueosEnUso.Text = "Parqueos Uso x Tiempo";
+            this.btnParqueosEnUso.Text = "Consultar Ticket";
             this.btnParqueosEnUso.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnParqueosEnUso.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnParqueosEnUso.UseVisualStyleBackColor = true;
@@ -819,7 +820,7 @@
             this.button4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button4.Image = global::CapaPresentacion.Properties.Resources.iconoConsulta;
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(0, 355);
+            this.button4.Location = new System.Drawing.Point(0, 349);
             this.button4.Name = "button4";
             this.button4.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.button4.Size = new System.Drawing.Size(282, 59);
@@ -840,7 +841,7 @@
             this.PnSubMenuProcesos.Dock = System.Windows.Forms.DockStyle.Top;
             this.PnSubMenuProcesos.Location = new System.Drawing.Point(0, 224);
             this.PnSubMenuProcesos.Name = "PnSubMenuProcesos";
-            this.PnSubMenuProcesos.Size = new System.Drawing.Size(282, 131);
+            this.PnSubMenuProcesos.Size = new System.Drawing.Size(282, 125);
             this.PnSubMenuProcesos.TabIndex = 8;
             // 
             // btnCobrarTicket
@@ -861,6 +862,7 @@
             this.btnCobrarTicket.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCobrarTicket.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCobrarTicket.UseVisualStyleBackColor = true;
+            this.btnCobrarTicket.Click += new System.EventHandler(this.btnCobrarTicket_Click);
             // 
             // btnCuadreCaja
             // 
@@ -871,7 +873,7 @@
             this.btnCuadreCaja.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCuadreCaja.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCuadreCaja.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnCuadreCaja.Location = new System.Drawing.Point(0, 99);
+            this.btnCuadreCaja.Location = new System.Drawing.Point(0, 93);
             this.btnCuadreCaja.Name = "btnCuadreCaja";
             this.btnCuadreCaja.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.btnCuadreCaja.Size = new System.Drawing.Size(282, 32);
@@ -884,17 +886,16 @@
             // 
             // btnRegistroTurno
             // 
-            this.btnRegistroTurno.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnRegistroTurno.FlatAppearance.BorderSize = 0;
             this.btnRegistroTurno.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
             this.btnRegistroTurno.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(22)))), ((int)(((byte)(34)))));
             this.btnRegistroTurno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistroTurno.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistroTurno.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnRegistroTurno.Location = new System.Drawing.Point(0, 32);
+            this.btnRegistroTurno.Location = new System.Drawing.Point(0, 61);
             this.btnRegistroTurno.Name = "btnRegistroTurno";
             this.btnRegistroTurno.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnRegistroTurno.Size = new System.Drawing.Size(282, 99);
+            this.btnRegistroTurno.Size = new System.Drawing.Size(282, 34);
             this.btnRegistroTurno.TabIndex = 1;
             this.btnRegistroTurno.Text = "Registro de Turno";
             this.btnRegistroTurno.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1026,6 +1027,10 @@
             this.Lbldashboard.TabIndex = 0;
             this.Lbldashboard.Text = "Inicio";
             // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1037,10 +1042,12 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.Name = "FrmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmPrincipal";
             this.Load += new System.EventHandler(this.FrmPrincipal_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmPrincipal_KeyDown);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -1133,5 +1140,6 @@
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Button btnCobrarTicket;
         private System.Windows.Forms.Button btnConsultarTurno;
+        private System.Windows.Forms.Timer timer1;
     }
 }
