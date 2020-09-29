@@ -23,10 +23,35 @@ namespace CapaNegocio
             return funcionesTurno.Aperturar(turno);
         }
 
+
         public static DataTable BuscarTurnos()
         {
             TurnoAD funcionesTunro = new TurnoAD();
-            return funcionesTunro.BuscarTodos();            
+            return funcionesTunro.BuscarTodos();
+        }
+
+        public static Turno EstaTurnoAbiertoEmpleado(int idEmpleadoTurno)
+        {
+            TurnoAD funcionesTunro = new TurnoAD();            
+            return funcionesTunro.BuscarUltimoTurnoAbiertoEmpleado(idEmpleadoTurno);
+        }
+
+        public static int CerrarTurno(Turno turnoCerrar)
+        {
+            TurnoAD funcionesTurno = new TurnoAD();
+            return funcionesTurno.Cerrar(turnoCerrar);
+        }
+
+        public static Turno BuscarTurnoPorID(int idTurnoAbierto)
+        {
+            TurnoAD funcionesTurno = new TurnoAD();
+            return funcionesTurno.BuscarPorID(idTurnoAbierto);
+        }
+
+        public static decimal BuscarSumatoriaCierreTurno(int idTurno)
+        {
+            TurnoAD funcionesTurno = new TurnoAD();
+            return funcionesTurno.BuscarSumatoriaCierreTurno(idTurno);            
         }
     }
 }
