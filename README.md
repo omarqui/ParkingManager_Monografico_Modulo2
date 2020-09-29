@@ -42,7 +42,7 @@ Omarqui| | | x
 - [x] Registro
 - [x] Cobro
 - [ ] Poner a funcionar descuento
-- [ ] Consulta
+- [x] Consulta
 
 #### Reporte
 
@@ -56,7 +56,8 @@ Omarqui| | | x
 
 - [x] Apertura
 - [x] Consulta
-- [ ] Cierre
+- [x] Cierre
+- [ ] Agregar lista de ticket a Cierre
 - [ ] Consulta para selecionar empleado en apertura
 
 #### Reporte
