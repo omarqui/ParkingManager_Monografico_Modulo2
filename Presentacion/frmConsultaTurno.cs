@@ -30,7 +30,9 @@ namespace CapaPresentacion
         }
 
         private void BuscarTurnosConsulta()
-        {            
+        {
+            dtgvTurnos.Rows.Clear();
+
             DataTable datosTurnos = TurnoLG.BuscarTurnos();
             
             foreach (DataRow turnos in datosTurnos.Rows)
@@ -57,6 +59,11 @@ namespace CapaPresentacion
         private void btnSalirConsultaTurno_Click(object sender, EventArgs e)
         {
             this.Dispose();
+        }
+
+        private void btnCierreConsultaTurno_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<frmCierreTurno>.ejecutarSoloUnaVez(true);
         }
     }
 }
