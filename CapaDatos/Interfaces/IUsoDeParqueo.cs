@@ -17,7 +17,12 @@ namespace CapaDatos.Interfaces
 
         int CerrarUso(UsoDeParqueo uso, SqlTransaction transaction = null);
 
-        DataTable BuscarTodos();
+        DataTable BuscarTodos(
+            DateTime? desde = null,
+            DateTime? hasta = null,
+            int? idCajero = null,
+            string estado = null,
+            string textoAbierto = null);
 
         int BuscarCantidadParqueoDisponibles();
 

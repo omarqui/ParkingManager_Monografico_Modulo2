@@ -105,13 +105,24 @@ namespace CapaDatos
             return null;
         }
 
-        public DataTable BuscarTodos()
+        public DataTable BuscarTodos(
+            DateTime? desde = null,
+            DateTime? hasta = null,
+            int? idCajero = null,
+            string estado = null,
+            string textoAbierto = null)
         {
             DataTable dt = new DataTable();
             using (var conn = _conexion)
             {
                 using (var cmd = CrearCommand(conn, "pa_buscarUso"))
                 {
+                    cmd.Parameters.AddWithValue("desde", desde);
+                    cmd.Parameters.AddWithValue("hasta", hasta);
+                    cmd.Parameters.AddWithValue("cajero", idCajero);
+                    cmd.Parameters.AddWithValue("estado", estado);
+                    cmd.Parameters.AddWithValue("textoAbierto", textoAbierto);
+
                     using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
                     {
                         adapter.Fill(dt);

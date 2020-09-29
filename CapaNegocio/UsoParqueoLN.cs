@@ -65,10 +65,26 @@ namespace CapaNegocio
             return filasAfectadas > 0 && filasAfectadasCobro > 0;
         }
 
-        public static DataTable BuscarTodos()
+        public static DataTable BuscarTodos(
+            DateTime? desde = null,
+            DateTime? hasta = null,
+            int? idCajero = null,
+            string estado = null,
+            string textoAbierto = null)
         {
             UsoDeParqueoAD repositorio = new UsoDeParqueoAD();
-            return repositorio.BuscarTodos();
+            
+            
+            if (idCajero == 0) idCajero = null;
+            if (estado == string.Empty) estado = null;
+            if (textoAbierto == string.Empty) textoAbierto = null;
+
+            return repositorio.BuscarTodos(
+                desde,
+                hasta,
+                idCajero,
+                estado,
+                textoAbierto);
         }
 
         public static int BuscarCantidadParqueoDisponibles()
