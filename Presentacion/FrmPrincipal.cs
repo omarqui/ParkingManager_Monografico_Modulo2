@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Globalization;
 
 namespace CapaPresentacion
 {
@@ -215,6 +216,7 @@ namespace CapaPresentacion
 
         private void FrmPrincipal_Load(object sender, EventArgs e)
         {
+            
             LblHora.Text = DateTime.Now.ToString("hh:mm:ss");
             LblFecha.Text = DateTime.Now.ToLongDateString();
         }

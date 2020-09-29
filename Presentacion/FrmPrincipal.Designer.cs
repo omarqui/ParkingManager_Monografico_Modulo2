@@ -997,7 +997,7 @@
             this.LblFecha.AutoSize = true;
             this.LblFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblFecha.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.LblFecha.Location = new System.Drawing.Point(660, 3);
+            this.LblFecha.Location = new System.Drawing.Point(470, 2);
             this.LblFecha.Name = "LblFecha";
             this.LblFecha.Size = new System.Drawing.Size(72, 25);
             this.LblFecha.TabIndex = 0;
@@ -1009,7 +1009,7 @@
             this.LblHora.AutoSize = true;
             this.LblHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblHora.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.LblHora.Location = new System.Drawing.Point(535, 3);
+            this.LblHora.Location = new System.Drawing.Point(309, 2);
             this.LblHora.Name = "LblHora";
             this.LblHora.Size = new System.Drawing.Size(58, 25);
             this.LblHora.TabIndex = 0;
