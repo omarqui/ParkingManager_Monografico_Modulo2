@@ -19,7 +19,7 @@ namespace CapaNegocio
             return empleadoAD.BuscarPorID(id);
         }
 
-        public Empleado BuscarPorUsuario(string usuario)
+        public static Empleado BuscarPorUsuario(string usuario)
         {
             IEmpleadoAD empleadoAD = null;
 

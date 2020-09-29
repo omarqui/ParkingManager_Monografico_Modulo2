@@ -42,7 +42,9 @@ namespace CapaPresentacion
             {
                 if (esValido)
                 {
+                    Globales.Empleado = EmpleadoLG.BuscarPorUsuario(usuario);
                     FrmPrincipal presentacion = new FrmPrincipal();
+
                     this.Hide();
                     presentacion.Show();
                 }
