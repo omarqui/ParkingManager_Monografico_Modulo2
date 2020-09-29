@@ -47,11 +47,11 @@
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.LblCActualPD = new System.Windows.Forms.Label();
+            this.LblCActualPO = new System.Windows.Forms.Label();
+            this.LblSalidasH = new System.Windows.Forms.Label();
+            this.lblAccesoH = new System.Windows.Forms.Label();
+            this.lblPDisponible = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.LblParqueos = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -127,7 +127,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1088, 663);
+            this.panel1.Size = new System.Drawing.Size(1098, 661);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -147,7 +147,7 @@
             // 
             this.pictureBox4.Image = global::CapaPresentacion.Properties.Resources.punto;
             this.pictureBox4.Location = new System.Drawing.Point(305, 636);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(19, 17);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -171,7 +171,7 @@
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
             this.panel7.Controls.Add(this.pictureBox3);
             this.panel7.Controls.Add(this.button14);
-            this.panel7.Location = new System.Drawing.Point(839, 198);
+            this.panel7.Location = new System.Drawing.Point(844, 198);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(237, 285);
             this.panel7.TabIndex = 1;
@@ -181,7 +181,7 @@
             this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox3.Image = global::CapaPresentacion.Properties.Resources.iconoConsultarTique;
             this.pictureBox3.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(237, 234);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -209,7 +209,7 @@
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
             this.panel6.Controls.Add(this.pictureBox2);
             this.panel6.Controls.Add(this.btnCobrar);
-            this.panel6.Location = new System.Drawing.Point(575, 198);
+            this.panel6.Location = new System.Drawing.Point(580, 198);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(237, 285);
             this.panel6.TabIndex = 1;
@@ -219,7 +219,7 @@
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox2.Image = global::CapaPresentacion.Properties.Resources.iconoCobrarTique;
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(237, 234);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -248,7 +248,7 @@
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
             this.panel5.Controls.Add(this.pictureBox1);
             this.panel5.Controls.Add(this.btnGenerarTicket);
-            this.panel5.Location = new System.Drawing.Point(305, 198);
+            this.panel5.Location = new System.Drawing.Point(310, 198);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(237, 285);
             this.panel5.TabIndex = 1;
@@ -258,7 +258,7 @@
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = global::CapaPresentacion.Properties.Resources.iconoGeneralTique;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(237, 234);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -291,11 +291,11 @@
             this.panel4.Controls.Add(this.pictureBox7);
             this.panel4.Controls.Add(this.pictureBox6);
             this.panel4.Controls.Add(this.pictureBox5);
-            this.panel4.Controls.Add(this.label7);
-            this.panel4.Controls.Add(this.label3);
-            this.panel4.Controls.Add(this.label11);
-            this.panel4.Controls.Add(this.label9);
-            this.panel4.Controls.Add(this.label6);
+            this.panel4.Controls.Add(this.LblCActualPD);
+            this.panel4.Controls.Add(this.LblCActualPO);
+            this.panel4.Controls.Add(this.LblSalidasH);
+            this.panel4.Controls.Add(this.lblAccesoH);
+            this.panel4.Controls.Add(this.lblPDisponible);
             this.panel4.Controls.Add(this.label5);
             this.panel4.Controls.Add(this.LblParqueos);
             this.panel4.Controls.Add(this.label10);
@@ -305,14 +305,14 @@
             this.panel4.Controls.Add(this.label1);
             this.panel4.Location = new System.Drawing.Point(305, 34);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(776, 152);
+            this.panel4.Size = new System.Drawing.Size(786, 152);
             this.panel4.TabIndex = 0;
             // 
             // pictureBox8
             // 
             this.pictureBox8.Image = global::CapaPresentacion.Properties.Resources.iconoSalidaHoy;
             this.pictureBox8.Location = new System.Drawing.Point(718, 51);
-            this.pictureBox8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox8.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(50, 41);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -323,7 +323,7 @@
             // 
             this.pictureBox7.Image = global::CapaPresentacion.Properties.Resources.iconoAccesosHoy;
             this.pictureBox7.Location = new System.Drawing.Point(558, 51);
-            this.pictureBox7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(62, 41);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -334,7 +334,7 @@
             // 
             this.pictureBox6.Image = global::CapaPresentacion.Properties.Resources.iconoParqueoD;
             this.pictureBox6.Location = new System.Drawing.Point(370, 51);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(75, 41);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -345,72 +345,72 @@
             // 
             this.pictureBox5.Image = global::CapaPresentacion.Properties.Resources.iconoPocup;
             this.pictureBox5.Location = new System.Drawing.Point(135, 51);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(75, 41);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox5.TabIndex = 1;
             this.pictureBox5.TabStop = false;
             // 
-            // label7
+            // LblCActualPD
             // 
-            this.label7.AutoSize = true;
-            this.label7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(36)))), ((int)(((byte)(85)))));
-            this.label7.Location = new System.Drawing.Point(230, 129);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(37, 18);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "00%";
+            this.LblCActualPD.AutoSize = true;
+            this.LblCActualPD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LblCActualPD.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblCActualPD.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(36)))), ((int)(((byte)(85)))));
+            this.LblCActualPD.Location = new System.Drawing.Point(230, 129);
+            this.LblCActualPD.Name = "LblCActualPD";
+            this.LblCActualPD.Size = new System.Drawing.Size(37, 18);
+            this.LblCActualPD.TabIndex = 0;
+            this.LblCActualPD.Text = "00%";
             // 
-            // label3
+            // LblCActualPO
             // 
-            this.label3.AutoSize = true;
-            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(36)))), ((int)(((byte)(85)))));
-            this.label3.Location = new System.Drawing.Point(6, 129);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(37, 18);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "00%";
+            this.LblCActualPO.AutoSize = true;
+            this.LblCActualPO.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LblCActualPO.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblCActualPO.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(36)))), ((int)(((byte)(85)))));
+            this.LblCActualPO.Location = new System.Drawing.Point(6, 129);
+            this.LblCActualPO.Name = "LblCActualPO";
+            this.LblCActualPO.Size = new System.Drawing.Size(37, 18);
+            this.LblCActualPO.TabIndex = 0;
+            this.LblCActualPO.Text = "00%";
             // 
-            // label11
+            // LblSalidasH
             // 
-            this.label11.AutoSize = true;
-            this.label11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 39.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(36)))), ((int)(((byte)(85)))));
-            this.label11.Location = new System.Drawing.Point(624, 41);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(85, 61);
-            this.label11.TabIndex = 0;
-            this.label11.Text = "00";
+            this.LblSalidasH.AutoSize = true;
+            this.LblSalidasH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LblSalidasH.Font = new System.Drawing.Font("Microsoft Sans Serif", 39.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblSalidasH.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(36)))), ((int)(((byte)(85)))));
+            this.LblSalidasH.Location = new System.Drawing.Point(624, 41);
+            this.LblSalidasH.Name = "LblSalidasH";
+            this.LblSalidasH.Size = new System.Drawing.Size(85, 61);
+            this.LblSalidasH.TabIndex = 0;
+            this.LblSalidasH.Text = "00";
             // 
-            // label9
+            // lblAccesoH
             // 
-            this.label9.AutoSize = true;
-            this.label9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 39.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(36)))), ((int)(((byte)(85)))));
-            this.label9.Location = new System.Drawing.Point(463, 41);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(85, 61);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "00";
+            this.lblAccesoH.AutoSize = true;
+            this.lblAccesoH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblAccesoH.Font = new System.Drawing.Font("Microsoft Sans Serif", 39.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAccesoH.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(36)))), ((int)(((byte)(85)))));
+            this.lblAccesoH.Location = new System.Drawing.Point(463, 41);
+            this.lblAccesoH.Name = "lblAccesoH";
+            this.lblAccesoH.Size = new System.Drawing.Size(85, 61);
+            this.lblAccesoH.TabIndex = 0;
+            this.lblAccesoH.Text = "00";
             // 
-            // label6
+            // lblPDisponible
             // 
-            this.label6.AutoSize = true;
-            this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 39.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(36)))), ((int)(((byte)(85)))));
-            this.label6.Location = new System.Drawing.Point(230, 41);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(85, 61);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "00";
+            this.lblPDisponible.AutoSize = true;
+            this.lblPDisponible.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblPDisponible.Font = new System.Drawing.Font("Microsoft Sans Serif", 39.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPDisponible.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(36)))), ((int)(((byte)(85)))));
+            this.lblPDisponible.Location = new System.Drawing.Point(230, 41);
+            this.lblPDisponible.Name = "lblPDisponible";
+            this.lblPDisponible.Size = new System.Drawing.Size(85, 61);
+            this.lblPDisponible.TabIndex = 0;
+            this.lblPDisponible.Text = "00";
             // 
             // label5
             // 
@@ -501,9 +501,9 @@
             this.panel8.Controls.Add(this.label17);
             this.panel8.Controls.Add(this.label13);
             this.panel8.Controls.Add(this.label12);
-            this.panel8.Location = new System.Drawing.Point(305, 499);
+            this.panel8.Location = new System.Drawing.Point(305, 497);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(771, 130);
+            this.panel8.Size = new System.Drawing.Size(781, 130);
             this.panel8.TabIndex = 0;
             this.panel8.Paint += new System.Windows.Forms.PaintEventHandler(this.panel8_Paint);
             // 
@@ -580,7 +580,7 @@
             this.PnPrincipal.Dock = System.Windows.Forms.DockStyle.Left;
             this.PnPrincipal.Location = new System.Drawing.Point(0, 0);
             this.PnPrincipal.Name = "PnPrincipal";
-            this.PnPrincipal.Size = new System.Drawing.Size(299, 663);
+            this.PnPrincipal.Size = new System.Drawing.Size(299, 661);
             this.PnPrincipal.TabIndex = 1;
             // 
             // BtnSalirPrincipal
@@ -591,7 +591,7 @@
             this.BtnSalirPrincipal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnSalirPrincipal.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnSalirPrincipal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(36)))), ((int)(((byte)(85)))));
-            this.BtnSalirPrincipal.Location = new System.Drawing.Point(0, 751);
+            this.BtnSalirPrincipal.Location = new System.Drawing.Point(0, 755);
             this.BtnSalirPrincipal.Name = "BtnSalirPrincipal";
             this.BtnSalirPrincipal.Size = new System.Drawing.Size(282, 34);
             this.BtnSalirPrincipal.TabIndex = 14;
@@ -610,7 +610,7 @@
             this.button12.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button12.Image = global::CapaPresentacion.Properties.Resources.iconoConfiguracion;
             this.button12.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button12.Location = new System.Drawing.Point(0, 692);
+            this.button12.Location = new System.Drawing.Point(0, 696);
             this.button12.Name = "button12";
             this.button12.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.button12.Size = new System.Drawing.Size(282, 59);
@@ -629,7 +629,7 @@
             this.PnSubMenuReportes.Controls.Add(this.btnTicketParqueoEnUso);
             this.PnSubMenuReportes.Controls.Add(this.btnReporteCuandreCaja);
             this.PnSubMenuReportes.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PnSubMenuReportes.Location = new System.Drawing.Point(0, 566);
+            this.PnSubMenuReportes.Location = new System.Drawing.Point(0, 570);
             this.PnSubMenuReportes.Name = "PnSubMenuReportes";
             this.PnSubMenuReportes.Size = new System.Drawing.Size(282, 126);
             this.PnSubMenuReportes.TabIndex = 12;
@@ -648,7 +648,7 @@
             this.btnFacturas.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.btnFacturas.Size = new System.Drawing.Size(282, 32);
             this.btnFacturas.TabIndex = 3;
-            this.btnFacturas.Text = "Lista de facturas";
+            this.btnFacturas.Text = "Lista de Facturas";
             this.btnFacturas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnFacturas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnFacturas.UseVisualStyleBackColor = true;
@@ -708,7 +708,7 @@
             this.btnReporteCuandreCaja.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.btnReporteCuandreCaja.Size = new System.Drawing.Size(282, 32);
             this.btnReporteCuandreCaja.TabIndex = 0;
-            this.btnReporteCuandreCaja.Text = "Cuadre de caja";
+            this.btnReporteCuandreCaja.Text = "Cuadre de Caja";
             this.btnReporteCuandreCaja.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnReporteCuandreCaja.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnReporteCuandreCaja.UseVisualStyleBackColor = true;
@@ -725,7 +725,7 @@
             this.button8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button8.Image = global::CapaPresentacion.Properties.Resources.iconoReportes;
             this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button8.Location = new System.Drawing.Point(0, 507);
+            this.button8.Location = new System.Drawing.Point(0, 511);
             this.button8.Name = "button8";
             this.button8.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.button8.Size = new System.Drawing.Size(282, 59);
@@ -743,7 +743,7 @@
             this.PnSubMenuConsulta.Controls.Add(this.btnConsultarEmpleado);
             this.PnSubMenuConsulta.Controls.Add(this.btnParqueosEnUso);
             this.PnSubMenuConsulta.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PnSubMenuConsulta.Location = new System.Drawing.Point(0, 410);
+            this.PnSubMenuConsulta.Location = new System.Drawing.Point(0, 414);
             this.PnSubMenuConsulta.Name = "PnSubMenuConsulta";
             this.PnSubMenuConsulta.Size = new System.Drawing.Size(282, 97);
             this.PnSubMenuConsulta.TabIndex = 10;
@@ -802,7 +802,7 @@
             this.btnParqueosEnUso.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.btnParqueosEnUso.Size = new System.Drawing.Size(282, 32);
             this.btnParqueosEnUso.TabIndex = 0;
-            this.btnParqueosEnUso.Text = "Parqueos en uso x tiempo";
+            this.btnParqueosEnUso.Text = "Parqueos Uso x Tiempo";
             this.btnParqueosEnUso.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnParqueosEnUso.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnParqueosEnUso.UseVisualStyleBackColor = true;
@@ -819,7 +819,7 @@
             this.button4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button4.Image = global::CapaPresentacion.Properties.Resources.iconoConsulta;
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(0, 351);
+            this.button4.Location = new System.Drawing.Point(0, 355);
             this.button4.Name = "button4";
             this.button4.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.button4.Size = new System.Drawing.Size(282, 59);
@@ -838,7 +838,7 @@
             this.PnSubMenuProcesos.Controls.Add(this.btnRegistroTurno);
             this.PnSubMenuProcesos.Controls.Add(this.btnGeneralTicket);
             this.PnSubMenuProcesos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PnSubMenuProcesos.Location = new System.Drawing.Point(0, 220);
+            this.PnSubMenuProcesos.Location = new System.Drawing.Point(0, 224);
             this.PnSubMenuProcesos.Name = "PnSubMenuProcesos";
             this.PnSubMenuProcesos.Size = new System.Drawing.Size(282, 131);
             this.PnSubMenuProcesos.TabIndex = 8;
@@ -876,7 +876,7 @@
             this.btnCuadreCaja.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.btnCuadreCaja.Size = new System.Drawing.Size(282, 32);
             this.btnCuadreCaja.TabIndex = 2;
-            this.btnCuadreCaja.Text = "Cuadre de caja";
+            this.btnCuadreCaja.Text = "Cuadre de Caja";
             this.btnCuadreCaja.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCuadreCaja.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCuadreCaja.UseVisualStyleBackColor = true;
@@ -933,7 +933,7 @@
             this.BtnProcesos.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BtnProcesos.Image = global::CapaPresentacion.Properties.Resources.iconoProceso;
             this.BtnProcesos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnProcesos.Location = new System.Drawing.Point(0, 161);
+            this.BtnProcesos.Location = new System.Drawing.Point(0, 165);
             this.BtnProcesos.Name = "BtnProcesos";
             this.BtnProcesos.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.BtnProcesos.Size = new System.Drawing.Size(282, 59);
@@ -955,7 +955,7 @@
             this.BtnInicio.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BtnInicio.Image = global::CapaPresentacion.Properties.Resources.iconoInicio;
             this.BtnInicio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnInicio.Location = new System.Drawing.Point(0, 102);
+            this.BtnInicio.Location = new System.Drawing.Point(0, 106);
             this.BtnInicio.Name = "BtnInicio";
             this.BtnInicio.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.BtnInicio.Size = new System.Drawing.Size(282, 59);
@@ -971,8 +971,8 @@
             this.PicLogo.Image = global::CapaPresentacion.Properties.Resources.logo_Parking;
             this.PicLogo.Location = new System.Drawing.Point(0, 0);
             this.PicLogo.Name = "PicLogo";
-            this.PicLogo.Padding = new System.Windows.Forms.Padding(11, 12, 11, 12);
-            this.PicLogo.Size = new System.Drawing.Size(282, 102);
+            this.PicLogo.Padding = new System.Windows.Forms.Padding(11, 15, 11, 12);
+            this.PicLogo.Size = new System.Drawing.Size(282, 106);
             this.PicLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PicLogo.TabIndex = 5;
             this.PicLogo.TabStop = false;
@@ -988,7 +988,7 @@
             this.panel3.Controls.Add(this.Lbldashboard);
             this.panel3.Location = new System.Drawing.Point(305, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(776, 28);
+            this.panel3.Size = new System.Drawing.Size(834, 28);
             this.panel3.TabIndex = 2;
             // 
             // LblFecha
@@ -997,7 +997,7 @@
             this.LblFecha.AutoSize = true;
             this.LblFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblFecha.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.LblFecha.Location = new System.Drawing.Point(602, 3);
+            this.LblFecha.Location = new System.Drawing.Point(660, 3);
             this.LblFecha.Name = "LblFecha";
             this.LblFecha.Size = new System.Drawing.Size(72, 25);
             this.LblFecha.TabIndex = 0;
@@ -1009,7 +1009,7 @@
             this.LblHora.AutoSize = true;
             this.LblHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblHora.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.LblHora.Location = new System.Drawing.Point(477, 3);
+            this.LblHora.Location = new System.Drawing.Point(535, 3);
             this.LblHora.Name = "LblHora";
             this.LblHora.Size = new System.Drawing.Size(58, 25);
             this.LblHora.TabIndex = 0;
@@ -1031,7 +1031,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(21)))));
-            this.ClientSize = new System.Drawing.Size(1088, 663);
+            this.ClientSize = new System.Drawing.Size(1098, 661);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.PnPrincipal);
             this.Controls.Add(this.panel1);
@@ -1100,14 +1100,14 @@
         private System.Windows.Forms.Label LblHora;
         private System.Windows.Forms.Label Lbldashboard;
         private System.Windows.Forms.Button BtnSalirPrincipal;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label LblCActualPO;
         private System.Windows.Forms.Label LblParqueos;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label LblCActualPD;
+        private System.Windows.Forms.Label LblSalidasH;
+        private System.Windows.Forms.Label lblAccesoH;
+        private System.Windows.Forms.Label lblPDisponible;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label8;

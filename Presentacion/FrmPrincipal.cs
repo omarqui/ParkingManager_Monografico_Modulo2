@@ -25,7 +25,6 @@ namespace CapaPresentacion
             PnSubMenuConsulta.Visible = false;
             PnSubMenuReportes.Visible = false;
 
-            
         }
 
         private void showSubMenu(Panel subMenu)
@@ -217,7 +216,8 @@ namespace CapaPresentacion
 
         private void FrmPrincipal_Load(object sender, EventArgs e)
         {
-            
+            LblHora.Text = DateTime.Now.ToString("hh:mm:ss");
+            LblFecha.Text = DateTime.Now.ToLongDateString();
         }
     }
 }

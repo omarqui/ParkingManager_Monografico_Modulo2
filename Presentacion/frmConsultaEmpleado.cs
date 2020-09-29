@@ -45,6 +45,8 @@ namespace CapaPresentacion
 
         private void btnEditarEmpleado_Click(object sender, EventArgs e)
         {
+            
+
             if (dtgvEmpleado.Rows.Count <= 0)
             {
                 MessageBox.Show("Debe seleccionar un registro para editar", "AVISO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
