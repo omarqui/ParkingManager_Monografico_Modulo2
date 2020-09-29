@@ -205,8 +205,7 @@ namespace CapaPresentacion
 
         private void btnCobrar_Click(object sender, EventArgs e)
         {
-            FrmUsoDeParqueo frmUsoDeParqueo = new FrmUsoDeParqueo();
-            frmUsoDeParqueo.ShowDialog();
+            AbrirFormulario<FrmUsoDeParqueo>.ejecutarSoloUnaVez(true);
         }
 
         private void button1_Click_2(object sender, EventArgs e)
