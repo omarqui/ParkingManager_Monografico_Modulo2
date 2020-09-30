@@ -53,5 +53,11 @@ namespace CapaNegocio
             TurnoAD funcionesTurno = new TurnoAD();
             return funcionesTurno.BuscarSumatoriaCierreTurno(idTurno);            
         }
+
+        public static DataTable BuscarTurnoImpresion(int idTurno)
+        {
+            TurnoAD funcionesTurno = new TurnoAD();
+            return funcionesTurno.BuscarTurnoImpresion(idTurno);
+        }
     }
 }

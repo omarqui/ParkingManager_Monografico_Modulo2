@@ -26,7 +26,7 @@ Omarqui| | | x
 
 ### Empleado
 
-- [x] Registro 
+- [x] Registro
 - [x] Consulta
 - [x] Login
 - [ ] Reporte
@@ -46,8 +46,8 @@ Omarqui| | | x
 
 #### Reporte
 
-- [ ] Registro
-- [ ] Cobro
+- [x] Registro
+- [x] Cobro
 - [ ] Listado
 
 ### Turno
@@ -62,7 +62,7 @@ Omarqui| | | x
 
 #### Reporte
 
-- [ ] Cierre
+- [x] Cierre
 - [ ] Listado
 
 ## Principal

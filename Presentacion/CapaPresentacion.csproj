@@ -64,6 +64,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Reportes\DataSetGeneral.cs">
+      <DependentUpon>DataSetGeneral.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Reportes\DataSetGeneral.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -188,6 +191,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Reportes\RptTurno.rdlc" />
     <EmbeddedResource Include="Reportes\RptGeneracionTicket.rdlc" />
     <EmbeddedResource Include="Reportes\RptCobroTicket.rdlc" />
     <None Include="App.config" />

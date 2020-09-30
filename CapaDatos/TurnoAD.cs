@@ -128,6 +128,23 @@ namespace CapaDatos
             }
         }
 
+        public DataTable BuscarTurnoImpresion(int idTurno)
+        {
+            DataTable dt = new DataTable();
+            using (var conn = _conexion)
+            {
+                using (var cmd = CrearCommand(conn, "pa_buscarTurnoImpresion"))
+                {
+                    cmd.Parameters.AddWithValue("idTurno", idTurno);
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
+                    {
+                        adapter.Fill(dt);
+                        return dt;
+                    }
+                }
+            }
+        }
+
         public int Cerrar(Turno turno, SqlTransaction transaction = null)
         {
             try
