@@ -193,5 +193,23 @@ namespace CapaDatos
         {
             return ObtenerSiguienteSecuenacia("USO_DE_PARQUEO", "IdUso");
         }
+
+        public DataTable BuscarTicketImpresion(int idUsoParqueo)
+        {
+            DataTable dt = new DataTable();
+            using (var conn = _conexion)
+            {
+                using (var cmd = CrearCommand(conn, "pa_BuscarTicketImpresion"))
+                {
+                    cmd.Parameters.AddWithValue("idUsoParqueo", idUsoParqueo);
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
+                    {
+                        adapter.Fill(dt);
+                        return dt;
+                    }
+                }
+            }
+        }
+
     }
 }

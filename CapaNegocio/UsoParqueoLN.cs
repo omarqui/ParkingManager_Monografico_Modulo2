@@ -106,5 +106,11 @@ namespace CapaNegocio
 
             return repositorio.BuscarCobroImpresion(idUso);
         }
+
+        public static DataTable BuscarTicketImpresion(int idUsoParqueo)
+        {
+            UsoDeParqueoAD funcionesUsoParqueo = new UsoDeParqueoAD();
+            return funcionesUsoParqueo.BuscarTicketImpresion(idUsoParqueo);
+        }
     }
 }
