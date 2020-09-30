@@ -21,10 +21,10 @@ namespace CapaPresentacion.Reportes
 
         private void FrmReportViwer_Load(object sender, EventArgs e)
         {
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "CapaPresentacion.Reportes.RptCobroTicket.rdlc";
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "CapaPresentacion.Reportes.RptGeneracionTicket.rdlc";
 
             ReportDataSource configuracion = new ReportDataSource("Configuracion", ConfiguracionLG.BuscarConfiguracion());
-            ReportDataSource cobro = new ReportDataSource("Cobro", UsoParqueoLN.BuscarCobroImpresion(1));
+            ReportDataSource cobro = new ReportDataSource("Ticket", UsoParqueoLN.BuscarTicketImpresion(1));
             reportViewer1.LocalReport.DataSources.Clear();
             reportViewer1.LocalReport.DataSources.Add(configuracion);
             reportViewer1.LocalReport.DataSources.Add(cobro);
