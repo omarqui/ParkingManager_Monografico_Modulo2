@@ -89,10 +89,12 @@
             this.BtnInicio = new System.Windows.Forms.Button();
             this.PicLogo = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.LblFecha = new System.Windows.Forms.Label();
-            this.LblHora = new System.Windows.Forms.Label();
             this.Lbldashboard = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.LblTurno = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.LblHora = new System.Windows.Forms.Label();
+            this.LblFecha = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel7.SuspendLayout();
@@ -120,6 +122,8 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(31)))), ((int)(((byte)(45)))));
             this.panel1.Controls.Add(this.lblNombreUsuario);
             this.panel1.Controls.Add(this.pictureBox4);
+            this.panel1.Controls.Add(this.LblTurno);
+            this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label14);
             this.panel1.Controls.Add(this.panel7);
             this.panel1.Controls.Add(this.panel6);
@@ -566,7 +570,6 @@
             // PnPrincipal
             // 
             this.PnPrincipal.AutoScroll = true;
-            this.PnPrincipal.Controls.Add(this.PicLogo);
             this.PnPrincipal.Controls.Add(this.BtnSalirPrincipal);
             this.PnPrincipal.Controls.Add(this.button12);
             this.PnPrincipal.Controls.Add(this.PnSubMenuReportes);
@@ -576,6 +579,7 @@
             this.PnPrincipal.Controls.Add(this.PnSubMenuProcesos);
             this.PnPrincipal.Controls.Add(this.BtnProcesos);
             this.PnPrincipal.Controls.Add(this.BtnInicio);
+            this.PnPrincipal.Controls.Add(this.PicLogo);
             this.PnPrincipal.Dock = System.Windows.Forms.DockStyle.Left;
             this.PnPrincipal.Location = new System.Drawing.Point(0, 0);
             this.PnPrincipal.Name = "PnPrincipal";
@@ -609,7 +613,7 @@
             this.button12.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button12.Image = global::CapaPresentacion.Properties.Resources.iconoConfiguracion;
             this.button12.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button12.Location = new System.Drawing.Point(0, 584);
+            this.button12.Location = new System.Drawing.Point(0, 690);
             this.button12.Name = "button12";
             this.button12.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.button12.Size = new System.Drawing.Size(282, 59);
@@ -628,7 +632,7 @@
             this.PnSubMenuReportes.Controls.Add(this.btnTicketParqueoEnUso);
             this.PnSubMenuReportes.Controls.Add(this.btnReporteCuandreCaja);
             this.PnSubMenuReportes.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PnSubMenuReportes.Location = new System.Drawing.Point(0, 458);
+            this.PnSubMenuReportes.Location = new System.Drawing.Point(0, 564);
             this.PnSubMenuReportes.Name = "PnSubMenuReportes";
             this.PnSubMenuReportes.Size = new System.Drawing.Size(282, 126);
             this.PnSubMenuReportes.TabIndex = 12;
@@ -723,7 +727,7 @@
             this.button8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button8.Image = global::CapaPresentacion.Properties.Resources.iconoReportes;
             this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button8.Location = new System.Drawing.Point(0, 399);
+            this.button8.Location = new System.Drawing.Point(0, 505);
             this.button8.Name = "button8";
             this.button8.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.button8.Size = new System.Drawing.Size(282, 59);
@@ -741,7 +745,7 @@
             this.PnSubMenuConsulta.Controls.Add(this.btnConsultarEmpleado);
             this.PnSubMenuConsulta.Controls.Add(this.btnParqueosEnUso);
             this.PnSubMenuConsulta.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PnSubMenuConsulta.Location = new System.Drawing.Point(0, 302);
+            this.PnSubMenuConsulta.Location = new System.Drawing.Point(0, 408);
             this.PnSubMenuConsulta.Name = "PnSubMenuConsulta";
             this.PnSubMenuConsulta.Size = new System.Drawing.Size(282, 97);
             this.PnSubMenuConsulta.TabIndex = 10;
@@ -817,7 +821,7 @@
             this.button4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button4.Image = global::CapaPresentacion.Properties.Resources.iconoConsulta;
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(0, 243);
+            this.button4.Location = new System.Drawing.Point(0, 349);
             this.button4.Name = "button4";
             this.button4.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.button4.Size = new System.Drawing.Size(282, 59);
@@ -836,7 +840,7 @@
             this.PnSubMenuProcesos.Controls.Add(this.btnRegistroTurno);
             this.PnSubMenuProcesos.Controls.Add(this.btnGeneralTicket);
             this.PnSubMenuProcesos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PnSubMenuProcesos.Location = new System.Drawing.Point(0, 118);
+            this.PnSubMenuProcesos.Location = new System.Drawing.Point(0, 224);
             this.PnSubMenuProcesos.Name = "PnSubMenuProcesos";
             this.PnSubMenuProcesos.Size = new System.Drawing.Size(282, 125);
             this.PnSubMenuProcesos.TabIndex = 8;
@@ -914,7 +918,7 @@
             this.btnGeneralTicket.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.btnGeneralTicket.Size = new System.Drawing.Size(282, 32);
             this.btnGeneralTicket.TabIndex = 0;
-            this.btnGeneralTicket.Text = "General Ticket";
+            this.btnGeneralTicket.Text = "Generar Ticket";
             this.btnGeneralTicket.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnGeneralTicket.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnGeneralTicket.UseVisualStyleBackColor = true;
@@ -931,7 +935,7 @@
             this.BtnProcesos.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BtnProcesos.Image = global::CapaPresentacion.Properties.Resources.iconoProceso;
             this.BtnProcesos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnProcesos.Location = new System.Drawing.Point(0, 59);
+            this.BtnProcesos.Location = new System.Drawing.Point(0, 165);
             this.BtnProcesos.Name = "BtnProcesos";
             this.BtnProcesos.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.BtnProcesos.Size = new System.Drawing.Size(282, 59);
@@ -953,7 +957,7 @@
             this.BtnInicio.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BtnInicio.Image = global::CapaPresentacion.Properties.Resources.iconoInicio;
             this.BtnInicio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnInicio.Location = new System.Drawing.Point(0, 0);
+            this.BtnInicio.Location = new System.Drawing.Point(0, 106);
             this.BtnInicio.Name = "BtnInicio";
             this.BtnInicio.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.BtnInicio.Size = new System.Drawing.Size(282, 59);
@@ -967,7 +971,7 @@
             // 
             this.PicLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.PicLogo.Image = global::CapaPresentacion.Properties.Resources.logo_Parking;
-            this.PicLogo.Location = new System.Drawing.Point(0, 643);
+            this.PicLogo.Location = new System.Drawing.Point(0, 0);
             this.PicLogo.Name = "PicLogo";
             this.PicLogo.Padding = new System.Windows.Forms.Padding(11, 15, 11, 12);
             this.PicLogo.Size = new System.Drawing.Size(282, 106);
@@ -988,36 +992,12 @@
             this.panel3.Size = new System.Drawing.Size(793, 28);
             this.panel3.TabIndex = 2;
             // 
-            // LblFecha
-            // 
-            this.LblFecha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.LblFecha.AutoSize = true;
-            this.LblFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblFecha.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.LblFecha.Location = new System.Drawing.Point(477, 2);
-            this.LblFecha.Name = "LblFecha";
-            this.LblFecha.Size = new System.Drawing.Size(72, 25);
-            this.LblFecha.TabIndex = 0;
-            this.LblFecha.Text = "Fecha";
-            // 
-            // LblHora
-            // 
-            this.LblHora.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.LblHora.AutoSize = true;
-            this.LblHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblHora.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.LblHora.Location = new System.Drawing.Point(316, 2);
-            this.LblHora.Name = "LblHora";
-            this.LblHora.Size = new System.Drawing.Size(58, 25);
-            this.LblHora.TabIndex = 0;
-            this.LblHora.Text = "Hora";
-            // 
             // Lbldashboard
             // 
             this.Lbldashboard.AutoSize = true;
             this.Lbldashboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbldashboard.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.Lbldashboard.Location = new System.Drawing.Point(2, 3);
+            this.Lbldashboard.Location = new System.Drawing.Point(2, 2);
             this.Lbldashboard.Name = "Lbldashboard";
             this.Lbldashboard.Size = new System.Drawing.Size(62, 25);
             this.Lbldashboard.TabIndex = 0;
@@ -1026,6 +1006,54 @@
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // LblTurno
+            // 
+            this.LblTurno.AutoSize = true;
+            this.LblTurno.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.LblTurno.ForeColor = System.Drawing.Color.White;
+            this.LblTurno.Location = new System.Drawing.Point(944, 633);
+            this.LblTurno.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LblTurno.Name = "LblTurno";
+            this.LblTurno.Size = new System.Drawing.Size(106, 24);
+            this.LblTurno.TabIndex = 5;
+            this.LblTurno.Text = "Abrir Turno";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(816, 632);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(131, 24);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Turno Abierto:";
+            // 
+            // LblHora
+            // 
+            this.LblHora.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.LblHora.AutoSize = true;
+            this.LblHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblHora.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.LblHora.Location = new System.Drawing.Point(683, 2);
+            this.LblHora.Name = "LblHora";
+            this.LblHora.Size = new System.Drawing.Size(58, 25);
+            this.LblHora.TabIndex = 0;
+            this.LblHora.Text = "Hora";
+            // 
+            // LblFecha
+            // 
+            this.LblFecha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.LblFecha.AutoSize = true;
+            this.LblFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblFecha.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.LblFecha.Location = new System.Drawing.Point(549, 2);
+            this.LblFecha.Name = "LblFecha";
+            this.LblFecha.Size = new System.Drawing.Size(72, 25);
+            this.LblFecha.TabIndex = 0;
+            this.LblFecha.Text = "Fecha";
             // 
             // FrmPrincipal
             // 
@@ -1099,8 +1127,6 @@
         private System.Windows.Forms.Panel PnSubMenuConsulta;
         private System.Windows.Forms.Button btnConsultarEmpleado;
         private System.Windows.Forms.Button btnParqueosEnUso;
-        private System.Windows.Forms.Label LblFecha;
-        private System.Windows.Forms.Label LblHora;
         private System.Windows.Forms.Label Lbldashboard;
         private System.Windows.Forms.Button BtnSalirPrincipal;
         private System.Windows.Forms.Label LblCActualPO;
@@ -1137,5 +1163,9 @@
         private System.Windows.Forms.Button btnCobrarTicket;
         private System.Windows.Forms.Button btnConsultarTurno;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label LblTurno;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label LblFecha;
+        private System.Windows.Forms.Label LblHora;
     }
 }

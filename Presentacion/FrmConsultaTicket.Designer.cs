@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblDesde = new System.Windows.Forms.Label();
             this.lblHasta = new System.Windows.Forms.Label();
             this.lblEstado = new System.Windows.Forms.Label();
@@ -82,7 +82,7 @@
             this.lblDesde.AutoSize = true;
             this.lblDesde.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.lblDesde.ForeColor = System.Drawing.Color.White;
-            this.lblDesde.Location = new System.Drawing.Point(80, 63);
+            this.lblDesde.Location = new System.Drawing.Point(254, 63);
             this.lblDesde.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDesde.Name = "lblDesde";
             this.lblDesde.Size = new System.Drawing.Size(66, 20);
@@ -94,7 +94,7 @@
             this.lblHasta.AutoSize = true;
             this.lblHasta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.lblHasta.ForeColor = System.Drawing.Color.White;
-            this.lblHasta.Location = new System.Drawing.Point(282, 63);
+            this.lblHasta.Location = new System.Drawing.Point(456, 63);
             this.lblHasta.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblHasta.Name = "lblHasta";
             this.lblHasta.Size = new System.Drawing.Size(63, 20);
@@ -106,7 +106,7 @@
             this.lblEstado.AutoSize = true;
             this.lblEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.lblEstado.ForeColor = System.Drawing.Color.White;
-            this.lblEstado.Location = new System.Drawing.Point(16, 116);
+            this.lblEstado.Location = new System.Drawing.Point(190, 116);
             this.lblEstado.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblEstado.Name = "lblEstado";
             this.lblEstado.Size = new System.Drawing.Size(69, 18);
@@ -118,7 +118,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(192, 7);
+            this.label6.Location = new System.Drawing.Point(366, 7);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(282, 37);
@@ -130,7 +130,7 @@
             this.rbAbierto.AutoSize = true;
             this.rbAbierto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.rbAbierto.ForeColor = System.Drawing.Color.White;
-            this.rbAbierto.Location = new System.Drawing.Point(103, 115);
+            this.rbAbierto.Location = new System.Drawing.Point(277, 115);
             this.rbAbierto.Margin = new System.Windows.Forms.Padding(2);
             this.rbAbierto.Name = "rbAbierto";
             this.rbAbierto.Size = new System.Drawing.Size(78, 24);
@@ -144,7 +144,7 @@
             this.rbCerrado.AutoSize = true;
             this.rbCerrado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.rbCerrado.ForeColor = System.Drawing.Color.White;
-            this.rbCerrado.Location = new System.Drawing.Point(254, 115);
+            this.rbCerrado.Location = new System.Drawing.Point(428, 115);
             this.rbCerrado.Margin = new System.Windows.Forms.Padding(2);
             this.rbCerrado.Name = "rbCerrado";
             this.rbCerrado.Size = new System.Drawing.Size(84, 24);
@@ -158,7 +158,7 @@
             this.rbTodos.AutoSize = true;
             this.rbTodos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.rbTodos.ForeColor = System.Drawing.Color.White;
-            this.rbTodos.Location = new System.Drawing.Point(411, 115);
+            this.rbTodos.Location = new System.Drawing.Point(585, 115);
             this.rbTodos.Margin = new System.Windows.Forms.Padding(2);
             this.rbTodos.Name = "rbTodos";
             this.rbTodos.Size = new System.Drawing.Size(71, 24);
@@ -173,7 +173,7 @@
             this.btnCajero.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCajero.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.btnCajero.ForeColor = System.Drawing.Color.White;
-            this.btnCajero.Location = new System.Drawing.Point(20, 63);
+            this.btnCajero.Location = new System.Drawing.Point(194, 63);
             this.btnCajero.Margin = new System.Windows.Forms.Padding(2);
             this.btnCajero.Name = "btnCajero";
             this.btnCajero.Size = new System.Drawing.Size(56, 21);
@@ -183,7 +183,7 @@
             // 
             // txtIdCajero
             // 
-            this.txtIdCajero.Location = new System.Drawing.Point(20, 93);
+            this.txtIdCajero.Location = new System.Drawing.Point(194, 93);
             this.txtIdCajero.Margin = new System.Windows.Forms.Padding(2);
             this.txtIdCajero.Name = "txtIdCajero";
             this.txtIdCajero.Size = new System.Drawing.Size(57, 20);
@@ -193,7 +193,7 @@
             // 
             this.dtpDesde.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.dtpDesde.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDesde.Location = new System.Drawing.Point(172, 63);
+            this.dtpDesde.Location = new System.Drawing.Point(346, 63);
             this.dtpDesde.Margin = new System.Windows.Forms.Padding(2);
             this.dtpDesde.Name = "dtpDesde";
             this.dtpDesde.Size = new System.Drawing.Size(105, 23);
@@ -204,7 +204,7 @@
             // 
             this.dtpHasta.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.dtpHasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpHasta.Location = new System.Drawing.Point(392, 64);
+            this.dtpHasta.Location = new System.Drawing.Point(566, 64);
             this.dtpHasta.Margin = new System.Windows.Forms.Padding(2);
             this.dtpHasta.Name = "dtpHasta";
             this.dtpHasta.Size = new System.Drawing.Size(105, 23);
@@ -213,7 +213,7 @@
             // 
             // txtNombreCajero
             // 
-            this.txtNombreCajero.Location = new System.Drawing.Point(83, 93);
+            this.txtNombreCajero.Location = new System.Drawing.Point(257, 93);
             this.txtNombreCajero.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombreCajero.Name = "txtNombreCajero";
             this.txtNombreCajero.Size = new System.Drawing.Size(414, 20);
@@ -221,7 +221,7 @@
             // 
             // txtTextoAbierto
             // 
-            this.txtTextoAbierto.Location = new System.Drawing.Point(16, 143);
+            this.txtTextoAbierto.Location = new System.Drawing.Point(190, 143);
             this.txtTextoAbierto.Margin = new System.Windows.Forms.Padding(2);
             this.txtTextoAbierto.Name = "txtTextoAbierto";
             this.txtTextoAbierto.Size = new System.Drawing.Size(699, 20);
@@ -280,14 +280,14 @@
             this.dtgvTicket.AllowUserToAddRows = false;
             this.dtgvTicket.AllowUserToDeleteRows = false;
             this.dtgvTicket.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(36)))), ((int)(((byte)(85)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.DarkGray;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgvTicket.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(36)))), ((int)(((byte)(85)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DarkGray;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvTicket.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dtgvTicket.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgvTicket.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dgvIdUso,
@@ -407,7 +407,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = global::CapaPresentacion.Properties.Resources.Calendar_31_64px;
-            this.pictureBox4.Location = new System.Drawing.Point(343, 65);
+            this.pictureBox4.Location = new System.Drawing.Point(517, 65);
             this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(26, 19);
@@ -418,7 +418,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::CapaPresentacion.Properties.Resources.Calendar_31_64px;
-            this.pictureBox3.Location = new System.Drawing.Point(141, 64);
+            this.pictureBox3.Location = new System.Drawing.Point(315, 64);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(26, 19);
@@ -429,7 +429,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::CapaPresentacion.Properties.Resources.Search_52px;
-            this.pictureBox2.Location = new System.Drawing.Point(14, 144);
+            this.pictureBox2.Location = new System.Drawing.Point(188, 144);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(28, 18);
@@ -440,7 +440,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::CapaPresentacion.Properties.Resources.Search_52px;
-            this.pictureBox1.Location = new System.Drawing.Point(164, 9);
+            this.pictureBox1.Location = new System.Drawing.Point(338, 9);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(30, 36);
@@ -456,7 +456,7 @@
             this.btnSalirConsultaTurno.ForeColor = System.Drawing.Color.White;
             this.btnSalirConsultaTurno.Image = global::CapaPresentacion.Properties.Resources.Exit_64px;
             this.btnSalirConsultaTurno.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalirConsultaTurno.Location = new System.Drawing.Point(612, 100);
+            this.btnSalirConsultaTurno.Location = new System.Drawing.Point(786, 100);
             this.btnSalirConsultaTurno.Margin = new System.Windows.Forms.Padding(2);
             this.btnSalirConsultaTurno.Name = "btnSalirConsultaTurno";
             this.btnSalirConsultaTurno.Size = new System.Drawing.Size(102, 40);
@@ -474,7 +474,7 @@
             this.btnCierreConsultaTurno.ForeColor = System.Drawing.Color.White;
             this.btnCierreConsultaTurno.Image = global::CapaPresentacion.Properties.Resources.registrar1;
             this.btnCierreConsultaTurno.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCierreConsultaTurno.Location = new System.Drawing.Point(612, 55);
+            this.btnCierreConsultaTurno.Location = new System.Drawing.Point(786, 55);
             this.btnCierreConsultaTurno.Margin = new System.Windows.Forms.Padding(2);
             this.btnCierreConsultaTurno.Name = "btnCierreConsultaTurno";
             this.btnCierreConsultaTurno.Size = new System.Drawing.Size(102, 40);
@@ -491,7 +491,7 @@
             this.btnImprimirConsultaTurno.ForeColor = System.Drawing.Color.White;
             this.btnImprimirConsultaTurno.Image = global::CapaPresentacion.Properties.Resources.PRINTERPEQ;
             this.btnImprimirConsultaTurno.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnImprimirConsultaTurno.Location = new System.Drawing.Point(500, 100);
+            this.btnImprimirConsultaTurno.Location = new System.Drawing.Point(674, 100);
             this.btnImprimirConsultaTurno.Margin = new System.Windows.Forms.Padding(2);
             this.btnImprimirConsultaTurno.Name = "btnImprimirConsultaTurno";
             this.btnImprimirConsultaTurno.Size = new System.Drawing.Size(102, 40);
@@ -508,7 +508,7 @@
             this.btnBuscarConsultaTurno.ForeColor = System.Drawing.Color.White;
             this.btnBuscarConsultaTurno.Image = global::CapaPresentacion.Properties.Resources.BUSCARPEQ_;
             this.btnBuscarConsultaTurno.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscarConsultaTurno.Location = new System.Drawing.Point(500, 55);
+            this.btnBuscarConsultaTurno.Location = new System.Drawing.Point(674, 55);
             this.btnBuscarConsultaTurno.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscarConsultaTurno.Name = "btnBuscarConsultaTurno";
             this.btnBuscarConsultaTurno.Size = new System.Drawing.Size(102, 40);
@@ -556,6 +556,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmConsultaTicket";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmConsultaTurno";
             this.Load += new System.EventHandler(this.frmConsultaTurno_Load);
