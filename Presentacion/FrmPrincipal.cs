@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Globalization;
 using System.Data.Odbc;
+using Entidades;
 
 namespace CapaPresentacion
 {
@@ -46,6 +47,11 @@ namespace CapaPresentacion
 
             lblNombreUsuario.Text = Globales.Empleado.Usuario;
 
+            Turno turnoAbierto = TurnoLG.BuscarTurnoPorID(Globales.Turno.IdTurno);
+            LblTurno.Text = turnoAbierto.IdTurno.ToString();
+
+            // Empleado empleadoTurnoAbierto = EmpleadoLG.BuscarEmpleado(Globales.Turno.IdEmpleado);
+            // LblTurno.Text = empleadoTurnoAbierto.Nombre;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -247,7 +253,7 @@ namespace CapaPresentacion
         private void timer1_Tick(object sender, EventArgs e)
         {
             LblHora.Text = DateTime.Now.ToString("hh:mm:ss");
-            LblFecha.Text = DateTime.Now.ToLongDateString();
+            LblFecha.Text = DateTime.Now.ToString("dd/MM/yyyy");
         }
     }
 }

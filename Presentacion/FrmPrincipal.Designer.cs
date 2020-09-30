@@ -89,10 +89,12 @@
             this.BtnInicio = new System.Windows.Forms.Button();
             this.PicLogo = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.LblFecha = new System.Windows.Forms.Label();
-            this.LblHora = new System.Windows.Forms.Label();
             this.Lbldashboard = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.LblTurno = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.LblHora = new System.Windows.Forms.Label();
+            this.LblFecha = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel7.SuspendLayout();
@@ -120,6 +122,8 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(31)))), ((int)(((byte)(45)))));
             this.panel1.Controls.Add(this.lblNombreUsuario);
             this.panel1.Controls.Add(this.pictureBox4);
+            this.panel1.Controls.Add(this.LblTurno);
+            this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label14);
             this.panel1.Controls.Add(this.panel7);
             this.panel1.Controls.Add(this.panel6);
@@ -914,7 +918,7 @@
             this.btnGeneralTicket.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.btnGeneralTicket.Size = new System.Drawing.Size(282, 32);
             this.btnGeneralTicket.TabIndex = 0;
-            this.btnGeneralTicket.Text = "General Ticket";
+            this.btnGeneralTicket.Text = "Generar Ticket";
             this.btnGeneralTicket.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnGeneralTicket.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnGeneralTicket.UseVisualStyleBackColor = true;
@@ -988,36 +992,12 @@
             this.panel3.Size = new System.Drawing.Size(793, 28);
             this.panel3.TabIndex = 2;
             // 
-            // LblFecha
-            // 
-            this.LblFecha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.LblFecha.AutoSize = true;
-            this.LblFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblFecha.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.LblFecha.Location = new System.Drawing.Point(477, 2);
-            this.LblFecha.Name = "LblFecha";
-            this.LblFecha.Size = new System.Drawing.Size(72, 25);
-            this.LblFecha.TabIndex = 0;
-            this.LblFecha.Text = "Fecha";
-            // 
-            // LblHora
-            // 
-            this.LblHora.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.LblHora.AutoSize = true;
-            this.LblHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblHora.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.LblHora.Location = new System.Drawing.Point(316, 2);
-            this.LblHora.Name = "LblHora";
-            this.LblHora.Size = new System.Drawing.Size(58, 25);
-            this.LblHora.TabIndex = 0;
-            this.LblHora.Text = "Hora";
-            // 
             // Lbldashboard
             // 
             this.Lbldashboard.AutoSize = true;
             this.Lbldashboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbldashboard.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.Lbldashboard.Location = new System.Drawing.Point(2, 3);
+            this.Lbldashboard.Location = new System.Drawing.Point(2, 2);
             this.Lbldashboard.Name = "Lbldashboard";
             this.Lbldashboard.Size = new System.Drawing.Size(62, 25);
             this.Lbldashboard.TabIndex = 0;
@@ -1026,6 +1006,54 @@
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // LblTurno
+            // 
+            this.LblTurno.AutoSize = true;
+            this.LblTurno.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.LblTurno.ForeColor = System.Drawing.Color.White;
+            this.LblTurno.Location = new System.Drawing.Point(944, 633);
+            this.LblTurno.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LblTurno.Name = "LblTurno";
+            this.LblTurno.Size = new System.Drawing.Size(106, 24);
+            this.LblTurno.TabIndex = 5;
+            this.LblTurno.Text = "Abrir Turno";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(816, 632);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(131, 24);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Turno Abierto:";
+            // 
+            // LblHora
+            // 
+            this.LblHora.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.LblHora.AutoSize = true;
+            this.LblHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblHora.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.LblHora.Location = new System.Drawing.Point(683, 2);
+            this.LblHora.Name = "LblHora";
+            this.LblHora.Size = new System.Drawing.Size(58, 25);
+            this.LblHora.TabIndex = 0;
+            this.LblHora.Text = "Hora";
+            // 
+            // LblFecha
+            // 
+            this.LblFecha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.LblFecha.AutoSize = true;
+            this.LblFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblFecha.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.LblFecha.Location = new System.Drawing.Point(549, 2);
+            this.LblFecha.Name = "LblFecha";
+            this.LblFecha.Size = new System.Drawing.Size(72, 25);
+            this.LblFecha.TabIndex = 0;
+            this.LblFecha.Text = "Fecha";
             // 
             // FrmPrincipal
             // 
@@ -1099,8 +1127,6 @@
         private System.Windows.Forms.Panel PnSubMenuConsulta;
         private System.Windows.Forms.Button btnConsultarEmpleado;
         private System.Windows.Forms.Button btnParqueosEnUso;
-        private System.Windows.Forms.Label LblFecha;
-        private System.Windows.Forms.Label LblHora;
         private System.Windows.Forms.Label Lbldashboard;
         private System.Windows.Forms.Button BtnSalirPrincipal;
         private System.Windows.Forms.Label LblCActualPO;
@@ -1137,5 +1163,9 @@
         private System.Windows.Forms.Button btnCobrarTicket;
         private System.Windows.Forms.Button btnConsultarTurno;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label LblTurno;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label LblFecha;
+        private System.Windows.Forms.Label LblHora;
     }
 }
