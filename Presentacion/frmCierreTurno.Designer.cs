@@ -293,7 +293,7 @@
             this.btnRegistrarTurno.Location = new System.Drawing.Point(318, 326);
             this.btnRegistrarTurno.Margin = new System.Windows.Forms.Padding(2);
             this.btnRegistrarTurno.Name = "btnRegistrarTurno";
-            this.btnRegistrarTurno.Size = new System.Drawing.Size(124, 31);
+            this.btnRegistrarTurno.Size = new System.Drawing.Size(153, 36);
             this.btnRegistrarTurno.TabIndex = 17;
             this.btnRegistrarTurno.Text = "Registrar Turno";
             this.btnRegistrarTurno.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -308,10 +308,10 @@
             this.btnSalirTurno.ForeColor = System.Drawing.Color.White;
             this.btnSalirTurno.Image = global::CapaPresentacion.Properties.Resources.Exit_64px;
             this.btnSalirTurno.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalirTurno.Location = new System.Drawing.Point(518, 326);
+            this.btnSalirTurno.Location = new System.Drawing.Point(501, 326);
             this.btnSalirTurno.Margin = new System.Windows.Forms.Padding(2);
             this.btnSalirTurno.Name = "btnSalirTurno";
-            this.btnSalirTurno.Size = new System.Drawing.Size(81, 31);
+            this.btnSalirTurno.Size = new System.Drawing.Size(98, 36);
             this.btnSalirTurno.TabIndex = 16;
             this.btnSalirTurno.Text = "Salir";
             this.btnSalirTurno.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
