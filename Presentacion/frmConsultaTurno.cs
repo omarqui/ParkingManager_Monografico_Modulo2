@@ -26,14 +26,20 @@ namespace CapaPresentacion
 
         private void frmConsultaTurno_Load(object sender, EventArgs e)
         {
-            //BuscarTurnosConsulta();
+            //BuscarTurnosConsulta();            
         }
 
         private void BuscarTurnosConsulta()
         {
+            int? idTurno = null; 
+            DateTime fechaDesde = dtpDesde.Value;
+            DateTime fechaHasta = dtpHasta.Value;
+            bool? estaAbierto = (rbAbierto.Checked) ? true : (rbCerrado.Checked) ? (bool?)false : null ;
+
+
             dtgvTurnos.Rows.Clear();
 
-            DataTable datosTurnos = TurnoLG.BuscarTurnos();
+            DataTable datosTurnos = TurnoLG.BuscarTurnos(idTurno, fechaDesde, fechaHasta, estaAbierto);
             
             foreach (DataRow turnos in datosTurnos.Rows)
             {
