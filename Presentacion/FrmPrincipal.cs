@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Globalization;
 using System.Data.Odbc;
+using Entidades;
 
 namespace CapaPresentacion
 {
@@ -112,7 +113,18 @@ namespace CapaPresentacion
 
         private void BtnSubMenuProcesos_Click(object sender, EventArgs e)
         {
-            AbrirFormulario<frmCierreTurno>.ejecutarSoloUnaVez(true);
+            Turno turno = TurnoLG.EstaTurnoAbiertoEmpleado(Globales.Empleado.IdEmpleado);
+                        
+            if (turno == null)
+            {
+                MessageBox.Show("No hay un turno abierto con este usuario", "TURNO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                AbrirFormulario<frmCierreTurno>.ejecutarSoloUnaVez(true);
+            }
+
+
             hideSubMenu();
         }
 

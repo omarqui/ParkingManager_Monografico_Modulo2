@@ -161,6 +161,7 @@
             this.txtCodigoTurno.Location = new System.Drawing.Point(152, 109);
             this.txtCodigoTurno.Margin = new System.Windows.Forms.Padding(2);
             this.txtCodigoTurno.Name = "txtCodigoTurno";
+            this.txtCodigoTurno.ReadOnly = true;
             this.txtCodigoTurno.Size = new System.Drawing.Size(76, 20);
             this.txtCodigoTurno.TabIndex = 8;
             // 
@@ -169,6 +170,7 @@
             this.txtCodigoEmpleadoTurno.Location = new System.Drawing.Point(152, 151);
             this.txtCodigoEmpleadoTurno.Margin = new System.Windows.Forms.Padding(2);
             this.txtCodigoEmpleadoTurno.Name = "txtCodigoEmpleadoTurno";
+            this.txtCodigoEmpleadoTurno.ReadOnly = true;
             this.txtCodigoEmpleadoTurno.Size = new System.Drawing.Size(76, 20);
             this.txtCodigoEmpleadoTurno.TabIndex = 9;
             // 
@@ -198,6 +200,7 @@
             this.txtMontoEntregado.Size = new System.Drawing.Size(151, 20);
             this.txtMontoEntregado.TabIndex = 12;
             this.txtMontoEntregado.TextChanged += new System.EventHandler(this.txtMontoEntregado_TextChanged);
+            this.txtMontoEntregado.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMontoEntregado_KeyPress);
             // 
             // txtMontoDiferencia
             // 
@@ -258,6 +261,7 @@
             this.txtNombreEmpleado.Location = new System.Drawing.Point(152, 202);
             this.txtNombreEmpleado.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombreEmpleado.Name = "txtNombreEmpleado";
+            this.txtNombreEmpleado.ReadOnly = true;
             this.txtNombreEmpleado.Size = new System.Drawing.Size(151, 20);
             this.txtNombreEmpleado.TabIndex = 29;
             // 

@@ -65,5 +65,42 @@ namespace CapaPresentacion
         {
             AbrirFormulario<frmCierreTurno>.ejecutarSoloUnaVez(true);
         }
+
+        private void btnCierreConsultaTurno_Click_1(object sender, EventArgs e)
+        {
+            int idturno;
+
+            if (dtgvTurnos.Rows.Count > 0)
+            {
+                idturno = Convert.ToInt32(dtgvTurnos.CurrentRow.Cells["dgvIdTurno"].Value);
+
+                try
+                {
+                    Turno turnoCerrar = TurnoLG.BuscarTurnoPorID(idturno);
+
+                    if (turnoCerrar.EstaAbierto == true)
+                    {
+                        frmCierreTurno formularioCierreTurno = new frmCierreTurno(idturno);
+                        formularioCierreTurno.ShowDialog(this);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Este turno está cerrado, debe seleccionar un turno abierto.", "TURNO CERRADO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                catch (Exception error)
+                {
+                    MessageBox.Show("Ha ocurrido un error: " + error.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                
+            }
+            else
+            {
+                MessageBox.Show("Debe seleccionar un turno para poder cerrar.", "SELECCIONAR TURNO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+                        
+            
+            
+        }
     }
 }
