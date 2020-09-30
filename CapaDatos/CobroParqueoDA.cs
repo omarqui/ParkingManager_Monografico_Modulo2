@@ -117,5 +117,22 @@ namespace CapaDatos
 
             return null;
         }
+
+        public DataTable BuscarCobroImpresion(int idUso)
+        {
+            DataTable dt = new DataTable();
+            using (var conn = _conexion)
+            {
+                using (var cmd = CrearCommand(conn, "pa_buscarCobroImpresion"))
+                {
+                    cmd.Parameters.AddWithValue("idUso", idUso);
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
+                    {
+                        adapter.Fill(dt);
+                        return dt;
+                    }
+                }
+            };
+        }
     }
 }

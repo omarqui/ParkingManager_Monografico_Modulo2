@@ -82,6 +82,20 @@ namespace CapaDatos
             return null;
         }
 
-
+        public DataTable BuscarDataSet()
+        {
+            DataTable dt = new DataTable();
+            using (var conn = _conexion)
+            {
+                using (var cmd = CrearCommand(conn, "pa_BuscarConfiguracion"))
+                {
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
+                    {
+                        adapter.Fill(dt);
+                        return dt;
+                    }
+                }
+            }
+        }
     }
 }

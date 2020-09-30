@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Entidades;
 using CapaDatos;
+using System.Data;
 
 namespace CapaNegocio
 {
@@ -34,6 +35,11 @@ namespace CapaNegocio
         {
             ConfiguracionAD funcionesConfiguracion = new ConfiguracionAD();
             return funcionesConfiguracion.Buscar();
+        }
+        public static DataTable BuscarConfiguracion()
+        {
+            ConfiguracionAD funcionesConfiguracion = new ConfiguracionAD();
+            return funcionesConfiguracion.BuscarDataSet();
         }
     }
 }

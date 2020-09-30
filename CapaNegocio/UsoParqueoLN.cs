@@ -99,5 +99,12 @@ namespace CapaNegocio
             int filasAfectadas = repositorio.CancelarUso(id);
             return filasAfectadas > 0;
         }
+
+        public static DataTable BuscarCobroImpresion(int idUso)
+        {
+            CobroParqueoDA repositorio = new CobroParqueoDA();
+
+            return repositorio.BuscarCobroImpresion(idUso);
+        }
     }
 }
