@@ -170,11 +170,6 @@ namespace CapaPresentacion
             //ConfiguracionEmpresa.Show();
         }
 
-        private void button15_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button12_Click(object sender, EventArgs e)
         {
             AbrirFormulario<frmConfiguracion>.ejecutarSoloUnaVez(true);
@@ -183,27 +178,6 @@ namespace CapaPresentacion
             //frmConfiguracion ConfiguracionEmpresa = new frmConfiguracion();
             //ConfiguracionEmpresa.Show();
         }
-
-        private void panel8_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void PicLogo_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label12_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnGenerarTicket_Click(object sender, EventArgs e)
         {
             var respuesta = MessageBox.Show("Seguro que desea generar un ticket?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -218,15 +192,18 @@ namespace CapaPresentacion
         private void btnCobrar_Click(object sender, EventArgs e)
         {
             AbrirFormulario<FrmUsoDeParqueo>.ejecutarNuevo(true);
+            hideSubMenu();
         }
 
         private void button1_Click_2(object sender, EventArgs e)
         {
             AbrirFormulario<frmConsultaTurno>.ejecutarSoloUnaVez(true);
+            hideSubMenu();
         }
         private void btnCobrarTicket_Click(object sender, EventArgs e)
         {
             AbrirFormulario<FrmUsoDeParqueo>.ejecutarSoloUnaVez(true);
+            hideSubMenu();
         }
 
         private void FrmPrincipal_KeyDown(object sender, KeyEventArgs e)

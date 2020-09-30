@@ -172,7 +172,7 @@
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
             this.panel7.Controls.Add(this.pictureBox3);
             this.panel7.Controls.Add(this.button14);
-            this.panel7.Location = new System.Drawing.Point(844, 198);
+            this.panel7.Location = new System.Drawing.Point(845, 198);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(237, 285);
             this.panel7.TabIndex = 1;
@@ -211,7 +211,7 @@
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
             this.panel6.Controls.Add(this.pictureBox2);
             this.panel6.Controls.Add(this.btnCobrar);
-            this.panel6.Location = new System.Drawing.Point(580, 198);
+            this.panel6.Location = new System.Drawing.Point(581, 198);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(237, 285);
             this.panel6.TabIndex = 1;
@@ -250,7 +250,7 @@
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
             this.panel5.Controls.Add(this.pictureBox1);
             this.panel5.Controls.Add(this.btnGenerarTicket);
-            this.panel5.Location = new System.Drawing.Point(310, 198);
+            this.panel5.Location = new System.Drawing.Point(311, 198);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(237, 285);
             this.panel5.TabIndex = 1;
@@ -506,7 +506,6 @@
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(781, 130);
             this.panel8.TabIndex = 0;
-            this.panel8.Paint += new System.Windows.Forms.PaintEventHandler(this.panel8_Paint);
             // 
             // label16
             // 
@@ -563,11 +562,11 @@
             this.label12.Size = new System.Drawing.Size(190, 25);
             this.label12.TabIndex = 0;
             this.label12.Text = "Atajos del Teclado";
-            this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
             // PnPrincipal
             // 
             this.PnPrincipal.AutoScroll = true;
+            this.PnPrincipal.Controls.Add(this.PicLogo);
             this.PnPrincipal.Controls.Add(this.BtnSalirPrincipal);
             this.PnPrincipal.Controls.Add(this.button12);
             this.PnPrincipal.Controls.Add(this.PnSubMenuReportes);
@@ -577,7 +576,6 @@
             this.PnPrincipal.Controls.Add(this.PnSubMenuProcesos);
             this.PnPrincipal.Controls.Add(this.BtnProcesos);
             this.PnPrincipal.Controls.Add(this.BtnInicio);
-            this.PnPrincipal.Controls.Add(this.PicLogo);
             this.PnPrincipal.Dock = System.Windows.Forms.DockStyle.Left;
             this.PnPrincipal.Location = new System.Drawing.Point(0, 0);
             this.PnPrincipal.Name = "PnPrincipal";
@@ -611,7 +609,7 @@
             this.button12.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button12.Image = global::CapaPresentacion.Properties.Resources.iconoConfiguracion;
             this.button12.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button12.Location = new System.Drawing.Point(0, 690);
+            this.button12.Location = new System.Drawing.Point(0, 584);
             this.button12.Name = "button12";
             this.button12.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.button12.Size = new System.Drawing.Size(282, 59);
@@ -630,7 +628,7 @@
             this.PnSubMenuReportes.Controls.Add(this.btnTicketParqueoEnUso);
             this.PnSubMenuReportes.Controls.Add(this.btnReporteCuandreCaja);
             this.PnSubMenuReportes.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PnSubMenuReportes.Location = new System.Drawing.Point(0, 564);
+            this.PnSubMenuReportes.Location = new System.Drawing.Point(0, 458);
             this.PnSubMenuReportes.Name = "PnSubMenuReportes";
             this.PnSubMenuReportes.Size = new System.Drawing.Size(282, 126);
             this.PnSubMenuReportes.TabIndex = 12;
@@ -653,7 +651,6 @@
             this.btnFacturas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnFacturas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnFacturas.UseVisualStyleBackColor = true;
-            this.btnFacturas.Click += new System.EventHandler(this.button15_Click);
             // 
             // btnReciboDeIngreso
             // 
@@ -726,7 +723,7 @@
             this.button8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button8.Image = global::CapaPresentacion.Properties.Resources.iconoReportes;
             this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button8.Location = new System.Drawing.Point(0, 505);
+            this.button8.Location = new System.Drawing.Point(0, 399);
             this.button8.Name = "button8";
             this.button8.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.button8.Size = new System.Drawing.Size(282, 59);
@@ -744,7 +741,7 @@
             this.PnSubMenuConsulta.Controls.Add(this.btnConsultarEmpleado);
             this.PnSubMenuConsulta.Controls.Add(this.btnParqueosEnUso);
             this.PnSubMenuConsulta.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PnSubMenuConsulta.Location = new System.Drawing.Point(0, 408);
+            this.PnSubMenuConsulta.Location = new System.Drawing.Point(0, 302);
             this.PnSubMenuConsulta.Name = "PnSubMenuConsulta";
             this.PnSubMenuConsulta.Size = new System.Drawing.Size(282, 97);
             this.PnSubMenuConsulta.TabIndex = 10;
@@ -820,7 +817,7 @@
             this.button4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button4.Image = global::CapaPresentacion.Properties.Resources.iconoConsulta;
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(0, 349);
+            this.button4.Location = new System.Drawing.Point(0, 243);
             this.button4.Name = "button4";
             this.button4.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.button4.Size = new System.Drawing.Size(282, 59);
@@ -839,7 +836,7 @@
             this.PnSubMenuProcesos.Controls.Add(this.btnRegistroTurno);
             this.PnSubMenuProcesos.Controls.Add(this.btnGeneralTicket);
             this.PnSubMenuProcesos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PnSubMenuProcesos.Location = new System.Drawing.Point(0, 224);
+            this.PnSubMenuProcesos.Location = new System.Drawing.Point(0, 118);
             this.PnSubMenuProcesos.Name = "PnSubMenuProcesos";
             this.PnSubMenuProcesos.Size = new System.Drawing.Size(282, 125);
             this.PnSubMenuProcesos.TabIndex = 8;
@@ -934,7 +931,7 @@
             this.BtnProcesos.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BtnProcesos.Image = global::CapaPresentacion.Properties.Resources.iconoProceso;
             this.BtnProcesos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnProcesos.Location = new System.Drawing.Point(0, 165);
+            this.BtnProcesos.Location = new System.Drawing.Point(0, 59);
             this.BtnProcesos.Name = "BtnProcesos";
             this.BtnProcesos.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.BtnProcesos.Size = new System.Drawing.Size(282, 59);
@@ -956,7 +953,7 @@
             this.BtnInicio.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BtnInicio.Image = global::CapaPresentacion.Properties.Resources.iconoInicio;
             this.BtnInicio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnInicio.Location = new System.Drawing.Point(0, 106);
+            this.BtnInicio.Location = new System.Drawing.Point(0, 0);
             this.BtnInicio.Name = "BtnInicio";
             this.BtnInicio.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.BtnInicio.Size = new System.Drawing.Size(282, 59);
@@ -970,14 +967,13 @@
             // 
             this.PicLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.PicLogo.Image = global::CapaPresentacion.Properties.Resources.logo_Parking;
-            this.PicLogo.Location = new System.Drawing.Point(0, 0);
+            this.PicLogo.Location = new System.Drawing.Point(0, 643);
             this.PicLogo.Name = "PicLogo";
             this.PicLogo.Padding = new System.Windows.Forms.Padding(11, 15, 11, 12);
             this.PicLogo.Size = new System.Drawing.Size(282, 106);
             this.PicLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PicLogo.TabIndex = 5;
             this.PicLogo.TabStop = false;
-            this.PicLogo.Click += new System.EventHandler(this.PicLogo_Click);
             // 
             // panel3
             // 
@@ -989,7 +985,7 @@
             this.panel3.Controls.Add(this.Lbldashboard);
             this.panel3.Location = new System.Drawing.Point(305, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(834, 28);
+            this.panel3.Size = new System.Drawing.Size(793, 28);
             this.panel3.TabIndex = 2;
             // 
             // LblFecha
@@ -998,7 +994,7 @@
             this.LblFecha.AutoSize = true;
             this.LblFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblFecha.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.LblFecha.Location = new System.Drawing.Point(470, 2);
+            this.LblFecha.Location = new System.Drawing.Point(477, 2);
             this.LblFecha.Name = "LblFecha";
             this.LblFecha.Size = new System.Drawing.Size(72, 25);
             this.LblFecha.TabIndex = 0;
@@ -1010,7 +1006,7 @@
             this.LblHora.AutoSize = true;
             this.LblHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblHora.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.LblHora.Location = new System.Drawing.Point(309, 2);
+            this.LblHora.Location = new System.Drawing.Point(316, 2);
             this.LblHora.Name = "LblHora";
             this.LblHora.Size = new System.Drawing.Size(58, 25);
             this.LblHora.TabIndex = 0;
