@@ -368,7 +368,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(31)))), ((int)(((byte)(45)))));
-            this.ClientSize = new System.Drawing.Size(473, 715);
+            this.ClientSize = new System.Drawing.Size(465, 715);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblFrmTurno);
             this.Controls.Add(this.groupBox1);
