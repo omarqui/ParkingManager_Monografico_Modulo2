@@ -14,6 +14,7 @@ namespace CapaPresentacion
 {
     public partial class frmTurno : Form
     {        
+
         public frmTurno()
         {
             InitializeComponent();
@@ -96,6 +97,11 @@ namespace CapaPresentacion
         private void txtMontoApertura_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.SoloNumeros();
+        }
+
+        private void txtNombreEmpleado_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
