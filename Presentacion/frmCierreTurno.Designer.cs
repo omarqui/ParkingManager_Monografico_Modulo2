@@ -164,7 +164,6 @@
             this.txtCodigoTurno.Location = new System.Drawing.Point(188, 109);
             this.txtCodigoTurno.Margin = new System.Windows.Forms.Padding(2);
             this.txtCodigoTurno.Name = "txtCodigoTurno";
-            this.txtCodigoTurno.ReadOnly = true;
             this.txtCodigoTurno.Size = new System.Drawing.Size(76, 23);
             this.txtCodigoTurno.TabIndex = 8;
             // 
@@ -174,7 +173,6 @@
             this.txtCodigoEmpleadoTurno.Location = new System.Drawing.Point(188, 149);
             this.txtCodigoEmpleadoTurno.Margin = new System.Windows.Forms.Padding(2);
             this.txtCodigoEmpleadoTurno.Name = "txtCodigoEmpleadoTurno";
-            this.txtCodigoEmpleadoTurno.ReadOnly = true;
             this.txtCodigoEmpleadoTurno.Size = new System.Drawing.Size(76, 23);
             this.txtCodigoEmpleadoTurno.TabIndex = 9;
             // 
@@ -277,7 +275,6 @@
             this.txtNombreEmpleado.Location = new System.Drawing.Point(188, 192);
             this.txtNombreEmpleado.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombreEmpleado.Name = "txtNombreEmpleado";
-            this.txtNombreEmpleado.ReadOnly = true;
             this.txtNombreEmpleado.Size = new System.Drawing.Size(298, 23);
             this.txtNombreEmpleado.TabIndex = 29;
             // 
