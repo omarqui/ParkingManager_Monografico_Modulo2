@@ -147,6 +147,7 @@
     <Compile Include="Reportes\FrmReportViwer.Designer.cs">
       <DependentUpon>FrmReportViwer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reportes\Reportero.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
     <EmbeddedResource Include="frmConfiguracion.resx">
       <DependentUpon>frmConfiguracion.cs</DependentUpon>
@@ -191,6 +192,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Reportes\RptListaTicket.rdlc" />
     <EmbeddedResource Include="Reportes\RptTurno.rdlc" />
     <EmbeddedResource Include="Reportes\RptGeneracionTicket.rdlc" />
     <EmbeddedResource Include="Reportes\RptCobroTicket.rdlc" />
