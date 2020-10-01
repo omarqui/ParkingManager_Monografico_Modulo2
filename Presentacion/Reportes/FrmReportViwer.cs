@@ -20,11 +20,12 @@ namespace CapaPresentacion.Reportes
         public FrmReportViwer()
         {
             InitializeComponent();
-            _nombreReporte = "RptTurno";
+            _nombreReporte = "RptListadoTicket";
             _fuentesDatos = new Dictionary<string, DataTable>
             {
                 { "Configuracion", ConfiguracionLG.BuscarConfiguracion() },
-                { "Turno", TurnoLG.BuscarTurnoImpresion(1) }
+                { "Tickets", UsoParqueoLN.BuscarTodos() },
+                //{ "Turno", TurnoLG.BuscarTurnoImpresion(1) }
             };
         }
 

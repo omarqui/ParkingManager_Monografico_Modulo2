@@ -192,7 +192,10 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Reportes\RptListaTicket.rdlc" />
+    <EmbeddedResource Include="Reportes\FrmReportViwer.resx">
+      <DependentUpon>FrmReportViwer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\RptListadoTicket.rdlc" />
     <EmbeddedResource Include="Reportes\RptTurno.rdlc" />
     <EmbeddedResource Include="Reportes\RptGeneracionTicket.rdlc" />
     <EmbeddedResource Include="Reportes\RptCobroTicket.rdlc" />
