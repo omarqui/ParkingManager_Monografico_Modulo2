@@ -40,6 +40,8 @@ namespace CapaPresentacion.Reportes
 
         private void FrmReportViwer_Load(object sender, EventArgs e)
         {
+            reportViewer1.SetDisplayMode(DisplayMode.PrintLayout);
+            reportViewer1.ZoomMode = ZoomMode.PageWidth;
             reportViewer1.LocalReport.ReportEmbeddedResource = $"CapaPresentacion.Reportes.{_nombreReporte}.rdlc";
 
             reportViewer1.LocalReport.DataSources.Clear();
