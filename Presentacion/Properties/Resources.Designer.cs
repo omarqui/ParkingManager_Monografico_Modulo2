@@ -73,6 +73,26 @@ namespace CapaPresentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap boton_cancelar {
+            get {
+                object obj = ResourceManager.GetObject("boton cancelar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap boton_registrar {
+            get {
+                object obj = ResourceManager.GetObject("boton registrar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap BUSCARPEQ_ {
             get {
                 object obj = ResourceManager.GetObject("BUSCARPEQ.", resourceCulture);
@@ -106,6 +126,26 @@ namespace CapaPresentacion.Properties {
         internal static System.Drawing.Bitmap Cash_In_Hand_50px {
             get {
                 object obj = ResourceManager.GetObject("Cash In Hand_50px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Cash_Register_50px {
+            get {
+                object obj = ResourceManager.GetObject("Cash Register_50px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Cash_Register_50px1 {
+            get {
+                object obj = ResourceManager.GetObject("Cash Register_50px1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -506,6 +546,16 @@ namespace CapaPresentacion.Properties {
         internal static System.Drawing.Bitmap registrar1 {
             get {
                 object obj = ResourceManager.GetObject("registrar1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap registrartruno {
+            get {
+                object obj = ResourceManager.GetObject("registrartruno", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
