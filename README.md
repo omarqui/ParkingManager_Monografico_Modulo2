@@ -77,3 +77,7 @@ Omarqui| | | x
 ## Permiso
 
 - [ ] Consulta
+
+## Valicaciones
+-[] Validar la cantidad de parqueos disponibles antes de generar el ticket de parqueo
+

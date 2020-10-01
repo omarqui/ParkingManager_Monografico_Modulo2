@@ -41,6 +41,7 @@ namespace CapaPresentacion
                     if (turnoGuardardo > 0)
                     {
                         MessageBox.Show("Turno creado correctamente", "TURNO CREADO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Dispose();
                     }
                 }
             }
