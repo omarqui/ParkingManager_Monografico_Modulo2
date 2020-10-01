@@ -50,8 +50,7 @@ namespace CapaPresentacion
             Turno turnoAbierto = TurnoLG.BuscarTurnoPorID(Globales.Turno.IdTurno);
             LblTurno.Text = turnoAbierto.IdTurno.ToString();
 
-            // Empleado empleadoTurnoAbierto = EmpleadoLG.BuscarEmpleado(Globales.Turno.IdEmpleado);
-            // LblTurno.Text = empleadoTurnoAbierto.Nombre;
+            RefrescarInformacionParqueos();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -96,23 +95,24 @@ namespace CapaPresentacion
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            var respuesta = MessageBox.Show("Seguro que desea generar un ticket?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (respuesta == DialogResult.No)
-            {
-                return;
-            }
-
-            UsoParqueoLN.AperturarUso();
-
-
+            ValidarParqueosDisponibles();
             hideSubMenu();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            AbrirFormulario<frmTurno>.ejecutarSoloUnaVez(true);
-            //frmTurno ControlTurno = new frmTurno();
-            //ControlTurno.Show();
+            Turno turnoVerificar = TurnoLG.EstaTurnoAbiertoEmpleado(Globales.Empleado.IdEmpleado);
+
+            if (turnoVerificar != null && turnoVerificar.IdEmpleado == Globales.Empleado.IdEmpleado && turnoVerificar.EstaAbierto == true)
+            {
+                MessageBox.Show("Ya existe un turno abierto con este empleado, debe cerrarlo antes de poder crear otro turno con dicho empleado.",
+                    "AVISO IMPORTANTE", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                AbrirFormulario<frmTurno>.ejecutarSoloUnaVez(true);
+            }
+            
             hideSubMenu();
         }
 
@@ -142,10 +142,6 @@ namespace CapaPresentacion
         private void button6_Click(object sender, EventArgs e)
         {
             AbrirFormulario<frmConsultaEmpleado>.ejecutarSoloUnaVez(true);
-
-            //frmConsultaEmpleado ConsultarEmpleado = new frmConsultaEmpleado();
-            //ConsultarEmpleado.Show();
-
             hideSubMenu();
         }
 
@@ -197,13 +193,7 @@ namespace CapaPresentacion
         }
         private void btnGenerarTicket_Click(object sender, EventArgs e)
         {
-            var respuesta = MessageBox.Show("Seguro que desea generar un ticket?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (respuesta == DialogResult.No)
-            {
-                return;
-            }
-
-            UsoParqueoLN.AperturarUso();
+            ValidarParqueosDisponibles();            
         }
 
         private void btnCobrar_Click(object sender, EventArgs e)
@@ -265,6 +255,43 @@ namespace CapaPresentacion
         {
             LblHora.Text = DateTime.Now.ToString("hh:mm:ss");
             LblFecha.Text = DateTime.Now.ToString("dd/MM/yyyy");
+        }
+
+        private void ValidarParqueosDisponibles()
+        {
+            try
+            {
+                if (UsoParqueoLN.BuscarCantidadParqueoDisponibles() < Globales.Configuracion.CantidadParqueos)
+                {
+                    var respuesta = MessageBox.Show("Seguro que desea generar un ticket?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (respuesta == DialogResult.No)
+                    {
+                        return;
+                    }
+
+                    RefrescarInformacionParqueos();
+                    UsoParqueoLN.AperturarUso();
+                }
+                else
+                {
+                    MessageBox.Show("No hay parqueos disponibles, no será posible generar el ticket", "PARQUEOS AGOTADOS", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show("Ha ocurrido un error : " + error.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void timerParqueos_Tick(object sender, EventArgs e)
+        {
+            RefrescarInformacionParqueos();
+        }
+
+        private void RefrescarInformacionParqueos()
+        {
+            LblParqueos.Text = UsoParqueoLN.BuscarCantidadParqueoDisponibles().ToString();
+            lblPDisponible.Text = (Globales.Configuracion.CantidadParqueos - UsoParqueoLN.BuscarCantidadParqueoDisponibles()).ToString();
         }
     }
 }

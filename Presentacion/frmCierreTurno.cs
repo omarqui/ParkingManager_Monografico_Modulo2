@@ -9,12 +9,15 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entidades;
 using CapaNegocio;
+using System.Text.RegularExpressions;
 
 namespace CapaPresentacion
 {
     public partial class frmCierreTurno : Form
     {
         private int _idTurnoCerrar;
+
+        private const char SignoDecimal = '.'; // Carácter separador decimal        
         public frmCierreTurno()
         {
             InitializeComponent();
@@ -112,8 +115,8 @@ namespace CapaPresentacion
         {
             decimal montoDiferencia, montoTotalEnCaja;
 
-            montoDiferencia = montoEntregado - montoCobrado;
-            montoTotalEnCaja = montoApertura + montoCobrado; //Este valor se puede colocar en un nuevo Textbox (incluso guardarlo en la base de datos como alternativa a mayor control )
+            montoDiferencia = Convert.ToDecimal(montoEntregado.Formatear()) - Convert.ToDecimal(montoCobrado.Formatear());
+            montoTotalEnCaja = Convert.ToDecimal(montoApertura) + Convert.ToDecimal(montoCobrado); //Este valor se puede colocar en un nuevo Textbox (incluso guardarlo en la base de datos como alternativa a mayor control )
 
             //Asignando los valores acalculados a los textbox
 
@@ -129,18 +132,29 @@ namespace CapaPresentacion
                 txtMontoEntregado.Text = "0.00";
             }
 
-            decimal montoApertura, montoCobrado, montoDiferencia, montoEntregado;
+            decimal montoApertura, montoCobrado, montoEntregado;
 
             montoApertura = Convert.ToDecimal(txtMontoApertura.Text);
             montoCobrado = Convert.ToDecimal(txtMontoCobrado.Text);
-            montoEntregado = Convert.ToDecimal(txtMontoEntregado.Text);
+            montoEntregado = Convert.ToDecimal(txtMontoEntregado.Text);            
 
             CalcularDatosTurno(montoApertura, montoCobrado, montoEntregado);
         }
 
         private void txtMontoEntregado_KeyPress(object sender, KeyPressEventArgs e)
         {
-            e.SoloNumeros();
+            var textBox = (TextBox)sender;
+            // Si el carácter pulsado no es un carácter válido se anula
+            e.Handled = !char.IsDigit(e.KeyChar) // No es dígito
+                        && !char.IsControl(e.KeyChar) // No es carácter de control (backspace)
+                        && (e.KeyChar != SignoDecimal // No es signo decimal o es la 1ª posición o ya hay un signo decimal
+                            || textBox.SelectionStart == 0
+                            || textBox.Text.Contains(SignoDecimal));
+        }
+
+        private void txtMontoEntregado_Leave(object sender, EventArgs e)
+        {
+            txtMontoEntregado.Text = Convert.ToDecimal(txtMontoEntregado.Text).Formatear();
         }
     }
 }

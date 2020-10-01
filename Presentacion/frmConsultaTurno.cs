@@ -26,7 +26,7 @@ namespace CapaPresentacion
 
         private void frmConsultaTurno_Load(object sender, EventArgs e)
         {
-            //BuscarTurnosConsulta();            
+            AsignarValoresPorDefecto();
         }
 
         private void BuscarTurnosConsulta()
@@ -107,6 +107,13 @@ namespace CapaPresentacion
                         
             
             
+        }
+
+        private void AsignarValoresPorDefecto()
+        {
+            dtpDesde.Value = DateTime.Today;
+            dtpHasta.Value = DateTime.Today;
+            rbTodos.Checked = true;
         }
     }
 }

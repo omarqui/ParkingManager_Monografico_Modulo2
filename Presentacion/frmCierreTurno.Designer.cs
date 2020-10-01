@@ -211,6 +211,7 @@
             this.txtMontoEntregado.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtMontoEntregado.TextChanged += new System.EventHandler(this.txtMontoEntregado_TextChanged);
             this.txtMontoEntregado.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMontoEntregado_KeyPress);
+            this.txtMontoEntregado.Leave += new System.EventHandler(this.txtMontoEntregado_Leave);
             // 
             // txtMontoDiferencia
             // 
