@@ -142,8 +142,11 @@
   <data name="guardar peq1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Recursos\guardar peq.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Circled Pause_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\Circled Pause_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Sin título-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\Sin título-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EMPLEADOS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\EMPLEADOS.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="unloker2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Recursos\unloker2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -151,14 +154,8 @@
   <data name="guardar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Recursos\guardar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="registrartruno" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\registrartruno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="editar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Recursos\editar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="unloker3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\unloker3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="iconoConfiguracion" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Recursos\iconoConfiguracion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -169,17 +166,14 @@
   <data name="Go_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Recursos\Go_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Cash Register_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\Cash Register_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="iconoParqueoD" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\iconoParqueoD.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="registrar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\registrar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="iconoReportes" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Recursos\iconoReportes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Circled Pause_5033px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\Circled Pause_5033px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Search_52px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\Search_52px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="nuevo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\nuevo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -193,20 +187,17 @@
   <data name="guardar peq" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Recursos\guardar peq.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="iconoInicio" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\iconoInicio.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Calendar 31_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Recursos\Calendar 31_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="save blanco" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Recursos\save blanco.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="consulta empleado1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\consulta empleado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="unloker3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\unloker3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Cash Register_50px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\Cash Register_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="close" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\close.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="registrar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Recursos\registrar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -229,8 +220,8 @@
   <data name="unloker" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Recursos\unloker.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="registrar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\registrar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Circled Pause_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\Circled Pause_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="iconoConsulta" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Recursos\iconoConsulta.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -238,8 +229,8 @@
   <data name="Cancel_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Recursos\Cancel_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="close" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\close.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="iconoInicio" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\iconoInicio.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="iconoGeneralTique" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Recursos\iconoGeneralTique.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -250,11 +241,11 @@
   <data name="Circled Pause_501px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Recursos\Circled Pause_501px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Search_52px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\Search_52px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="iconoParqueoD" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\iconoParqueoD.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Sin título-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\Sin título-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="consulta empleado1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\consulta empleado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="consulta empleado" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Recursos\consulta empleado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -268,25 +259,19 @@
   <data name="Ok_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Recursos\Ok_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="boton registrar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\boton registrar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="ICONO LOGO" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Recursos\ICONO LOGO.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="iconoPocup" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Recursos\iconoPocup.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="EMPLEADOS" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\EMPLEADOS.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Cash In Hand_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\Cash In Hand_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Circled Pause_5033px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\Circled Pause_5033px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="unloker1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Recursos\unloker1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="boton cancelar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\boton cancelar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Cash In Hand_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\Cash In Hand_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

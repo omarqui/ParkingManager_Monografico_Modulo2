@@ -171,9 +171,6 @@
     <None Include="Recursos\Circled Pause_5033px.png" />
     <None Include="Recursos\Cancel_50px.png" />
     <None Include="Recursos\Cash In Hand_50px.png" />
-    <None Include="Recursos\Cash Register_50px.png" />
-    <None Include="Recursos\boton registrar.png" />
-    <None Include="Recursos\boton cancelar.png" />
     <Content Include="Recursos\close.png" />
     <Content Include="Recursos\coche.png" />
     <Content Include="Recursos\Configuración.png" />
@@ -213,7 +210,6 @@
     <None Include="Recursos\registrar.png" />
     <None Include="Recursos\registrar grand.png" />
     <None Include="Recursos\punto.png" />
-    <None Include="Recursos\registrartruno.png" />
     <Content Include="Recursos\Reporte.png" />
     <Content Include="Recursos\salir.png" />
     <None Include="Recursos\save blanco.png" />
