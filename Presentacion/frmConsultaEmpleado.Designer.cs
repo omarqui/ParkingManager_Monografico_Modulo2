@@ -84,7 +84,8 @@
             this.dtgvEmpleado.EnableHeadersVisualStyles = false;
             this.dtgvEmpleado.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(36)))), ((int)(((byte)(85)))));
             this.dtgvEmpleado.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.dtgvEmpleado.Location = new System.Drawing.Point(19, 80);
+            this.dtgvEmpleado.Location = new System.Drawing.Point(25, 98);
+            this.dtgvEmpleado.Margin = new System.Windows.Forms.Padding(4);
             this.dtgvEmpleado.Name = "dtgvEmpleado";
             this.dtgvEmpleado.ReadOnly = true;
             this.dtgvEmpleado.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -104,7 +105,7 @@
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
             this.dtgvEmpleado.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.dtgvEmpleado.Size = new System.Drawing.Size(680, 373);
+            this.dtgvEmpleado.Size = new System.Drawing.Size(906, 459);
             this.dtgvEmpleado.TabIndex = 0;
             // 
             // dgvIdEmpleado
@@ -140,20 +141,18 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26F);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(214, 18);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(285, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(337, 39);
+            this.label1.Size = new System.Drawing.Size(425, 52);
             this.label1.TabIndex = 4;
             this.label1.Text = "Consulta Empleados";
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::CapaPresentacion.Properties.Resources.consulta_empleado;
-            this.pictureBox2.Location = new System.Drawing.Point(164, 17);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Location = new System.Drawing.Point(218, 21);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(52, 45);
+            this.pictureBox2.Size = new System.Drawing.Size(69, 55);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 6;
             this.pictureBox2.TabStop = false;
@@ -161,10 +160,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::CapaPresentacion.Properties.Resources.logo_Parking1;
-            this.pictureBox1.Location = new System.Drawing.Point(19, 10);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(25, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(37, 31);
+            this.pictureBox1.Size = new System.Drawing.Size(49, 38);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
@@ -179,9 +177,10 @@
             this.btnSalir.ForeColor = System.Drawing.Color.White;
             this.btnSalir.Image = global::CapaPresentacion.Properties.Resources.Exit_64px;
             this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalir.Location = new System.Drawing.Point(617, 459);
+            this.btnSalir.Location = new System.Drawing.Point(823, 565);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(4);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(81, 40);
+            this.btnSalir.Size = new System.Drawing.Size(108, 49);
             this.btnSalir.TabIndex = 3;
             this.btnSalir.Text = "Salir";
             this.btnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -197,9 +196,10 @@
             this.btnNuevoEmpleado.ForeColor = System.Drawing.Color.White;
             this.btnNuevoEmpleado.Image = global::CapaPresentacion.Properties.Resources._new;
             this.btnNuevoEmpleado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNuevoEmpleado.Location = new System.Drawing.Point(119, 459);
+            this.btnNuevoEmpleado.Location = new System.Drawing.Point(159, 565);
+            this.btnNuevoEmpleado.Margin = new System.Windows.Forms.Padding(4);
             this.btnNuevoEmpleado.Name = "btnNuevoEmpleado";
-            this.btnNuevoEmpleado.Size = new System.Drawing.Size(81, 40);
+            this.btnNuevoEmpleado.Size = new System.Drawing.Size(108, 49);
             this.btnNuevoEmpleado.TabIndex = 2;
             this.btnNuevoEmpleado.Text = "Crear";
             this.btnNuevoEmpleado.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -216,9 +216,10 @@
             this.btnEditarEmpleado.ForeColor = System.Drawing.Color.White;
             this.btnEditarEmpleado.Image = global::CapaPresentacion.Properties.Resources.editar;
             this.btnEditarEmpleado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEditarEmpleado.Location = new System.Drawing.Point(19, 459);
+            this.btnEditarEmpleado.Location = new System.Drawing.Point(25, 565);
+            this.btnEditarEmpleado.Margin = new System.Windows.Forms.Padding(4);
             this.btnEditarEmpleado.Name = "btnEditarEmpleado";
-            this.btnEditarEmpleado.Size = new System.Drawing.Size(81, 40);
+            this.btnEditarEmpleado.Size = new System.Drawing.Size(108, 49);
             this.btnEditarEmpleado.TabIndex = 1;
             this.btnEditarEmpleado.Text = "Editar";
             this.btnEditarEmpleado.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -227,10 +228,10 @@
             // 
             // frmConsultaEmpleado
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(31)))), ((int)(((byte)(45)))));
-            this.ClientSize = new System.Drawing.Size(724, 525);
+            this.ClientSize = new System.Drawing.Size(966, 646);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
@@ -239,8 +240,8 @@
             this.Controls.Add(this.btnEditarEmpleado);
             this.Controls.Add(this.dtgvEmpleado);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmConsultaEmpleado";
-            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmConsultaEmpleado";
             this.Load += new System.EventHandler(this.frmConsultaEmpleado_Load);

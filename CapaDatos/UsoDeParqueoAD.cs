@@ -165,7 +165,6 @@ namespace CapaDatos
             {
                 using (var cmd = CrearCommand(_conexion, "pa_CerrarUso", transaction))
                 {
-                    cmd.Parameters.AddWithValue("idUso", uso.IdUso);
                     cmd.Parameters.AddWithValue("IdTurno", uso.IdTurno);
                     cmd.Parameters.AddWithValue("fechaSalida", uso.FechaSalida);
                     cmd.Parameters.AddWithValue("total", uso.Total);

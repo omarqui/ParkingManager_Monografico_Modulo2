@@ -14,17 +14,9 @@ namespace CapaPresentacion
 {
     public partial class frmCierreTurno : Form
     {
-        private int _idTurnoCerrar;
         public frmCierreTurno()
         {
             InitializeComponent();
-            _idTurnoCerrar = Globales.Turno.IdTurno;
-        }
-
-        public frmCierreTurno(int idTurnoCerrar)
-        {
-            InitializeComponent();
-            _idTurnoCerrar = idTurnoCerrar;
         }
 
         private void btnRegistrarTurno_Click(object sender, EventArgs e)
@@ -45,7 +37,6 @@ namespace CapaPresentacion
                     if (registroAfectado > 0)
                     {
                         MessageBox.Show("Turno cerrado correctamente", "TURNO CERRADO", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        this.Dispose();
                     }
                 }
                 catch (Exception error)
@@ -82,10 +73,10 @@ namespace CapaPresentacion
             {
                 if (Globales.Turno != null)
                 {
-                    Turno turnoAbierto = TurnoLG.BuscarTurnoPorID(_idTurnoCerrar);
-                    Empleado empleadoTurnoAbierto = EmpleadoLG.BuscarEmpleado(turnoAbierto.IdEmpleado);
+                    Turno turnoAbierto = TurnoLG.BuscarTurnoPorID(Globales.Turno.IdTurno);
+                    Empleado empleadoTurnoAbierto = EmpleadoLG.BuscarEmpleado(Globales.Turno.IdEmpleado);
 
-                    decimal sumatoriaCobradaTurno = TurnoLG.BuscarSumatoriaCierreTurno(_idTurnoCerrar);
+                    decimal sumatoriaCobradaTurno = TurnoLG.BuscarSumatoriaCierreTurno(Globales.Turno.IdTurno);
 
                     txtCodigoTurno.Text = turnoAbierto.IdTurno.ToString();
                     txtCodigoEmpleadoTurno.Text = turnoAbierto.IdEmpleado.ToString();
@@ -124,11 +115,6 @@ namespace CapaPresentacion
 
         private void txtMontoEntregado_TextChanged(object sender, EventArgs e)
         {
-            if (txtMontoEntregado.Text == "")
-            {
-                txtMontoEntregado.Text = "0.00";
-            }
-
             decimal montoApertura, montoCobrado, montoDiferencia, montoEntregado;
 
             montoApertura = Convert.ToDecimal(txtMontoApertura.Text);
@@ -136,11 +122,6 @@ namespace CapaPresentacion
             montoEntregado = Convert.ToDecimal(txtMontoEntregado.Text);
 
             CalcularDatosTurno(montoApertura, montoCobrado, montoEntregado);
-        }
-
-        private void txtMontoEntregado_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            e.SoloNumeros();
         }
     }
 }

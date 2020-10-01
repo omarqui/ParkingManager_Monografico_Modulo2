@@ -157,10 +157,5 @@ namespace CapaPresentacion
             lblClave.Visible = false;
 
         }
-
-        private void txtCedula_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            e.SoloNumeros();
-        }
     }
 }
