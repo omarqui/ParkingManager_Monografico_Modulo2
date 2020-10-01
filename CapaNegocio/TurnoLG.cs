@@ -24,10 +24,10 @@ namespace CapaNegocio
         }
 
 
-        public static DataTable BuscarTurnos(int? idTurno, DateTime fechaDesde, DateTime fechaHasta, bool? estaAbierto)
+        public static DataTable BuscarTurnos()
         {
             TurnoAD funcionesTunro = new TurnoAD();
-            return funcionesTunro.BuscarTodos(idTurno, fechaDesde, fechaHasta, estaAbierto);
+            return funcionesTunro.BuscarTodos();
         }
 
         public static Turno EstaTurnoAbiertoEmpleado(int idEmpleadoTurno)

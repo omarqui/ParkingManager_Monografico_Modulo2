@@ -86,10 +86,5 @@ namespace CapaPresentacion
                 this.Dispose();
             }
         }
-
-        private void txtPrecioPorHora_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            e.SoloNumeros();
-        }
     }
 }
