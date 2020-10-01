@@ -106,17 +106,19 @@ namespace CapaDatos
                     return null;
                 }
             }
-
-            return null;
         }
 
-        public DataTable BuscarTodos()
+        public DataTable BuscarTodos(int? idTurno, DateTime fechaDesde,  DateTime fechaHasta, bool? estaAbierto)
         {
             DataTable dt = new DataTable();
             using (var conn = _conexion)
             {
                 using (var cmd = CrearCommand(conn, "pa_buscarTurno"))
                 {
+                    cmd.Parameters.AddWithValue("idTurno", idTurno);
+                    cmd.Parameters.AddWithValue("FechaDesde", fechaDesde);
+                    cmd.Parameters.AddWithValue("FechaHasta", fechaHasta);
+                    cmd.Parameters.AddWithValue("EstaAbierto", estaAbierto);
                     using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
                     {
                         adapter.Fill(dt);

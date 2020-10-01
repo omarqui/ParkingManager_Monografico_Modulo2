@@ -17,6 +17,6 @@ namespace CapaDatos.Interfaces
 
         Turno BuscarPorID(int id);
 
-        DataTable BuscarTodos();
+        DataTable BuscarTodos(int? idTurno, DateTime fechaDesde, DateTime fechaHasta, bool? estaAbierto);
     }
 }
