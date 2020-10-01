@@ -195,6 +195,7 @@
     <EmbeddedResource Include="Reportes\FrmReportViwer.resx">
       <DependentUpon>FrmReportViwer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\RptListadoTurno.rdlc" />
     <EmbeddedResource Include="Reportes\RptListadoTicket.rdlc" />
     <EmbeddedResource Include="Reportes\RptTurno.rdlc" />
     <EmbeddedResource Include="Reportes\RptGeneracionTicket.rdlc" />

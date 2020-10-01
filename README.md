@@ -48,7 +48,7 @@ Omarqui| | | x
 
 - [x] Registro
 - [x] Cobro
-- [ ] Listado
+- [x] Listado
 
 ### Turno
 
@@ -63,7 +63,7 @@ Omarqui| | | x
 #### Reporte
 
 - [x] Cierre
-- [ ] Listado
+- [x] Listado
 
 ## Principal
 
