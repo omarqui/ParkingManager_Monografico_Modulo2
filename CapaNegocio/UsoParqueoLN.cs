@@ -12,11 +12,11 @@ namespace CapaNegocio
 {
     public class UsoParqueoLN
     {
-        public static bool AperturarUso()
+        public static UsoDeParqueo AperturarUso()
         {
             UsoDeParqueoAD repositorio = new UsoDeParqueoAD();
-            int filasAfectadas = repositorio.AperturarUso(Globales.Turno.IdTurno);
-            return filasAfectadas > 0;
+            int id = repositorio.AperturarUso(Globales.Turno.IdTurno);
+            return BuscarPorID(id);
         }
 
         public static UsoDeParqueo BuscarPorID(int id)
@@ -30,17 +30,17 @@ namespace CapaNegocio
             UsoDeParqueo uso = BuscarPorID(id);
             if (uso == null)
             {
-                throw new ExepcionPersonalida("Ticket no encontrado");
+                throw new ExepcionPersonalizada("Ticket no encontrado");
             }
 
             if (!uso.EstaActivo)
             {
-                throw new ExepcionPersonalida("Este ticket no esta activo");
+                throw new ExepcionPersonalizada("Este ticket no esta activo");
             }
 
             if (uso.Cobro != null)
             {
-                throw new ExepcionPersonalida("Este ticket ya fue cobrado");
+                throw new ExepcionPersonalizada("Este ticket ya fue cobrado");
             }
 
             DateTime fechaCierre = DateTime.Now;
@@ -111,6 +111,14 @@ namespace CapaNegocio
         {
             UsoDeParqueoAD funcionesUsoParqueo = new UsoDeParqueoAD();
             return funcionesUsoParqueo.BuscarTicketImpresion(idUsoParqueo);
+        }
+
+        public static DatosReporte ImprimirGeneracionTicket(int idUso)
+        {
+            return new DatosReporte(
+                "RptGeneracionTicket",
+                new Dictionary<string, DataTable>() { { "Ticket", BuscarTicketImpresion(idUso) } }
+                );
         }
     }
 }

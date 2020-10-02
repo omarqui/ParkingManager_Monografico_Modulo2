@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace CapaNegocio
 {
-    public class ExepcionPersonalida : Exception
+    public class ExepcionPersonalizada : Exception
     {
-        public ExepcionPersonalida(string message) : base(message)
+        public ExepcionPersonalizada(string message) : base(message)
         {
         }
     }

@@ -18,5 +18,14 @@ namespace CapaPresentacion.Reportes
             FrmReportViwer reportViwer = new FrmReportViwer(nombreReporte, fuentesDatos);
             reportViwer.ShowDialog();
         }
+
+        public static void Imprimir(DatosReporte datosReporte)
+        {
+            datosReporte.Datos.Add("Configuracion", ConfiguracionLG.BuscarConfiguracion());
+            FrmReportViwer reportViwer = new FrmReportViwer(
+                datosReporte.NombreReporte, 
+                datosReporte.Datos);
+            reportViwer.ShowDialog();
+        }
     }
 }

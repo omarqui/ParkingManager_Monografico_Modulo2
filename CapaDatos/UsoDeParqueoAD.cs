@@ -32,9 +32,11 @@ namespace CapaDatos
                 {
                     cmd.Parameters.AddWithValue("IdTurno", idTurno);
 
-                    var filasAfectadas = cmd.ExecuteNonQuery();
+                    var idGenerado = cmd.Parameters.Add("idGenerado", SqlDbType.Int);
+                    idGenerado.Direction = ParameterDirection.ReturnValue;
+                    cmd.ExecuteNonQuery();
 
-                    return filasAfectadas;
+                    return (int)idGenerado.Value;
                 }
 
             }

@@ -1,4 +1,6 @@
 ﻿using CapaNegocio;
+using CapaPresentacion.Reportes;
+using Entidades;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -292,6 +294,11 @@ namespace CapaPresentacion
         {
             LblParqueos.Text = UsoParqueoLN.BuscarCantidadParqueoDisponibles().ToString();
             lblPDisponible.Text = (Globales.Configuracion.CantidadParqueos - UsoParqueoLN.BuscarCantidadParqueoDisponibles()).ToString();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+
         }
     }
 }
