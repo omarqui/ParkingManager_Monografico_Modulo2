@@ -174,7 +174,7 @@
             // 
             this.btnCajero.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(36)))), ((int)(((byte)(85)))));
             this.btnCajero.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCajero.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8F);
+            this.btnCajero.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.btnCajero.ForeColor = System.Drawing.Color.White;
             this.btnCajero.Location = new System.Drawing.Point(201, 55);
             this.btnCajero.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
@@ -479,7 +479,7 @@
             // 
             this.btnSalirConsultaTurno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(36)))), ((int)(((byte)(85)))));
             this.btnSalirConsultaTurno.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSalirConsultaTurno.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F);
+            this.btnSalirConsultaTurno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.btnSalirConsultaTurno.ForeColor = System.Drawing.Color.White;
             this.btnSalirConsultaTurno.Image = global::CapaPresentacion.Properties.Resources.Exit_64px;
             this.btnSalirConsultaTurno.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -497,7 +497,7 @@
             // 
             this.btnCierreConsultaTurno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(36)))), ((int)(((byte)(85)))));
             this.btnCierreConsultaTurno.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCierreConsultaTurno.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F);
+            this.btnCierreConsultaTurno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.btnCierreConsultaTurno.ForeColor = System.Drawing.Color.White;
             this.btnCierreConsultaTurno.Image = global::CapaPresentacion.Properties.Resources.registrar1;
             this.btnCierreConsultaTurno.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -514,7 +514,7 @@
             // 
             this.btnImprimirConsultaTurno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(36)))), ((int)(((byte)(85)))));
             this.btnImprimirConsultaTurno.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnImprimirConsultaTurno.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F);
+            this.btnImprimirConsultaTurno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.btnImprimirConsultaTurno.ForeColor = System.Drawing.Color.White;
             this.btnImprimirConsultaTurno.Image = global::CapaPresentacion.Properties.Resources.PRINTERPEQ;
             this.btnImprimirConsultaTurno.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -526,12 +526,13 @@
             this.btnImprimirConsultaTurno.Text = "Imprimir";
             this.btnImprimirConsultaTurno.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnImprimirConsultaTurno.UseVisualStyleBackColor = false;
+            this.btnImprimirConsultaTurno.Click += new System.EventHandler(this.btnImprimirConsultaTurno_Click);
             // 
             // btnBuscarConsultaTurno
             // 
             this.btnBuscarConsultaTurno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(36)))), ((int)(((byte)(85)))));
             this.btnBuscarConsultaTurno.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnBuscarConsultaTurno.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F);
+            this.btnBuscarConsultaTurno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.btnBuscarConsultaTurno.ForeColor = System.Drawing.Color.White;
             this.btnBuscarConsultaTurno.Image = global::CapaPresentacion.Properties.Resources.BUSCARPEQ_;
             this.btnBuscarConsultaTurno.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;

@@ -9,11 +9,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entidades;
 using CapaNegocio;
+using CapaPresentacion.Reportes;
 
 namespace CapaPresentacion
 {
     public partial class frmConsultaTurno : Form
     {
+        DataTable datosTurnos;
+
         public frmConsultaTurno()
         {
             InitializeComponent();
@@ -31,18 +34,18 @@ namespace CapaPresentacion
 
         private void BuscarTurnosConsulta()
         {
-            int? idTurno = null; 
+            int? idTurno = null;
             DateTime fechaDesde = dtpDesde.Value;
             DateTime fechaHasta = dtpHasta.Value;
             bool? estaAbierto = (rbAbierto.Checked) ? true : (rbCerrado.Checked) ? (bool?)false : null ;            
 
             dtgvTurnos.Rows.Clear();
 
-            DataTable datosTurnos = TurnoLG.BuscarTurnos(idTurno, fechaDesde, fechaHasta, estaAbierto);
-            
+            datosTurnos = TurnoLG.BuscarTurnos(idTurno, fechaDesde, fechaHasta, estaAbierto);
+
             foreach (DataRow turnos in datosTurnos.Rows)
             {
-                dtgvTurnos.Rows.Add((int)turnos["IdTurno"], 
+                dtgvTurnos.Rows.Add((int)turnos["IdTurno"],
                     (int)turnos["IdEmpleado"],
                     turnos["NombreEmpleado"],
                     Convert.ToDateTime(turnos["FechaApertura"]).ToShortDateString(),
@@ -99,15 +102,15 @@ namespace CapaPresentacion
                 {
                     MessageBox.Show("Ha ocurrido un error: " + error.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                
+
             }
             else
             {
                 MessageBox.Show("Debe seleccionar un turno para poder cerrar.", "SELECCIONAR TURNO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-                        
-            
-            
+
+
+
         }
 
         private void AsignarValoresPorDefecto()
@@ -121,6 +124,17 @@ namespace CapaPresentacion
             dtpHasta.Value = DateTime.Today;
 
             rbTodos.Checked = true;
+        }
+
+        private void btnImprimirConsultaTurno_Click(object sender, EventArgs e)
+        {
+            Reportero.Imprimir(
+                new DatosReporte(
+                    "RptListadoTurno",
+                    new Dictionary<string, DataTable>()
+                    {
+                        {"Turnos", datosTurnos }
+                    }));
         }
     }
 }

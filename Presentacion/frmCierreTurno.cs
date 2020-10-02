@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using Entidades;
 using CapaNegocio;
 using System.Text.RegularExpressions;
+using CapaPresentacion.Reportes;
 
 namespace CapaPresentacion
 {
@@ -47,14 +48,13 @@ namespace CapaPresentacion
                     int registroAfectado = TurnoLG.CerrarTurno(turnoCerrar);
                     if (registroAfectado > 0)
                     {
-                        MessageBox.Show("Turno cerrado correctamente", "TURNO CERRADO", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        this.Dispose();
+                        Reportero.Imprimir(TurnoLG.ImprimirTurno(turnoCerrar.IdTurno));
+                        Dispose();
                     }
                 }
                 catch (Exception error)
                 {
                     MessageBox.Show("HA OCURRIDO UN ERROR Y LA OPERACIÓN NO HA SIDO COMPLETADA: \r "+ error.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    throw;
                 }
             }
         }

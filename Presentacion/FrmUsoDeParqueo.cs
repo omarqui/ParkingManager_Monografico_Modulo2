@@ -1,4 +1,5 @@
 ﻿using CapaNegocio;
+using CapaPresentacion.Reportes;
 using Entidades;
 using System;
 using System.Collections.Generic;
@@ -120,6 +121,7 @@ namespace CapaPresentacion
                         bool guardo = UsoParqueoLN.CerrarUso(ticket);
                         if (guardo)
                         {
+                            Reportero.Imprimir(UsoParqueoLN.ImprimirCobroTicket(ticket.IdUso));
                             Close();
                         }
                     }

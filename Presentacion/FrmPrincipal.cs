@@ -271,8 +271,9 @@ namespace CapaPresentacion
                         return;
                     }
 
+                    UsoDeParqueo ticket = UsoParqueoLN.AperturarUso();
+                    Reportero.Imprimir(UsoParqueoLN.ImprimirGeneracionTicket(ticket.IdUso));
                     RefrescarInformacionParqueos();
-                    UsoParqueoLN.AperturarUso();
                 }
                 else
                 {
@@ -294,11 +295,6 @@ namespace CapaPresentacion
         {
             LblParqueos.Text = UsoParqueoLN.BuscarCantidadParqueoDisponibles().ToString();
             lblPDisponible.Text = (Globales.Configuracion.CantidadParqueos - UsoParqueoLN.BuscarCantidadParqueoDisponibles()).ToString();
-        }
-
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-
         }
     }
 }

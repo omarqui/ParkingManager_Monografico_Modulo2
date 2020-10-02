@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using Entidades;
 using CapaNegocio;
 using static System.Windows.Forms.DataGrid;
+using CapaPresentacion.Reportes;
 
 namespace CapaPresentacion
 {
@@ -17,7 +18,8 @@ namespace CapaPresentacion
     {
         private const string REPRESENTACION_NULL = "N/A";
         private int indexResumen = -1;
-        object[] resumen;
+        private object[] resumen;
+        private DataTable datos;
 
         public FrmConsultaTicket()
         {
@@ -36,7 +38,7 @@ namespace CapaPresentacion
             DateTime desde = dtpDesde.Value;
             DateTime hasta = dtpDesde.Value;
             string idCajero = txtIdCajero.Text == string.Empty ? "0" : txtIdCajero.Text;
-            DataTable datos = UsoParqueoLN.BuscarTodos(
+            datos = UsoParqueoLN.BuscarTodos(
                 desde: dtpDesde.Value,
                 hasta: dtpHasta.Value,
                 idCajero: int.Parse(idCajero),
@@ -63,7 +65,7 @@ namespace CapaPresentacion
                 sumDescuento += descuento ?? 0;
                 sumNeto += neto ?? 0;
                 sumTiempo += tiempo ?? 0;
-
+                DataTable dataTable = new DataTable();
                 dtgvTicket.Rows.Add(usoParqueo["IdUso"] as int?,
                     (DateTime)usoParqueo["FechaEntrada"],
                     (usoParqueo["FechaSalida"] as DateTime?)?.ToString() ?? REPRESENTACION_NULL,
@@ -130,7 +132,17 @@ namespace CapaPresentacion
             if (dtgvTicket.Rows.Count > indexResumen)
                 dtgvTicket.Rows.RemoveAt(indexResumen);
 
-            indexResumen = -1;
+            indexResumen -= 1;
+        }
+
+        private void btnImprimirConsultaTurno_Click(object sender, EventArgs e)
+        {
+            Reportero.Imprimir(new DatosReporte(
+                "RptListadoTicket",
+                new Dictionary<string, DataTable>()
+                {
+                    {"Tickets", datos }
+                }));
         }
     }
 }

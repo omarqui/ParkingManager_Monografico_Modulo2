@@ -120,5 +120,13 @@ namespace CapaNegocio
                 new Dictionary<string, DataTable>() { { "Ticket", BuscarTicketImpresion(idUso) } }
                 );
         }
+
+        public static DatosReporte ImprimirCobroTicket(int idUso)
+        {
+            return new DatosReporte(
+                "RptCobroTicket",
+                new Dictionary<string, DataTable>() { { "Cobro", BuscarCobroImpresion(idUso) } }
+                );
+        }
     }
 }

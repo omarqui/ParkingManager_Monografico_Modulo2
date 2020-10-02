@@ -17,5 +17,9 @@ namespace CapaNegocio
             NombreReporte = nombreReporte;
             Datos = datos;
         }
+
+        public DatosReporte()
+        {
+        }
     }
 }

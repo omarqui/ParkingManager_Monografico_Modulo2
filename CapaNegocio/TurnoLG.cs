@@ -59,5 +59,17 @@ namespace CapaNegocio
             TurnoAD funcionesTurno = new TurnoAD();
             return funcionesTurno.BuscarTurnoImpresion(idTurno);
         }
+
+        public static DatosReporte ImprimirTurno(int idTurno)
+        {
+            return new DatosReporte()
+            {
+                NombreReporte = "RptTurno",
+                Datos = new Dictionary<string, DataTable>()
+                {
+                    {"Turno",  BuscarTurnoImpresion(idTurno)}
+                }
+            };
+        }
     }
 }
