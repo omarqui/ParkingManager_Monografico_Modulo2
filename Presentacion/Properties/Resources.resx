@@ -130,6 +130,9 @@
   <data name="registrar grand" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Recursos\registrar grand.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Versions_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\Versions_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="logo Parking1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Recursos\logo Parking.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -142,6 +145,9 @@
   <data name="guardar peq1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Recursos\guardar peq.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Circled Pause_5033px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\Circled Pause_5033px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Circled Pause_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Recursos\Circled Pause_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -150,6 +156,9 @@
   </data>
   <data name="guardar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Recursos\guardar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconoSalidaHoy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\iconoSalidaHoy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="registrartruno" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Recursos\registrartruno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -178,8 +187,8 @@
   <data name="iconoReportes" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Recursos\iconoReportes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Circled Pause_5033px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\Circled Pause_5033px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="boton cancelar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\boton cancelar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="nuevo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\nuevo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -223,8 +232,8 @@
   <data name="iconoProceso" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Recursos\iconoProceso.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="iconoSalidaHoy" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\iconoSalidaHoy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Search_52px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\Search_52px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="unloker" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Recursos\unloker.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -250,8 +259,8 @@
   <data name="Circled Pause_501px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Recursos\Circled Pause_501px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Search_52px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\Search_52px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ICONO LOGO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\ICONO LOGO.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Sin título-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Recursos\Sin título-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -271,9 +280,6 @@
   <data name="boton registrar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Recursos\boton registrar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ICONO LOGO" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\ICONO LOGO.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="iconoPocup" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Recursos\iconoPocup.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -286,7 +292,7 @@
   <data name="unloker1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Recursos\unloker1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="boton cancelar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Recursos\boton cancelar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="printmediano" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\printmediano.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

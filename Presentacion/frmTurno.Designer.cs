@@ -284,6 +284,7 @@
             this.Controls.Add(this.lblFechaApertura);
             this.Controls.Add(this.lblCodigoEmpleadoTurno);
             this.Controls.Add(this.lblCodigoTurno);
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
