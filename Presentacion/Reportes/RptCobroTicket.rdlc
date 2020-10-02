@@ -159,7 +159,9 @@
                                   <TextRuns>
                                     <TextRun>
                                       <Value>Cobro No.</Value>
-                                      <Style />
+                                      <Style>
+                                        <FontWeight>Bold</FontWeight>
+                                      </Style>
                                     </TextRun>
                                   </TextRuns>
                                   <Style />
@@ -225,7 +227,9 @@
                                   <TextRuns>
                                     <TextRun>
                                       <Value>Ticket No.</Value>
-                                      <Style />
+                                      <Style>
+                                        <FontWeight>Bold</FontWeight>
+                                      </Style>
                                     </TextRun>
                                   </TextRuns>
                                   <Style />
@@ -292,7 +296,9 @@
                                   <TextRuns>
                                     <TextRun>
                                       <Value>Entrada</Value>
-                                      <Style />
+                                      <Style>
+                                        <FontWeight>Bold</FontWeight>
+                                      </Style>
                                     </TextRun>
                                   </TextRuns>
                                   <Style />
@@ -327,7 +333,9 @@
                                   <TextRuns>
                                     <TextRun>
                                       <Value>Salida</Value>
-                                      <Style />
+                                      <Style>
+                                        <FontWeight>Bold</FontWeight>
+                                      </Style>
                                     </TextRun>
                                   </TextRuns>
                                   <Style />
@@ -362,7 +370,9 @@
                                   <TextRuns>
                                     <TextRun>
                                       <Value>Tiempo (Min)</Value>
-                                      <Style />
+                                      <Style>
+                                        <FontWeight>Bold</FontWeight>
+                                      </Style>
                                     </TextRun>
                                   </TextRuns>
                                   <Style />
@@ -397,7 +407,9 @@
                                   <TextRuns>
                                     <TextRun>
                                       <Value>Precio (Min)</Value>
-                                      <Style />
+                                      <Style>
+                                        <FontWeight>Bold</FontWeight>
+                                      </Style>
                                     </TextRun>
                                   </TextRuns>
                                   <Style />
@@ -528,7 +540,9 @@
                                   <TextRuns>
                                     <TextRun>
                                       <Value>Cajero</Value>
-                                      <Style />
+                                      <Style>
+                                        <FontWeight>Bold</FontWeight>
+                                      </Style>
                                     </TextRun>
                                   </TextRuns>
                                   <Style />
@@ -989,7 +1003,9 @@
                                   <TextRuns>
                                     <TextRun>
                                       <Value>Turno No.</Value>
-                                      <Style />
+                                      <Style>
+                                        <FontWeight>Bold</FontWeight>
+                                      </Style>
                                     </TextRun>
                                   </TextRuns>
                                   <Style />
@@ -1079,6 +1095,7 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>Cobro</DataSetName>
+            <Top>0.35in</Top>
             <Left>0.02967in</Left>
             <Height>4.24097in</Height>
             <Width>2.95159in</Width>
@@ -1088,14 +1105,71 @@
               </Border>
             </Style>
           </Tablix>
+          <Textbox Name="NombreEmpresa3">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Label>NombreEmpresa</Label>
+                    <Value>Cobro de Ticket</Value>
+                    <Style>
+                      <FontSize>12pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>NombreEmpresa2</rd:DefaultName>
+            <Top>0.06944in</Top>
+            <Left>0.04548in</Left>
+            <Height>0.23611in</Height>
+            <Width>2.90278in</Width>
+            <ZIndex>1</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+              <TopBorder>
+                <Color>Black</Color>
+                <Style>Solid</Style>
+                <Width>1pt</Width>
+              </TopBorder>
+              <BottomBorder>
+                <Color>Black</Color>
+                <Style>Solid</Style>
+                <Width>1pt</Width>
+              </BottomBorder>
+              <LeftBorder>
+                <Color>Black</Color>
+                <Style>Solid</Style>
+                <Width>1pt</Width>
+              </LeftBorder>
+              <RightBorder>
+                <Color>Black</Color>
+                <Style>Solid</Style>
+                <Width>1pt</Width>
+              </RightBorder>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
         </ReportItems>
-        <Height>4.24097in</Height>
+        <Height>4.6993in</Height>
         <Style />
       </Body>
       <Width>2.99375in</Width>
       <Page>
         <PageHeader>
-          <Height>0.69568in</Height>
+          <Height>0.67513in</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
@@ -1183,6 +1257,7 @@
                       <Style>
                         <FontSize>12pt</FontSize>
                         <FontWeight>Bold</FontWeight>
+                        <TextDecoration>Underline</TextDecoration>
                       </Style>
                     </TextRun>
                   </TextRuns>

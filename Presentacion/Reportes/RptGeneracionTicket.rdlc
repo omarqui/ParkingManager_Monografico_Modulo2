@@ -115,7 +115,10 @@
                                   <TextRuns>
                                     <TextRun>
                                       <Value>Ticket No.</Value>
-                                      <Style />
+                                      <Style>
+                                        <FontStyle>Italic</FontStyle>
+                                        <FontWeight>Bold</FontWeight>
+                                      </Style>
                                     </TextRun>
                                   </TextRuns>
                                   <Style />
@@ -181,7 +184,10 @@
                                   <TextRuns>
                                     <TextRun>
                                       <Value>Entrada</Value>
-                                      <Style />
+                                      <Style>
+                                        <FontStyle>Italic</FontStyle>
+                                        <FontWeight>Bold</FontWeight>
+                                      </Style>
                                     </TextRun>
                                   </TextRuns>
                                   <Style />
@@ -216,7 +222,10 @@
                                   <TextRuns>
                                     <TextRun>
                                       <Value>Precio (Min)</Value>
-                                      <Style />
+                                      <Style>
+                                        <FontStyle>Italic</FontStyle>
+                                        <FontWeight>Bold</FontWeight>
+                                      </Style>
                                     </TextRun>
                                   </TextRuns>
                                   <Style />
@@ -251,7 +260,10 @@
                                   <TextRuns>
                                     <TextRun>
                                       <Value>Cajero</Value>
-                                      <Style />
+                                      <Style>
+                                        <FontStyle>Italic</FontStyle>
+                                        <FontWeight>Bold</FontWeight>
+                                      </Style>
                                     </TextRun>
                                   </TextRuns>
                                   <Style />
@@ -384,7 +396,10 @@
                                   <TextRuns>
                                     <TextRun>
                                       <Value>Turno No.</Value>
-                                      <Style />
+                                      <Style>
+                                        <FontStyle>Italic</FontStyle>
+                                        <FontWeight>Bold</FontWeight>
+                                      </Style>
                                     </TextRun>
                                   </TextRuns>
                                   <Style />
@@ -474,6 +489,7 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>Ticket</DataSetName>
+            <Top>0.375in</Top>
             <Left>0.02967in</Left>
             <Height>1.7618in</Height>
             <Width>2.95159in</Width>
@@ -483,8 +499,65 @@
               </Border>
             </Style>
           </Tablix>
+          <Textbox Name="NombreEmpresa3">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Label>NombreEmpresa</Label>
+                    <Value>Ticket de Parqueo</Value>
+                    <Style>
+                      <FontSize>12pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                      <TextDecoration>None</TextDecoration>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>NombreEmpresa2</rd:DefaultName>
+            <Top>0.0816in</Top>
+            <Left>0.04548in</Left>
+            <Height>0.23611in</Height>
+            <Width>2.90278in</Width>
+            <ZIndex>1</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+              <TopBorder>
+                <Color>Black</Color>
+                <Style>Solid</Style>
+                <Width>1pt</Width>
+              </TopBorder>
+              <BottomBorder>
+                <Color>Black</Color>
+                <Style>Solid</Style>
+                <Width>1pt</Width>
+              </BottomBorder>
+              <LeftBorder>
+                <Color>Black</Color>
+                <Style>Solid</Style>
+                <Width>1pt</Width>
+              </LeftBorder>
+              <RightBorder>
+                <Color>Black</Color>
+                <Style>Solid</Style>
+                <Width>1pt</Width>
+              </RightBorder>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
         </ReportItems>
-        <Height>1.89722in</Height>
+        <Height>2.3243in</Height>
         <Style />
       </Body>
       <Width>2.99375in</Width>
@@ -578,6 +651,7 @@
                       <Style>
                         <FontSize>12pt</FontSize>
                         <FontWeight>Bold</FontWeight>
+                        <TextDecoration>Underline</TextDecoration>
                       </Style>
                     </TextRun>
                   </TextRuns>
