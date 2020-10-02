@@ -70,6 +70,12 @@
     <Compile Include="frmConsultaTurno.Designer.cs">
       <DependentUpon>frmConsultaTurno.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmFormatoDeImpresion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFormatoDeImpresion.Designer.cs">
+      <DependentUpon>frmFormatoDeImpresion.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +126,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmConsultaTurno.resx">
       <DependentUpon>frmConsultaTurno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFormatoDeImpresion.resx">
+      <DependentUpon>frmFormatoDeImpresion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
@@ -209,6 +218,7 @@
     <None Include="Recursos\new.png" />
     <None Include="Recursos\PRINTERPEQ.png" />
     <None Include="Recursos\Ok_50px.png" />
+    <None Include="Recursos\printmediano.png" />
     <Content Include="Recursos\Procesos.png" />
     <None Include="Recursos\registrar.png" />
     <None Include="Recursos\registrar grand.png" />
@@ -225,6 +235,7 @@
     <Content Include="Recursos\unloker2.png" />
     <Content Include="Recursos\unloker3.png" />
     <Content Include="Recursos\Usuario.png" />
+    <None Include="Recursos\Versions_50px.png" />
     <Content Include="Recursos\WhatsApp Image 2020-09-03 at 11.51.56 PM.jpeg" />
     <None Include="Resources\nuevo.png" />
   </ItemGroup>

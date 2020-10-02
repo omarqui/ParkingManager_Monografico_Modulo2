@@ -513,6 +513,16 @@ namespace CapaPresentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap printmediano {
+            get {
+                object obj = ResourceManager.GetObject("printmediano", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap punto {
             get {
                 object obj = ResourceManager.GetObject("punto", resourceCulture);
@@ -626,6 +636,16 @@ namespace CapaPresentacion.Properties {
         internal static System.Drawing.Bitmap unloker3 {
             get {
                 object obj = ResourceManager.GetObject("unloker3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Versions_50px {
+            get {
+                object obj = ResourceManager.GetObject("Versions_50px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
