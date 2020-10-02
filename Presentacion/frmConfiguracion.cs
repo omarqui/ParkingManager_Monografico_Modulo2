@@ -57,6 +57,7 @@ namespace CapaPresentacion
                     int cantidadRegistrosAfectados = ConfiguracionLG.GuardarConfiguracion(configuracionEntidad);
                     if (cantidadRegistrosAfectados >= 1)
                     {
+                        Globales.LimpiarConfiguracion();
                         MessageBox.Show("Guardado con éxito", "GUARDADO", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }

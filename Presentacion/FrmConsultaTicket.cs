@@ -78,7 +78,7 @@ namespace CapaPresentacion
                     );
 
             }
-
+            
             resumen = new object[] {
                 "",
                 "",
@@ -98,7 +98,7 @@ namespace CapaPresentacion
 
         private void InsertarResumen()
         {
-            if (indexResumen == -1)
+            if (datos != null && datos.Rows.Count > 0 && indexResumen == -1)
                 indexResumen = dtgvTicket.Rows.Add(resumen);
         }
 
@@ -129,10 +129,10 @@ namespace CapaPresentacion
 
         private void EliminarResumen()
         {
-            if (dtgvTicket.Rows.Count > indexResumen)
+            if (dtgvTicket.Rows.Count > indexResumen && indexResumen >= 0)
                 dtgvTicket.Rows.RemoveAt(indexResumen);
 
-            indexResumen -= 1;
+            indexResumen = -1;
         }
 
         private void btnImprimirConsultaTurno_Click(object sender, EventArgs e)
@@ -143,6 +143,19 @@ namespace CapaPresentacion
                 {
                     {"Tickets", datos }
                 }));
+        }
+
+        private void btnCierreConsultaTurno_Click(object sender, EventArgs e)
+        {
+            if (dtgvTicket.SelectedCells.Count <= 0)
+            {
+                return;
+            }
+            int indiceFila = dtgvTicket.SelectedCells[0].RowIndex;
+            int idTurno = (int)dtgvTicket.Rows[indiceFila].Cells[0].Value;
+            if (!Globales.ObligarAperturaTurno()) return;
+            FrmUsoDeParqueo frmUsoDeParqueo = new FrmUsoDeParqueo(idTurno);
+            frmUsoDeParqueo.ShowDialog();
         }
     }
 }

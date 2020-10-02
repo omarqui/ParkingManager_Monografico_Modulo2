@@ -1707,7 +1707,7 @@
             </Style>
           </Line>
           <Line Name="Line7">
-            <Top>3.43056in</Top>
+            <Top>3.74306in</Top>
             <Left>5.55in</Left>
             <Height>0in</Height>
             <Width>2.12292in</Width>
@@ -1719,7 +1719,7 @@
             </Style>
           </Line>
           <Line Name="Line8">
-            <Top>3.45556in</Top>
+            <Top>3.76806in</Top>
             <Left>5.55in</Left>
             <Height>0in</Height>
             <Width>2.12292in</Width>
@@ -1731,9 +1731,9 @@
             </Style>
           </Line>
           <Line Name="Line9">
-            <Top>2.76806in</Top>
+            <Top>2.78056in</Top>
             <Left>6.475in</Left>
-            <Height>1.00417in</Height>
+            <Height>1.32917in</Height>
             <Width>0in</Width>
             <ZIndex>8</ZIndex>
             <Style>
@@ -1759,7 +1759,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox36</rd:DefaultName>
-            <Top>2.80694in</Top>
+            <Top>3.11944in</Top>
             <Left>5.57606in</Left>
             <Height>0.25in</Height>
             <Width>0.8625in</Width>
@@ -1793,7 +1793,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>IdTurnoUso</rd:DefaultName>
-            <Top>2.80694in</Top>
+            <Top>3.11944in</Top>
             <Left>6.50801in</Left>
             <Height>0.25in</Height>
             <Width>1.11528in</Width>
@@ -1825,7 +1825,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox36</rd:DefaultName>
-            <Top>3.13125in</Top>
+            <Top>3.44375in</Top>
             <Left>5.57606in</Left>
             <Height>0.25in</Height>
             <Width>0.8625in</Width>
@@ -1859,7 +1859,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>IdTurnoUso</rd:DefaultName>
-            <Top>3.13125in</Top>
+            <Top>3.44375in</Top>
             <Left>6.50801in</Left>
             <Height>0.25in</Height>
             <Width>1.11528in</Width>
@@ -1891,7 +1891,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox36</rd:DefaultName>
-            <Top>3.50069in</Top>
+            <Top>3.81319in</Top>
             <Left>5.57606in</Left>
             <Height>0.25in</Height>
             <Width>0.8625in</Width>
@@ -1913,7 +1913,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=First(Fields!MontoCobrado.Value, "Turno") - First(Fields!MontoEntregado.Value, "Turno")</Value>
+                    <Value>=First(Fields!MontoApertura.Value, "Turno") + First(Fields!MontoCobrado.Value, "Turno") - First(Fields!MontoEntregado.Value, "Turno")</Value>
                     <Style>
                       <Format>#,0.00</Format>
                     </Style>
@@ -1925,7 +1925,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>IdTurnoUso</rd:DefaultName>
-            <Top>3.50069in</Top>
+            <Top>3.81319in</Top>
             <Left>6.50801in</Left>
             <Height>0.25in</Height>
             <Width>1.11528in</Width>
@@ -1943,7 +1943,7 @@
           <Line Name="Line10">
             <Top>2.76806in</Top>
             <Left>5.55in</Left>
-            <Height>1.01667in</Height>
+            <Height>1.32917in</Height>
             <Width>0in</Width>
             <ZIndex>15</ZIndex>
             <Style>
@@ -1955,7 +1955,7 @@
           <Line Name="Line11">
             <Top>2.76806in</Top>
             <Left>7.67292in</Left>
-            <Height>1.01667in</Height>
+            <Height>1.32917in</Height>
             <Width>0in</Width>
             <ZIndex>16</ZIndex>
             <Style>
@@ -1977,7 +1977,7 @@
             </Style>
           </Line>
           <Line Name="Line13">
-            <Top>3.78473in</Top>
+            <Top>4.09723in</Top>
             <Left>5.55in</Left>
             <Height>0in</Height>
             <Width>2.13542in</Width>
@@ -2055,8 +2055,74 @@
               <PaddingTop>2pt</PaddingTop>
             </Style>
           </Textbox>
+          <Textbox Name="IdTurnoUso9">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!MontoApertura.Value, "Turno")</Value>
+                    <Style>
+                      <Format>#,0.00;(#,0.00)</Format>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>IdTurnoUso</rd:DefaultName>
+            <Top>2.80487in</Top>
+            <Left>6.50278in</Left>
+            <Height>0.25in</Height>
+            <Width>1.11528in</Width>
+            <ZIndex>21</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox45">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Aperturado</Value>
+                    <Style>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox36</rd:DefaultName>
+            <Top>2.80487in</Top>
+            <Left>5.57535in</Left>
+            <Height>0.25in</Height>
+            <Width>0.8625in</Width>
+            <ZIndex>22</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
         </ReportItems>
-        <Height>3.91806in</Height>
+        <Height>4.23207in</Height>
         <Style />
       </Body>
       <Width>8.39793in</Width>

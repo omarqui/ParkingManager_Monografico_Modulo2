@@ -48,6 +48,7 @@ namespace CapaPresentacion
                     int registroAfectado = TurnoLG.CerrarTurno(turnoCerrar);
                     if (registroAfectado > 0)
                     {
+                        Globales.LimpiarTurno();
                         Reportero.Imprimir(TurnoLG.ImprimirTurno(turnoCerrar.IdTurno));
                         Dispose();
                     }
@@ -76,28 +77,32 @@ namespace CapaPresentacion
 
         private void frmCierreTurno_Load(object sender, EventArgs e)
         {
-            BuscarInformacionTurnoAbierto();            
+            BuscarInformacionTurnoAbierto();
         }
                 
         private void BuscarInformacionTurnoAbierto()
         {
             try
             {
-                if (Globales.Turno != null)
+                Turno turnoACerrar = TurnoLG.BuscarTurnoPorID(_idTurnoCerrar);
+                if (turnoACerrar == null)
                 {
-                    Turno turnoAbierto = TurnoLG.BuscarTurnoPorID(_idTurnoCerrar);
-                    Empleado empleadoTurnoAbierto = EmpleadoLG.BuscarEmpleado(turnoAbierto.IdEmpleado);
-
-                    decimal sumatoriaCobradaTurno = TurnoLG.BuscarSumatoriaCierreTurno(_idTurnoCerrar);
-
-                    txtCodigoTurno.Text = turnoAbierto.IdTurno.ToString();
-                    txtCodigoEmpleadoTurno.Text = turnoAbierto.IdEmpleado.ToString();
-                    txtMontoApertura.Text = turnoAbierto.MontoApertura.Formatear();
-                    txtMontoCobrado.Text = sumatoriaCobradaTurno.Formatear();
-                    txtMontoDiferencia.Text = turnoAbierto.MontoDiferencia.Formatear();
-                    txtMontoEntregado.Text = "0.00";
-                    txtNombreEmpleado.Text = empleadoTurnoAbierto.Nombre;
+                    MessageBox.Show("No hay turno a cerrar", "Aviso", MessageBoxButtons.OK);
+                    return;
                 }
+                
+                Empleado empleadoTurnoAbierto = EmpleadoLG.BuscarEmpleado(turnoACerrar.IdEmpleado);
+
+                decimal sumatoriaCobradaTurno = TurnoLG.BuscarSumatoriaCierreTurno(_idTurnoCerrar);
+
+                txtCodigoTurno.Text = turnoACerrar.IdTurno.ToString();
+                txtCodigoEmpleadoTurno.Text = turnoACerrar.IdEmpleado.ToString();
+                txtMontoApertura.Text = turnoACerrar.MontoApertura.Formatear();
+                dtpFechaApertura.Value = turnoACerrar.FechaApertura;
+                txtMontoCobrado.Text = sumatoriaCobradaTurno.Formatear();
+                txtMontoDiferencia.Text = turnoACerrar.MontoDiferencia.Formatear();
+                txtMontoEntregado.Text = "0.00";
+                txtNombreEmpleado.Text = empleadoTurnoAbierto.Nombre;
             }
             catch (Exception error)
             {

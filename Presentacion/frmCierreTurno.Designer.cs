@@ -178,49 +178,49 @@
             // 
             // txtMontoApertura
             // 
-            this.txtMontoApertura.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15.75F);
+            this.txtMontoApertura.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.txtMontoApertura.Location = new System.Drawing.Point(157, 34);
             this.txtMontoApertura.Margin = new System.Windows.Forms.Padding(2);
             this.txtMontoApertura.Name = "txtMontoApertura";
             this.txtMontoApertura.ReadOnly = true;
-            this.txtMontoApertura.Size = new System.Drawing.Size(151, 32);
+            this.txtMontoApertura.Size = new System.Drawing.Size(151, 31);
             this.txtMontoApertura.TabIndex = 10;
-            this.txtMontoApertura.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtMontoApertura.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtMontoCobrado
             // 
-            this.txtMontoCobrado.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15.75F);
+            this.txtMontoCobrado.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.txtMontoCobrado.Location = new System.Drawing.Point(484, 34);
             this.txtMontoCobrado.Margin = new System.Windows.Forms.Padding(2);
             this.txtMontoCobrado.Name = "txtMontoCobrado";
             this.txtMontoCobrado.ReadOnly = true;
-            this.txtMontoCobrado.Size = new System.Drawing.Size(151, 32);
+            this.txtMontoCobrado.Size = new System.Drawing.Size(151, 31);
             this.txtMontoCobrado.TabIndex = 11;
-            this.txtMontoCobrado.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtMontoCobrado.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtMontoEntregado
             // 
-            this.txtMontoEntregado.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15.75F);
+            this.txtMontoEntregado.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.txtMontoEntregado.Location = new System.Drawing.Point(157, 77);
             this.txtMontoEntregado.Margin = new System.Windows.Forms.Padding(2);
             this.txtMontoEntregado.Name = "txtMontoEntregado";
-            this.txtMontoEntregado.Size = new System.Drawing.Size(151, 32);
+            this.txtMontoEntregado.Size = new System.Drawing.Size(151, 31);
             this.txtMontoEntregado.TabIndex = 12;
-            this.txtMontoEntregado.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtMontoEntregado.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtMontoEntregado.TextChanged += new System.EventHandler(this.txtMontoEntregado_TextChanged);
             this.txtMontoEntregado.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMontoEntregado_KeyPress);
             this.txtMontoEntregado.Leave += new System.EventHandler(this.txtMontoEntregado_Leave);
             // 
             // txtMontoDiferencia
             // 
-            this.txtMontoDiferencia.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15.75F);
+            this.txtMontoDiferencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.txtMontoDiferencia.Location = new System.Drawing.Point(484, 77);
             this.txtMontoDiferencia.Margin = new System.Windows.Forms.Padding(2);
             this.txtMontoDiferencia.Name = "txtMontoDiferencia";
             this.txtMontoDiferencia.ReadOnly = true;
-            this.txtMontoDiferencia.Size = new System.Drawing.Size(151, 32);
+            this.txtMontoDiferencia.Size = new System.Drawing.Size(151, 31);
             this.txtMontoDiferencia.TabIndex = 13;
-            this.txtMontoDiferencia.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtMontoDiferencia.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // dtpFechaApertura
             // 
@@ -303,7 +303,7 @@
             // 
             this.btnRegistrarTurno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(36)))), ((int)(((byte)(85)))));
             this.btnRegistrarTurno.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnRegistrarTurno.Font = new System.Drawing.Font("Arial Rounded MT Bold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistrarTurno.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrarTurno.ForeColor = System.Drawing.Color.White;
             this.btnRegistrarTurno.Image = global::CapaPresentacion.Properties.Resources.registrar;
             this.btnRegistrarTurno.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -322,7 +322,7 @@
             // 
             this.btnSalirTurno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(36)))), ((int)(((byte)(85)))));
             this.btnSalirTurno.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSalirTurno.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalirTurno.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalirTurno.ForeColor = System.Drawing.Color.White;
             this.btnSalirTurno.Image = global::CapaPresentacion.Properties.Resources.Exit_64px;
             this.btnSalirTurno.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -338,14 +338,14 @@
             // 
             // txtTotalEnCaja
             // 
-            this.txtTotalEnCaja.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15.75F);
+            this.txtTotalEnCaja.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.txtTotalEnCaja.Location = new System.Drawing.Point(484, 129);
             this.txtTotalEnCaja.Margin = new System.Windows.Forms.Padding(2);
             this.txtTotalEnCaja.Name = "txtTotalEnCaja";
             this.txtTotalEnCaja.ReadOnly = true;
-            this.txtTotalEnCaja.Size = new System.Drawing.Size(151, 32);
+            this.txtTotalEnCaja.Size = new System.Drawing.Size(151, 31);
             this.txtTotalEnCaja.TabIndex = 31;
-            this.txtTotalEnCaja.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtTotalEnCaja.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.toolTip1.SetToolTip(this.txtTotalEnCaja, "Monto de inicio de fondo de caja más el monto total cobrado.");
             // 
             // lblTotalEnCaja
@@ -372,7 +372,7 @@
             this.groupBox1.Controls.Add(this.txtMontoCobrado);
             this.groupBox1.Controls.Add(this.txtMontoEntregado);
             this.groupBox1.Controls.Add(this.txtMontoDiferencia);
-            this.groupBox1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15.75F);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.groupBox1.Location = new System.Drawing.Point(19, 213);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(659, 186);

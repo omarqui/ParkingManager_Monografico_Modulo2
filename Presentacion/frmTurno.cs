@@ -25,7 +25,7 @@ namespace CapaPresentacion
         {
             try
             {
-                Turno turnoVerificar = TurnoLG.EstaTurnoAbiertoEmpleado(Globales.Empleado.IdEmpleado);
+                Turno turnoVerificar = TurnoLG.BuscarUltimoTurnoAbiertoEmpleado(Globales.Empleado.IdEmpleado);
 
                 if (turnoVerificar != null && turnoVerificar.IdEmpleado == Globales.Empleado.IdEmpleado && turnoVerificar.EstaAbierto == true)
                 {
@@ -41,7 +41,9 @@ namespace CapaPresentacion
                     int turnoGuardardo = TurnoLG.AperturarTurno(turno);
                     if (turnoGuardardo > 0)
                     {
+                        Globales.RefrescarTurno();
                         MessageBox.Show("Turno creado correctamente", "TURNO CREADO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                         this.Dispose();
                     }
                 }

@@ -46,10 +46,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.reportViewer1);
+            this.KeyPreview = true;
             this.Name = "FrmReportViwer";
             this.Text = "Reporte";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmReportViwer_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmReportViwer_KeyDown);
             this.ResumeLayout(false);
 
         }

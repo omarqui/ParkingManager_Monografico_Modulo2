@@ -8,6 +8,7 @@ namespace CapaPresentacion
 {
     static class Program
     {
+        public static FrmPrincipal _formularioPrincipal;
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -16,10 +17,8 @@ namespace CapaPresentacion
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new frmConfiguracion());
-            Application.Run(new FrmPrincipal());
-            //Application.Run(new Reportes.FrmReportViwer());
-            //Application.Run(new FrmPrincipal());
+            _formularioPrincipal = new FrmPrincipal();
+            Application.Run(_formularioPrincipal);
 
         }
     }

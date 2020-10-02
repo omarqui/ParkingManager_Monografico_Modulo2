@@ -64,6 +64,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Globales.cs" />
     <Compile Include="Reportes\DataSetGeneral.cs">
       <DependentUpon>DataSetGeneral.xsd</DependentUpon>
     </Compile>

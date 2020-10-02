@@ -56,5 +56,13 @@ namespace CapaPresentacion.Reportes
             //reportViewer1.LocalReport.Refresh();
             reportViewer1.RefreshReport();
         }
+
+        private void FrmReportViwer_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                Close();
+            }
+        }
     }
 }

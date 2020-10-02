@@ -16,6 +16,7 @@ namespace CapaPresentacion
 {
     public partial class FrmUsoDeParqueo : Form
     {
+        int _idTicket;
         UsoDeParqueo ticket;
         private decimal descuento;
         private decimal pagado;
@@ -25,9 +26,23 @@ namespace CapaPresentacion
             InitializeComponent();
         }
 
+        public FrmUsoDeParqueo(int idTicket)
+        {
+            InitializeComponent();
+            _idTicket = idTicket;
+        }
+
         private void FrmUsoDeParqueo_Load(object sender, EventArgs e)
         {
-            txtNumeroTicket.Focus();
+            if (_idTicket > 0)
+            {
+                txtNumeroTicket.Text = _idTicket.ToString();
+                txtNumeroTicket_TextChanged(txtNumeroTicket, null);
+                btnDerecha.PerformClick();
+            } else
+            {
+                txtNumeroTicket.Focus();
+            }
         }
 
         private void tabControl1_Selected(object sender, TabControlEventArgs e)
@@ -146,7 +161,7 @@ namespace CapaPresentacion
                 return false;
             }
 
-            ticket.Cobro = new CobroParqueo(ticket, descuento, pagado);
+            ticket.Cobro = new CobroParqueo(ticket, descuento, pagado, Globales.Turno.IdTurno);
             txtPagadoTab3.Text = ticket.Cobro.MontoPagado.Formatear();
             txtDescuentoTab3.Text = ticket.Cobro.Descuento.Formatear();
             txtNetoTab3.Text = ticket.Cobro.TotalCobrado.Formatear();
@@ -184,7 +199,7 @@ namespace CapaPresentacion
         private bool CargarTurno(int idTicket)
         {
             ticket = UsoParqueoLN.BuscarPorIDParaCerrar(idTicket);
-
+            
             txtNumeroTicketTab2.Text = ticket.IdUso.ToString();
             txtEntradaTab2.Text = ticket.FechaEntrada.ToString();
             txtSalidaTab2.Text = ticket.FechaSalida.ToString();

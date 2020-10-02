@@ -17,15 +17,14 @@ namespace Entidades
 
         public CobroParqueo(UsoDeParqueo uso)
         {
-            IdTurno = uso.IdTurno;
             IdUso = uso.IdUso;
             Fecha = uso.FechaSalida;
             TotalCobrado = uso.Total;
         }
 
-        public CobroParqueo(UsoDeParqueo uso, decimal descuento, decimal montoPagado)
+        public CobroParqueo(UsoDeParqueo uso, decimal descuento, decimal montoPagado, int idTurno)
         {
-            IdTurno = uso.IdTurno;
+            IdTurno = idTurno;
             IdUso = uso.IdUso;
             Fecha = uso.FechaSalida;
             Descuento = descuento;

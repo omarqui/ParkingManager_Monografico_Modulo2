@@ -12,10 +12,10 @@ namespace CapaNegocio
 {
     public class UsoParqueoLN
     {
-        public static UsoDeParqueo AperturarUso()
+        public static UsoDeParqueo AperturarUso(int idTurno)
         {
             UsoDeParqueoAD repositorio = new UsoDeParqueoAD();
-            int id = repositorio.AperturarUso(Globales.Turno.IdTurno);
+            int id = repositorio.AperturarUso(idTurno);
             return BuscarPorID(id);
         }
 

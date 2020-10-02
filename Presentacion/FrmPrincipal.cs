@@ -46,13 +46,15 @@ namespace CapaPresentacion
         private void FrmPrincipal_Load(object sender, EventArgs e)
         {
             timer1.Enabled = true;
-
-            lblNombreUsuario.Text = Globales.Empleado.Usuario;
-
-            Turno turnoAbierto = TurnoLG.BuscarTurnoPorID(Globales.Turno.IdTurno);
-            LblTurno.Text = turnoAbierto.IdTurno.ToString();
-
+            Globales.RefrescarTurno();
+            Globales.RefrescarEmpleado();
             RefrescarInformacionParqueos();
+        }
+
+        public void SetInformacionesGenerales(Turno turno, Empleado empleado)
+        {
+            lblNombreUsuario.Text = empleado?.Usuario ?? "No usuario";
+            LblTurno.Text =  (turno?.IdTurno)?.ToString() ?? "No turno abierto";
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -97,13 +99,13 @@ namespace CapaPresentacion
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            ValidarParqueosDisponibles();
+            GenerarTicket();
             hideSubMenu();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Turno turnoVerificar = TurnoLG.EstaTurnoAbiertoEmpleado(Globales.Empleado.IdEmpleado);
+            Turno turnoVerificar = TurnoLG.BuscarUltimoTurnoAbiertoEmpleado(Globales.Empleado.IdEmpleado);
 
             if (turnoVerificar != null && turnoVerificar.IdEmpleado == Globales.Empleado.IdEmpleado && turnoVerificar.EstaAbierto == true)
             {
@@ -120,7 +122,7 @@ namespace CapaPresentacion
 
         private void BtnSubMenuProcesos_Click(object sender, EventArgs e)
         {
-            Turno turno = TurnoLG.EstaTurnoAbiertoEmpleado(Globales.Empleado.IdEmpleado);
+            Turno turno = TurnoLG.BuscarUltimoTurnoAbiertoEmpleado(Globales.Empleado.IdEmpleado);
                         
             if (turno == null)
             {
@@ -195,12 +197,12 @@ namespace CapaPresentacion
         }
         private void btnGenerarTicket_Click(object sender, EventArgs e)
         {
-            ValidarParqueosDisponibles();            
+            GenerarTicket();            
         }
 
         private void btnCobrar_Click(object sender, EventArgs e)
         {
-            AbrirFormulario<FrmUsoDeParqueo>.ejecutarNuevo(true);
+            CobrarTicket();
             hideSubMenu();
         }
 
@@ -211,8 +213,14 @@ namespace CapaPresentacion
         }
         private void btnCobrarTicket_Click(object sender, EventArgs e)
         {
-            AbrirFormulario<FrmUsoDeParqueo>.ejecutarSoloUnaVez(true);
+            CobrarTicket();
             hideSubMenu();
+        }
+
+        private static void CobrarTicket()
+        {
+            if (!Globales.ObligarAperturaTurno()) return;
+            AbrirFormulario<FrmUsoDeParqueo>.ejecutarSoloUnaVez(true);
         }
 
         private void FrmPrincipal_KeyDown(object sender, KeyEventArgs e)
@@ -224,18 +232,11 @@ namespace CapaPresentacion
                     break;
 
                 case Keys.F2:
-
-                    var respuesta = MessageBox.Show("Seguro que desea generar un ticket?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                    if (respuesta == DialogResult.No)
-                    {
-                        return;
-                    }
-                    UsoParqueoLN.AperturarUso();
- 
+                    GenerarTicket();
                     break;
 
                 case Keys.F3:
-                    AbrirFormulario<FrmUsoDeParqueo>.ejecutarNuevo(true);
+                    CobrarTicket();
                     break;               
 
                 case Keys.F4:
@@ -259,26 +260,27 @@ namespace CapaPresentacion
             LblFecha.Text = DateTime.Now.ToString("dd/MM/yyyy");
         }
 
-        private void ValidarParqueosDisponibles()
+        private void GenerarTicket()
         {
             try
             {
-                if (UsoParqueoLN.BuscarCantidadParqueoDisponibles() < Globales.Configuracion.CantidadParqueos)
-                {
-                    var respuesta = MessageBox.Show("Seguro que desea generar un ticket?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                    if (respuesta == DialogResult.No)
-                    {
-                        return;
-                    }
+                if (!Globales.ObligarAperturaTurno()) return;
 
-                    UsoDeParqueo ticket = UsoParqueoLN.AperturarUso();
-                    Reportero.Imprimir(UsoParqueoLN.ImprimirGeneracionTicket(ticket.IdUso));
-                    RefrescarInformacionParqueos();
-                }
-                else
+                if (UsoParqueoLN.BuscarCantidadParqueoDisponibles() >= Globales.Configuracion.CantidadParqueos)
                 {
                     MessageBox.Show("No hay parqueos disponibles, no será posible generar el ticket", "PARQUEOS AGOTADOS", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
                 }
+
+                var respuesta = MessageBox.Show("Seguro que desea generar un ticket?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (respuesta == DialogResult.No)
+                {
+                    return;
+                }
+
+                UsoDeParqueo ticket = UsoParqueoLN.AperturarUso(Globales.Turno.IdTurno);
+                Reportero.Imprimir(UsoParqueoLN.ImprimirGeneracionTicket(ticket.IdUso));
+                RefrescarInformacionParqueos();
             }
             catch (Exception error)
             {

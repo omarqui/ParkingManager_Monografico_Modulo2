@@ -47,7 +47,6 @@
     <Compile Include="DatosReporte.cs" />
     <Compile Include="EmpleadoLG.cs" />
     <Compile Include="ExepcionPersonalizada.cs" />
-    <Compile Include="Globales.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TurnoLG.cs" />
     <Compile Include="UsoParqueoLN.cs" />

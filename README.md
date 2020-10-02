@@ -68,16 +68,31 @@ Omarqui| | | x
 ## Principal
 
 - [x] Diseño
-- [ ] Mostrar datos usuario
+- [x] Mostrar datos usuario
 - [ ] Mostrar datos dashboard
-- [ ] Poner a funcionar menu
-- [ ] Poner a funcionar atajos de teclado
-- [ ] Mostrar fecha y hora
+- [x] Poner a funcionar menu
+- [x] Poner a funcionar atajos de teclado
+- [x] Mostrar fecha y hora
 
 ## Permiso
 
 - [ ] Consulta
 
 ## Valicaciones
--[] Validar la cantidad de parqueos disponibles antes de generar el ticket de parqueo
+
+- [x] Validar la cantidad de parqueos disponibles antes de generar el ticket de parqueo
+- [ ] Estilo boton deshabilitado en cobro de ticket
+- [ ] Bloquear txt de cuadre de caja
+- [ ] Contemplar monto apertura en calculo de diferencia
+- [ ] Rediseño de apertura de turno
+- [ ] Abrir consulta de ticket en menu lateral
+- [ ] Usar formulario de formato de impresion en consultas
+- [ ] Diseño homogeneo en consultas
+- [ ] Redistribucion de columnas en consultas
+- [ ] Filtros de consulta de ticket
+- [ ] Quitar menus de reporte
+- [ ] Actualizar presentacion al cambiar configuracion
+- [ ] Completar datos de dashboard
+- [ ] Abrir ayuda con F1
+---
 
