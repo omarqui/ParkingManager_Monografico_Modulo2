@@ -34,8 +34,7 @@ namespace CapaPresentacion
             int? idTurno = null; 
             DateTime fechaDesde = dtpDesde.Value;
             DateTime fechaHasta = dtpHasta.Value;
-            bool? estaAbierto = (rbAbierto.Checked) ? true : (rbCerrado.Checked) ? (bool?)false : null ;
-
+            bool? estaAbierto = (rbAbierto.Checked) ? true : (rbCerrado.Checked) ? (bool?)false : null ;            
 
             dtgvTurnos.Rows.Clear();
 
@@ -54,6 +53,8 @@ namespace CapaPresentacion
                     (decimal)turnos["MontoDiferencia"],
                     ((bool)turnos["EstaAbierto"] == true) ? "ABIERTO" : "CERRADO");
             }
+
+            lblCantidad.Text = "Cantidad : " + dtgvTurnos.Rows.Count.ToString();
 
         }
 
@@ -111,8 +112,14 @@ namespace CapaPresentacion
 
         private void AsignarValoresPorDefecto()
         {
-            dtpDesde.Value = DateTime.Today;
+            dtpDesde.Format = DateTimePickerFormat.Custom;
+            dtpDesde.CustomFormat = "dd-MM-yyyy";
             dtpHasta.Value = DateTime.Today;
+
+            dtpHasta.Format = DateTimePickerFormat.Custom;            
+            dtpHasta.CustomFormat = "dd-MM-yyyy";
+            dtpHasta.Value = DateTime.Today;
+
             rbTodos.Checked = true;
         }
     }
