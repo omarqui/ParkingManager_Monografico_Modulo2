@@ -53,14 +53,15 @@ namespace CapaPresentacion
             timer1.Enabled = true;
             Globales.RefrescarTurno();
             Globales.RefrescarEmpleado();
-            RefrescarInformacionParqueos();
+            
+            RefrescarInformacionParqueos(Globales.Configuracion, Globales.Turno);
         }
 
-        public void SetInformacionesGenerales(Turno turno, Empleado empleado)
+        public void SetInformacionesGenerales(Turno turno, Empleado empleado, Configuracion configuracion)
         {
             lblNombreUsuario.Text = empleado?.ToString() ?? "No usuario";
             LblTurno.Text =  (turno?.IdTurno)?.ToString() ?? "No turno abierto";
-            RefrescarInformacionParqueos();
+            RefrescarInformacionParqueos(configuracion, turno);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -284,7 +285,7 @@ namespace CapaPresentacion
 
                 UsoDeParqueo ticket = UsoParqueoLN.AperturarUso(Globales.Turno.IdTurno);
                 Reportero.Imprimir(UsoParqueoLN.ImprimirGeneracionTicket(ticket.IdUso));
-                RefrescarInformacionParqueos();
+                RefrescarInformacionParqueos(Globales.Configuracion, Globales.Turno);
             }
             catch (Exception error)
             {
@@ -294,13 +295,18 @@ namespace CapaPresentacion
 
         private void timerParqueos_Tick(object sender, EventArgs e)
         {
-            RefrescarInformacionParqueos();
+            RefrescarInformacionParqueos(Globales.Configuracion, Globales.Turno);
         }
 
-        private void RefrescarInformacionParqueos()
+        private void RefrescarInformacionParqueos(Configuracion configuracion, Turno turno)
         {
+            if (configuracion == null)
+            {
+                return;
+            }
+
             int cantidadParqueosOcupados = UsoParqueoLN.BuscarCantidadParqueoOcupados();
-            int totalParqueos = Globales.Configuracion.CantidadParqueos;
+            int totalParqueos = configuracion.CantidadParqueos;
             int cantidadParqueosDisponibles = totalParqueos - cantidadParqueosOcupados;
 
             LblParqueos.Text = cantidadParqueosOcupados.ToString();
@@ -308,12 +314,15 @@ namespace CapaPresentacion
             LblCActualPO.Text = ((decimal)cantidadParqueosOcupados / (decimal)totalParqueos * 100).Formatear(0) + " %";
             LblCActualPD.Text = ((decimal)cantidadParqueosDisponibles / (decimal)totalParqueos * 100).Formatear(0) + " %";
 
-            if (Globales.Turno == null)
+            if (turno == null)
             {
+                lblAccesoH.Text = "0";
+                LblSalidasH.Text = "0";
                 return;
             }
-            lblAccesoH.Text = TurnoLG.BuscarCantidadAcceso(Globales.Turno.IdTurno).ToString();
-            LblSalidasH.Text = TurnoLG.BuscarCantidadSalida(Globales.Turno.IdTurno).ToString();
+
+            lblAccesoH.Text = TurnoLG.BuscarCantidadAcceso(turno.IdTurno).ToString();
+            LblSalidasH.Text = TurnoLG.BuscarCantidadSalida(turno.IdTurno).ToString();
         }
 
         private void AbrirManuelAyuda()

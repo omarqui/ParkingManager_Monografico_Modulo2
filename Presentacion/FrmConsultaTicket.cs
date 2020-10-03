@@ -43,7 +43,7 @@ namespace CapaPresentacion
             string idCajero = txtIdCajero.Text == string.Empty ? "0" : txtIdCajero.Text;
             datos = UsoParqueoLN.BuscarTodos(
                 desde: dtpDesde.Value,
-                hasta: dtpHasta.Value,
+                hasta: dtpHasta.Value.AddHours(23).AddMinutes(59).AddSeconds(59).AddMilliseconds(999),
                 idCajero: int.Parse(idCajero),
                 textoAbierto: txtTextoAbierto.Text);
             decimal sumTotal = 0;
@@ -53,7 +53,6 @@ namespace CapaPresentacion
 
             foreach (DataRow usoParqueo in datos.Rows)
             {
-
                 bool estaAbierto = usoParqueo["FechaSalida"] as DateTime? == null;
                 bool estaActivo = (bool)usoParqueo["EstaActivo"];
 

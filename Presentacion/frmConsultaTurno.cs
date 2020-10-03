@@ -41,7 +41,11 @@ namespace CapaPresentacion
 
             dtgvTurnos.Rows.Clear();
 
-            datosTurnos = TurnoLG.BuscarTurnos(idTurno, fechaDesde, fechaHasta, estaAbierto);
+            datosTurnos = TurnoLG.BuscarTurnos(
+                idTurno, 
+                fechaDesde, 
+                fechaHasta.AddHours(23).AddMinutes(59).AddSeconds(59).AddMilliseconds(999), 
+                estaAbierto);
 
             foreach (DataRow turnos in datosTurnos.Rows)
             {
