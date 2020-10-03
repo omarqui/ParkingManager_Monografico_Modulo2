@@ -106,5 +106,10 @@ namespace CapaPresentacion
         {
 
         }
+
+        private void txtMontoApertura_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            e.SoloNumeros();
+        }
     }
 }

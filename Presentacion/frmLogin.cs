@@ -20,8 +20,6 @@ namespace CapaPresentacion
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
-            TxtUsuarioLogin.Text = "admin";
-            TxtPasswordLogin.Text = "123";
         }
 
         private void btnSalir_Click(object sender, EventArgs e)

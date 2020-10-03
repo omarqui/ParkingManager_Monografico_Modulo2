@@ -253,6 +253,12 @@ namespace CapaPresentacion
             {
                 return;
             }
+            if (descuento > ticket.Total)
+            {
+                MessageBox.Show("El monto de descuento debe ser menor al total", "Aviso");
+                txtDescuentoTab2.Text = "0.00";
+                return;
+            }
 
             txtNetoTab2.Text = (ticket.Total - descuento).Formatear();
         }

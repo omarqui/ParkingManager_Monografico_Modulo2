@@ -30,8 +30,8 @@ namespace CapaPresentacion
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmConsultaTicket));
             this.lblDesde = new System.Windows.Forms.Label();
             this.lblHasta = new System.Windows.Forms.Label();
@@ -71,8 +71,6 @@ namespace CapaPresentacion
             this.btnCierreConsultaTurno = new System.Windows.Forms.Button();
             this.btnImprimirConsultaTurno = new System.Windows.Forms.Button();
             this.btnBuscarConsultaTurno = new System.Windows.Forms.Button();
-            this.dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            this.dataGridViewCellStyle4 = new DataGridViewCellStyle();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvTicket)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -137,11 +135,10 @@ namespace CapaPresentacion
             this.rbAbierto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.rbAbierto.ForeColor = System.Drawing.Color.White;
             this.rbAbierto.Location = new System.Drawing.Point(266, 110);
-            this.rbAbierto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbAbierto.Margin = new System.Windows.Forms.Padding(2);
             this.rbAbierto.Name = "rbAbierto";
             this.rbAbierto.Size = new System.Drawing.Size(78, 24);
             this.rbAbierto.TabIndex = 10;
-            this.rbAbierto.TabStop = true;
             this.rbAbierto.Text = "Abierto";
             this.rbAbierto.UseVisualStyleBackColor = true;
             // 
@@ -151,21 +148,21 @@ namespace CapaPresentacion
             this.rbCerrado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.rbCerrado.ForeColor = System.Drawing.Color.White;
             this.rbCerrado.Location = new System.Drawing.Point(417, 110);
-            this.rbCerrado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbCerrado.Margin = new System.Windows.Forms.Padding(2);
             this.rbCerrado.Name = "rbCerrado";
             this.rbCerrado.Size = new System.Drawing.Size(84, 24);
             this.rbCerrado.TabIndex = 11;
-            this.rbCerrado.TabStop = true;
             this.rbCerrado.Text = "Cerrado";
             this.rbCerrado.UseVisualStyleBackColor = true;
             // 
             // rbTodos
             // 
             this.rbTodos.AutoSize = true;
+            this.rbTodos.Checked = true;
             this.rbTodos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.rbTodos.ForeColor = System.Drawing.Color.White;
             this.rbTodos.Location = new System.Drawing.Point(574, 110);
-            this.rbTodos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbTodos.Margin = new System.Windows.Forms.Padding(2);
             this.rbTodos.Name = "rbTodos";
             this.rbTodos.Size = new System.Drawing.Size(71, 24);
             this.rbTodos.TabIndex = 12;
@@ -180,7 +177,7 @@ namespace CapaPresentacion
             this.btnCajero.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.btnCajero.ForeColor = System.Drawing.Color.White;
             this.btnCajero.Location = new System.Drawing.Point(183, 58);
-            this.btnCajero.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCajero.Margin = new System.Windows.Forms.Padding(2);
             this.btnCajero.Name = "btnCajero";
             this.btnCajero.Size = new System.Drawing.Size(56, 21);
             this.btnCajero.TabIndex = 13;
@@ -190,7 +187,7 @@ namespace CapaPresentacion
             // txtIdCajero
             // 
             this.txtIdCajero.Location = new System.Drawing.Point(183, 87);
-            this.txtIdCajero.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtIdCajero.Margin = new System.Windows.Forms.Padding(2);
             this.txtIdCajero.Name = "txtIdCajero";
             this.txtIdCajero.Size = new System.Drawing.Size(57, 20);
             this.txtIdCajero.TabIndex = 14;
@@ -200,7 +197,7 @@ namespace CapaPresentacion
             this.dtpDesde.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.dtpDesde.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpDesde.Location = new System.Drawing.Point(334, 58);
-            this.dtpDesde.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpDesde.Margin = new System.Windows.Forms.Padding(2);
             this.dtpDesde.Name = "dtpDesde";
             this.dtpDesde.Size = new System.Drawing.Size(105, 23);
             this.dtpDesde.TabIndex = 15;
@@ -211,7 +208,7 @@ namespace CapaPresentacion
             this.dtpHasta.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.dtpHasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpHasta.Location = new System.Drawing.Point(555, 58);
-            this.dtpHasta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpHasta.Margin = new System.Windows.Forms.Padding(2);
             this.dtpHasta.Name = "dtpHasta";
             this.dtpHasta.Size = new System.Drawing.Size(105, 23);
             this.dtpHasta.TabIndex = 16;
@@ -219,18 +216,19 @@ namespace CapaPresentacion
             // 
             // txtNombreCajero
             // 
+            this.txtNombreCajero.Enabled = false;
             this.txtNombreCajero.Location = new System.Drawing.Point(246, 87);
-            this.txtNombreCajero.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNombreCajero.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombreCajero.Name = "txtNombreCajero";
             this.txtNombreCajero.Size = new System.Drawing.Size(414, 20);
             this.txtNombreCajero.TabIndex = 17;
             // 
             // txtTextoAbierto
             // 
-            this.txtTextoAbierto.Location = new System.Drawing.Point(178, 137);
-            this.txtTextoAbierto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTextoAbierto.Location = new System.Drawing.Point(209, 137);
+            this.txtTextoAbierto.Margin = new System.Windows.Forms.Padding(2);
             this.txtTextoAbierto.Name = "txtTextoAbierto";
-            this.txtTextoAbierto.Size = new System.Drawing.Size(699, 20);
+            this.txtTextoAbierto.Size = new System.Drawing.Size(668, 20);
             this.txtTextoAbierto.TabIndex = 18;
             // 
             // lblCantidad
@@ -291,7 +289,7 @@ namespace CapaPresentacion
             this.dtgvTicket.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(36)))), ((int)(((byte)(85)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DarkGray;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -311,7 +309,7 @@ namespace CapaPresentacion
             this.dtgvTicket.EnableHeadersVisualStyles = false;
             this.dtgvTicket.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(36)))), ((int)(((byte)(85)))));
             this.dtgvTicket.Location = new System.Drawing.Point(14, 166);
-            this.dtgvTicket.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtgvTicket.Margin = new System.Windows.Forms.Padding(2);
             this.dtgvTicket.Name = "dtgvTicket";
             this.dtgvTicket.ReadOnly = true;
             this.dtgvTicket.RowHeadersVisible = false;
@@ -341,7 +339,7 @@ namespace CapaPresentacion
             this.dgvFechaEntrada.MinimumWidth = 6;
             this.dgvFechaEntrada.Name = "dgvFechaEntrada";
             this.dgvFechaEntrada.ReadOnly = true;
-            this.dgvFechaEntrada.Width = 167;
+            this.dgvFechaEntrada.Width = 132;
             // 
             // dgvFechaSalida
             // 
@@ -350,7 +348,7 @@ namespace CapaPresentacion
             this.dgvFechaSalida.MinimumWidth = 6;
             this.dgvFechaSalida.Name = "dgvFechaSalida";
             this.dgvFechaSalida.ReadOnly = true;
-            this.dgvFechaSalida.Width = 148;
+            this.dgvFechaSalida.Width = 115;
             // 
             // dgvEmpleado
             // 
@@ -399,7 +397,7 @@ namespace CapaPresentacion
             // 
             this.pictureBox8.Image = global::CapaPresentacion.Properties.Resources.Ok_50px;
             this.pictureBox8.Location = new System.Drawing.Point(937, 499);
-            this.pictureBox8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox8.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(20, 16);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -410,7 +408,7 @@ namespace CapaPresentacion
             // 
             this.pictureBox7.Image = global::CapaPresentacion.Properties.Resources.Circled_Pause_50px;
             this.pictureBox7.Location = new System.Drawing.Point(801, 499);
-            this.pictureBox7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(20, 16);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -421,7 +419,7 @@ namespace CapaPresentacion
             // 
             this.pictureBox6.Image = global::CapaPresentacion.Properties.Resources.Circled_Pause_5033px;
             this.pictureBox6.Location = new System.Drawing.Point(678, 499);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(20, 16);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -432,7 +430,7 @@ namespace CapaPresentacion
             // 
             this.pictureBox4.Image = global::CapaPresentacion.Properties.Resources.Calendar_31_64px;
             this.pictureBox4.Location = new System.Drawing.Point(506, 59);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(26, 19);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -443,7 +441,7 @@ namespace CapaPresentacion
             // 
             this.pictureBox3.Image = global::CapaPresentacion.Properties.Resources.Calendar_31_64px;
             this.pictureBox3.Location = new System.Drawing.Point(304, 58);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(26, 19);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -454,7 +452,7 @@ namespace CapaPresentacion
             // 
             this.pictureBox2.Image = global::CapaPresentacion.Properties.Resources.Search_52px;
             this.pictureBox2.Location = new System.Drawing.Point(177, 138);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(28, 18);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -465,7 +463,7 @@ namespace CapaPresentacion
             // 
             this.pictureBox1.Image = global::CapaPresentacion.Properties.Resources.Search_52px;
             this.pictureBox1.Location = new System.Drawing.Point(327, 3);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(30, 36);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -479,12 +477,12 @@ namespace CapaPresentacion
             this.btnSalirConsultaTurno.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnSalirConsultaTurno.FlatAppearance.BorderSize = 0;
             this.btnSalirConsultaTurno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalirConsultaTurno.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
+            this.btnSalirConsultaTurno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.btnSalirConsultaTurno.ForeColor = System.Drawing.Color.White;
             this.btnSalirConsultaTurno.Image = global::CapaPresentacion.Properties.Resources.Exit_64px;
             this.btnSalirConsultaTurno.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSalirConsultaTurno.Location = new System.Drawing.Point(775, 94);
-            this.btnSalirConsultaTurno.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSalirConsultaTurno.Margin = new System.Windows.Forms.Padding(2);
             this.btnSalirConsultaTurno.Name = "btnSalirConsultaTurno";
             this.btnSalirConsultaTurno.Size = new System.Drawing.Size(102, 40);
             this.btnSalirConsultaTurno.TabIndex = 9;
@@ -500,12 +498,12 @@ namespace CapaPresentacion
             this.btnCierreConsultaTurno.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnCierreConsultaTurno.FlatAppearance.BorderSize = 0;
             this.btnCierreConsultaTurno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCierreConsultaTurno.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
+            this.btnCierreConsultaTurno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.btnCierreConsultaTurno.ForeColor = System.Drawing.Color.White;
             this.btnCierreConsultaTurno.Image = global::CapaPresentacion.Properties.Resources.registrar1;
             this.btnCierreConsultaTurno.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCierreConsultaTurno.Location = new System.Drawing.Point(775, 50);
-            this.btnCierreConsultaTurno.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCierreConsultaTurno.Margin = new System.Windows.Forms.Padding(2);
             this.btnCierreConsultaTurno.Name = "btnCierreConsultaTurno";
             this.btnCierreConsultaTurno.Size = new System.Drawing.Size(102, 40);
             this.btnCierreConsultaTurno.TabIndex = 8;
@@ -521,12 +519,12 @@ namespace CapaPresentacion
             this.btnImprimirConsultaTurno.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnImprimirConsultaTurno.FlatAppearance.BorderSize = 0;
             this.btnImprimirConsultaTurno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnImprimirConsultaTurno.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
+            this.btnImprimirConsultaTurno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.btnImprimirConsultaTurno.ForeColor = System.Drawing.Color.White;
             this.btnImprimirConsultaTurno.Image = global::CapaPresentacion.Properties.Resources.PRINTERPEQ;
             this.btnImprimirConsultaTurno.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnImprimirConsultaTurno.Location = new System.Drawing.Point(663, 94);
-            this.btnImprimirConsultaTurno.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnImprimirConsultaTurno.Margin = new System.Windows.Forms.Padding(2);
             this.btnImprimirConsultaTurno.Name = "btnImprimirConsultaTurno";
             this.btnImprimirConsultaTurno.Size = new System.Drawing.Size(102, 40);
             this.btnImprimirConsultaTurno.TabIndex = 7;
@@ -542,12 +540,12 @@ namespace CapaPresentacion
             this.btnBuscarConsultaTurno.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnBuscarConsultaTurno.FlatAppearance.BorderSize = 0;
             this.btnBuscarConsultaTurno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscarConsultaTurno.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
+            this.btnBuscarConsultaTurno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.btnBuscarConsultaTurno.ForeColor = System.Drawing.Color.White;
             this.btnBuscarConsultaTurno.Image = global::CapaPresentacion.Properties.Resources.BUSCARPEQ_;
             this.btnBuscarConsultaTurno.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBuscarConsultaTurno.Location = new System.Drawing.Point(663, 50);
-            this.btnBuscarConsultaTurno.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBuscarConsultaTurno.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscarConsultaTurno.Name = "btnBuscarConsultaTurno";
             this.btnBuscarConsultaTurno.Size = new System.Drawing.Size(102, 40);
             this.btnBuscarConsultaTurno.TabIndex = 6;
@@ -592,7 +590,7 @@ namespace CapaPresentacion
             this.Controls.Add(this.lblHasta);
             this.Controls.Add(this.lblDesde);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmConsultaTicket";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

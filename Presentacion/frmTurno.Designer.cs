@@ -103,7 +103,7 @@
             this.txtCodigoTurno.Enabled = false;
             this.txtCodigoTurno.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCodigoTurno.Location = new System.Drawing.Point(152, 159);
-            this.txtCodigoTurno.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCodigoTurno.Margin = new System.Windows.Forms.Padding(2);
             this.txtCodigoTurno.Name = "txtCodigoTurno";
             this.txtCodigoTurno.Size = new System.Drawing.Size(94, 26);
             this.txtCodigoTurno.TabIndex = 8;
@@ -112,7 +112,7 @@
             // 
             this.txtCodigoEmpleadoTurno.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtCodigoEmpleadoTurno.Location = new System.Drawing.Point(408, 159);
-            this.txtCodigoEmpleadoTurno.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCodigoEmpleadoTurno.Margin = new System.Windows.Forms.Padding(2);
             this.txtCodigoEmpleadoTurno.Name = "txtCodigoEmpleadoTurno";
             this.txtCodigoEmpleadoTurno.ReadOnly = true;
             this.txtCodigoEmpleadoTurno.Size = new System.Drawing.Size(126, 26);
@@ -122,10 +122,11 @@
             // 
             this.txtMontoApertura.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMontoApertura.Location = new System.Drawing.Point(253, 250);
-            this.txtMontoApertura.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMontoApertura.Margin = new System.Windows.Forms.Padding(2);
             this.txtMontoApertura.Name = "txtMontoApertura";
             this.txtMontoApertura.Size = new System.Drawing.Size(154, 32);
             this.txtMontoApertura.TabIndex = 10;
+            this.txtMontoApertura.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMontoApertura_KeyPress_1);
             this.txtMontoApertura.Leave += new System.EventHandler(this.txtMontoApertura_Leave);
             // 
             // dtpFechaApertura
@@ -134,7 +135,7 @@
             this.dtpFechaApertura.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFechaApertura.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpFechaApertura.Location = new System.Drawing.Point(379, 112);
-            this.dtpFechaApertura.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpFechaApertura.Margin = new System.Windows.Forms.Padding(2);
             this.dtpFechaApertura.Name = "dtpFechaApertura";
             this.dtpFechaApertura.Size = new System.Drawing.Size(155, 26);
             this.dtpFechaApertura.TabIndex = 14;
@@ -169,7 +170,7 @@
             this.txtNombreEmpleado.AllowDrop = true;
             this.txtNombreEmpleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtNombreEmpleado.Location = new System.Drawing.Point(253, 208);
-            this.txtNombreEmpleado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNombreEmpleado.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombreEmpleado.Name = "txtNombreEmpleado";
             this.txtNombreEmpleado.Size = new System.Drawing.Size(281, 26);
             this.txtNombreEmpleado.TabIndex = 29;
@@ -201,7 +202,7 @@
             // 
             this.pictureBox1.Image = global::CapaPresentacion.Properties.Resources.Cash_Register_50px1;
             this.pictureBox1.Location = new System.Drawing.Point(159, 11);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(35, 36);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -230,7 +231,7 @@
             this.btnRegistrarTurno.Image = global::CapaPresentacion.Properties.Resources.registrartruno;
             this.btnRegistrarTurno.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRegistrarTurno.Location = new System.Drawing.Point(57, 305);
-            this.btnRegistrarTurno.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRegistrarTurno.Margin = new System.Windows.Forms.Padding(2);
             this.btnRegistrarTurno.Name = "btnRegistrarTurno";
             this.btnRegistrarTurno.Size = new System.Drawing.Size(294, 56);
             this.btnRegistrarTurno.TabIndex = 17;
@@ -251,7 +252,7 @@
             this.btnSalirTurno.Image = global::CapaPresentacion.Properties.Resources.Exit_64px;
             this.btnSalirTurno.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSalirTurno.Location = new System.Drawing.Point(355, 305);
-            this.btnSalirTurno.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSalirTurno.Margin = new System.Windows.Forms.Padding(2);
             this.btnSalirTurno.Name = "btnSalirTurno";
             this.btnSalirTurno.Size = new System.Drawing.Size(179, 56);
             this.btnSalirTurno.TabIndex = 16;
@@ -286,7 +287,7 @@
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmTurno";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
