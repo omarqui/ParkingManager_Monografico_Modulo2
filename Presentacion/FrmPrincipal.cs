@@ -12,7 +12,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Globalization;
 using System.Data.Odbc;
-using Entidades;
+using System.Diagnostics;
+using System.IO;
+
 
 namespace CapaPresentacion
 {
@@ -227,8 +229,8 @@ namespace CapaPresentacion
         {
             switch (e.KeyCode)
             {
-                case Keys.F1:
-                    MessageBox.Show("Trataste de ejecutar una accion con la tecla F1");
+                case Keys.F1:                    
+                    AbrirManuelAyuda();
                     break;
 
                 case Keys.F2:
@@ -298,5 +300,12 @@ namespace CapaPresentacion
             LblParqueos.Text = UsoParqueoLN.BuscarCantidadParqueoDisponibles().ToString();
             lblPDisponible.Text = (Globales.Configuracion.CantidadParqueos - UsoParqueoLN.BuscarCantidadParqueoDisponibles()).ToString();
         }
+
+        private void AbrirManuelAyuda()
+        {
+            string archivoAbrir = @"D:\Monografico 2020\Modulo 2\Proyecto Final Grupal Mod 2\ParkingManager_Monografico_Modulo2\Presentacion\Manual-ayuda\MANUAL-DE-AYUDA.pdf";
+            Process.Start(archivoAbrir);
+        }
+
     }
 }
