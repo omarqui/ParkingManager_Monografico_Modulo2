@@ -78,21 +78,23 @@ Omarqui| | | x
 
 - [ ] Consulta
 
+## Importantes
+
+- [ ] Bloquear txt de cuadre de caja
+- [ ] Contemplar monto apertura en calculo de diferencia
+- [ ] Abrir consulta de ticket en menu lateral
+- [ ] Usar formulario de formato de impresion en consultas
+- [ ] Filtros de consulta de ticket
+- [ ] Quitar menus de reporte
+- [ ] Actualizar presentacion al cambiar configuracion
+- [ ] Revisar info de usuario en presentacion
+- [ ] Completar datos de dashboard
+- [ ] Abrir ayuda con F1
+
 ## Valicaciones
 
 - [x] Validar la cantidad de parqueos disponibles antes de generar el ticket de parqueo
 - [ ] Estilo boton deshabilitado en cobro de ticket
-- [ ] Bloquear txt de cuadre de caja
-- [ ] Contemplar monto apertura en calculo de diferencia
 - [ ] Rediseño de apertura de turno
-- [ ] Abrir consulta de ticket en menu lateral
-- [ ] Usar formulario de formato de impresion en consultas
 - [ ] Diseño homogeneo en consultas
 - [ ] Redistribucion de columnas en consultas
-- [ ] Filtros de consulta de ticket
-- [ ] Quitar menus de reporte
-- [ ] Actualizar presentacion al cambiar configuracion
-- [ ] Completar datos de dashboard
-- [ ] Abrir ayuda con F1
----
-
