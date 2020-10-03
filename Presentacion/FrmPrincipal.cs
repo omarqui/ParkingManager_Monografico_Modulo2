@@ -29,7 +29,9 @@ namespace CapaPresentacion
             PnSubMenuProcesos.Visible = false;
             PnSubMenuConsulta.Visible = false;
             PnSubMenuReportes.Visible = false;
+            PnSubMenuReportes.Visible = false;
 
+            button8.Visible = false; //Boton de reporte Oculto.
         }
 
         private void showSubMenu(Panel subMenu)
@@ -139,7 +141,8 @@ namespace CapaPresentacion
 
         private void button5_Click_1(object sender, EventArgs e)
         {
-            AbrirFormulario<FrmUsoDeParqueo>.ejecutarNuevo(true);
+           // AbrirFormulario<FrmConsultaTicket>.ejecutarSoloUnaVez(true);
+            AbrirFormulario<FrmConsultaTicket>.ejecutarNuevo(true);
             hideSubMenu();
         }
 
