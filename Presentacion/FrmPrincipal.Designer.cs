@@ -616,6 +616,7 @@
             this.BtnSalirPrincipal.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnSalirPrincipal.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.BtnSalirPrincipal.FlatAppearance.BorderSize = 3;
+            this.BtnSalirPrincipal.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.BtnSalirPrincipal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnSalirPrincipal.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnSalirPrincipal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(36)))), ((int)(((byte)(85)))));
@@ -851,7 +852,7 @@
             this.button4.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.button4.Size = new System.Drawing.Size(282, 59);
             this.button4.TabIndex = 9;
-            this.button4.Text = "  Consultas";
+            this.button4.Text = "  Consultas / Reportes";
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button4.UseVisualStyleBackColor = true;
