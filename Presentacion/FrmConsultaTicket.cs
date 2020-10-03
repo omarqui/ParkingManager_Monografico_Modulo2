@@ -28,11 +28,10 @@ namespace CapaPresentacion
 
         private void frmConsultaTurno_Load(object sender, EventArgs e)
         {
-            //BuscarTurnosConsulta();
-
             dtpDesde.Value = DateTime.Today;
             dtpHasta.Value = DateTime.Today;
 
+            AsignarValoresPorDefecto();
         }
 
         private void BuscarDatosConsulta()

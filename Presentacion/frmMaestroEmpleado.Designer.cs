@@ -410,7 +410,6 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmMaestroEmpleado";
-            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Maestro Empleado";
             this.Load += new System.EventHandler(this.frmMaestroEmpleado_Load);

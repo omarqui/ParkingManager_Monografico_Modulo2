@@ -48,6 +48,7 @@
             this.Controls.Add(this.reportViewer1);
             this.KeyPreview = true;
             this.Name = "FrmReportViwer";
+            this.ShowInTaskbar = false;
             this.Text = "Reporte";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmReportViwer_Load);
