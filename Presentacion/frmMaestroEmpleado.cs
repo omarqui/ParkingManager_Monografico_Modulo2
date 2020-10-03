@@ -174,5 +174,25 @@ namespace CapaPresentacion
         {
             e.SoloNumeros();
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblEstado_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chkEstado_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chkPuedeHacerDescuento_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
