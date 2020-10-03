@@ -1,4 +1,6 @@
-﻿namespace CapaPresentacion
+﻿using System.Windows.Forms;
+
+namespace CapaPresentacion
 {
     partial class FrmConsultaTicket
     {
@@ -69,6 +71,8 @@
             this.btnCierreConsultaTurno = new System.Windows.Forms.Button();
             this.btnImprimirConsultaTurno = new System.Windows.Forms.Button();
             this.btnBuscarConsultaTurno = new System.Windows.Forms.Button();
+            this.dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            this.dataGridViewCellStyle4 = new DataGridViewCellStyle();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvTicket)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -646,5 +650,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvDescuento;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvNeto;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvEstado;
+        private DataGridViewCellStyle dataGridViewCellStyle3;
+        private DataGridViewCellStyle dataGridViewCellStyle4;
     }
 }
