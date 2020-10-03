@@ -7,6 +7,7 @@ pa_insertarEmpleado null
 		   ,1
            ,'admin'
 		   ,'123'
+		   ,0
 GO
 pa_ActualizarConfiguracion 'Soy una empresa'
         ,'Mi casa'
@@ -19,12 +20,14 @@ pa_aperturar_turno 1
 GO
 pa_AperturarUso 1
 GO
-pa_InsertarCobro 1
+declare @fecha datetime = getdate()
+exec pa_InsertarCobro 1
         ,1
         ,10
         ,750
         ,1000
         ,250
+		,@fecha
 GO
 
 -- pa_CancelarUso
