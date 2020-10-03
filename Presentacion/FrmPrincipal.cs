@@ -22,6 +22,7 @@ namespace CapaPresentacion
     {
         public FrmPrincipal()
         {
+            Program._formularioPrincipal = this;
             InitializeComponent();
             hideSubMenu();
         }

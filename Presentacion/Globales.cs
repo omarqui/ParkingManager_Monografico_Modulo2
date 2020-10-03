@@ -91,7 +91,7 @@ namespace CapaPresentacion
 
         private static void RefrescarFormPrincipal()
         {
-            Program._formularioPrincipal.SetInformacionesGenerales(_turno,_empleado);
+            Program._formularioPrincipal?.SetInformacionesGenerales(_turno,_empleado);
         }
 
         public static bool ObligarAperturaTurno()

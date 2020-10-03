@@ -46,7 +46,6 @@ namespace CapaPresentacion
 
                     Globales.EmpleadoID = EmpleadoLG.BuscarPorUsuario(usuario).IdEmpleado;
                     FrmPrincipal presentacion = new FrmPrincipal();
-                    Program._formularioPrincipal = presentacion;
 
                     this.Hide();
                     presentacion.Show();
