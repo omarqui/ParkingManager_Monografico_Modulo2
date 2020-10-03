@@ -37,7 +37,7 @@ namespace CapaPresentacion
             int? idTurno = null;
             DateTime fechaDesde = dtpDesde.Value;
             DateTime fechaHasta = dtpHasta.Value;
-            bool? estaAbierto = (rbAbierto.Checked) ? true : (rbCerrado.Checked) ? (bool?)false : null ;            
+            bool? estaAbierto = (rbAbierto.Checked) ? true : (rbCerrado.Checked) ? (bool?)false : null;
 
             dtgvTurnos.Rows.Clear();
 
@@ -119,7 +119,7 @@ namespace CapaPresentacion
             dtpDesde.CustomFormat = "dd-MM-yyyy";
             dtpHasta.Value = DateTime.Today;
 
-            dtpHasta.Format = DateTimePickerFormat.Custom;            
+            dtpHasta.Format = DateTimePickerFormat.Custom;
             dtpHasta.CustomFormat = "dd-MM-yyyy";
             dtpHasta.Value = DateTime.Today;
 
@@ -128,13 +128,42 @@ namespace CapaPresentacion
 
         private void btnImprimirConsultaTurno_Click(object sender, EventArgs e)
         {
-            Reportero.Imprimir(
-                new DatosReporte(
-                    "RptListadoTurno",
-                    new Dictionary<string, DataTable>()
+            var frmFormato = new frmFormatoDeImpresion();
+            frmFormato.ShowDialog();
+
+            DatosReporte datosReporte;
+            switch (frmFormato.tipoImpresion)
+            {
+                case TipoImpresion.Lista:
+                    datosReporte = new DatosReporte(
+                                "RptListadoTurno",
+                                new Dictionary<string, DataTable>()
+                                {
+                                    {"Turnos", datosTurnos }
+                                });
+                    break;
+                case TipoImpresion.Selecionado:
+                    if (dtgvTurnos.SelectedCells.Count <= 0)
                     {
-                        {"Turnos", datosTurnos }
-                    }));
+                        return;
+                    }
+
+                    int indiceFila = dtgvTurnos.SelectedCells[0].RowIndex;
+                    int idTurno = (int)dtgvTurnos.Rows[indiceFila].Cells[0].Value;
+
+                    datosReporte = new DatosReporte(
+                                "RptTurno",
+                                new Dictionary<string, DataTable>()
+                                {
+                                    {"Turno", TurnoLG.BuscarTurnoImpresion(idTurno) }
+                                });
+                    break;
+                default:
+                    return;
+            }
+
+
+            Reportero.Imprimir(datosReporte);
         }
     }
 }

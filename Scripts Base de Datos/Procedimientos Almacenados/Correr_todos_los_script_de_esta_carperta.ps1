@@ -17,3 +17,5 @@ foreach ($s in $scripts)
         $script = $s.FullName
         Invoke-Sqlcmd -ServerInstance $Server -InputFile $script
     }
+Write-Host -NoNewLine 'Presiona cualquier letra para salir...';
+$null = $Host.UI.RawUI.ReadKey('NoEcho,IncludeKeyDown');

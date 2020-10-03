@@ -171,6 +171,7 @@ namespace CapaDatos
                     cmd.Parameters.AddWithValue("IdTurno", uso.IdTurno);
                     cmd.Parameters.AddWithValue("fechaSalida", uso.FechaSalida);
                     cmd.Parameters.AddWithValue("total", uso.Total);
+                    cmd.Parameters.AddWithValue("tiempo", uso.TiempoUso);
 
                     var filasAfectadas = cmd.ExecuteNonQuery();
 

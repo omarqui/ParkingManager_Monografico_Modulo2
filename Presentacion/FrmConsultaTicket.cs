@@ -137,12 +137,45 @@ namespace CapaPresentacion
 
         private void btnImprimirConsultaTurno_Click(object sender, EventArgs e)
         {
-            Reportero.Imprimir(new DatosReporte(
-                "RptListadoTicket",
-                new Dictionary<string, DataTable>()
-                {
-                    {"Tickets", datos }
-                }));
+            var frmFormato = new frmFormatoDeImpresion();
+            frmFormato.ShowDialog();
+
+            DatosReporte datosReporte;
+            switch (frmFormato.tipoImpresion)
+            {
+                case TipoImpresion.Lista:
+                    datosReporte = new DatosReporte(
+                                        "RptListadoTicket",
+                                        new Dictionary<string, DataTable>()
+                                        {
+                                            {"Tickets", datos }
+                                        });
+                    break;
+                case TipoImpresion.Selecionado:
+                    if (dtgvTicket.SelectedCells.Count <= 0)
+                    {
+                        return;
+                    }
+
+                    int indiceFila = dtgvTicket.SelectedCells[0].RowIndex;
+                    int idTicket = (int)dtgvTicket.Rows[indiceFila].Cells[0].Value;
+                    string fechaSalida = (string)dtgvTicket.Rows[indiceFila].Cells[2].Value;
+
+                    if (fechaSalida == REPRESENTACION_NULL)
+                    {
+                        datosReporte = UsoParqueoLN.ImprimirGeneracionTicket(idTicket);
+                    } else
+                    {
+                        datosReporte = UsoParqueoLN.ImprimirCobroTicket(idTicket);
+                    }
+
+                    break;
+                default:
+                    return;
+            }
+
+
+            Reportero.Imprimir(datosReporte);
         }
 
         private void btnCierreConsultaTurno_Click(object sender, EventArgs e)

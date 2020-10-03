@@ -70,5 +70,10 @@ namespace CapaNegocio
                 }
             };
         }
+
+        public static DataTable BuscarTurnoImpresion(object idTurno)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

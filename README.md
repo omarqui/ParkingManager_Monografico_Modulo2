@@ -80,21 +80,22 @@ Omarqui| | | x
 
 ## Importantes
 
-- [ ] Bloquear txt de cuadre de caja
-- [ ] Contemplar monto apertura en calculo de diferencia
-- [ ] Abrir consulta de ticket en menu lateral
-- [ ] Usar formulario de formato de impresion en consultas
-- [ ] Filtros de consulta de ticket
-- [ ] Quitar menus de reporte
-- [ ] Actualizar presentacion al cambiar configuracion
+- [x] Bloquear txt de cuadre de caja [edickson]
+- [x] Contemplar monto apertura en calculo de diferencia [edickson]
+- [x] Abrir consulta de ticket en menu lateral [edwin]
+- [x] Usar formulario de formato de impresion en consultas [omarqui]
+- [ ] Filtros de consulta de ticket [omarqui]
+- [x] Quitar menus de reporte [edwin]
+- [ ] Actualizar presentacion al cambiar configuracion [omarqui]
+- [x] Monto negativo en ticket [omarqui]
 - [ ] Revisar info de usuario en presentacion
 - [ ] Completar datos de dashboard
-- [ ] Abrir ayuda con F1
+- [ ] Abrir ayuda con F1 [Brayan]
 
 ## Valicaciones
 
 - [x] Validar la cantidad de parqueos disponibles antes de generar el ticket de parqueo
-- [ ] Estilo boton deshabilitado en cobro de ticket
-- [ ] Rediseño de apertura de turno
-- [ ] Diseño homogeneo en consultas
+- [x] Estilo boton deshabilitado en cobro de ticket [Junior]
+- [x] Rediseño de apertura de turno [Junior]
+- [x] Diseño homogeneo en consultas
 - [ ] Redistribucion de columnas en consultas
