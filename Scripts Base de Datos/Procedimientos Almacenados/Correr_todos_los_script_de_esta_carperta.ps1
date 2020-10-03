@@ -8,7 +8,7 @@ IF (!(Get-Module -Name sqlps))
   
   
 $localScriptRoot = "."
-$Server = Read-Host 'Nombre servidor sql:'
+$Server = Read-Host 'MRCODE\MRCODE2017:'
 $scripts = Get-ChildItem $localScriptRoot | Where-Object {$_.Extension -eq ".sql"}
   
 foreach ($s in $scripts)

@@ -501,6 +501,7 @@
             this.btnCierreConsultaTurno.Text = "Cierre";
             this.btnCierreConsultaTurno.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnCierreConsultaTurno.UseVisualStyleBackColor = false;
+            this.btnCierreConsultaTurno.Click += new System.EventHandler(this.btnCierreConsultaTurno_Click);
             // 
             // btnImprimirConsultaTurno
             // 
@@ -576,6 +577,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmConsultaTurno";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmConsultaTurno";
             this.Load += new System.EventHandler(this.frmConsultaTurno_Load);

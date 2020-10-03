@@ -73,11 +73,6 @@ namespace CapaPresentacion
 
         private void btnCierreConsultaTurno_Click(object sender, EventArgs e)
         {
-            AbrirFormulario<frmCierreTurno>.ejecutarSoloUnaVez(true);
-        }
-
-        private void btnCierreConsultaTurno_Click_1(object sender, EventArgs e)
-        {
             int idturno;
 
             if (dtgvTurnos.Rows.Count > 0)
@@ -90,8 +85,7 @@ namespace CapaPresentacion
 
                     if (turnoCerrar.EstaAbierto == true)
                     {
-                        frmCierreTurno formularioCierreTurno = new frmCierreTurno(idturno);
-                        formularioCierreTurno.ShowDialog(this);
+                        AbrirFormulario<frmCierreTurno>.ejecutarSoloUnaVez(true);
                     }
                     else
                     {
@@ -108,10 +102,11 @@ namespace CapaPresentacion
             {
                 MessageBox.Show("Debe seleccionar un turno para poder cerrar.", "SELECCIONAR TURNO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-
-
-
         }
+
+        //private void btnCierreConsultaTurno_Click_1(object sender, EventArgs e)
+        //{
+        //}
 
         private void AsignarValoresPorDefecto()
         {

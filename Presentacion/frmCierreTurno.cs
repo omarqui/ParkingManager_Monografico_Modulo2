@@ -120,8 +120,8 @@ namespace CapaPresentacion
         {
             decimal montoDiferencia, montoTotalEnCaja;
 
-            montoDiferencia = Convert.ToDecimal(montoEntregado.Formatear()) - Convert.ToDecimal(montoCobrado.Formatear());
-            montoTotalEnCaja = Convert.ToDecimal(montoApertura) + Convert.ToDecimal(montoCobrado); //Este valor se puede colocar en un nuevo Textbox (incluso guardarlo en la base de datos como alternativa a mayor control )
+            montoDiferencia =  Convert.ToDecimal(montoEntregado.Formatear()) - (Convert.ToDecimal(montoCobrado.Formatear()) + Convert.ToDecimal(montoApertura.Formatear()));
+            montoTotalEnCaja = Convert.ToDecimal(montoApertura) + Convert.ToDecimal(montoCobrado); 
 
             //Asignando los valores acalculados a los textbox
 
