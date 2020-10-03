@@ -56,7 +56,7 @@
             this.lblCodigoTurno.AutoSize = true;
             this.lblCodigoTurno.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCodigoTurno.ForeColor = System.Drawing.Color.White;
-            this.lblCodigoTurno.Location = new System.Drawing.Point(53, 147);
+            this.lblCodigoTurno.Location = new System.Drawing.Point(53, 161);
             this.lblCodigoTurno.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCodigoTurno.Name = "lblCodigoTurno";
             this.lblCodigoTurno.Size = new System.Drawing.Size(91, 24);
@@ -68,7 +68,7 @@
             this.lblCodigoEmpleadoTurno.AutoSize = true;
             this.lblCodigoEmpleadoTurno.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCodigoEmpleadoTurno.ForeColor = System.Drawing.Color.White;
-            this.lblCodigoEmpleadoTurno.Location = new System.Drawing.Point(230, 150);
+            this.lblCodigoEmpleadoTurno.Location = new System.Drawing.Point(274, 161);
             this.lblCodigoEmpleadoTurno.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCodigoEmpleadoTurno.Name = "lblCodigoEmpleadoTurno";
             this.lblCodigoEmpleadoTurno.Size = new System.Drawing.Size(130, 24);
@@ -80,7 +80,7 @@
             this.lblFechaApertura.AutoSize = true;
             this.lblFechaApertura.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFechaApertura.ForeColor = System.Drawing.Color.White;
-            this.lblFechaApertura.Location = new System.Drawing.Point(213, 77);
+            this.lblFechaApertura.Location = new System.Drawing.Point(344, 85);
             this.lblFechaApertura.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblFechaApertura.Name = "lblFechaApertura";
             this.lblFechaApertura.Size = new System.Drawing.Size(155, 24);
@@ -92,7 +92,7 @@
             this.lblMontoApertura.AutoSize = true;
             this.lblMontoApertura.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
             this.lblMontoApertura.ForeColor = System.Drawing.Color.White;
-            this.lblMontoApertura.Location = new System.Drawing.Point(53, 225);
+            this.lblMontoApertura.Location = new System.Drawing.Point(53, 256);
             this.lblMontoApertura.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMontoApertura.Name = "lblMontoApertura";
             this.lblMontoApertura.Size = new System.Drawing.Size(154, 24);
@@ -103,16 +103,16 @@
             // 
             this.txtCodigoTurno.Enabled = false;
             this.txtCodigoTurno.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodigoTurno.Location = new System.Drawing.Point(142, 149);
+            this.txtCodigoTurno.Location = new System.Drawing.Point(152, 159);
             this.txtCodigoTurno.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtCodigoTurno.Name = "txtCodigoTurno";
-            this.txtCodigoTurno.Size = new System.Drawing.Size(87, 26);
+            this.txtCodigoTurno.Size = new System.Drawing.Size(94, 26);
             this.txtCodigoTurno.TabIndex = 8;
             // 
             // txtCodigoEmpleadoTurno
             // 
             this.txtCodigoEmpleadoTurno.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtCodigoEmpleadoTurno.Location = new System.Drawing.Point(358, 149);
+            this.txtCodigoEmpleadoTurno.Location = new System.Drawing.Point(408, 159);
             this.txtCodigoEmpleadoTurno.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtCodigoEmpleadoTurno.Name = "txtCodigoEmpleadoTurno";
             this.txtCodigoEmpleadoTurno.ReadOnly = true;
@@ -122,10 +122,10 @@
             // txtMontoApertura
             // 
             this.txtMontoApertura.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMontoApertura.Location = new System.Drawing.Point(232, 220);
+            this.txtMontoApertura.Location = new System.Drawing.Point(253, 250);
             this.txtMontoApertura.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtMontoApertura.Name = "txtMontoApertura";
-            this.txtMontoApertura.Size = new System.Drawing.Size(250, 32);
+            this.txtMontoApertura.Size = new System.Drawing.Size(154, 32);
             this.txtMontoApertura.TabIndex = 10;
             this.txtMontoApertura.Leave += new System.EventHandler(this.txtMontoApertura_Leave);
             // 
@@ -134,10 +134,10 @@
             this.dtpFechaApertura.Enabled = false;
             this.dtpFechaApertura.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFechaApertura.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaApertura.Location = new System.Drawing.Point(213, 104);
+            this.dtpFechaApertura.Location = new System.Drawing.Point(348, 112);
             this.dtpFechaApertura.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dtpFechaApertura.Name = "dtpFechaApertura";
-            this.dtpFechaApertura.Size = new System.Drawing.Size(140, 26);
+            this.dtpFechaApertura.Size = new System.Drawing.Size(155, 26);
             this.dtpFechaApertura.TabIndex = 14;
             // 
             // lblFrmTurno
@@ -145,7 +145,7 @@
             this.lblFrmTurno.AutoSize = true;
             this.lblFrmTurno.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
             this.lblFrmTurno.ForeColor = System.Drawing.Color.White;
-            this.lblFrmTurno.Location = new System.Drawing.Point(169, 11);
+            this.lblFrmTurno.Location = new System.Drawing.Point(198, 11);
             this.lblFrmTurno.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblFrmTurno.Name = "lblFrmTurno";
             this.lblFrmTurno.Size = new System.Drawing.Size(238, 37);
@@ -158,7 +158,7 @@
             this.lblNombreEmpleado.AutoSize = true;
             this.lblNombreEmpleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
             this.lblNombreEmpleado.ForeColor = System.Drawing.Color.White;
-            this.lblNombreEmpleado.Location = new System.Drawing.Point(53, 186);
+            this.lblNombreEmpleado.Location = new System.Drawing.Point(53, 210);
             this.lblNombreEmpleado.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNombreEmpleado.Name = "lblNombreEmpleado";
             this.lblNombreEmpleado.Size = new System.Drawing.Size(186, 24);
@@ -169,10 +169,10 @@
             // 
             this.txtNombreEmpleado.AllowDrop = true;
             this.txtNombreEmpleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtNombreEmpleado.Location = new System.Drawing.Point(232, 184);
+            this.txtNombreEmpleado.Location = new System.Drawing.Point(253, 208);
             this.txtNombreEmpleado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNombreEmpleado.Name = "txtNombreEmpleado";
-            this.txtNombreEmpleado.Size = new System.Drawing.Size(250, 26);
+            this.txtNombreEmpleado.Size = new System.Drawing.Size(281, 26);
             this.txtNombreEmpleado.TabIndex = 29;
             this.txtNombreEmpleado.TextChanged += new System.EventHandler(this.txtNombreEmpleado_TextChanged);
             // 
@@ -181,9 +181,9 @@
             this.dtpHora.Enabled = false;
             this.dtpHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.dtpHora.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtpHora.Location = new System.Drawing.Point(57, 104);
+            this.dtpHora.Location = new System.Drawing.Point(57, 112);
             this.dtpHora.Name = "dtpHora";
-            this.dtpHora.Size = new System.Drawing.Size(140, 26);
+            this.dtpHora.Size = new System.Drawing.Size(155, 26);
             this.dtpHora.TabIndex = 30;
             // 
             // lblHora
@@ -191,7 +191,7 @@
             this.lblHora.AutoSize = true;
             this.lblHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
             this.lblHora.ForeColor = System.Drawing.Color.White;
-            this.lblHora.Location = new System.Drawing.Point(53, 77);
+            this.lblHora.Location = new System.Drawing.Point(53, 85);
             this.lblHora.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblHora.Name = "lblHora";
             this.lblHora.Size = new System.Drawing.Size(55, 24);
@@ -200,10 +200,10 @@
             // 
             // BtnBuscarEmpleado
             // 
-            this.BtnBuscarEmpleado.Location = new System.Drawing.Point(455, 150);
+            this.BtnBuscarEmpleado.Location = new System.Drawing.Point(506, 159);
             this.BtnBuscarEmpleado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BtnBuscarEmpleado.Name = "BtnBuscarEmpleado";
-            this.BtnBuscarEmpleado.Size = new System.Drawing.Size(26, 24);
+            this.BtnBuscarEmpleado.Size = new System.Drawing.Size(28, 26);
             this.BtnBuscarEmpleado.TabIndex = 32;
             this.BtnBuscarEmpleado.Text = "BuscarEmpleado";
             this.BtnBuscarEmpleado.UseVisualStyleBackColor = true;
@@ -211,7 +211,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::CapaPresentacion.Properties.Resources.Cash_Register_50px1;
-            this.pictureBox1.Location = new System.Drawing.Point(136, 11);
+            this.pictureBox1.Location = new System.Drawing.Point(159, 11);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(35, 36);
@@ -237,10 +237,10 @@
             this.btnRegistrarTurno.ForeColor = System.Drawing.Color.White;
             this.btnRegistrarTurno.Image = global::CapaPresentacion.Properties.Resources.registrartruno;
             this.btnRegistrarTurno.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRegistrarTurno.Location = new System.Drawing.Point(57, 278);
+            this.btnRegistrarTurno.Location = new System.Drawing.Point(57, 305);
             this.btnRegistrarTurno.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnRegistrarTurno.Name = "btnRegistrarTurno";
-            this.btnRegistrarTurno.Size = new System.Drawing.Size(150, 42);
+            this.btnRegistrarTurno.Size = new System.Drawing.Size(294, 56);
             this.btnRegistrarTurno.TabIndex = 17;
             this.btnRegistrarTurno.Text = "Registrar ";
             this.btnRegistrarTurno.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -255,10 +255,10 @@
             this.btnSalirTurno.ForeColor = System.Drawing.Color.White;
             this.btnSalirTurno.Image = global::CapaPresentacion.Properties.Resources.Exit_64px;
             this.btnSalirTurno.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalirTurno.Location = new System.Drawing.Point(332, 278);
+            this.btnSalirTurno.Location = new System.Drawing.Point(355, 305);
             this.btnSalirTurno.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSalirTurno.Name = "btnSalirTurno";
-            this.btnSalirTurno.Size = new System.Drawing.Size(150, 42);
+            this.btnSalirTurno.Size = new System.Drawing.Size(179, 56);
             this.btnSalirTurno.TabIndex = 16;
             this.btnSalirTurno.Text = "Cancelar";
             this.btnSalirTurno.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -270,7 +270,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(31)))), ((int)(((byte)(45)))));
-            this.ClientSize = new System.Drawing.Size(532, 342);
+            this.ClientSize = new System.Drawing.Size(586, 383);
             this.Controls.Add(this.BtnBuscarEmpleado);
             this.Controls.Add(this.lblHora);
             this.Controls.Add(this.dtpHora);

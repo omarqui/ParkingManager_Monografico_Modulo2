@@ -283,7 +283,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::CapaPresentacion.Properties.Resources.registrar_grand;
+            this.pictureBox1.Image = global::CapaPresentacion.Properties.Resources.Cash_Register_50px1;
             this.pictureBox1.Location = new System.Drawing.Point(180, 28);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";

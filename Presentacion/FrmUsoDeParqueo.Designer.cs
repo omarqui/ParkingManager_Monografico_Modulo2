@@ -745,8 +745,9 @@
             // 
             // btnDerecha
             // 
-            this.btnDerecha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(36)))), ((int)(((byte)(85)))));
+            this.btnDerecha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(1)))), ((int)(((byte)(0)))));
             this.btnDerecha.Enabled = false;
+            this.btnDerecha.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
             this.btnDerecha.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDerecha.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10F);
             this.btnDerecha.ForeColor = System.Drawing.Color.White;
