@@ -190,19 +190,6 @@
             this.label23.Text = "Neto";
             this.label23.UseWaitCursor = true;
             // 
-            // btnDescuento
-            // 
-            this.btnDescuento.ForeColor = System.Drawing.Color.Black;
-            this.btnDescuento.Location = new System.Drawing.Point(557, 84);
-            this.btnDescuento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnDescuento.Name = "btnDescuento";
-            this.btnDescuento.Size = new System.Drawing.Size(31, 28);
-            this.btnDescuento.TabIndex = 38;
-            this.btnDescuento.Text = "button4";
-            this.btnDescuento.UseVisualStyleBackColor = true;
-            this.btnDescuento.UseWaitCursor = true;
-            this.btnDescuento.Click += new System.EventHandler(this.btnDescuento_Click);
-            // 
             // txtNetoTab2
             // 
             this.txtNetoTab2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

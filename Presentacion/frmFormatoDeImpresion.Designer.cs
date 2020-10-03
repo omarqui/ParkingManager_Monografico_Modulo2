@@ -35,6 +35,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnImprimir = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -43,7 +44,7 @@
             this.rbLista.AutoSize = true;
             this.rbLista.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.rbLista.ForeColor = System.Drawing.Color.White;
-            this.rbLista.Location = new System.Drawing.Point(56, 64);
+            this.rbLista.Location = new System.Drawing.Point(56, 76);
             this.rbLista.Margin = new System.Windows.Forms.Padding(2);
             this.rbLista.Name = "rbLista";
             this.rbLista.Size = new System.Drawing.Size(121, 24);
@@ -57,7 +58,7 @@
             this.rbSeleccion.Checked = true;
             this.rbSeleccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.rbSeleccion.ForeColor = System.Drawing.Color.White;
-            this.rbSeleccion.Location = new System.Drawing.Point(56, 100);
+            this.rbSeleccion.Location = new System.Drawing.Point(56, 112);
             this.rbSeleccion.Margin = new System.Windows.Forms.Padding(2);
             this.rbSeleccion.Name = "rbSeleccion";
             this.rbSeleccion.Size = new System.Drawing.Size(156, 24);
@@ -93,7 +94,7 @@
             // btnImprimir
             // 
             this.btnImprimir.BackColor = System.Drawing.Color.Transparent;
-            this.btnImprimir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
+            this.btnImprimir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnImprimir.BackgroundImage")));
             this.btnImprimir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnImprimir.FlatAppearance.BorderSize = 0;
             this.btnImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -101,20 +102,20 @@
             this.btnImprimir.ForeColor = System.Drawing.Color.White;
             this.btnImprimir.Image = global::CapaPresentacion.Properties.Resources.printmediano;
             this.btnImprimir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnImprimir.Location = new System.Drawing.Point(45, 191);
+            this.btnImprimir.Location = new System.Drawing.Point(19, 163);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(103, 47);
             this.btnImprimir.TabIndex = 4;
             this.btnImprimir.Text = "Imprimir";
             this.btnImprimir.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnImprimir.UseVisualStyleBackColor = false
+            this.btnImprimir.UseVisualStyleBackColor = false;
             this.btnImprimir.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnSalir
             // 
             this.btnSalir.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnSalir.BackColor = System.Drawing.Color.Transparent;
-            this.btnSalir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.btnSalir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSalir.BackgroundImage")));
             this.btnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnSalir.FlatAppearance.BorderSize = 0;
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -122,7 +123,7 @@
             this.btnSalir.ForeColor = System.Drawing.Color.White;
             this.btnSalir.Image = global::CapaPresentacion.Properties.Resources.Exit_64px;
             this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalir.Location = new System.Drawing.Point(192, 191);
+            this.btnSalir.Location = new System.Drawing.Point(143, 163);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(108, 47);
             this.btnSalir.TabIndex = 3;
@@ -130,6 +131,14 @@
             this.btnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Location = new System.Drawing.Point(20, 54);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(230, 100);
+            this.panel1.TabIndex = 6;
             // 
             // frmFormatoDeImpresion
             // 
@@ -143,6 +152,7 @@
             this.Controls.Add(this.rbSeleccion);
             this.Controls.Add(this.rbLista);
             this.Controls.Add(this.btnImprimir);
+            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -163,5 +173,6 @@
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnImprimir;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panel1;
     }
 }

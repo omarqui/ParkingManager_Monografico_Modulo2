@@ -238,11 +238,11 @@ namespace CapaPresentacion
         {
             if (btnDerecha.Enabled)
             {
-                btnDerecha.BackColor = Color.FromArgb(240, 36, 85);
+                btnDerecha.BackgroundImage = Properties.Resources.botones_genericos;
                 btnDerecha.ForeColor = Color.White;
             } else
             {
-                btnDerecha.BackColor = Color.FromArgb(247, 136, 162);
+                btnDerecha.BackgroundImage = Properties.Resources.botones_genericos_inabilitado;
                 btnDerecha.ForeColor = Color.Gainsboro;
             }
         }
