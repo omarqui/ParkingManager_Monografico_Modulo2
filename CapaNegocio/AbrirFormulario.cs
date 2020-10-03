@@ -20,13 +20,11 @@ namespace CapaNegocio
             }
 
             if (esDialogo)
-            {
-                instancia.ShowInTaskbar = false;
+            {                
                 instancia.ShowDialog();                
             }
             else
             {
-                instancia.ShowInTaskbar = false;
                 instancia.Show();
             }
                 
@@ -37,13 +35,11 @@ namespace CapaNegocio
         {
             var nuevaInstancia = new tipo();
             if (esDialogo)
-            {
-                instancia.ShowInTaskbar = false;
+            {                
                 nuevaInstancia.ShowDialog();
             }
             else
-            {
-                instancia.ShowInTaskbar = false;
+            {                
                 nuevaInstancia.Show();
             }
 

@@ -157,5 +157,18 @@ namespace CapaPresentacion
             FrmUsoDeParqueo frmUsoDeParqueo = new FrmUsoDeParqueo(idTurno);
             frmUsoDeParqueo.ShowDialog();
         }
+
+        private void AsignarValoresPorDefecto()
+        {
+            dtpDesde.Format = DateTimePickerFormat.Custom;
+            dtpDesde.CustomFormat = "dd-MM-yyyy";
+            dtpHasta.Value = DateTime.Today;
+
+            dtpHasta.Format = DateTimePickerFormat.Custom;
+            dtpHasta.CustomFormat = "dd-MM-yyyy";
+            dtpHasta.Value = DateTime.Today;
+
+            rbTodos.Checked = true;
+        }
     }
 }
