@@ -16,14 +16,20 @@ namespace CapaNegocio
             if (instancia == null || instancia.IsDisposed)
             {
                 instancia = new tipo();
-                instancia.FormClosed += liberarForm;
+                instancia.FormClosed += liberarForm;                
             }
 
             if (esDialogo)
-                instancia.ShowDialog();
+            {
+                instancia.ShowInTaskbar = false;
+                instancia.ShowDialog();                
+            }
             else
+            {
+                instancia.ShowInTaskbar = false;
                 instancia.Show();
-
+            }
+                
             return instancia;
         }
 
@@ -31,9 +37,15 @@ namespace CapaNegocio
         {
             var nuevaInstancia = new tipo();
             if (esDialogo)
+            {
+                instancia.ShowInTaskbar = false;
                 nuevaInstancia.ShowDialog();
+            }
             else
+            {
+                instancia.ShowInTaskbar = false;
                 nuevaInstancia.Show();
+            }
 
             return nuevaInstancia;
         }

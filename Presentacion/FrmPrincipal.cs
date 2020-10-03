@@ -191,9 +191,6 @@ namespace CapaPresentacion
         {
             AbrirFormulario<frmConfiguracion>.ejecutarSoloUnaVez(true);
             hideSubMenu();
-
-            //frmConfiguracion ConfiguracionEmpresa = new frmConfiguracion();
-            //ConfiguracionEmpresa.Show();
         }
         private void btnGenerarTicket_Click(object sender, EventArgs e)
         {
