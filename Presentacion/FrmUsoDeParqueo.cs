@@ -43,6 +43,8 @@ namespace CapaPresentacion
             {
                 txtNumeroTicket.Focus();
             }
+            btnDerecha_EnabledChanged(null, null);
+            txtDescuentoTab2.Enabled = Globales.Empleado.PuedeHacerDescuento;
         }
 
         private void tabControl1_Selected(object sender, TabControlEventArgs e)
@@ -170,26 +172,6 @@ namespace CapaPresentacion
             return true;
         }
 
-        private void textBox6_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox7_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox8_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox9_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void txtNumeroTicket_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.SoloNumeros();
@@ -206,8 +188,8 @@ namespace CapaPresentacion
             txtPrecioXMinTab2.Text = ticket.PrecioPorMinuto.Formatear();
             txtTiempoTab2.Text = ticket.TiempoUso.Formatear();
             txtTotalTab2.Text = ticket.Total.Formatear();
-            txtDescuentoTab2.Text = "0.00";
-            txtNetoTab2.Text = ticket.Total.Formatear();
+            txtDescuentoTab2.Text = descuento.Formatear();
+            txtNetoTab2.Text = (ticket.Total - descuento).Formatear();
 
             txtNumeroTicketTab3.Text = ticket.IdUso.ToString();
             txtEntradaTab3.Text = ticket.FechaEntrada.ToString();
@@ -215,44 +197,15 @@ namespace CapaPresentacion
             txtPrecioXMinTab3.Text = ticket.PrecioPorMinuto.Formatear();
             txtTiempoTab3.Text = ticket.TiempoUso.Formatear();
             txtTotalTab3.Text = ticket.Total.Formatear();
+            txtDescuentoTab3.Text = descuento.Formatear();
             txtPagadoTab2.Text = "";
 
             return true;
         }
 
-        private void label21_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void txtNetoTab2_TextChanged(object sender, EventArgs e)
         {
             btnDerecha.Enabled = txtNetoTab2.Text.Length > 0;
-        }
-
-        private void tabPage2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtDescuentoTab2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtTotalTab2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnDescuento_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label22_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void txtNumeroTicket_TextChanged(object sender, EventArgs e)
@@ -267,7 +220,7 @@ namespace CapaPresentacion
                 return;
             }
 
-            btnDerecha.Enabled = pagado >= ticket.Cobro.TotalCobrado;
+            btnDerecha.Enabled = pagado >= (ticket.Total - descuento);
         }
 
         private void txtPagadoTab2_KeyPress(object sender, KeyPressEventArgs e)
@@ -281,79 +234,27 @@ namespace CapaPresentacion
             txtNumeroTicket.Focus();
         }
 
-        private void txtNumeroTicketTab2_TextChanged(object sender, EventArgs e)
+        private void btnDerecha_EnabledChanged(object sender, EventArgs e)
         {
-
+            if (btnDerecha.Enabled)
+            {
+                btnDerecha.BackColor = Color.FromArgb(240, 36, 85);
+                btnDerecha.ForeColor = Color.White;
+            } else
+            {
+                btnDerecha.BackColor = Color.FromArgb(247, 136, 162);
+                btnDerecha.ForeColor = Color.Gainsboro;
+            }
         }
 
-        private void txtEntradaTab2_TextChanged(object sender, EventArgs e)
+        private void txtDescuentoTab2_TextChanged(object sender, EventArgs e)
         {
+            if (!decimal.TryParse(txtDescuentoTab2.Text, out descuento))
+            {
+                return;
+            }
 
-        }
-
-        private void txtSalidaTab2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtTiempoTab2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtPrecioXMinTab2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label12_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label13_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label14_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label15_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox5_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label17_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
+            txtNetoTab2.Text = (ticket.Total - descuento).Formatear();
         }
     }
     

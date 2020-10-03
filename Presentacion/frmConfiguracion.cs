@@ -39,33 +39,47 @@ namespace CapaPresentacion
             {
                 MessageBox.Show("El campo Nombre de Empresa no debe estar vacío", "CAMPOS SIN INFORMACÍON", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtNombreEmpresa.Focus();
+                return;
             }
-            else
+
+            int cantidadParqueosOcupados = UsoParqueoLN.BuscarCantidadParqueoOcupados();
+            if (Convert.ToInt32(nudCantidadParqueos.Value) < cantidadParqueosOcupados)
             {
-                try
-                {
-                    Configuracion configuracionEntidad = new Configuracion();
+                MessageBox.Show(
+                    $"La cantidad de parqueos debe ser mayor o igual a la cantidad de parqueos ocupados ({cantidadParqueosOcupados})", 
+                    "Aviso", 
+                    MessageBoxButtons.OK, 
+                    MessageBoxIcon.Warning);
+                nudCantidadParqueos.Focus();
+                return;
+            }
 
-                    //Recolectando los datos que van a ser guardados
-                    configuracionEntidad.NombreEmpresa = txtNombreEmpresa.Text.Trim();
-                    configuracionEntidad.DireccionEmpresa = txtDireccionEmpresa.Text.Trim();
-                    configuracionEntidad.TelefonoEmpresa = txtTelefonoEmpresa.Text.Trim();
-                    configuracionEntidad.CantidadParqueos = Convert.ToInt32(nudCantidadParqueos.Value);
-                    configuracionEntidad.PrecioPorHora = Convert.ToDecimal(txtPrecioPorHora.Text);
 
-                    //Ejecutando la funcion que guarda la configuracion
-                    int cantidadRegistrosAfectados = ConfiguracionLG.GuardarConfiguracion(configuracionEntidad);
-                    if (cantidadRegistrosAfectados >= 1)
-                    {
-                        Globales.LimpiarConfiguracion();
-                        MessageBox.Show("Guardado con éxito", "GUARDADO", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                }
-                catch (Exception error)
+            try
+            {
+                Configuracion configuracionEntidad = new Configuracion();
+
+                //Recolectando los datos que van a ser guardados
+                configuracionEntidad.NombreEmpresa = txtNombreEmpresa.Text.Trim();
+                configuracionEntidad.DireccionEmpresa = txtDireccionEmpresa.Text.Trim();
+                configuracionEntidad.TelefonoEmpresa = txtTelefonoEmpresa.Text.Trim();
+                configuracionEntidad.CantidadParqueos = Convert.ToInt32(nudCantidadParqueos.Value);
+                configuracionEntidad.PrecioPorHora = Convert.ToDecimal(txtPrecioPorHora.Text);
+
+                //Ejecutando la funcion que guarda la configuracion
+                int cantidadRegistrosAfectados = ConfiguracionLG.GuardarConfiguracion(configuracionEntidad);
+                if (cantidadRegistrosAfectados >= 1)
                 {
-                    MessageBox.Show("No se ha guardado la configuración, verifique los detalles siguientes: \n" + error.Message, "GUARDADO", MessageBoxButtons.OK, MessageBoxIcon.Information);                    
+                    Globales.LimpiarConfiguracion();
+                    MessageBox.Show("Guardado con éxito", "GUARDADO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Dispose();
                 }
             }
+            catch (Exception error)
+            {
+                MessageBox.Show("No se ha guardado la configuración, verifique los detalles siguientes: \n" + error.Message, "GUARDADO", MessageBoxButtons.OK, MessageBoxIcon.Information);                    
+            }
+            
         }
 
         private void CargarConfiguracionSistema()

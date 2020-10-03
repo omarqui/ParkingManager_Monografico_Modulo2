@@ -86,6 +86,64 @@ namespace CapaDatos
             return null;
         }
 
+        public int BuscarCantidadSalida(int idTurno)
+        {
+            try
+            {
+                using (var cmd = CrearCommand(_conexion, "pa_BuscarCantidadSalida"))
+                {
+                    cmd.Parameters.AddWithValue("idTurno", idTurno);
+
+                    var cantidadAcceso = cmd.Parameters.Add("@cantidadSalida", SqlDbType.Int);
+                    cantidadAcceso.Direction = ParameterDirection.ReturnValue;
+                    cmd.ExecuteNonQuery();
+
+                    return (int)cantidadAcceso.Value;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                if (esConexionAutoManejado)
+                {
+                    _conexion.Close();
+                }
+            }
+        }
+
+        public int BuscarCantidadAcceso(int idTurno)
+        {
+            try
+            {
+                using (var cmd = CrearCommand(_conexion, "pa_BuscarCantidadAcceso"))
+                {
+                    cmd.Parameters.AddWithValue("idTurno", idTurno);
+
+                    var cantidadAcceso = cmd.Parameters.Add("@cantidadAcceso", SqlDbType.Int);
+                    cantidadAcceso.Direction = ParameterDirection.ReturnValue;
+                    cmd.ExecuteNonQuery();
+
+                    return (int)cantidadAcceso.Value;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                if (esConexionAutoManejado)
+                {
+                    _conexion.Close();
+                }
+            }
+        }
+
         public Turno BuscarUltimoTurnoAbiertoEmpleado(int id)
         {
             using (var conn = _conexion)

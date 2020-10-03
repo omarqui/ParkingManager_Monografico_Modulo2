@@ -37,6 +37,7 @@ Celular nvarchar(30) DEFAULT '',
 Usuario nvarchar(30) NOT NULL UNIQUE,
 Clave binary(64) NOT NULL,
 EstaActivo bit NOT NULL DEFAULT 1,
+PuedeHacerDescuento bit NOT NULL DEFAULT 0,
 CONSTRAINT PK_EMPLEADO_IdEmpleado PRIMARY KEY (IdEmpleado),
 CONSTRAINT CHK_EMPLEADO_Clave CHECK (Clave <> ''),
 CONSTRAINT Unico_Usuario UNIQUE (Usuario)

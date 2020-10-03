@@ -24,7 +24,7 @@ namespace CapaDatos.Interfaces
             string estado = null,
             string textoAbierto = null);
 
-        int BuscarCantidadParqueoDisponibles();
+        int BuscarCantidadParqueoOcupados();
 
         int CancelarUso(int idUso, SqlTransaction transaction = null);
     }

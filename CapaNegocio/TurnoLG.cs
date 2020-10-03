@@ -71,9 +71,16 @@ namespace CapaNegocio
             };
         }
 
-        public static DataTable BuscarTurnoImpresion(object idTurno)
+        public static int BuscarCantidadAcceso(int idTurno)
         {
-            throw new NotImplementedException();
+            TurnoAD funcionesTurno = new TurnoAD();
+            return funcionesTurno.BuscarCantidadAcceso(idTurno);
+        }
+
+        public static int BuscarCantidadSalida(int idTurno)
+        {
+            TurnoAD funcionesTurno = new TurnoAD();
+            return funcionesTurno.BuscarCantidadSalida(idTurno);
         }
     }
 }

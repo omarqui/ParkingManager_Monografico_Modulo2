@@ -64,6 +64,7 @@ namespace CapaDatos
                     cmd.Parameters.AddWithValue("Direccion", empleado.Direccion);
                     cmd.Parameters.AddWithValue("Nombre", empleado.Nombre);
                     cmd.Parameters.AddWithValue("EstaActivo", empleado.EstaActivo);
+                    cmd.Parameters.AddWithValue("PuedeHacerDescuento", empleado.PuedeHacerDescuento);
 
                     if (empleado.IdEmpleado == 0)
                     {
@@ -132,7 +133,8 @@ namespace CapaDatos
                                 Direccion = reader["Direccion"].ToString(),
                                 Celular = reader["Celular"].ToString(),
                                 EstaActivo = reader["EstaActivo"] as bool? ?? false,
-                                Usuario = reader["Usuario"].ToString()
+                                Usuario = reader["Usuario"].ToString(),
+                                PuedeHacerDescuento = reader["PuedeHacerDescuento"] as bool? ?? false
                             };
                         }
                     }

@@ -84,18 +84,21 @@ Omarqui| | | x
 - [x] Contemplar monto apertura en calculo de diferencia [edickson]
 - [x] Abrir consulta de ticket en menu lateral [edwin]
 - [x] Usar formulario de formato de impresion en consultas [omarqui]
-- [ ] Filtros de consulta de ticket [omarqui]
 - [x] Quitar menus de reporte [edwin]
-- [ ] Actualizar presentacion al cambiar configuracion [omarqui]
 - [x] Monto negativo en ticket [omarqui]
-- [ ] Revisar info de usuario en presentacion
-- [ ] Completar datos de dashboard
+- [x] Manejo de descuento en cobro de ticket
+- [x] Completar datos de dashboard
+- [x] Revisar info de usuario en presentacion
+- [x] Filtros de consulta de ticket [omarqui]
+- [x] Actualizar presentacion al cambiar configuracion [omarqui]
+- [x] Actualizar presentacion al cambiar usuario  [omarqui]
+- [ ] Cancelacion ticket
 - [ ] Abrir ayuda con F1 [Brayan]
 
 ## Valicaciones
 
 - [x] Validar la cantidad de parqueos disponibles antes de generar el ticket de parqueo
 - [x] Estilo boton deshabilitado en cobro de ticket [Junior]
-- [x] Rediseño de apertura de turno [Junior]
+- [x] Rediseño de apertura de tu rno [Junior]
 - [x] Diseño homogeneo en consultas
 - [ ] Redistribucion de columnas en consultas

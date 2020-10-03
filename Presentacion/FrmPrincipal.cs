@@ -55,8 +55,9 @@ namespace CapaPresentacion
 
         public void SetInformacionesGenerales(Turno turno, Empleado empleado)
         {
-            lblNombreUsuario.Text = empleado?.Usuario ?? "No usuario";
+            lblNombreUsuario.Text = empleado?.ToString() ?? "No usuario";
             LblTurno.Text =  (turno?.IdTurno)?.ToString() ?? "No turno abierto";
+            RefrescarInformacionParqueos();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -266,7 +267,7 @@ namespace CapaPresentacion
             {
                 if (!Globales.ObligarAperturaTurno()) return;
 
-                if (UsoParqueoLN.BuscarCantidadParqueoDisponibles() >= Globales.Configuracion.CantidadParqueos)
+                if (UsoParqueoLN.BuscarCantidadParqueoOcupados() >= Globales.Configuracion.CantidadParqueos)
                 {
                     MessageBox.Show("No hay parqueos disponibles, no será posible generar el ticket", "PARQUEOS AGOTADOS", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
@@ -295,8 +296,21 @@ namespace CapaPresentacion
 
         private void RefrescarInformacionParqueos()
         {
-            LblParqueos.Text = UsoParqueoLN.BuscarCantidadParqueoDisponibles().ToString();
-            lblPDisponible.Text = (Globales.Configuracion.CantidadParqueos - UsoParqueoLN.BuscarCantidadParqueoDisponibles()).ToString();
+            int cantidadParqueosOcupados = UsoParqueoLN.BuscarCantidadParqueoOcupados();
+            int totalParqueos = Globales.Configuracion.CantidadParqueos;
+            int cantidadParqueosDisponibles = totalParqueos - cantidadParqueosOcupados;
+
+            LblParqueos.Text = cantidadParqueosOcupados.ToString();
+            lblPDisponible.Text = cantidadParqueosDisponibles.ToString();
+            LblCActualPO.Text = ((decimal)cantidadParqueosOcupados / (decimal)totalParqueos * 100).Formatear(0) + " %";
+            LblCActualPD.Text = ((decimal)cantidadParqueosDisponibles / (decimal)totalParqueos * 100).Formatear(0) + " %";
+
+            if (Globales.Turno == null)
+            {
+                return;
+            }
+            lblAccesoH.Text = TurnoLG.BuscarCantidadAcceso(Globales.Turno.IdTurno).ToString();
+            LblSalidasH.Text = TurnoLG.BuscarCantidadSalida(Globales.Turno.IdTurno).ToString();
         }
     }
 }

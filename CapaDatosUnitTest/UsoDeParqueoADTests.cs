@@ -13,7 +13,7 @@ namespace CapaDatosUnitTest
         public void BuscarCantidadParqueoDisponiblesTests()
         {
             var repositorio = new UsoDeParqueoAD();
-            Assert.IsNotNull(repositorio.BuscarCantidadParqueoDisponibles());
+            Assert.IsNotNull(repositorio.BuscarCantidadParqueoOcupados());
         }
 
         [TestMethod]

@@ -87,10 +87,10 @@ namespace CapaNegocio
                 textoAbierto);
         }
 
-        public static int BuscarCantidadParqueoDisponibles()
+        public static int BuscarCantidadParqueoOcupados()
         {
             UsoDeParqueoAD repositorio = new UsoDeParqueoAD();
-            return repositorio.BuscarCantidadParqueoDisponibles();
+            return repositorio.BuscarCantidadParqueoOcupados();
         }
 
         public static bool CancelarUso(int id)

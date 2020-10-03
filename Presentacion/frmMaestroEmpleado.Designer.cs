@@ -53,6 +53,8 @@
             this.btnSalir = new System.Windows.Forms.Button();
             this.bntGuardar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
+            this.chkPuedeHacerDescuento = new System.Windows.Forms.CheckBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -141,7 +143,7 @@
             this.lblEstado.AutoSize = true;
             this.lblEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.lblEstado.ForeColor = System.Drawing.Color.White;
-            this.lblEstado.Location = new System.Drawing.Point(71, 436);
+            this.lblEstado.Location = new System.Drawing.Point(71, 469);
             this.lblEstado.Name = "lblEstado";
             this.lblEstado.Size = new System.Drawing.Size(80, 26);
             this.lblEstado.TabIndex = 7;
@@ -216,7 +218,7 @@
             // chkEstado
             // 
             this.chkEstado.AutoSize = true;
-            this.chkEstado.Location = new System.Drawing.Point(205, 441);
+            this.chkEstado.Location = new System.Drawing.Point(205, 474);
             this.chkEstado.Name = "chkEstado";
             this.chkEstado.Size = new System.Drawing.Size(15, 14);
             this.chkEstado.TabIndex = 22;
@@ -267,7 +269,7 @@
             this.btnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(36)))), ((int)(((byte)(85)))));
             this.btnSalir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSalir.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8F);
+            this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.btnSalir.ForeColor = System.Drawing.Color.White;
             this.btnSalir.Image = global::CapaPresentacion.Properties.Resources.Exit_64px;
             this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -285,7 +287,7 @@
             this.bntGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(36)))), ((int)(((byte)(85)))));
             this.bntGuardar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bntGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.bntGuardar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bntGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bntGuardar.ForeColor = System.Drawing.Color.White;
             this.bntGuardar.Image = global::CapaPresentacion.Properties.Resources.save_blanco;
             this.bntGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -307,7 +309,7 @@
             this.btnNuevo.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnNuevo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnNuevo.Font = new System.Drawing.Font("Arial Rounded MT Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNuevo.ForeColor = System.Drawing.Color.White;
             this.btnNuevo.Image = global::CapaPresentacion.Properties.Resources._new;
             this.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -320,12 +322,34 @@
             this.btnNuevo.UseVisualStyleBackColor = false;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
+            // chkPuedeHacerDescuento
+            // 
+            this.chkPuedeHacerDescuento.AutoSize = true;
+            this.chkPuedeHacerDescuento.Location = new System.Drawing.Point(205, 438);
+            this.chkPuedeHacerDescuento.Name = "chkPuedeHacerDescuento";
+            this.chkPuedeHacerDescuento.Size = new System.Drawing.Size(15, 14);
+            this.chkPuedeHacerDescuento.TabIndex = 26;
+            this.chkPuedeHacerDescuento.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(71, 433);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(116, 26);
+            this.label2.TabIndex = 25;
+            this.label2.Text = "Descuento";
+            // 
             // frmMaestroEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(31)))), ((int)(((byte)(45)))));
             this.ClientSize = new System.Drawing.Size(724, 525);
+            this.Controls.Add(this.chkPuedeHacerDescuento);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.chkEstado);
@@ -392,5 +416,7 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Button btnNuevo;
+        private System.Windows.Forms.CheckBox chkPuedeHacerDescuento;
+        private System.Windows.Forms.Label label2;
     }
 }

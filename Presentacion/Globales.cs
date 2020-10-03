@@ -49,14 +49,14 @@ namespace CapaPresentacion
         {
             if (_empleado == null)
             {
-                _empleado = EmpleadoLG.BuscarEmpleado(1);
+                _empleado = EmpleadoLG.BuscarEmpleado(_idEmpleadoLogeado == 0 ? 1 : _idEmpleadoLogeado);
                 RefrescarFormPrincipal();
             }
         }
 
         private static Configuracion _configuracion;
 
-        internal static void LimpiarTurno()
+        public static void LimpiarTurno()
         {
             _turno = null;
             RefrescarFormPrincipal();
@@ -75,7 +75,15 @@ namespace CapaPresentacion
             }
         }
 
-        internal static void LimpiarConfiguracion()
+        static int _idEmpleadoLogeado = 0;
+        public static int EmpleadoID { set
+            {
+                _idEmpleadoLogeado = value;
+                RefrescarEmpleado();
+            }
+        }
+
+        public static void LimpiarConfiguracion()
         {
             _configuracion = null;
             RefrescarFormPrincipal();
@@ -86,7 +94,7 @@ namespace CapaPresentacion
             Program._formularioPrincipal.SetInformacionesGenerales(_turno,_empleado);
         }
 
-        internal static bool ObligarAperturaTurno()
+        public static bool ObligarAperturaTurno()
         {
             if (_turno == null)
             {
@@ -107,6 +115,13 @@ namespace CapaPresentacion
             }
 
             return true;
+        }
+
+        public static void LimpiarEmpleado()
+        {
+            _empleado = null;
+            RefrescarEmpleado();
+            RefrescarFormPrincipal();
         }
     }
 }

@@ -43,7 +43,8 @@ namespace CapaPresentacion
             {
                 if (esValido)
                 {
-                    Globales.Empleado = EmpleadoLG.BuscarPorUsuario(usuario);
+
+                    Globales.EmpleadoID = EmpleadoLG.BuscarPorUsuario(usuario).IdEmpleado;
                     FrmPrincipal presentacion = new FrmPrincipal();
                     Program._formularioPrincipal = presentacion;
 

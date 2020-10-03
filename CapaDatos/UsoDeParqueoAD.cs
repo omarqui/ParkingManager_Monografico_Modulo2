@@ -53,7 +53,7 @@ namespace CapaDatos
             }
         }
 
-        public int BuscarCantidadParqueoDisponibles()
+        public int BuscarCantidadParqueoOcupados()
         {
             using (var conn = Conexion)
             {

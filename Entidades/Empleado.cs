@@ -16,6 +16,12 @@ namespace Entidades
         public string Celular { get; set; }
         public string Usuario { get; set; }
         public string Clave { get; set; }
+        public bool PuedeHacerDescuento { get; set; }
         public bool EstaActivo { get; set; }
+
+        public override string ToString()
+        {
+            return $"{Nombre} ({Usuario})";
+        }
     }
 }

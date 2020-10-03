@@ -92,21 +92,33 @@ namespace CapaPresentacion
                         Empleado empleadoEntidad = new Empleado();
 
                         //Asignando valores recogidos del formulario a los atributos de la entidad
-                        empleadoEntidad.IdEmpleado = this.idEmpleadoEditar ;   //debe llenarse depende si es creado o modifinando
+                        empleadoEntidad.IdEmpleado = this.idEmpleadoEditar;   //debe llenarse depende si es creado o modifinando
                         empleadoEntidad.Nombre = txtNombre.Text.Trim();
                         empleadoEntidad.Cedula = txtCedula.Text.Trim();
                         empleadoEntidad.Celular = txtCelular.Text.Trim();
                         empleadoEntidad.Direccion = txtDireccion.Text.Trim();
                         empleadoEntidad.Clave = txtClave.Text.Trim();
                         empleadoEntidad.Usuario = txtUsuario.Text.Trim();
-                        empleadoEntidad.EstaActivo = (chkEstado.Checked == true) ? true : false;
+                        empleadoEntidad.EstaActivo = chkEstado.Checked;
+                        empleadoEntidad.PuedeHacerDescuento = chkPuedeHacerDescuento.Checked;
 
                         //Ejecutando la funcion que guarda y/o actualiza. La funcion devuelve la cantidad de registros afectados
                         int registroGuardado = empleadoLogica.GuardarEmpleado(empleadoEntidad);
                         if (registroGuardado >= 1)
                         {
+                            if (empleadoEntidad.IdEmpleado == Globales.Empleado.IdEmpleado)
+                            {
+                                Globales.LimpiarEmpleado();
+                            }
+
                             MessageBox.Show("Guardado correctamente", "GUARDAR", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            AsignarValoresPorDefecto();
+                            if (this.idEmpleadoEditar == default)
+                            {
+                                AsignarValoresPorDefecto();
+                            } else
+                            {
+                                Dispose();
+                            }
                         }
 
                     }
@@ -155,7 +167,7 @@ namespace CapaPresentacion
             chkEstado.Checked = empleadoCargado.EstaActivo;
             txtClave.Visible = false;
             lblClave.Visible = false;
-
+            chkPuedeHacerDescuento.Checked = empleadoCargado.PuedeHacerDescuento;
         }
 
         private void txtCedula_KeyPress(object sender, KeyPressEventArgs e)
