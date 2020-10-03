@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblDesde = new System.Windows.Forms.Label();
             this.lblHasta = new System.Windows.Forms.Label();
             this.lblEstado = new System.Windows.Forms.Label();
@@ -167,7 +168,7 @@
             // 
             this.btnCajero.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(36)))), ((int)(((byte)(85)))));
             this.btnCajero.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCajero.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.btnCajero.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.btnCajero.ForeColor = System.Drawing.Color.White;
             this.btnCajero.Location = new System.Drawing.Point(244, 71);
             this.btnCajero.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -271,7 +272,10 @@
             // 
             this.dtgvTicket.AllowUserToAddRows = false;
             this.dtgvTicket.AllowUserToDeleteRows = false;
+            this.dtgvTicket.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtgvTicket.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dtgvTicket.BackgroundColor = System.Drawing.Color.White;
+            this.dtgvTicket.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(36)))), ((int)(((byte)(85)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
@@ -292,12 +296,18 @@
             this.dgvNeto,
             this.dgvEstado});
             this.dtgvTicket.EnableHeadersVisualStyles = false;
+            this.dtgvTicket.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(36)))), ((int)(((byte)(85)))));
             this.dtgvTicket.Location = new System.Drawing.Point(19, 204);
             this.dtgvTicket.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtgvTicket.Name = "dtgvTicket";
             this.dtgvTicket.ReadOnly = true;
             this.dtgvTicket.RowHeadersVisible = false;
             this.dtgvTicket.RowHeadersWidth = 51;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            this.dtgvTicket.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dtgvTicket.RowTemplate.Height = 24;
             this.dtgvTicket.Size = new System.Drawing.Size(1405, 401);
             this.dtgvTicket.TabIndex = 27;
@@ -310,7 +320,6 @@
             this.dgvIdUso.MinimumWidth = 6;
             this.dgvIdUso.Name = "dgvIdUso";
             this.dgvIdUso.ReadOnly = true;
-            this.dgvIdUso.Width = 125;
             // 
             // dgvFechaEntrada
             // 
@@ -344,7 +353,6 @@
             this.dgvTiempo.MinimumWidth = 6;
             this.dgvTiempo.Name = "dgvTiempo";
             this.dgvTiempo.ReadOnly = true;
-            this.dgvTiempo.Width = 125;
             // 
             // dgvTotal
             // 
@@ -352,7 +360,6 @@
             this.dgvTotal.MinimumWidth = 6;
             this.dgvTotal.Name = "dgvTotal";
             this.dgvTotal.ReadOnly = true;
-            this.dgvTotal.Width = 125;
             // 
             // dgvDescuento
             // 
@@ -360,7 +367,6 @@
             this.dgvDescuento.MinimumWidth = 6;
             this.dgvDescuento.Name = "dgvDescuento";
             this.dgvDescuento.ReadOnly = true;
-            this.dgvDescuento.Width = 125;
             // 
             // dgvNeto
             // 
@@ -368,7 +374,6 @@
             this.dgvNeto.MinimumWidth = 6;
             this.dgvNeto.Name = "dgvNeto";
             this.dgvNeto.ReadOnly = true;
-            this.dgvNeto.Width = 125;
             // 
             // dgvEstado
             // 
@@ -376,7 +381,6 @@
             this.dgvEstado.MinimumWidth = 6;
             this.dgvEstado.Name = "dgvEstado";
             this.dgvEstado.ReadOnly = true;
-            this.dgvEstado.Width = 125;
             // 
             // pictureBox8
             // 

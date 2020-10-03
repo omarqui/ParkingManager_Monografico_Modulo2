@@ -30,6 +30,7 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblDesde = new System.Windows.Forms.Label();
             this.lblHasta = new System.Windows.Forms.Label();
             this.lblEstado = new System.Windows.Forms.Label();
@@ -302,14 +303,19 @@
             this.dgvEstado});
             this.dtgvTurnos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnF2;
             this.dtgvTurnos.EnableHeadersVisualStyles = false;
-            this.dtgvTurnos.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.dtgvTurnos.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.dtgvTurnos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(36)))), ((int)(((byte)(85)))));
+            this.dtgvTurnos.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.dtgvTurnos.Location = new System.Drawing.Point(20, 197);
             this.dtgvTurnos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtgvTurnos.Name = "dtgvTurnos";
             this.dtgvTurnos.ReadOnly = true;
             this.dtgvTurnos.RowHeadersVisible = false;
             this.dtgvTurnos.RowHeadersWidth = 51;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            this.dtgvTurnos.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dtgvTurnos.RowTemplate.Height = 24;
             this.dtgvTurnos.Size = new System.Drawing.Size(1417, 401);
             this.dtgvTurnos.TabIndex = 27;

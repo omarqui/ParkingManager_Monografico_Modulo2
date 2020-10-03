@@ -65,7 +65,7 @@
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dtgvEmpleado.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dtgvEmpleado.ColumnHeadersHeight = 30;
+            this.dtgvEmpleado.ColumnHeadersHeight = 45;
             this.dtgvEmpleado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dtgvEmpleado.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dgvIdEmpleado,
@@ -99,9 +99,9 @@
             this.dtgvEmpleado.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dtgvEmpleado.RowHeadersVisible = false;
             this.dtgvEmpleado.RowHeadersWidth = 51;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(31)))), ((int)(((byte)(45)))));
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
             this.dtgvEmpleado.RowsDefaultCellStyle = dataGridViewCellStyle4;
