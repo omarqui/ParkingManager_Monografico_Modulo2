@@ -228,6 +228,14 @@
     <None Include="Recursos\logo Parking.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Recursos\botones genericos.png" />
+    <None Include="Recursos\botones genericos grande.png" />
+    <None Include="Recursos\boton generico cuadrado.png" />
+    <None Include="Recursos\boton generico cuadrado1.png" />
+    <None Include="Recursos\boton generico redondo1.png" />
+    <None Include="Recursos\boton largo.png" />
+    <None Include="Recursos\boton largo1.png" />
+    <None Include="Recursos\botones genericos inabilitado.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll" />
     <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll" />

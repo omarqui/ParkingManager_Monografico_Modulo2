@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmConsultaTicket));
             this.lblDesde = new System.Windows.Forms.Label();
             this.lblHasta = new System.Windows.Forms.Label();
             this.lblEstado = new System.Windows.Forms.Label();
@@ -336,7 +337,7 @@
             this.dgvFechaEntrada.MinimumWidth = 6;
             this.dgvFechaEntrada.Name = "dgvFechaEntrada";
             this.dgvFechaEntrada.ReadOnly = true;
-            this.dgvFechaEntrada.Width = 130;
+            this.dgvFechaEntrada.Width = 167;
             // 
             // dgvFechaSalida
             // 
@@ -345,7 +346,7 @@
             this.dgvFechaSalida.MinimumWidth = 6;
             this.dgvFechaSalida.Name = "dgvFechaSalida";
             this.dgvFechaSalida.ReadOnly = true;
-            this.dgvFechaSalida.Width = 117;
+            this.dgvFechaSalida.Width = 148;
             // 
             // dgvEmpleado
             // 
@@ -469,8 +470,11 @@
             // 
             // btnSalirConsultaTurno
             // 
-            this.btnSalirConsultaTurno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(36)))), ((int)(((byte)(85)))));
-            this.btnSalirConsultaTurno.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSalirConsultaTurno.BackColor = System.Drawing.Color.Transparent;
+            this.btnSalirConsultaTurno.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSalirConsultaTurno.BackgroundImage")));
+            this.btnSalirConsultaTurno.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSalirConsultaTurno.FlatAppearance.BorderSize = 0;
+            this.btnSalirConsultaTurno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalirConsultaTurno.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
             this.btnSalirConsultaTurno.ForeColor = System.Drawing.Color.White;
             this.btnSalirConsultaTurno.Image = global::CapaPresentacion.Properties.Resources.Exit_64px;
@@ -487,8 +491,11 @@
             // 
             // btnCierreConsultaTurno
             // 
-            this.btnCierreConsultaTurno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(36)))), ((int)(((byte)(85)))));
-            this.btnCierreConsultaTurno.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCierreConsultaTurno.BackColor = System.Drawing.Color.Transparent;
+            this.btnCierreConsultaTurno.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCierreConsultaTurno.BackgroundImage")));
+            this.btnCierreConsultaTurno.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCierreConsultaTurno.FlatAppearance.BorderSize = 0;
+            this.btnCierreConsultaTurno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCierreConsultaTurno.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
             this.btnCierreConsultaTurno.ForeColor = System.Drawing.Color.White;
             this.btnCierreConsultaTurno.Image = global::CapaPresentacion.Properties.Resources.registrar1;
@@ -505,8 +512,11 @@
             // 
             // btnImprimirConsultaTurno
             // 
-            this.btnImprimirConsultaTurno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(36)))), ((int)(((byte)(85)))));
-            this.btnImprimirConsultaTurno.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnImprimirConsultaTurno.BackColor = System.Drawing.Color.Transparent;
+            this.btnImprimirConsultaTurno.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnImprimirConsultaTurno.BackgroundImage")));
+            this.btnImprimirConsultaTurno.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnImprimirConsultaTurno.FlatAppearance.BorderSize = 0;
+            this.btnImprimirConsultaTurno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnImprimirConsultaTurno.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
             this.btnImprimirConsultaTurno.ForeColor = System.Drawing.Color.White;
             this.btnImprimirConsultaTurno.Image = global::CapaPresentacion.Properties.Resources.PRINTERPEQ;
@@ -523,8 +533,11 @@
             // 
             // btnBuscarConsultaTurno
             // 
-            this.btnBuscarConsultaTurno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(36)))), ((int)(((byte)(85)))));
-            this.btnBuscarConsultaTurno.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnBuscarConsultaTurno.BackColor = System.Drawing.Color.Transparent;
+            this.btnBuscarConsultaTurno.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBuscarConsultaTurno.BackgroundImage")));
+            this.btnBuscarConsultaTurno.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnBuscarConsultaTurno.FlatAppearance.BorderSize = 0;
+            this.btnBuscarConsultaTurno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscarConsultaTurno.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F);
             this.btnBuscarConsultaTurno.ForeColor = System.Drawing.Color.White;
             this.btnBuscarConsultaTurno.Image = global::CapaPresentacion.Properties.Resources.BUSCARPEQ_;
