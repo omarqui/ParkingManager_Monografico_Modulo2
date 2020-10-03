@@ -92,35 +92,39 @@
             // 
             // btnImprimir
             // 
-            this.btnImprimir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(36)))), ((int)(((byte)(85)))));
-            this.btnImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnImprimir.BackColor = System.Drawing.Color.Transparent;
+            this.btnImprimir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
+            this.btnImprimir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnImprimir.FlatAppearance.BorderSize = 0;
+            this.btnImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnImprimir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.btnImprimir.ForeColor = System.Drawing.Color.White;
             this.btnImprimir.Image = global::CapaPresentacion.Properties.Resources.printmediano;
             this.btnImprimir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnImprimir.Location = new System.Drawing.Point(34, 155);
-            this.btnImprimir.Margin = new System.Windows.Forms.Padding(2);
+            this.btnImprimir.Location = new System.Drawing.Point(45, 191);
             this.btnImprimir.Name = "btnImprimir";
-            this.btnImprimir.Size = new System.Drawing.Size(77, 38);
+            this.btnImprimir.Size = new System.Drawing.Size(103, 47);
             this.btnImprimir.TabIndex = 4;
             this.btnImprimir.Text = "Imprimir";
             this.btnImprimir.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnImprimir.UseVisualStyleBackColor = false;
+            this.btnImprimir.UseVisualStyleBackColor = false
             this.btnImprimir.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnSalir
             // 
             this.btnSalir.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(36)))), ((int)(((byte)(85)))));
-            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSalir.BackColor = System.Drawing.Color.Transparent;
+            this.btnSalir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.btnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSalir.FlatAppearance.BorderSize = 0;
+            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.btnSalir.ForeColor = System.Drawing.Color.White;
             this.btnSalir.Image = global::CapaPresentacion.Properties.Resources.Exit_64px;
             this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalir.Location = new System.Drawing.Point(144, 155);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSalir.Location = new System.Drawing.Point(192, 191);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(81, 38);
+            this.btnSalir.Size = new System.Drawing.Size(108, 47);
             this.btnSalir.TabIndex = 3;
             this.btnSalir.Text = "Salir";
             this.btnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;

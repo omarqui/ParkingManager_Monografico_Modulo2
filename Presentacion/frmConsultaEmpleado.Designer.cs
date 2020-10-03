@@ -32,6 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConsultaEmpleado));
             this.dtgvEmpleado = new System.Windows.Forms.DataGridView();
             this.dgvIdEmpleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -172,17 +173,20 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(36)))), ((int)(((byte)(85)))));
+            this.btnSalir.BackColor = System.Drawing.Color.Transparent;
+            this.btnSalir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSalir.BackgroundImage")));
+            this.btnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnSalir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSalir.FlatAppearance.BorderSize = 0;
+            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F);
             this.btnSalir.ForeColor = System.Drawing.Color.White;
             this.btnSalir.Image = global::CapaPresentacion.Properties.Resources.Exit_64px;
             this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalir.Location = new System.Drawing.Point(823, 565);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSalir.Location = new System.Drawing.Point(793, 565);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(4);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(108, 49);
+            this.btnSalir.Size = new System.Drawing.Size(138, 49);
             this.btnSalir.TabIndex = 3;
             this.btnSalir.Text = "Salir";
             this.btnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -191,17 +195,20 @@
             // 
             // btnNuevoEmpleado
             // 
-            this.btnNuevoEmpleado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(36)))), ((int)(((byte)(85)))));
+            this.btnNuevoEmpleado.BackColor = System.Drawing.Color.Transparent;
+            this.btnNuevoEmpleado.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnNuevoEmpleado.BackgroundImage")));
+            this.btnNuevoEmpleado.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnNuevoEmpleado.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnNuevoEmpleado.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnNuevoEmpleado.FlatAppearance.BorderSize = 0;
+            this.btnNuevoEmpleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNuevoEmpleado.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F);
             this.btnNuevoEmpleado.ForeColor = System.Drawing.Color.White;
             this.btnNuevoEmpleado.Image = global::CapaPresentacion.Properties.Resources._new;
             this.btnNuevoEmpleado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNuevoEmpleado.Location = new System.Drawing.Point(159, 565);
-            this.btnNuevoEmpleado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnNuevoEmpleado.Margin = new System.Windows.Forms.Padding(4);
             this.btnNuevoEmpleado.Name = "btnNuevoEmpleado";
-            this.btnNuevoEmpleado.Size = new System.Drawing.Size(108, 49);
+            this.btnNuevoEmpleado.Size = new System.Drawing.Size(129, 49);
             this.btnNuevoEmpleado.TabIndex = 2;
             this.btnNuevoEmpleado.Text = "Crear";
             this.btnNuevoEmpleado.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -210,18 +217,20 @@
             // 
             // btnEditarEmpleado
             // 
-            this.btnEditarEmpleado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(36)))), ((int)(((byte)(85)))));
-            this.btnEditarEmpleado.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnEditarEmpleado.BackColor = System.Drawing.Color.Transparent;
+            this.btnEditarEmpleado.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEditarEmpleado.BackgroundImage")));
+            this.btnEditarEmpleado.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnEditarEmpleado.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEditarEmpleado.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnEditarEmpleado.FlatAppearance.BorderSize = 0;
+            this.btnEditarEmpleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditarEmpleado.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F);
             this.btnEditarEmpleado.ForeColor = System.Drawing.Color.White;
             this.btnEditarEmpleado.Image = global::CapaPresentacion.Properties.Resources.editar;
             this.btnEditarEmpleado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEditarEmpleado.Location = new System.Drawing.Point(25, 565);
-            this.btnEditarEmpleado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEditarEmpleado.Margin = new System.Windows.Forms.Padding(4);
             this.btnEditarEmpleado.Name = "btnEditarEmpleado";
-            this.btnEditarEmpleado.Size = new System.Drawing.Size(108, 49);
+            this.btnEditarEmpleado.Size = new System.Drawing.Size(129, 49);
             this.btnEditarEmpleado.TabIndex = 1;
             this.btnEditarEmpleado.Text = "Editar";
             this.btnEditarEmpleado.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
